@@ -1,0 +1,129 @@
+﻿@model List<BT2MWG.Models.Product>;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //int i = 0;
+    String i = (String) Url.ActionContext.RouteData.Values["id"];
+    int j = Int32.Parse(i);
+    string name = Model[j].Name;
+    string image = Model[j].Image;
+    decimal price = Model[j].Price;
+    int productId = Model[j].ProductID;
+
+   
+    
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/public/css/_Footer.css" rel="stylesheet"  runat="server" type="text/css" media="screen" >
+    <link href="~/public/css/_Header.css" rel="stylesheet"  runat="server" type="text/css" media="screen" >
+    <title>Document</title>
+
+</head>
+<body>
+    <script src="~/public/js/productController.js"></script>
+    <div class="header">
+    <section style="height:54px" class="header-search-section">
+        <a href="/" class="header-logo">
+                <i class="icon-logo-newsversion"></i>
+        </a>
+        <form class="header-search">
+            <input type="text" placeholder="Tìm sản phẩm, nhóm hàng, hãng...">
+            <div class="clear-search">
+                <i class="icon-clear-search"></i>
+            </div>
+            <button type="submit" class="submit-search">
+                <i class="icon-search"></i>
+            </button>
+            <div class="search-show">
+                <div class="search-result">
+                    @*<img src="@image" style="width:80px;"alt=""/><br />@name<br />@price*@
+                @*<p class="search-product-txt">Sản phẩm gợi ý</p>
+                        <ul>
+                            <li>
+                                <a href="/">
+                                    <div class="img">
+                                        <img src="@image" class="ls-is-cached lazyloaded" alt="">
+                                    </div>
+                                    <div class="ct">
+                                        <h3>@name</h3>
+                                        <div class="price">
+                                            <strong class="price-current">@price₫</strong>
+                                            <span class="price-old">629.000₫</span>
+                                            <span class="price-percent">10%</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>*@
+                </div>
+            </div>
+        </form>
+        <div class="boxright">
+            <a href="/cart/" class="header__cart">
+                <div class="header__cart-icon">
+                    <i class="icon-cart"></i>
+                    <div class="number"></div>
+                </div>
+                <div class="header__cart-money">
+                    Giỏ hàng
+                    <strong style="display: none;"></strong>
+                </div>
+            </a>
+            <div class="add-cart">
+                <p class="add-cart-txt"><i class="icon-done"></i>Đã thêm sản phẩm</p>
+                <a href="/cart/" class="add-cart-btn">Xem giỏ hàng</a>
+            </div>
+          
+            <a href="tel:1900866874" class="header__hotline">
+                Hotline (7h30 - 22h00)
+                <br>
+                <span>1900 866 874</span>
+            </a>
+            <a href="/me-va-be" class="txtlink-right">
+                CẨM NANG<br>MẸ VÀ BÉ
+            </a>
+        </div>
+
+       
+    </section>
+</div>
+    @RenderBody()
+    <div class="commitment">
+        <ul>
+            <li>
+                <div class="li-icon">
+                    <i class="icon-chinhhang"></i>
+                </div>
+                <div class="li-content">
+                    <p><span>100% sản phẩm chính hãng</span><br>hơn 100 thương hiệu nổi tiếng</p>
+                </div>
+            </li>
+            <li>
+                <div class="li-icon">
+                    <i class="icon-doi1"></i>
+                </div>
+                <div class="li-content">
+                    <p><span>1 Đổi 1 trong vòng 1 tháng</span><span class="li-content-note">(Tuỳ sản phẩm)</span><br>Tại 49 cửa hàng trên toàn quốc</p>
+                    <a href="/bao-hanh-doi-tra" class="txt-link">Xem chi tiết</a>
+                </div>
+            </li>
+            <li>
+                <div class="li-icon">
+                    <i class="icon-mpgiaohang"></i>
+                </div>
+                <div class="li-content">
+                    <p><span>Miễn phí giao hàng</span><br>Cho đơn từ 500.000đ trong 10km đầu tiên </p>
+                    <a href="/chinh-sach-giao-hang" class="txt-link">Xem chi tiết</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

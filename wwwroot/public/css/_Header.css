@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, input, button, option, textarea, label, select, legend, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font: 14px/18px Helvetica,Arial,sans-serif;
+    color: #222;
+    outline: none;
+}
+
+section {
+    max-width: 90%;
+    margin: auto;
+    width: 100%;
+}
+
+.header{
+    padding: 10px 0 0 0;
+    position: relative;
+    background-color: #ed1164;
+}
+
+.header-logo {
+    float: left;
+}
+
+a {
+    transition: .3s;
+    text-decoration: none;
+}
+
+
+
+.header-search {
+    background-color: #fff;
+    border-radius: 20px;
+    float: left;
+    margin-left: 45px;
+    position: relative;
+    transition: .3s;
+    width: calc(100% - 690px);
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.header-search input {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+input[type=text], input[type=tel], textarea {
+    -webkit-appearance: none;
+}
+
+.header-search .clear-search {
+    display: none;
+    position: absolute;
+    right: 40px;
+    top: calc(50% - 11px);
+}
+
+
+.icon-clear-search {
+    background-position: -285px -140px;
+    height: 11px;
+    width: 11px;
+}
+
+[class^="icon-"], [class*="icon-"] {
+    background-image: url(//cdn.tgdd.vn/mwgcart/stag-bluekids/images/common/desktop/icon_common@2x.png?v=4);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 350px 350px;
+}
+
+.header-search button {
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 26px;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 26px;
+}
+
+.search-show {
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    display: none;
+    left: 0;
+    position: absolute;
+    padding-bottom: 25px;
+    top: 40px;
+    width: 100%;
+    z-index: 6;
+}
+
+.search-result ul, ol {
+    list-style: none;
+}
+
+    .search-result ul li {
+        margin-top: 12px;
+    }
+
+    .search-result ul a {
+        align-items: center;
+        display: flex;
+    }
+
+    .search-result ul .img {
+        width: 60px;
+    }
+
+    .search-result ul .ct {
+        padding-left: 15px px;
+        width: calc(100% - 60px);
+    }
+
+    .search-result ul img {
+        width: 100%;
+    }
+
+    .search-result ul .ct {
+        padding-left: 15px;
+        width: calc(100% - 60px);
+    }
+
+    .search-result ul h3 {
+        line-height: 19px;
+        transition: .3s;
+        font-size: 14px;
+    }
+
+    .search-result ul .price {
+        color: #222;
+    }
+
+    .search-result ul .price-current {
+        font-weight: bold;
+        line-height: 24px;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    .search-result ul .price-old {
+        color: #444;
+        font-size: 14px;
+        line-height: 16px;
+        margin-right: 5px;
+        text-decoration-line: line-through;
+    }
+
+    .search-result ul .price-percent {
+        background-color: #ed1164;
+        border-radius: 17px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 15px;
+        padding: 2px 3px;
+    }
+
+.search-product-txt {
+    color: #888;
+    padding-top: 15px;
+}
+
+.search-result {
+    display: none;
+    border-top: 1px solid #dfdfdf;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.header .boxright {
+    float: right;
+    padding: 2px 0;
+}
+
+.header__cart, .header__hotline {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.add-cart {
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 4px;
+    color: #000;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 8px;
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    width: 193px;
+    z-index: 10;
+    display: none;
+}
+
+.add-cart::before {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 5px solid #fff;
+    content: '';
+    position: absolute;
+    right: 92px;
+    top: -5px;
+}
+
+.header__hotline {
+    margin-left: 22px;
+}
+
+.header__hotline {
+    margin-left: 10px;
+}
+
+.header__cart, .header__hotline {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header__hotline span {
+    color: #ffcb05;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.txtlink-right{
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 27px;
+    position: relative;
+    padding-left: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.txtlink-right::before {
+    background-color: #f2f2f2;
+    content: '';
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: calc(50% - 14px);
+    width: 1px;
+}
+
+.icon-cart {
+    background-position: -240px 0;
+    height: 29px;
+    width: 28px;
+}
+
+.header__cart div {
+    position: relative;
+}
+
+.header__cart div, .header__cart-money {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-search {
+    background-position: -214px -4px;
+    height: 19px;
+    width: 19px;
+}
+
+.icon-logo-newsversion {
+    background-position: -105px -260px;
+    height: 41px;
+    width: 194px;
+}

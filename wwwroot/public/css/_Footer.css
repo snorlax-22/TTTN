@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.commitment {
+    margin-top:100px;
+    background-color: #fbd3d1;
+    padding: 20px 0;
+}
+
+div {
+    display: block;
+}
+body, input, button, option, textarea, label, select, legend, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font: 14px/18px Helvetica,Arial,sans-serif;
+    color: #222;
+    outline: none;
+}
+
+.commitment ul {
+    display: flex;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+}
+ul, ol {
+    list-style: none;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+.commitment ul li {
+    align-items: center;
+    display: flex;
+    padding: 0 13px;
+    width: 33.333%;
+}
+
+.commitment ul .li-icon {
+    align-items: center;
+    background-color: #ed1164;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-right: 15px;
+    width: 50px;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+div {
+    display: block;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+ul, ol {
+    list-style: none;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+
+.icon-chinhhang {
+    background-position: -135px -55px;
+    height: 29px;
+    width: 27px;
+}
+
+[class^="icon-"], [class*="icon-"] {
+    background-image: url(//cdn.tgdd.vn/mwgcart/stag-bluekids/images/common/desktop/icon_common@2x.png?v=4);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 350px 350px;
+}
+
+.icon-doi1 {
+    background-position: -170px -55px;
+    height: 29px;
+    width: 24px;
+}
+
+.icon-mpgiaohang {
+    background-position: -200px -55px;
+    height: 22px;
+    width: 28px;
+}
+
+.commitment ul .txt-link {
+    color: #023f88;
+    font-size: 14px;
+    transition: .3s;
+}
