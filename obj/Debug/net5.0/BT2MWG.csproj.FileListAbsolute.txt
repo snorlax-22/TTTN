@@ -110,3 +110,13 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\runtimes
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\Components\ProductDetailBox\Default.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Footer.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Header.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Web.Mvc.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Web.Razor.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Web.Helpers.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Web.WebPages.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll

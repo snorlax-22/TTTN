@@ -130,7 +130,7 @@ input[type=text], input[type=tel], textarea {
     }
 
     .search-result ul .ct {
-        padding-left: 15px px;
+        padding-left: 15px;
         width: calc(100% - 60px);
     }
 
