@@ -9,8 +9,10 @@ namespace BT2MWG.Models
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
-        public string Image { get; set; }
+        public List<string> Image { get; set; }
         public decimal Price { get; set; }
+
+        
        
     }
 
