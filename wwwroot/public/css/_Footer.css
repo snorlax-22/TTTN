@@ -111,3 +111,77 @@ ul {
     font-size: 14px;
     transition: .3s;
 }
+
+.footer__logo {
+    background-color: #e5e5e5;
+    padding: 15px 15px 5px;
+    text-align: center;
+}
+
+.footer__logo-hd {
+    color: #000;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+[class^="iconlogo-"], [class*="iconlogo-"] {
+    background-image: url(//cdn.tgdd.vn/mwgcart/stag-bluekids/images/common/desktop/icon_logo@2x.png?v=4);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 133px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 300px 350px;
+}
+
+.footer__logo-list {
+    font-size: 0;
+    margin-top: 15px;
+    padding-left: 0px;
+}
+
+    .footer__logo-list li {
+        display: inline-block;
+        margin: 0 15px 10px;
+        
+    }
+
+.footer__logo ul, ol {
+    list-style: none;
+}
+
+.iconlogo-fashion {
+    background-position: -145px 0;
+}
+
+.iconlogo-sport {
+    background-position: 0 0;
+}
+
+.iconlogo-ji {
+    background-position: 0 -50px;
+}
+
+.iconlogo-cycle {
+    background-position: 0 -285px;
+}
+.iconlogo-topzone {
+    background-position: -145px -50px;
+}
+
+.iconlogo-bachhoaxanh {
+    background-position: 0 -100px;
+}
+
+.iconlogo-thegioididong {
+    background-position: -145px -100px;
+}
+
+.iconlogo-dienmayxanh {
+    background-position: 0 -150px;
+}
+
+.iconlogo-ankhang {
+    background-position: -145px -285px;
+}
