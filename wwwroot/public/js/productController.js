@@ -55,8 +55,8 @@
     })
 })
 
-window.onload = function moneyFormat() {
-    var raw = document.getElementsByClassName('current-price')[0].innerHTML;
-    var moneyFormat = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(raw);
-    document.getElementsByClassName('current-price')[0].innerHTML = moneyFormat;
-}
+//window.onload = function moneyFormat() {
+//    var raw = document.getElementsByClassName('current-price')[0].innerHTML;
+//    var moneyFormat = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(raw);
+//    document.getElementsByClassName('current-price')[0].innerHTML = moneyFormat;
+//}

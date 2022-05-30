@@ -1,4 +1,5 @@
-﻿@model List<BT2MWG.Models.Product>;
+﻿@using System.Globalization
+@model List<BT2MWG.Models.Product>;
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -9,6 +10,10 @@
     string name = Model[j].Name;
     string image = Model[j].Image[0];
     decimal price = Model[j].Price;
+
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+    string af = price.ToString("#,###", cul.NumberFormat);
+
     int productId = Model[j].ProductID;
 
     //Footer & Header
@@ -103,8 +108,8 @@
                 </div>
 
                 <div class="price-section">
-                    <span class="current-price" >@price</span>
-                    <span class="old-price">1.399.000đ</span>
+                    <span class="current-price" >@af₫</span>
+                    <span class="old-price">1.399.000₫</span>
                     <span class="discount">-20%</span>
 
                 </div>
