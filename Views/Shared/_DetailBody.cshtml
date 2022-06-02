@@ -1,0 +1,54 @@
+﻿@using System.Globalization
+@model List<BT2MWG.Models.Product>;
+@*
+*@
+@{
+    
+    String i = (String)Url.ActionContext.RouteData.Values["id"];
+    int j = Int32.Parse(i);
+
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   
+    string af = Model[j].Price.ToString("#,###", cul.NumberFormat);
+
+    decimal priceNew = Model[j].Price - (Model[j].Price * Model[j].Discount) / 100;
+
+    string aff = priceNew.ToString("#,###", cul.NumberFormat);
+    //Footer & Header
+    
+
+}
+
+<div class="detail-body-column-2-product-name">
+    <div class="title">
+        <h3>@Model[j].Name</h3>
+    </div>
+
+    <div class="price-section">
+        <span class="current-price">@aff₫</span>
+        <span class="old-price">@af₫</span>
+        <span class="discount">@Model[j].Discount%</span>
+
+    </div>
+    <span class="product-id">#@Model[j].ProductID</span>
+    <div class="discount-detail">
+        <p>Khuyến mãi</p>
+        <ul class="promotion-list">
+            @foreach (var item in @Model[j].Promotion)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    </div>
+    <div class="button-section">
+        <button class="button button-buy">MUA NGAY</button>
+        <button class="button button-see">XEM CỬA HÀNG CÒN HÀNG</button>
+    </div>
+
+    @*Thông tin đổi trả*@
+    @await Html.PartialAsync("_Policy")
+
+    @*Thông tin chi tiết của sản phẩm*@
+    @await Component.InvokeAsync("ProductDetailBox")
+
+
+</div>

@@ -1,0 +1,27 @@
+﻿@using System.Globalization
+@model List<BT2MWG.Models.Product>;
+@*
+*@
+@{
+    
+    String i = (String)Url.ActionContext.RouteData.Values["id"];
+    int j = Int32.Parse(i);
+}
+
+<div class="detail-body-column-1-infor">
+    <h2>THÔNG TIN SẢN PHẨM</h2>
+    <h3>Đặc điểm nổi bật</h3>
+    <ul>
+        @foreach (var item in Model[j].Features)
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <h3>Hướng dẫn sử dụng </h3>
+    <ul>
+        @foreach (var item in Model[j].Instructions)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>

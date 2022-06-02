@@ -119,3 +119,7 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.W
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\System.Web.WebPages.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Footer.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_OthersToy.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Policy.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_DetailBody.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Info.cshtml.g.cs

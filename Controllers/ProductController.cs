@@ -27,17 +27,16 @@ namespace BT2MWG.Controllers
         {
             if(searchText == null) { return View(); }
             var products = dataHelper.initProducts();
-            //var productsSearched;
             try
             {
-                productsSearched =from product in products
-                                       where product.Name.StartsWith(searchText)
-                                       || product.Name.EndsWith(searchText)
-                                       || product.Name.Contains(searchText)
-                                       select product;
-
+                productsSearched = from product in products
+                                   where product.Name.StartsWith(searchText)
+                                   || product.Name.EndsWith(searchText)
+                                   || product.Name.Contains(searchText)
+                                   select product;
+                
             }
-            catch(ArgumentNullException ane)
+            catch(ArgumentNullException)
             {
                 return Json("Nothing");
             }

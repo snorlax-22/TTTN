@@ -10,6 +10,19 @@ body {
     color: #222;
 }
 
+.info__item section {
+    margin: 0px;
+    max-width: 100%;
+}
+
+.info__item .spec_article section{
+    margin: 0px;
+}
+
+.policy-section section{
+    max-width:100%;
+}
+
 li {
     display: list-item;
 }

@@ -27,6 +27,9 @@ namespace BT2MWG.Models
 
         public string Origin { get; set; }
 
+        public List<string> Features { get; set; }
+        public List<string> Instructions { get; set; }
+
     }
 
 
