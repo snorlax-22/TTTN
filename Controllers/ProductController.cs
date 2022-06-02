@@ -13,7 +13,7 @@ namespace BT2MWG.Controllers
     {
 
         DataHelper dataHelper = new DataHelper();
-
+        private object productsSearched;
 
         public IActionResult Index()
         {
@@ -23,14 +23,28 @@ namespace BT2MWG.Controllers
         }
 
         [HttpGet]
-        public ActionResult Search()
+        public ActionResult Search(string searchText)
         {
+            if(searchText == null) { return View(); }
             var products = dataHelper.initProducts();
+            //var productsSearched;
+            try
+            {
+                productsSearched =from product in products
+                                       where product.Name.StartsWith(searchText)
+                                       || product.Name.EndsWith(searchText)
+                                       || product.Name.Contains(searchText)
+                                       select product;
 
-            
+            }
+            catch(ArgumentNullException ane)
+            {
+                return Json("Nothing");
+            }
+
 
             string value = string.Empty;
-            value = JsonConvert.SerializeObject(products, Formatting.Indented, new JsonSerializerSettings
+            value = JsonConvert.SerializeObject(productsSearched, Formatting.Indented, new JsonSerializerSettings
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });

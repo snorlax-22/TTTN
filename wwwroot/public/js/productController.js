@@ -10,9 +10,17 @@
     $.ajax({
         url: '/Product/Search/do-choi',
         type: 'GET',
+        data: {
+            searchText: searchField
+        },
         dataType: 'json',
-        contentType:'application/json;charset=utf-8',
+        contentType: 'application/json;charset=utf-8',
         success: function (response) {
+            if (!response.length) {
+                $(".search-result").css("display", "none");
+                $(".search-show").css("display", "none");
+                $(".header-search").css("border-radius", "20px");
+            }
             var data = JSON.parse(response);
             console.log(data);
             if (searchField != "") {
@@ -39,11 +47,12 @@
                             </li>`;
                     $('.search-result ul').append(html_Search);
                 }
-                if (searchField == "") {
+                if (item.Name.search(expression) == -1 || searchField == "" || !searchField.length || searchField == null) {
                     $(".search-result").css("display", "none");
                     $(".search-show").css("display", "none");
                     $(".header-search").css("border-radius", "20px");
                 }
+
                 else if (item.Name.search(expression) != -1 && searchField != "") {
                     $(".search-result").css("display", "block");
                     $(".search-show").css("display", "block");
@@ -51,6 +60,11 @@
 
                 }
             })
+        },
+        error: function(){
+            $(".search-result").css("display", "none");
+            $(".search-show").css("display", "none");
+            $(".header-search").css("border-radius", "20px");
         }
     })
 })
