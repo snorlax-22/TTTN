@@ -1,24 +1,20 @@
 ﻿@using System.Globalization
 @model List<BT2MWG.Models.Product>;
 @*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    //int i = 0;
+    
     String i = (String)Url.ActionContext.RouteData.Values["id"];
     int j = Int32.Parse(i);
-    string name = Model[j].Name;
-    string image = Model[j].Image[0];
-    decimal price = Model[j].Price;
 
-    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
-    string af = price.ToString("#,###", cul.NumberFormat);
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   
+    string af = Model[j].Price.ToString("#,###", cul.NumberFormat);
 
-    int productId = Model[j].ProductID;
+    decimal priceNew = Model[j].Price - (Model[j].Price * Model[j].Discount) / 100;
 
+    string aff = priceNew.ToString("#,###", cul.NumberFormat);
     //Footer & Header
     Layout = "~/Views/Shared/_Footer.cshtml";
-
 
 }
 
@@ -26,6 +22,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha512-sJa5KWq3F99QOeijUOm9O+BgDgVtzrWBBagZtjlW7F3I47NO1OaNJvbut+9KOPmjNr4Wb3blU4vQiQdi+Zk6wg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,48 +35,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/public/css/style.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
     <link href="~/public/css/_Footer.css" rel="stylesheet" runat="server" type="text/css" media="screen">
-    <link href="~/public/css/_Header.css" rel="stylesheet" runat="server" type="text/css" media="screen">
+    <script src="~/public/js/slider.js"></script>
     <script src="~/public/js/productController.js"></script>
-    <title>@name</title>
+    <title>@Model[j].Name</title>
 </head>
 <body>
 
 
     <div class="detail-body">
         <div class="detail-body-column">
-
-            @*Hình ảnh sản phẩm*@
-            @*<div class="detail-body-img">
-            <img src="@image" alt="" width="600" height="594" />
-            </div>
-
-            <div class="slider-thumb">
-            <a target="_blank" href="Model[0].Image">
-            <img src="@image" alt="Forest" width="50">
-            </a>
-            </div>*@
             <div id="sync1" class="owl-carousel owl-theme">
-                @for (var n = 0; n < 7; n++)
+                @foreach(var item in @Model[@j].Image)
                 {
                     <div class="item">
-
-                        <img src="@Model[@j].Image[@n]" alt="" />
+                        <img src="@item" alt="" />
                     </div>
                 }
-
-
             </div>
-
             <div id="sync2" class="owl-carousel owl-theme">
 
-                @for (var o = 0; o < 7; o++)
+                @foreach(var item in @Model[@j].Image)
                 {
                     <div class="slider-thumb item">
-                        <img src="@Model[@j].Image[@o]" alt="Forest" style="width: 80px;height: 102%">
+                        <img src="@item" alt="Forest" style="width: 80px;height: 102%">
                     </div>
                 }
-
-
             </div>
 
             <div class="detail-body-column-1-thump">
@@ -104,36 +84,26 @@
         <div class="detail-body-column">
             <div class="detail-body-column-2-product-name">
                 <div class="title">
-                    <h3>@name</h3>
+                    <h3>@Model[j].Name</h3>
                 </div>
 
                 <div class="price-section">
-                    <span class="current-price" >@af₫</span>
-                    <span class="old-price">1.399.000₫</span>
-                    <span class="discount">-20%</span>
+                    <span class="current-price" >@aff₫</span>
+                    <span class="old-price">@af₫</span>
+                    <span class="discount">@Model[j].Discount%</span>
 
                 </div>
-                <span class="product-id">#@productId</span>
+                <span class="product-id">#@Model[j].ProductID</span>
                 <div class="discount-detail">
-
-
-                    <p>Khuyến mãi (Đến 31/05)</p>
-
+                    <p>Khuyến mãi</p>
                     <ul class="promotion-list">
-                        <li>
-                            Nhập mã AVAKID giảm 10% tối đa 100.000đ cho đơn hàng từ 300.000đ trở lên khi thanh toán qua Ví Moca trên ứng dụng Grab (click xem chi tiết)
-                        </li>
+                            @foreach(var item in @Model[j].Promotion){<li>@item</li>} 
                     </ul>
-
                 </div>
                 <div class="button-section">
-
                     <button class="button button-buy">MUA NGAY</button>
                     <button class="button button-see">XEM CỬA HÀNG CÒN HÀNG</button>
-
                 </div>
-
-
                 <ul class="policy">
                     <li class="doitra ">
                         <div class="iconl">
@@ -300,92 +270,4 @@
 
     </div>
 </body>
-<script>
-    $(document).ready(function() {
-        var sync1 = $("#sync1");
-        var sync2 = $("#sync2");
-        var slidesPerPage = 7; //globaly define number of elements per page
-        var syncedSecondary = true;
-
-        sync1
-            .owlCarousel({
-                items: 1,
-                slideSpeed: 2000,
-                nav: true,
-                autoplay: false,
-                dots: true,
-                loop: true,
-                responsiveRefreshRate: 200,
-                navText: [
-                    '<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>',
-                    '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'
-                ]
-            })
-            .on("changed.owl.carousel", syncPosition);
-
-        sync2
-            .on("initialized.owl.carousel", function() {
-                sync2.find(".owl-item").eq(0).addClass("current");
-            })
-            .owlCarousel({
-                items: slidesPerPage,
-                dots: true,
-                nav: true,
-                smartSpeed: 200,
-                slideSpeed: 500,
-                slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-                responsiveRefreshRate: 100
-            })
-            .on("changed.owl.carousel", syncPosition2);
-
-        function syncPosition(el) {
-            //if you set loop to false, you have to restore this next line
-            //var current = el.item.index;
-
-            //if you disable loop you have to comment this block
-            var count = el.item.count - 1;
-            var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
-
-            if (current < 0) {
-                current = count;
-            }
-            if (current > count) {
-                current = 0;
-            }
-
-            //end block
-
-            sync2
-                .find(".owl-item")
-                .removeClass("current")
-                .eq(current)
-                .addClass("current");
-            var onscreen = sync2.find(".owl-item.active").length - 1;
-            var start = sync2.find(".owl-item.active").first().index();
-            var end = sync2.find(".owl-item.active").last().index();
-
-            if (current > end) {
-                sync2.data("owl.carousel").to(current, 100, true);
-            }
-            if (current < start) {
-                sync2.data("owl.carousel").to(current - onscreen, 100, true);
-            }
-        }
-
-        function syncPosition2(el) {
-            if (syncedSecondary) {
-                var number = el.item.index;
-                sync1.data("owl.carousel").to(number, 100, true);
-            }
-        }
-
-        sync2.on("click", ".owl-item", function(e) {
-            e.preventDefault();
-            var number = $(this).index();
-            sync1.data("owl.carousel").to(number, 300, true);
-        });
-    });
-
-
-</script>
 </html>

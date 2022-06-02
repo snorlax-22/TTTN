@@ -25,7 +25,7 @@
                     var html_Search = `<li>
                                 <a href="/">
                                     <div class="img">
-                                        <img src="${item.Image}" class="ls-is-cached lazyloaded" alt="">
+                                        <img src="${item.Image[0]}" class="ls-is-cached lazyloaded" alt="">
                                     </div>
                                     <div class="ct">
                                         <h3>${item.Name}</h3>
@@ -54,9 +54,3 @@
         }
     })
 })
-
-//window.onload = function moneyFormat() {
-//    var raw = document.getElementsByClassName('current-price')[0].innerHTML;
-//    var moneyFormat = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(raw);
-//    document.getElementsByClassName('current-price')[0].innerHTML = moneyFormat;
-//}

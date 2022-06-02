@@ -1,65 +1,55 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-    //string name = Model[j].Name;
-    //string image = Model[j].Image;
-    //decimal price = Model[j].Price;
-    //int productId = Model[j].ProductID;
-}
-
+@using System.Globalization
 @model List<BT2MWG.Models.Product>;
+@{
+    String i = (String)Url.ActionContext.RouteData.Values["id"];
+    int j = Int32.Parse(i);
+}
+<section class="info__item spec_article">
+    <p class="info-title">Thông tin chi tiết</p>
+    <div class="info-content">
+        <ul class="info-article ">
+            <li>
+                <p class="txt01">Thương hiệu</p>
+                <p class="txt02">@Model[j].Brand</p>
+            </li>
 
-@*<ul class="list-group">
-    @name ffffffff
-    @foreach(var product in Model)
-    {
-        <li class="list-group-item">
-            @product.Name <strong>@product.Price</strong>
-        </li>
-    }
-</ul>*@
-                <div class="info__item spec_article">
-                    <p class="info-title">Thông tin chi tiết</p>
-                    <div class="info-content">
-                        <ul class="info-article ">
-                            <li>
-                                <p class="txt01">Thương hiệu</p>
-                                <p class="txt02">Lego (Đan Mạch)</p>
-                            </li>
+            <li>
+                <p class="txt01">Loại</p>
+                <p class="txt02">
+                    @foreach (var item in Model[j].Kind)
+                    {
+                        <span class="dot">@item</span>
+                    }
+                </p>
+            </li>
+            <li>
+                <p class="txt01">Độ tuổi</p>
+                <p class="txt02">@Model[j].AgeLimit</p>
+            </li>
+            <li>
+                <p class="txt01">Chất liệu</p>
+                <p class="txt02">@Model[j].Material</p>
+            </li>
+            <li>
+                <p class="txt01">Kích thước hộp</p>
+                <p class="txt02">@Model[j].Size cm</p>
+            </li>
+            <li>
+                <p class="txt01">Trọng lượng</p>
+                <p class="txt02">@Model[j].Weight g</p>
+            </li>
+            <li>
+                <p class="txt01">Lưu ý khi sử dụng</p>
+                <p class="txt02">@Model[j].Warn</p>
+            </li>
+            <li>
+                <p class="txt01">Nơi sản xuất</p>
+                <p class="txt02">@Model[j].Origin</p>
+            </li>
+        </ul>
+    </div>
+</section>
 
-                            <li>
-                                <p class="txt01">Loại</p>
-                                <p class="txt02">
-                                    <span class="dot">Đồ chơi bé trai</span>
-                                    <span class="dot">Đồ chơi lắp ráp</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p class="txt01">Độ tuổi</p>
-                                <p class="txt02">Từ 5 tuổi trở lên</p>
-                            </li>
-                            <li>
-                                <p class="txt01">Chất liệu</p>
-                                <p class="txt02">Nhựa</p>
-                            </li>
-                            <li>
-                                <p class="txt01">Kích thước hộp</p>
-                                <p class="txt02">38x26x6 cm</p>
-                            </li>
-                            <li>
-                                <p class="txt01">Trọng lượng</p>
-                                <p class="txt02">724 g</p>
-                            </li>
-                            <li>
-                                <p class="txt01">Lưu ý khi sử dụng</p>
-                                <p class="txt02">Có các chi tiết nhỏ, không dùng cho trẻ dưới 3 tuổi, tránh nguy cơ tiềm ẩn khi trẻ sử dụng sai</p>
-                            </li>
-                            <li>
-                                <p class="txt01">Nơi sản xuất</p>
-                                <p class="txt02">Trung Quốc</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-    
