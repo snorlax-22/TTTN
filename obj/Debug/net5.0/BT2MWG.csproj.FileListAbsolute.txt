@@ -123,3 +123,4 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Vi
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Policy.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_DetailBody.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Info.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Slider.cshtml.g.cs

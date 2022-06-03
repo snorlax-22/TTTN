@@ -1,0 +1,27 @@
+﻿@using System.Globalization
+@model List<BT2MWG.Models.Product>;
+@*
+*@
+@{
+    
+    String i = (String)Url.ActionContext.RouteData.Values["id"];
+    int j = Int32.Parse(i);
+}
+
+<div id="sync1" class="owl-carousel owl-theme">
+    @foreach (var item in @Model[@j].Image)
+    {
+        <div class="item">
+            <img src="@item" alt="" />
+        </div>
+    }
+</div>
+<div id="sync2" class="owl-carousel owl-theme">
+
+    @foreach (var item in @Model[@j].Image)
+    {
+        <div class="slider-thumb item">
+            <img src="@item" alt="Forest" style="width: 80px;height: 102%">
+        </div>
+    }
+</div>
