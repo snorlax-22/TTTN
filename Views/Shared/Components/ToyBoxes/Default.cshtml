@@ -4,8 +4,19 @@
 @using System.Globalization
 @model BT2MWG.Models.Product;
 @{
-    String i = (String)Url.ActionContext.RouteData.Values["id"];
-    int j = Int32.Parse(i);
+    //int i = 0;
+    string i = "";
+    //String i = (String)Url.ActionContext.RouteData.Values["id"];
+    int j = 0;
+    if ((String)Url.ActionContext.RouteData.Values["id"] == null)
+    {
+        i = "0";
+    }
+    else
+    {
+        i = (String)Url.ActionContext.RouteData.Values["id"];
+    }
+    j = Int32.Parse(i);
 
     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
     string af = Model.Price.ToString("#,###", cul.NumberFormat);

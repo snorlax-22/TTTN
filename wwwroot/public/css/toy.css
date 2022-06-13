@@ -1,0 +1,219 @@
+﻿body {
+}
+
+/*--------------------------------------CSS Toy------------------------------*/
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+[class^="icon-"], [class*="icon-"] {
+    background-image: url(//cdn.tgdd.vn/mwgcart/stag-bluekids/images/common/desktop/icon_common@2x.png?v=4);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 350px 350px;
+}
+
+.icon-filter {
+    background-position: -305px 0;
+    height: 15px;
+    width: 14px;
+}
+
+.box-filter {
+    background: #fff;
+    font-size: 0;
+    padding-top: 15px;
+}
+
+.filter-item {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right: 8px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.filter-item__title {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    padding: 8px;
+    transition: .3s;
+}
+
+    .filter-item__title span {
+        padding-right: 12px;
+        position: relative;
+        color: #333;
+    }
+        .filter-item__title span::before {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #333;
+            content: '';
+            height: 0;
+            position: absolute;
+            top: 6px;
+            right: 0;
+            width: 0;
+        }
+
+.filter-show {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    left: 10px;
+    position: absolute;
+    padding: 15px 15px 5px 15px;
+    top: 52px;
+    width: max-content;
+    min-width: 400px;
+    max-width: 640px;
+    white-space: normal;
+    z-index: 2;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c-btnbox {
+    align-items: center;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+    color: #555;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    line-height: 17px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    padding: 9px 11px;
+}
+
+.filter-list--column .c-btnbox {
+    margin-right: 6px;
+    width: 92px;
+    height: 40px;
+}
+
+
+
+.box-quicklink {
+    position: relative;
+    min-height: 30px;
+}
+
+.box-quicklink {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxleft {
+    max-width: 85%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-quicklink__txt {
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 8px;
+}
+
+.box-quicklink__item {
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: #333;
+    display: flex;
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 10px;
+    height: 36px;
+    padding: 2px 9px;
+    margin-bottom: 10px;
+    vertical-align: top;
+}
+
+.sort-select {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.sort-select {
+    float: right;
+    position: relative;
+}
+
+    .sort-select .click-sort {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        cursor: pointer;
+        color: #999;
+        line-height: 17px;
+        padding: 9px 10px;
+    }
+
+    .sort-select .sort-show {
+        color: #333;
+        padding-right: 12px;
+        position: relative;
+    }
+
+        .sort-select .sort-show::before {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #333;
+            content: '';
+            height: 0;
+            position: absolute;
+            top: 6px;
+            right: 0;
+            width: 0;
+        }
+
+.sort-select-main {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 20%);
+    display: none;
+    position: absolute;
+    padding: 0 7px;
+    top: 37px;
+    right: 0;
+    width: 160px;
+    z-index: 2;
+}
+
+    .sort-select-main p {
+        border-bottom: 1px solid #f1f1f1;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 11px 3px;
+    }
+
+#toy-grid{
+    margin-top:40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+#toy-grid>div{
+    width:14%;
+    margin-bottom:2%;
+    margin-left: 0.66%;
+}

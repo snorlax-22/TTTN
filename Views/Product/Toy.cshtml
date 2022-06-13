@@ -2,15 +2,102 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-     Layout = "~/Views/Shared/_Footer.cshtml";
-}
+    Layout = "~/Views/Shared/_Footer.cshtml";
+}@using System.Globalization
+@model List<BT2MWG.Models.Product>;
 <head>
-    <link href="~/public/css/style.css" rel="stylesheet" type="text/css" media="screen" runat="server" /> 
+
+    <link href="~/public/css/style.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+    <link href="~/public/css/toy.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+    <script src="~/public/js/toy.js"></script>
 </head>
 <section>
     <div class="box-filter">
         <div class="warpper-filfer">
+            <div class="filter-item filter-total">
+                <div class="filter-item__title jsTitle allfilter active">
+                    <i class="icon-filter"></i>Lọc
+                    <strong class="number hide" style="display: none;"></strong>
+                </div>
+            </div>
+            <div class="filter-item" onclick="showFilteritem(this);">
+                <div class="filter-item__title"><span>Thương hiệu</span></div>
+                <div class="filter-show">
+                    <div class="filter-list filter-list--column manu outsight">
+                        <a href="ta-cho-be-bobby" class="c-btnbox filter-manu ">
+                            <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/120876/HOTWHEELS-200x120.png" width="67" height="33" alt="HOT WHEELS">
+                        </a>
+                        <a href="ta-cho-be-huggies" class="c-btnbox filter-manu ">
+                            <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/124513/Lego-200x120.png" width="67" height="33" alt="Lego">
+                        </a>
+                    </div>
+                    <div class="filter-button">
+                        @*<a href="javascript:void(0)" class="btn-filter-close">Bỏ chọn</a>
+                            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem (<b class="total-reloading">117</b> kết quả)</a>*@
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="filter-item">
+                <div class="filter-item__title"><span>Giá</span></div>
+                <div class="filter-show" style="display: none;">
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <div class="filter-item__title"><span>Loại</span></div>
+                <div class="filter-show" style="display: none;">
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <div class="filter-item__title"><span>Cân nặng</span></div>
+                <div class="filter-show" style="display: none;">
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <div class="filter-item__title"><span>Size</span></div>
+                <div class="filter-show" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-quicklink">
+        <div class="boxleft ">
+            <p class="box-quicklink__txt">Phổ biến:</p>
+            <a href="https://www.avakids.com/do-choi-lego" class="box-quicklink__item">
+                <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/124513/Lego-200x120.png" width="70" height="20" class="no-text">
+
+            </a>
+            <a href="https://www.avakids.com/do-choi-hot-wheels" class="box-quicklink__item">
+                <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/120876/HOTWHEELS-200x120.png" width="70" height="20" class="no-text">
+
+            </a>
             
+        </div>
+
+        <!-- Sắp xếp -->
+        <div class="sort-select">
+            <p class="click-sort" onclick="showFilter(this);">Xếp theo: <span class="sort-show">Nổi bật</span></p>
+            <div class="sort-select-main">
+                <p class="active"><i></i>Nổi bật</p>
+                <p class=""><i></i>Bán chạy</p>
+                <p class=""><i></i>% Giảm nhiều</p>
+                <p class=""><i></i>Giá cao đến thấp</p>
+                <p class=""><i></i>Giá thấp đến cao</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="others-toy" id="toy-grid">
+            @foreach (var item in @Model.Take(6))
+            {
+                @await Component.InvokeAsync("ToyBoxes", item.ProductID)
+            }
+
         </div>
     </div>
 </section>

@@ -2,9 +2,9 @@
 
 /*--------------------------------CSS details toy----------------------*/
 
-.detail-body{
-    margin-left:200px;
-    margin-right:200px;
+.detail-body {
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 body {
@@ -17,12 +17,12 @@ body {
     max-width: 100%;
 }
 
-.info__item .spec_article section{
+.info__item .spec_article section {
     margin: 0px;
 }
 
-.policy-section section{
-    max-width:100%;
+.policy-section section {
+    max-width: 100%;
 }
 
 li {
@@ -30,7 +30,7 @@ li {
 }
 
 ::-webkit-scrollbar-thumb {
-    background:#ed1164;
+    background: #ed1164;
     border-radius: 8px;
 }
 
@@ -211,9 +211,9 @@ ul, ol {
         width: 10%;
     }
 
-.slider-thumb img:hover {
-    box-shadow: 0 0 2px 1px rgba(237, 17, 100, 0.5);
-}
+        .slider-thumb img:hover {
+            box-shadow: 0 0 2px 1px rgba(237, 17, 100, 0.5);
+        }
 
 .info__item {
     border-bottom: 1px solid #dfdfdf;
@@ -294,7 +294,7 @@ ul, ol {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     margin-left: 200px;
 }
 
@@ -307,21 +307,21 @@ ul, ol {
     margin-right: 2%;
 }
 
-.others-toy-item img{
-    width: 100%;
-    height: auto;
-}
-
-    .others-toy div:hover {
-        box-shadow: 0 0 2px 1px rgba(237, 17, 100, 0.5);
+    .others-toy-item img {
+        width: 100%;
+        height: auto;
     }
+
+.others-toy div:hover {
+    box-shadow: 0 0 2px 1px rgba(237, 17, 100, 0.5);
+}
 
 
 
 .others-toy-item h3 {
     font-size: 14px;
     line-height: 20px;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 .others-toy-item p {
@@ -340,7 +340,7 @@ ul, ol {
     display: inline-block;
     text-decoration-line: line-through;
     vertical-align: middle;
-    margin-left:5px;
+    margin-left: 5px;
 }
 
 .others-toy-item-percent {
@@ -361,40 +361,40 @@ ul, ol {
     cursor: pointer;
     margin: 0 10px;
     text-align: center;
-    margin : 10px;
+    margin: 10px;
 }
 
 .txt {
     line-height: 40px;
     width: 100%;
     color: #333;
-    font-size:16px;
+    font-size: 16px;
     font-weight: lighter;
 }
 
     .others-toy-item-buy:hover, .txt:hover {
         background-color: #ed1164;
-        box-shadow:none;
+        box-shadow: none;
         color: white;
     }
 
-    .others-toy-item>span, h3{
-        margin-left:5px;
-    }
+.others-toy-item > span, h3 {
+    margin-left: 5px;
+}
 
-.others-toy-item-price{
+.others-toy-item-price {
     margin-left: 5px;
     font-weight: bold !important;
 }
 
 /*owl carousel*/
 
-#sync1{
+#sync1 {
     width: 600px;
     height: 594px;
 }
 
-#sync2{
+#sync2 {
     margin: 20px;
     width: 600px;
 }
@@ -439,7 +439,7 @@ ul, ol {
         transition: all 0.3s ease;
     }
 
-        /*.owl-theme .owl-nav [class*=owl-].disabled:hover {
+/*.owl-theme .owl-nav [class*=owl-].disabled:hover {
             background-color: #d6d6d6;
         }*/
 
@@ -464,11 +464,4 @@ ul, ol {
         right: 10px;
     }
 
-/*--------------------------------------CSS Toy------------------------------*/
-.box-filter {
-    background: #fff;
-    font-size: 0;
-    padding-top: 15px;
-}
-    
-    
+

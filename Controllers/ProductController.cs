@@ -14,6 +14,7 @@ namespace BT2MWG.Controllers
 
         DataHelper dataHelper = new DataHelper();
         private object productsSearched;
+        private object productsSearchedBrand;
 
         public IActionResult Index()
         {
@@ -28,6 +29,20 @@ namespace BT2MWG.Controllers
 
             return View(products);
         }
+
+
+        //public IActionResult Toy(string searchedBrand)
+        //{
+        //    var products = dataHelper.initProducts();
+
+        //    var productsSearchedBrand = (from product in products
+        //                                where product.Brand == searchedBrand.Trim()
+        //                                select product).ToList();
+
+
+
+        //    return View(productsSearchedBrand);
+        //}
 
         [HttpGet]
         public ActionResult Search(string searchText)
@@ -57,5 +72,7 @@ namespace BT2MWG.Controllers
 
             return Json(value);
         }
+        
+       
     }
 }

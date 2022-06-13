@@ -83,8 +83,8 @@ namespace BT2MWG.Controllers
             Features2.Add("Đồ chơi trạm cảnh sát tuần tra và cứu hỏa biển Lego City 60308 bao gồm 297 chi tiết.");
             Features2.Add("Bé có thể sáng tạo và tưởng tượng câu chuyện của mình.");
             Features2.Add("Đồ chơi lắp ráp giúp rèn luyện tính rỉ mỉ, sáng tạo của bé khi lắp ráp.");
-            
             Features2.Add("Đồ chơi Lego City không có góc nhọn, thành phần độc hại nên an toàn cho bé.");
+          
             List<string> Features3 = new List<string>();
             Features2.Add("Đồ chơi trạm rửa xe thông minh Hot Wheels FTB66 trang bị đầy đủ các tính năng rửa.");
             Features2.Add("Đồ chơi Hot Wheels có thể kết hợp với nhiều mô hình khác giúp bé khám phá thế giới xung quanh.");
