@@ -4,8 +4,21 @@
 *@
 @{
     //int i = 0;
-    String i = (String) Url.ActionContext.RouteData.Values["id"];
-    int j = Int32.Parse(i);
+    string i = "";
+    //String i = (String)Url.ActionContext.RouteData.Values["id"];
+    int j = 0;
+    if((String)Url.ActionContext.RouteData.Values["id"]==null)
+    {
+        i = "0";
+    }
+    else
+    {
+        i = (String)Url.ActionContext.RouteData.Values["id"]; 
+    }
+    j = Int32.Parse(i);
+    
+
+
     string name = Model[j].Name;
     string image = Model[j].Image[0];
     decimal price = Model[j].Price;

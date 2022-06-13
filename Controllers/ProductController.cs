@@ -22,6 +22,13 @@ namespace BT2MWG.Controllers
             return View(products);
         }
 
+        public IActionResult Toy()
+        {
+            var products = dataHelper.initProducts();
+
+            return View(products);
+        }
+
         [HttpGet]
         public ActionResult Search(string searchText)
         {

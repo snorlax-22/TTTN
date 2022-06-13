@@ -35,6 +35,7 @@ namespace BT2MWG
             {
                 //routes.MapRoute("default", "{controller=home}/{action=index}/{id?}");
                 routes.MapRoute("Default", "{controller=Product}/{action=Index}/do-choi/{id?}");
+                routes.MapRoute("Toy", "{controller=Product}/{action=Toy}");
             });
         }
     }
