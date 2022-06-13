@@ -34,7 +34,7 @@ namespace BT2MWG
             app.UseMvc(routes =>
             {
                 //routes.MapRoute("default", "{controller=home}/{action=index}/{id?}");
-                routes.MapRoute("default", "{controller=Product}/{action=Index}/do-choi/{id?}");
+                routes.MapRoute("Default", "{controller=Product}/{action=Index}/do-choi/{id?}");
             });
         }
     }

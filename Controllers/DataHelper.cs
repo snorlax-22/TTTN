@@ -15,6 +15,19 @@ namespace BT2MWG.Controllers
             List<string> Image5 = new List<string>();
             List<string> Image6 = new List<string>();
             List<string> Image7 = new List<string>();
+            List<string> Image8 = new List<string>();
+            List<string> Image9 = new List<string>();
+            List<string> Image10 = new List<string>();
+            List<string> Image11 = new List<string>();
+            List<string> Image12 = new List<string>();
+            List<string> Image13 = new List<string>();
+            List<string> Image14 = new List<string>();
+            List<string> Image15 = new List<string>();
+            List<string> Image16 = new List<string>();
+            List<string> Image17 = new List<string>();
+            List<string> Image18 = new List<string>();
+            List<string> Image19 = new List<string>();
+            List<string> Image20 = new List<string>();
 
             Image1.Add("/public/image/lego-canh-sat.jpg");
             Image1.Add("/public/image/lego-canh-sat-2.jpg");

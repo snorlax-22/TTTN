@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using System.Globalization
+@model BT2MWG.Models.Product;
+@{
+    String i = (String)Url.ActionContext.RouteData.Values["id"];
+    int j = Int32.Parse(i);
+
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+    string af = Model.Price.ToString("#,###", cul.NumberFormat);
+
+    decimal priceNew = Model.Price - (Model.Price * Model.Discount) / 100;
+
+    string aff = priceNew.ToString("#,###", cul.NumberFormat);
+}
+
+
+
+
+<div class="others-toy-item">
+    <img src=@Model.Image[0] alt="" />
+    <h3>
+        @*Đồ chơi xe địa hình cứu hộ Lego City 60301*@
+        @Model.Name
+    </h3>
+    <p class="others-toy-item-price">
+        @*993.200₫*@
+        @aff₫
+    </p>
+    <span class="others-toy-item-old-price">
+        @*1.399.000₫*@
+        @af₫
+    </span>
+    <span class="others-toy-item-percent">
+        @Model.Discount%
+    </span>
+
+    <div class="others-toy-item-buy">
+        <p class="txt">Chọn mua</p>
+    </div>
+</div>
