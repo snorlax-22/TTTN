@@ -76,13 +76,13 @@ namespace BT2MWG.Controllers
             List<string> Features1 = new List<string>();
             Features1.Add("Đồ chơi trạm cảnh sát tuần tra và cứu hỏa biển Lego City 60308 bao gồm 297 chi tiết.");
             Features1.Add("Bé có thể sáng tạo và tưởng tượng câu chuyện của mình.");
-            Features1.Add("Đồ chơi lắp ráp giúp rèn luyện tính rỉ mỉ, sáng tạo của bé khi lắp ráp.");
+            Features1.Add("Đồ chơi lắp ráp giúp rèn luyện tính tỉ mỉ, sáng tạo của bé khi lắp ráp.");
             Features1.Add("Đồ chơi Lego City không có góc nhọn, thành phần độc hại nên an toàn cho bé.");
 
             List<string> Features2 = new List<string>();
             Features2.Add("Đồ chơi trạm cảnh sát tuần tra và cứu hỏa biển Lego City 60308 bao gồm 297 chi tiết.");
             Features2.Add("Bé có thể sáng tạo và tưởng tượng câu chuyện của mình.");
-            Features2.Add("Đồ chơi lắp ráp giúp rèn luyện tính rỉ mỉ, sáng tạo của bé khi lắp ráp.");
+            Features2.Add("Đồ chơi lắp ráp giúp rèn luyện tính tỉ mỉ, sáng tạo của bé khi lắp ráp.");
             Features2.Add("Đồ chơi Lego City không có góc nhọn, thành phần độc hại nên an toàn cho bé.");
           
             List<string> Features3 = new List<string>();

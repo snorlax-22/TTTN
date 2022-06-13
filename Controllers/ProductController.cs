@@ -23,31 +23,25 @@ namespace BT2MWG.Controllers
             return View(products);
         }
 
-        public IActionResult Toy()
+        public IActionResult Toy(string searchedBrand)
         {
             var products = dataHelper.initProducts();
+
+            if (searchedBrand != null)
+            {
+                products = (from product in products
+                            where product.Brand == searchedBrand.Trim()
+                            select product).ToList();
+            }
+           
 
             return View(products);
         }
 
-
-        //public IActionResult Toy(string searchedBrand)
-        //{
-        //    var products = dataHelper.initProducts();
-
-        //    var productsSearchedBrand = (from product in products
-        //                                where product.Brand == searchedBrand.Trim()
-        //                                select product).ToList();
-
-
-
-        //    return View(productsSearchedBrand);
-        //}
-
         [HttpGet]
         public ActionResult Search(string searchText)
         {
-            if(searchText == null) { return View(); }
+            if (searchText == null) { return View(); }
             var products = dataHelper.initProducts();
             try
             {
@@ -56,9 +50,9 @@ namespace BT2MWG.Controllers
                                    || product.Name.EndsWith(searchText)
                                    || product.Name.Contains(searchText)
                                    select product;
-                
+
             }
-            catch(ArgumentNullException)
+            catch (ArgumentNullException)
             {
                 return Json("Nothing");
             }
@@ -72,7 +66,7 @@ namespace BT2MWG.Controllers
 
             return Json(value);
         }
-        
-       
+
+
     }
 }
