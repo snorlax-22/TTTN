@@ -20,7 +20,7 @@ namespace BT2MWG.Views.Shared.Components.ToyBoxes
                                    where product.ProductID == inputId
                                    select product).ToList();
 
-            Product productA = productsSearched[0]; 
+            Product productA = productsSearched.First(); 
 
 
 

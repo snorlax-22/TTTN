@@ -3,132 +3,16 @@
 *@
 @{
 }
-
+@using System.Globalization
+@model List<BT2MWG.Models.Product>;
 <div class="others-toy">
-
-
-    @await Component.InvokeAsync("ToyBoxes",1)
-    @await Component.InvokeAsync("ToyBoxes",2)
-    @*<div class="others-toy-item">
-        <img src="~/public/image/xe-dia-hinh.jpg" alt="" />
-        <h3>
-            Đồ chơi xe địa hình cứu hộ Lego City 60301
-        </h3>
-        <p class="others-toy-item-price">
-            993.200₫
-        </p>
-        <span class="others-toy-item-old-price">
-            1.399.000₫
-        </span>
-        <span class="others-toy-item-percent">
-            29%
-        </span>
-
-        <div class="others-toy-item-buy">
-            <p class="txt">Chọn mua</p>
-        </div>
-    </div>
-
-    <div class="others-toy-item">
-        <img src="~/public/image/hot-wheels.jpg" alt="" />
-        <h3>
-            Đồ chơi trạm rửa xe thông minh Hot Wheels
-        </h3>
-        <p class="others-toy-item-price">
-            998.200₫
-        </p>
-        <span class="others-toy-item-old-price">
-            1.349.000₫
-        </span>
-        <span class="others-toy-item-percent">
-            26%
-        </span>
-
-        <div class="others-toy-item-buy">
-            <p class="txt">Chọn mua</p>
-        </div>
-    </div>
-
-    <div class="others-toy-item">
-        <img src="~/public/image/thung-gach.jpg" alt="" />
-        <h3>
-            Đồ chơi thùng gạch sáng tạo Lego Duplo
-        </h3>
-        <p class="others-toy-item-price">
-            1.002.400₫
-        </p>
-        <span class="others-toy-item-old-price">
-            1.319.000₫
-        </span>
-        <span class="others-toy-item-percent">
-            24%
-        </span>
-
-        <div class="others-toy-item-buy">
-            <p class="txt">Chọn mua</p>
-        </div>
-    </div>
-
-    <div class="others-toy-item">
-        <img src="~/public/image/tau-chien.jpg" alt="" />
-        <h3>
-            Đồ chơi tàu chiến hạm bay Bounty Lego
-        </h3>
-        <p class="others-toy-item-price">
-            1.039.200₫
-        </p>
-        <span class="others-toy-item-old-price">
-            1.299.000₫
-        </span>
-        <span class="others-toy-item-percent">
-            20%
-        </span>
-
-        <div class="others-toy-item-buy">
-            <p class="txt">Chọn mua</p>
-        </div>
-    </div>
-
-    <div class="others-toy-item">
-        <img src="~/public/image/phi-co.jpg" alt="" />
-        <h3>
-            Đồ chơi phi cơ chiến đấu của Cole Lego
-        </h3>
-        <p class="others-toy-item-price">
-            1.000.200₫
-        </p>
-        <span class="others-toy-item-old-price">
-            1.299.000₫
-        </span>
-        <span class="others-toy-item-percent">
-            23%
-        </span>
-
-        <div class="others-toy-item-buy">
-            <p class="txt">Chọn mua</p>
-        </div>
-    </div>
-
-    <div class="others-toy-item">
-        <img src="~/public/image/cam-trai.jpg" alt="" />
-        <h3>
-            Đồ chơi xe địa hình cứu hộ Lego City 60301
-        </h3>
-        <p class="others-toy-item-price">
-            1.002.500₫
-        </p>
-        <span class="others-toy-item-old-price">
-            1.269.000₫
-        </span>
-        <span class="others-toy-item-percent">
-            21%
-        </span>
-
-        <div class="others-toy-item-buy">
-            <p class="txt">Chọn mua</p>
-        </div>
-    </div>*@
-
-
-
+    @*@for (int i = 1; i <= @Model.Count ; i++)
+    {
+        @await Component.InvokeAsync("ToyBoxes",i)
+    }*@
+    
+    @foreach (var item in @Model.Take(6))
+    {
+        @await Component.InvokeAsync("ToyBoxes",item.ProductID)
+    }
 </div>
