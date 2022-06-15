@@ -116,6 +116,7 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Vi
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Footer.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Info.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_OthersToy.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_OthersToy_Toy.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Policy.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_Slider.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.RazorTargetAssemblyInfo.cache
@@ -127,4 +128,3 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\ref\BT2M
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.genruntimeconfig.cache
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.csproj.AssemblyReference.cache
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_OthersToy_Toy.cshtml.g.cs

@@ -1,5 +1,6 @@
 ﻿
 
+//show và unshow các class dưới đây
 function showFilter(obj) {
     var c = document.getElementsByClassName("sort-select-main");
     for (var i = 0; i < c.length; i++) {
@@ -13,6 +14,7 @@ function showFilter(obj) {
     }
 }
 
+//show và unshow các class dưới đây
 function showFilteritem(obj) {
     var c = document.getElementsByClassName("filter-show");
 
@@ -24,26 +26,83 @@ function showFilteritem(obj) {
     }
 }
 
+//show và unshow các class dưới đây
+function showFilteritem1(obj) {
+    var c = document.getElementsByClassName("filter-show");
+
+    if (c[1].style.display == "block") {
+        c[1].style.display = "none";
+    }
+    else {
+        c[1].style.display = "block";
+    }
+}
+
+var a = 5
+console.log(a)
+
+var filtersBrand = [];
+var filtersKind = [];
+
+//trạng thái nút bấm filter
 $(document).ready(function () {
     $('.c-btnbox').click(function () {
-        var searchBrand = $(this).attr('data-brand');
-        console.log(searchBrand)
+        
+        if ($(this).hasClass('act')) {
+            $(this).removeClass('act');
+        }
+        else {
+            if ($(this).attr('data-brand') != undefined && !filtersBrand.includes($(this).attr('data-brand'))) {
+                filtersBrand.push($(this).attr('data-brand'));
+            }
+            if ($(this).attr('data-name') != undefined && !filtersKind.includes($(this).attr('data-name'))) {
+                filtersKind.push($(this).attr('data-name'));
+            }
+            
+            console.log(filtersBrand)
+            console.log(filtersKind)
+            $(this).addClass('act');
+        }
+    })
+});
+
+
+
+//lấy dữ liệu data-brand và data-name của class ".c-btnbox"
+$(document).ready(function () {
+    $('.filter-button').click(function () {
+        //var searchBrand = $(this).attr('data-brand');
+        //var searchKind = $(this).attr('data-name');
+
+        var prd = {
+            brand : [],
+            kind : []
+        };
+
+        prd.brand = filtersBrand;
+        prd.kind = filtersKind;
+
+        console.log(prd.brand)
+        console.log(prd.kind)
+
+        var myJsonProduct = JSON.stringify(prd);
+
         $.ajax({
             url: '/Product/SearchFilter',
             type: 'GET',
             data: {
-                searchBrand: searchBrand
+                jsonprd: myJsonProduct
             },
             dataType: 'json',
             contentType: 'application/json;charset=utf-8',
             success: function (response) {
                 var data = JSON.parse(response);
                 console.log(data)
-                
+
                 $('#toy-grid').load('Product/LoadToyBoxes', {
                     aPList: data
-                    });
-                
+                });
+
             },
             error: function () {
 

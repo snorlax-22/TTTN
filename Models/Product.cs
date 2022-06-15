@@ -13,7 +13,7 @@ namespace BT2MWG.Models
         public decimal Price { get; set; }
         public int Discount { get; set; }
         public List<string> Promotion { get; set; }
-       
+
         public string Brand { get; set; }
 
         public List<string> Kind { get; set; }
@@ -30,6 +30,13 @@ namespace BT2MWG.Models
         public List<string> Features { get; set; }
         public List<string> Instructions { get; set; }
 
+    }
+
+    public class QuerySearch
+    {
+        public List<string> brand { get; set; }
+
+        public List<string> kind { get; set; }
     }
 
 

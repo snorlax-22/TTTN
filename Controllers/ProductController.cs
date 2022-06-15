@@ -37,10 +37,28 @@ namespace BT2MWG.Controllers
             return View(products);
         }
 
-        //public IActionResult LoadToyBoxes(int value)
-        //{
-        //    return ViewComponent("ToyBoxes",new { inputId = value });
-        //}
+        public IActionResult ToyQuery(QuerySearch qry)
+        {
+            // ajax -> post/get -> map fiel to qry -> exeute search
+            
+            var products = dataHelper.initProducts();
+
+           // products.Where(e => e.Price > qry.priceFrom)
+
+
+            //truy van theo dieu kien
+
+
+            //order
+
+
+
+
+            return View(products);
+        }
+
+
+        //task: chuyển cái này qua controller khác
         public IActionResult LoadToyBoxes(List<Product> aPList)
         {
             return PartialView("_OthersToy_Toy", aPList);
@@ -76,15 +94,18 @@ namespace BT2MWG.Controllers
         }
 
         [HttpGet]
-        public ActionResult SearchFilter(string searchBrand)
+        public ActionResult SearchFilter(string jsonprd)
         {
-            if (searchBrand == null) { return View(); }
+            QuerySearch qry = JsonConvert.DeserializeObject<QuerySearch>(jsonprd);
+
             var products = dataHelper.initProducts();
             try
             {
-                productsSearchedBrand = from product in products
-                                        where product.Brand == searchBrand
-                                        select product;
+                productsSearchedBrand = (from product in products
+                                        where qry.brand.Contains(product.Brand)
+                                        && qry.kind.Intersect(product.Kind).Any()
+                                        select product);
+                
 
             }
             catch (ArgumentNullException)

@@ -51,17 +51,6 @@ a {
         position: relative;
         color: #333;
     }
-        .filter-item__title span::before {
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-            border-top: 4px solid #333;
-            content: '';
-            height: 0;
-            position: absolute;
-            top: 6px;
-            right: 0;
-            width: 0;
-        }
 
 .filter-show {
     display: none;
@@ -84,6 +73,37 @@ a {
     flex-wrap: wrap;
 }
 
+.filter-button {
+    box-shadow: 0 -4px 8px rgb(0 0 0 / 5%);
+    justify-content: center;
+    text-align: center;
+    margin: 10px -15px 0;
+    padding: 10px 4px;
+    /*display: none;*/
+}
+
+.btn-filter-close {
+    color: #023f88;
+}
+
+.btn-filter-close, .btn-filter-readmore {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 6px;
+    padding: 13px 10px;
+    text-align: center;
+    width: 35%;
+    position: relative;
+    height: 40px;
+}
+
+.btn-filter-readmore {
+    background-color: #ed1164;
+    border-radius: 8px;
+    color: #fff;
+}
+
 .c-btnbox {
     align-items: center;
     border: 1px solid #dfdfdf;
@@ -97,6 +117,10 @@ a {
     margin-right: 6px;
     padding: 9px 11px;
 }
+
+    .c-btnbox.act {
+        border: 1px solid #ed1164;
+    }
 
 .filter-list--column .c-btnbox {
     margin-right: 6px;
@@ -204,16 +228,35 @@ a {
         padding: 11px 3px;
     }
 
-#toy-grid{
-    margin-top:40px;
+#toy-grid {
+    margin-top: 40px;
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
     flex-flow: row wrap;
 }
 
-#toy-grid>div{
-    width:14%;
-    margin-bottom:2%;
-    margin-left: 0.66%;
-}
+    #toy-grid > div {
+        width: 14%;
+        margin-bottom: 2%;
+        margin-left: 0.66%;
+    }
+
+
+
+/*a.c-btnbox::before {
+    background-image: url(https://cdn.tgdd.vn/mwgcart/bluekids/images/common/desktop/icon_common@2x.png?v=3);
+    content: '';
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 350px 350px;
+    background-position: -305px -40px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: -1px;
+    right: -1px;
+}*/
+
