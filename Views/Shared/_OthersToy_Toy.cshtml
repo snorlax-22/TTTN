@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using System.Globalization
+@model List<BT2MWG.Models.Product>;
+
+    @*@for (int i = 1; i <= @Model.Count ; i++)
+    {
+        @await Component.InvokeAsync("ToyBoxes",i)
+    }*@
+    
+    @foreach (var item in @Model)
+    {
+        @await Component.InvokeAsync("ToyBoxes",item.ProductID)
+    }

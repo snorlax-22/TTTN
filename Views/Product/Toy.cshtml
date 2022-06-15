@@ -24,10 +24,12 @@
                 <div class="filter-item__title"><span>Thương hiệu</span></div>
                 <div class="filter-show">
                     <div class="filter-list filter-list--column manu outsight">
-                        <a href="ta-cho-be-bobby" class="c-btnbox filter-manu ">
+                        <a id="test" class="c-btnbox filter-manu " data-brand="HOT WHEELS (Mỹ)">
+                            @*<a href="/Product/Toy?searchedBrand=HOT%20WHEELS%20(M%E1%BB%B9)" class="c-btnbox filter-manu " data-brand="HOT WHEELS (Mỹ)">*@
                             <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/120876/HOTWHEELS-200x120.png" width="67" height="33" alt="HOT WHEELS">
                         </a>
-                        <a href="ta-cho-be-huggies" class="c-btnbox filter-manu ">
+                        @*<a href="/Product/Toy?searchedBrand=Lego%20(%C4%90an%20M%E1%BA%A1ch)" class="c-btnbox filter-manu " data-brand="Lego (Đan Mạch)">*@
+                        <a class="c-btnbox filter-manu" data-brand="Lego (Đan Mạch)">
                             <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/124513/Lego-200x120.png" width="67" height="33" alt="Lego">
                         </a>
                     </div>
@@ -97,7 +99,6 @@
             {
                 @await Component.InvokeAsync("ToyBoxes", item.ProductID)
             }
-
         </div>
     </div>
 </section>

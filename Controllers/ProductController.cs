@@ -16,6 +16,7 @@ namespace BT2MWG.Controllers
         private object productsSearched;
         private object productsSearchedBrand;
 
+
         public IActionResult Index()
         {
             var products = dataHelper.initProducts();
@@ -33,9 +34,16 @@ namespace BT2MWG.Controllers
                             where product.Brand == searchedBrand.Trim()
                             select product).ToList();
             }
-           
-
             return View(products);
+        }
+
+        //public IActionResult LoadToyBoxes(int value)
+        //{
+        //    return ViewComponent("ToyBoxes",new { inputId = value });
+        //}
+        public IActionResult LoadToyBoxes(List<Product> aPList)
+        {
+            return PartialView("_OthersToy_Toy", aPList);
         }
 
         [HttpGet]
@@ -67,6 +75,31 @@ namespace BT2MWG.Controllers
             return Json(value);
         }
 
+        [HttpGet]
+        public ActionResult SearchFilter(string searchBrand)
+        {
+            if (searchBrand == null) { return View(); }
+            var products = dataHelper.initProducts();
+            try
+            {
+                productsSearchedBrand = from product in products
+                                        where product.Brand == searchBrand
+                                        select product;
 
+            }
+            catch (ArgumentNullException)
+            {
+                return Json("Nothing");
+            }
+
+
+            string value = string.Empty;
+            value = JsonConvert.SerializeObject(productsSearchedBrand, Formatting.Indented, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+
+            return Json(value);
+        }
     }
 }
