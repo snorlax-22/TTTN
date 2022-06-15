@@ -38,15 +38,20 @@ function showFilteritem1(obj) {
     }
 }
 
-var a = 5
-console.log(a)
-
 var filtersBrand = [];
 var filtersKind = [];
-
+//sad
 //trạng thái nút bấm filter
 $(document).ready(function () {
+    $('.sort').click(function () {
+
+            console.log($(this).attr('data-name'))
+    })
+});
+
+$(document).ready(function () {
     $('.c-btnbox').click(function () {
+        /*$('#MyDiv').css({ "background-color": "red" });*/
         
         if ($(this).hasClass('act')) {
             $(this).removeClass('act');
@@ -66,13 +71,9 @@ $(document).ready(function () {
     })
 });
 
-
-
 //lấy dữ liệu data-brand và data-name của class ".c-btnbox"
 $(document).ready(function () {
     $('.filter-button').click(function () {
-        //var searchBrand = $(this).attr('data-brand');
-        //var searchKind = $(this).attr('data-name');
 
         var prd = {
             brand : [],
@@ -88,7 +89,7 @@ $(document).ready(function () {
         var myJsonProduct = JSON.stringify(prd);
 
         $.ajax({
-            url: '/Product/SearchFilter',
+            url: '/ProductCate/SearchFilter',
             type: 'GET',
             data: {
                 jsonprd: myJsonProduct
@@ -99,13 +100,11 @@ $(document).ready(function () {
                 var data = JSON.parse(response);
                 console.log(data)
 
-                $('#toy-grid').load('Product/LoadToyBoxes', {
+                $('#toy-grid').load('ProductCate/LoadToyBoxes', {
                     aPList: data
                 });
-
             },
             error: function () {
-
             }
         })
     })

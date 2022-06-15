@@ -5,7 +5,6 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\BT2MWG.d
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\BT2MWG.runtimeconfig.json
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\BT2MWG.runtimeconfig.dev.json
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\BT2MWG.dll
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\ref\BT2MWG.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\BT2MWG.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\BT2MWG.Views.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\BT2MWG.Views.pdb
@@ -103,13 +102,12 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.M
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.RazorAssemblyInfo.cache
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.RazorAssemblyInfo.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\staticwebassets\BT2MWG.StaticWebAssets.Manifest.cache
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\staticwebassets\BT2MWG.StaticWebAssets.xml
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\scopedcss\bundle\BT2MWG.styles.css
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.TagHelpers.input.cache
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.TagHelpers.output.cache
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.RazorCoreGenerate.cache
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\ProductCate\Toy.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Product\Toy.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\Components\ProductDetailBox\Default.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\Components\ToyBoxes\Default.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\Shared\_DetailBody.cshtml.g.cs
@@ -128,3 +126,5 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\ref\BT2M
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.genruntimeconfig.cache
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.csproj.AssemblyReference.cache
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\ref\BT2MWG.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\staticwebassets\BT2MWG.StaticWebAssets.xml
