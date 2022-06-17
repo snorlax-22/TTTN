@@ -28,6 +28,7 @@ namespace BT2MWG.Models
         public string Origin { get; set; }
 
         public List<string> Features { get; set; }
+
         public List<string> Instructions { get; set; }
 
     }
@@ -37,6 +38,10 @@ namespace BT2MWG.Models
         public List<string> brand { get; set; }
 
         public List<string> kind { get; set; }
+        
+        public string orderType { get; set; }
+
+
     }
 
 

@@ -242,21 +242,13 @@ a {
         margin-left: 0.66%;
     }
 
+.on-active-page{
+
+}
+
+.not-on-active-page{
+    display:none;
+}
 
 
-/*a.c-btnbox::before {
-    background-image: url(https://cdn.tgdd.vn/mwgcart/bluekids/images/common/desktop/icon_common@2x.png?v=3);
-    content: '';
-    background-repeat: no-repeat;
-    display: inline-block;
-    line-height: 30px;
-    vertical-align: middle;
-    background-size: 350px 350px;
-    background-position: -305px -40px;
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    top: -1px;
-    right: -1px;
-}*/
 

@@ -2,6 +2,11 @@
 var filtersBrand = [];
 var filtersKind = [];
 var sortSelected = "";
+var prd = {
+    brand: [],
+    kind: [],
+    orderType:""
+};
 
 //show và unshow các class dưới đây
 function showFilter(obj) {
@@ -46,16 +51,44 @@ function showFilteritem1(obj) {
 //trạng thái nút bấm filter
 $(document).ready(function () {
     $('.sort').click(function () {
+        prd.orderType = $(this).attr('data-name');
+        console.log(prd.orderType)
+        var myJsonProduct = JSON.stringify(prd);
 
-            console.log($(this).attr('data-name'))
+        $.ajax({
+            url: '/ProductCate/SearchFilter',
+            type: 'GET',
+            data: {
+                jsonprd: myJsonProduct
+            },
+            dataType: 'json',
+            contentType: 'application/json;charset=utf-8',
+            success: function (response) {
+                var data = JSON.parse(response);
+                $('#toy-grid').load('ProductCate/LoadToyBoxes', {
+                    aPList: data,
+                });
+            },
+            error: function () {
+            }
+        })
     })
 });
 
+//check nếu có brand hoặc loại trong 
 $(document).ready(function () {
     $('.c-btnbox').click(function () {
-        
         if ($(this).hasClass('act')) {
+            
+            if (filtersBrand.includes($(this).attr('data-brand'))) {
+                filtersBrand.pop($(this).attr('data-brand'));
+            }
+            if (filtersKind.includes($(this).attr('data-name'))) {
+                filtersKind.pop($(this).attr('data-name'));
+            }
             $(this).removeClass('act');
+            console.log("removed " + filtersBrand);
+            console.log("removed " + filtersKind);
         }
         else {
             if ($(this).attr('data-brand') != undefined && !filtersBrand.includes($(this).attr('data-brand'))) {
@@ -65,6 +98,8 @@ $(document).ready(function () {
                 filtersKind.push($(this).attr('data-name'));
             }
             $(this).addClass('act');
+            console.log("added " + filtersBrand);
+            console.log("added " + filtersKind);
         }
     })
 });
@@ -72,14 +107,9 @@ $(document).ready(function () {
 //lấy dữ liệu data-brand và data-name của class ".c-btnbox"
 $(document).ready(function () {
     $('.filter-button').click(function () {
-
-        var prd = {
-            brand : [],
-            kind : []
-        };
-
         prd.brand = filtersBrand;
         prd.kind = filtersKind;
+        console.log(prd);
 
         var myJsonProduct = JSON.stringify(prd);
 
