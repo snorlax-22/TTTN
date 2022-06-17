@@ -44,6 +44,25 @@ namespace BT2MWG.Controllers
             return PartialView("_OthersToy_Toy", aPList);
         }
 
+        public IActionResult LoadToyBoxesSorted(List<Product> aPList, string key)
+        {
+
+            if (key == "priceAsc")
+            {
+                aPList = aPList.OrderBy(o => o.Price).ToList();
+            }
+            if (key == "priceDesc")
+            {
+                aPList = aPList.OrderByDescending(o => o.Price).ToList();
+            }
+            if (key == "discountAsc")
+            {
+                aPList = aPList.OrderByDescending(o => o.Discount).ToList();
+            }
+
+            return PartialView("_OthersToy_Toy", aPList);
+        }
+
         [HttpGet]
         public ActionResult SearchFilter(string jsonprd)
         {

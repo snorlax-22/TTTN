@@ -1,4 +1,7 @@
 ﻿
+var filtersBrand = [];
+var filtersKind = [];
+var sortSelected = "";
 
 //show và unshow các class dưới đây
 function showFilter(obj) {
@@ -38,8 +41,7 @@ function showFilteritem1(obj) {
     }
 }
 
-var filtersBrand = [];
-var filtersKind = [];
+
 //sad
 //trạng thái nút bấm filter
 $(document).ready(function () {
@@ -51,7 +53,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.c-btnbox').click(function () {
-        /*$('#MyDiv').css({ "background-color": "red" });*/
         
         if ($(this).hasClass('act')) {
             $(this).removeClass('act');
@@ -63,9 +64,6 @@ $(document).ready(function () {
             if ($(this).attr('data-name') != undefined && !filtersKind.includes($(this).attr('data-name'))) {
                 filtersKind.push($(this).attr('data-name'));
             }
-            
-            console.log(filtersBrand)
-            console.log(filtersKind)
             $(this).addClass('act');
         }
     })
@@ -83,9 +81,6 @@ $(document).ready(function () {
         prd.brand = filtersBrand;
         prd.kind = filtersKind;
 
-        console.log(prd.brand)
-        console.log(prd.kind)
-
         var myJsonProduct = JSON.stringify(prd);
 
         $.ajax({
@@ -98,10 +93,8 @@ $(document).ready(function () {
             contentType: 'application/json;charset=utf-8',
             success: function (response) {
                 var data = JSON.parse(response);
-                console.log(data)
-
                 $('#toy-grid').load('ProductCate/LoadToyBoxes', {
-                    aPList: data
+                    aPList: data,
                 });
             },
             error: function () {
