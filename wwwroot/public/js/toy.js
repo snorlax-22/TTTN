@@ -76,12 +76,15 @@ $(document).ready(function () {
     })
 });
 
+
 //phân trang
 $(document).ready(function () {
-    $('.button-pagbreak.button-pagbreak-prev').click(function () {
+    $('.pagination.button-pagbreak.button-pagbreak-prev').click(function () {
         console.log($(this).attr('data-page'))
         prd.CurrentPageIndex = $(this).attr('data-page');
-        console.log(prd.currentPage)
+
+        $('.pagination.button-pagbreak.button-pagbreak-prev').removeClass("active");
+        $(this).toggleClass("active");
 
         var myJsonProduct = JSON.stringify(prd);
 
@@ -102,23 +105,91 @@ $(document).ready(function () {
             error: function () {
             }
         })
-    })
+    }),
+    $('#_pgNextPage').click(function () {
+        console.log($(this).attr('data-page'))
+        prd.CurrentPageIndex = $(this).attr('data-page');
+
+        var buttonPage = document.getElementsByClassName('pagination button-pagbreak button-pagbreak-prev');
+
+        $('.pagination').removeClass("active");
+        buttonPage[buttonPage.length - 1].classList.add("active");
+
+        var myJsonProduct = JSON.stringify(prd);
+
+        $.ajax({
+            url: '/ProductCate/SearchFilter',
+            type: 'GET',
+            data: {
+                jsonprd: myJsonProduct
+            },
+            dataType: 'json',
+            contentType: 'application/json;charset=utf-8',
+            success: function (response) {
+                var data = JSON.parse(response);
+                $('#toy-grid').load('ProductCate/LoadToyBoxes', {
+                    aPList: data
+                });
+            },
+            error: function () {
+            }
+        })
+    }),
+        $('#_pgPreviousPage').click(function () {
+            console.log($(this).attr('data-page'))
+            prd.CurrentPageIndex = $(this).attr('data-page');
+
+            var buttonPage = document.getElementsByClassName('pagination button-pagbreak button-pagbreak-prev');
+
+            $('.pagination').removeClass("active");
+            buttonPage[0].classList.add("active");
+
+            var myJsonProduct = JSON.stringify(prd);
+
+            $.ajax({
+                url: '/ProductCate/SearchFilter',
+                type: 'GET',
+                data: {
+                    jsonprd: myJsonProduct
+                },
+                dataType: 'json',
+                contentType: 'application/json;charset=utf-8',
+                success: function (response) {
+                    var data = JSON.parse(response);
+                    $('#toy-grid').load('ProductCate/LoadToyBoxes', {
+                        aPList: data
+                    });
+                },
+                error: function () {
+                }
+            })
+        })
 });
 
 //check nếu có brand hoặc loại trong 
 $(document).ready(function () {
+    //var y = [1, 2, 2, 3, 2]
+    //var removeItem = 2;
+
+    //y = jQuery.grep(y, function (value) {
+    //    return value != removeItem;
+    //});
     $('.c-btnbox').click(function () {
         if ($(this).hasClass('act')) {
             
             if (filtersBrand.includes($(this).attr('data-brand'))) {
-                filtersBrand.pop($(this).attr('data-brand'));
+                //filtersBrand.pop($(this).attr('data-brand'));
+                filtersBrand.splice($.inArray($(this).attr('data-brand'), filtersBrand), 1);
+               
             }
             if (filtersKind.includes($(this).attr('data-name'))) {
-                filtersKind.pop($(this).attr('data-name'));
+                //filtersKind.pop($(this).attr('data-name'));
+                filtersKind.splice($.inArray($(this).attr('data-name'), filtersKind), 1);
+               
             }
             $(this).removeClass('act');
-            console.log("removed " + filtersBrand);
-            console.log("removed " + filtersKind);
+            console.log(filtersBrand);
+            console.log(filtersKind);
         }
         else {
             if ($(this).attr('data-brand') != undefined && !filtersBrand.includes($(this).attr('data-brand'))) {
@@ -128,8 +199,9 @@ $(document).ready(function () {
                 filtersKind.push($(this).attr('data-name'));
             }
             $(this).addClass('act');
-            console.log("added " + filtersBrand);
-            console.log("added " + filtersKind);
+
+            console.log(filtersBrand);
+            console.log(filtersKind);
         }
     })
 });

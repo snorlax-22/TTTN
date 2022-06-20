@@ -99,10 +99,20 @@
             }
         </div>
         <div class="pagbreak">
-            @for (int i = 0; i <= @maxPage; i++)
+            <a class="button-pagbreak button-pagbreak-prev" id="_pgPreviousPage" data-page="1"></a>
+            @for (int i = 0; i < @maxPage; i++)
             {
-                <a class="button-pagbreak button-pagbreak-prev" data-page=@(i+1)>@(i+1)</a>
+                @if ((@i + 1) == 1)
+                {
+                    <a class="pagination button-pagbreak button-pagbreak-prev active" data-page=@(i+1)>@(i+1)</a>
+                }
+                else
+                {
+                    <a class="pagination button-pagbreak button-pagbreak-prev" data-page=@(i+1)>@(i+1)</a>
+                }
+                
             }
+            <a class="button-pagbreak button-pagbreak-next" id="_pgNextPage" data-page=@(maxPage)></a>
         </div>
     </div>
 </section>

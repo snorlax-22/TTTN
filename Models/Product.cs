@@ -33,8 +33,4 @@ namespace BT2MWG.Models
 
         public int maxPage { get; set; }
     }
-
-    
-
-
 }

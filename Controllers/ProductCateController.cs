@@ -9,19 +9,21 @@ namespace BT2MWG.Controllers
 {
     public class ProductCateController : Controller
     {
-
+        int maxRows = 2;
         DataHelper dataHelper = new DataHelper();
         private List<Product> productsSearchedBrand;
 
         public ActionResult Toy()
         {
-            int maxRows = 2;
+
 
             var products = dataHelper.initProducts();
+            double pageCount = (double)((decimal)products.Count() / Convert.ToDecimal(maxRows));
             products = (from product in products select product)
                                              .Take(maxRows)
                                              .ToList();
-            double pageCount = (double)((decimal)products.Count() / Convert.ToDecimal(maxRows));
+
+            
 
             foreach (var item in products)
             {
@@ -53,7 +55,7 @@ namespace BT2MWG.Controllers
         public ActionResult SearchFilter(string jsonprd)
         {
             QuerySearch qry = JsonConvert.DeserializeObject<QuerySearch>(jsonprd);
-            int maxRows = 2;
+
             var products = dataHelper.initProducts();
             productsSearchedBrand = products;
             if (qry.CurrentPageIndex == null)

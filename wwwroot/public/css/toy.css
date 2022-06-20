@@ -253,6 +253,7 @@ a {
     .pagbreak .button-pagbreak {
         position: relative;
     }
+
 .pagbreak a {
     background-color: #f6f8fa;
     border-radius: 4px;
@@ -266,6 +267,44 @@ a {
     width: 41px;
     cursor: pointer;
 }
+
+#_pgPreviousPage::before {
+    border-top: 1px solid #555;
+    border-left: 1px solid #555;
+    content: '';
+    height: 8px;
+    position: absolute;
+    width: 8px;
+}
+
+#_pgPreviousPage::before {
+    left: 18px;
+    transform: rotate(-45deg);
+    top: 11px;
+}
+
+#_pgNextPage::before {
+    border-top: 1px solid #555;
+    border-left: 1px solid #555;
+    content: '';
+    height: 8px;
+    position: absolute;
+    width: 8px;
+}
+
+#_pgNextPage::before {
+    left: 14px;
+    transform: rotate(135deg);
+    top: 11px;
+}
+
+.pagbreak .active {
+    background-color: #faeff3;
+    border: 1px solid #ed1164;
+    color: #ed1164;
+    font-weight: bold;
+}
+
 
 
 
