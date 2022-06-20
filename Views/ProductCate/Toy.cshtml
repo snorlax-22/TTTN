@@ -1,7 +1,8 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 *@
 @{
+    var maxPage = Model[0].maxPage;
     Layout = "~/Views/Shared/_Footer.cshtml";
 }@using System.Globalization
 @model List<BT2MWG.Models.Product>;
@@ -10,6 +11,7 @@
     <link href="~/public/css/style.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
     <link href="~/public/css/toy.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
     <script src="~/public/js/toy.js"></script>
+
 </head>
 <section>
     <div class="box-filter">
@@ -20,7 +22,7 @@
                     <strong class="number hide" style="display: none;"></strong>
                 </div>
             </div>
-            <div class="filter-item" >
+            <div class="filter-item">
                 <div class="filter-item__title" onclick="showFilteritem(this);"><span>Thương hiệu</span></div>
                 <div class="filter-show" id="show1">
                     <div class="filter-list filter-list--column manu outsight">
@@ -40,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="filter-item" >
+            <div class="filter-item">
                 <div class="filter-item__title" onclick="showFilteritem1(this);"><span>Loại</span></div>
                 <div class="filter-show">
                     <div class="filter-list props outsight">
@@ -91,19 +93,16 @@
 
     <div>
         <div class="others-toy" id="toy-grid">
-            @*@foreach (var item in @Model)
-                {
-                    @await Component.InvokeAsync("ToyBoxes", item.ProductID)
-                }*@
-
-            @for (int i = 0; i < 5; i++)
+            @foreach (var item in @Model)
             {
-                @await Component.InvokeAsync("ToyBoxes", 1)
-                @await Component.InvokeAsync("ToyBoxes", 2)
-                @await Component.InvokeAsync("ToyBoxes", 3)
-                @await Component.InvokeAsync("ToyBoxes", 4)
+                @await Component.InvokeAsync("ToyBoxes", item.ProductID)
             }
-
+        </div>
+        <div class="pagbreak">
+            @for (int i = 0; i <= @maxPage; i++)
+            {
+                <a class="button-pagbreak button-pagbreak-prev" data-page=@(i+1)>@(i+1)</a>
+            }
         </div>
     </div>
 </section>

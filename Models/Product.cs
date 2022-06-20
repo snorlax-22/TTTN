@@ -31,18 +31,10 @@ namespace BT2MWG.Models
 
         public List<string> Instructions { get; set; }
 
+        public int maxPage { get; set; }
     }
 
-    public class QuerySearch
-    {
-        public List<string> brand { get; set; }
-
-        public List<string> kind { get; set; }
-        
-        public string orderType { get; set; }
-
-
-    }
+    
 
 
 }

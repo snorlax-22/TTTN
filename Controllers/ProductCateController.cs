@@ -13,16 +13,21 @@ namespace BT2MWG.Controllers
         DataHelper dataHelper = new DataHelper();
         private List<Product> productsSearchedBrand;
 
-        public ActionResult Toy(string searchedBrand)
+        public ActionResult Toy()
         {
-            var products = dataHelper.initProducts();
+            int maxRows = 2;
 
-            if (searchedBrand != null)
+            var products = dataHelper.initProducts();
+            products = (from product in products select product)
+                                             .Take(maxRows)
+                                             .ToList();
+            double pageCount = (double)((decimal)products.Count() / Convert.ToDecimal(maxRows));
+
+            foreach (var item in products)
             {
-                products = (from product in products
-                            where product.Brand == searchedBrand.Trim()
-                            select product).ToList();
+                item.maxPage = (int)pageCount;
             }
+
             return View(products);
         }
 
@@ -48,52 +53,43 @@ namespace BT2MWG.Controllers
         public ActionResult SearchFilter(string jsonprd)
         {
             QuerySearch qry = JsonConvert.DeserializeObject<QuerySearch>(jsonprd);
-
+            int maxRows = 2;
             var products = dataHelper.initProducts();
             productsSearchedBrand = products;
+            if (qry.CurrentPageIndex == null)
+            {
+                qry.CurrentPageIndex = 0;
+            }
             try
             {
-
                 if (qry.brand.Count != 0 || qry.kind.Count != 0)
                 {
                     productsSearchedBrand = (from product in products
                                              where qry.brand.Contains(product.Brand)
                                              || qry.kind.Intersect(product.Kind).Any()
-                                             select product).ToList();
-                    switch (qry.orderType)
+                                             select product)
+                                             .Skip((int)((qry.CurrentPageIndex - 1) * maxRows))
+                                             .Take(maxRows).ToList();
+                    productsSearchedBrand = qry.orderType switch
                     {
-                        case "discountAsc":
-                            productsSearchedBrand = productsSearchedBrand.OrderByDescending(x => x.Discount).ToList();
-                            break;
-                        case "priceAsc":
-                            productsSearchedBrand = productsSearchedBrand.OrderBy(x => x.Price).ToList();
-                            break;
-                        case "priceDesc":
-                            productsSearchedBrand = productsSearchedBrand.OrderByDescending(x => x.Price).ToList();
-                            break;
-                        default:
-                            productsSearchedBrand = productsSearchedBrand.ToList();
-                            break;
-                    }
+                        "discountAsc" => productsSearchedBrand.OrderByDescending(x => x.Discount).ToList(),
+                        "priceAsc" => productsSearchedBrand.OrderBy(x => x.Price).ToList(),
+                        "priceDesc" => productsSearchedBrand.OrderByDescending(x => x.Price).ToList(),
+                        _ => productsSearchedBrand.ToList(),
+                    };
                 }
                 else
                 {
-                    productsSearchedBrand = (from product in products select product).ToList();
-                    switch (qry.orderType)
+                    productsSearchedBrand = (from product in products select product)
+                                            .Skip((int)((qry.CurrentPageIndex - 1) * maxRows))
+                                             .Take(maxRows).ToList();
+                    productsSearchedBrand = qry.orderType switch
                     {
-                        case "discountAsc":
-                            productsSearchedBrand = productsSearchedBrand.OrderByDescending(x => x.Discount).ToList();
-                            break;
-                        case "priceAsc":
-                            productsSearchedBrand = productsSearchedBrand.OrderBy(x => x.Price).ToList();
-                            break;
-                        case "priceDesc":
-                            productsSearchedBrand = productsSearchedBrand.OrderByDescending(x => x.Price).ToList();
-                            break;
-                        default:
-                            productsSearchedBrand = productsSearchedBrand.ToList();
-                            break;
-                    }
+                        "discountAsc" => productsSearchedBrand.OrderByDescending(x => x.Discount).ToList(),
+                        "priceAsc" => productsSearchedBrand.OrderBy(x => x.Price).ToList(),
+                        "priceDesc" => productsSearchedBrand.OrderByDescending(x => x.Price).ToList(),
+                        _ => productsSearchedBrand.ToList(),
+                    };
                 }
             }
             catch (ArgumentNullException)
@@ -107,5 +103,25 @@ namespace BT2MWG.Controllers
             });
             return Json(value);
         }
+
+
+        //private CustomerModel GetCustomers(int currentPage)
+        //{
+        //    int maxRows = 10;
+        //    CustomerModel customerModel = new CustomerModel();
+
+        //    customerModel.Customers = (from customer in this.Context.Customers
+        //                               select customer)
+        //                .OrderBy(customer => customer.CustomerID)
+        //                .Skip((currentPage - 1) * maxRows)
+        //                .Take(maxRows).ToList();
+
+        //    double pageCount = (double)((decimal)this.Context.Customers.Count() / Convert.ToDecimal(maxRows));
+        //    customerModel.PageCount = (int)Math.Ceiling(pageCount);
+
+        //    customerModel.CurrentPageIndex = currentPage;
+
+        //    return customerModel;
+        //}
     }
 }

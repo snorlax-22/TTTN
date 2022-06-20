@@ -126,5 +126,4 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\ref\BT2M
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.genruntimeconfig.cache
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.csproj.AssemblyReference.cache
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\ref\BT2MWG.dll
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\staticwebassets\BT2MWG.StaticWebAssets.xml
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\refint\BT2MWG.dll

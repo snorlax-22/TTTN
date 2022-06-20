@@ -5,7 +5,8 @@ var sortSelected = "";
 var prd = {
     brand: [],
     kind: [],
-    orderType:""
+    orderType: "",
+    CurrentPageIndex: 1
 };
 
 //show và unshow các class dưới đây
@@ -67,6 +68,35 @@ $(document).ready(function () {
                 var data = JSON.parse(response);
                 $('#toy-grid').load('ProductCate/LoadToyBoxes', {
                     aPList: data,
+                });
+            },
+            error: function () {
+            }
+        })
+    })
+});
+
+//phân trang
+$(document).ready(function () {
+    $('.button-pagbreak.button-pagbreak-prev').click(function () {
+        console.log($(this).attr('data-page'))
+        prd.CurrentPageIndex = $(this).attr('data-page');
+        console.log(prd.currentPage)
+
+        var myJsonProduct = JSON.stringify(prd);
+
+        $.ajax({
+            url: '/ProductCate/SearchFilter',
+            type: 'GET',
+            data: {
+                jsonprd: myJsonProduct
+            },
+            dataType: 'json',
+            contentType: 'application/json;charset=utf-8',
+            success: function (response) {
+                var data = JSON.parse(response);
+                $('#toy-grid').load('ProductCate/LoadToyBoxes', {
+                    aPList: data
                 });
             },
             error: function () {
