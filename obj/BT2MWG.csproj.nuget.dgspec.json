@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\MWG\\BT2\\BT2MWG\\BT2MWG.csproj": {}
+    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\MWG\\BT2\\BT2MWG\\BT2MWG.csproj": {
+    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\MWG\\BT2\\BT2MWG\\BT2MWG.csproj",
+        "projectUniqueName": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj",
         "projectName": "BT2MWG",
-        "projectPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\MWG\\BT2\\BT2MWG\\BT2MWG.csproj",
+        "projectPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj",
         "packagesPath": "C:\\Users\\Snorlax\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\MWG\\BT2\\BT2MWG\\obj\\",
+        "outputPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages"
@@ -52,6 +52,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
             },
             "System.Text.Json": {
               "target": "Package",

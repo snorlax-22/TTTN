@@ -135,6 +135,7 @@ $(document).ready(function () {
             }
         })
     }),
+        
         $('#_pgPreviousPage').click(function () {
             console.log($(this).attr('data-page'))
             prd.CurrentPageIndex = $(this).attr('data-page');
