@@ -1,0 +1,122 @@
+﻿@using BT2MWG.Models
+@using System.Globalization
+@model BT2MWG.Models.DOCHOI;
+
+@{
+    var count = 0;
+    var dbo = new db();
+
+    var gia = dbo.layGiaTheoMaSanPham(@Model.MaDoChoi).Gia;
+    var listAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
+    var listDanhMuc = dbo.layDanhMucTheoDoChoi(@Model.MaDoChoi);
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+    string giaOld = gia.ToString("#,###", cul.NumberFormat);
+    //viết thêm hàm lấy đồ chơi để lấy tên đồ chơi (lấy theo id)
+}
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/plugins/images/favicon.png">
+    <!-- Custom CSS -->
+    <link href="~/public/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/public/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <!-- Custom CSS -->
+    <link href="~/public/css/style.min.css" rel="stylesheet">
+    <link href="~/public/css/admin/toydetail.css" rel="stylesheet">
+
+    <script src="~/public/js/admin/toydetail.js"></script>
+
+</head>
+
+<body>
+
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+        @await Html.PartialAsync("/Views/Common/Partial/Topbar Header.cshtml")
+
+        @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
+        <div class="page-wrapper">
+            <br />
+            <label>Nhân viên nhập</label>
+            <input id="emppName" type="button" value="" readonly disabled>
+            @*<input id="empName" type="text" name="username" value="" readonly/>*@
+            <br />
+            <br />
+            <label>Tên đồ chơi</label>
+            <input id="toyName" type="text" value="@Model.TenDoChoi" />
+            <br />
+            <br />
+            <label>Nhà cung cấp</label>
+            <input id="toySuppliers" type="text" value="@Model.NHACUNGCAP.TENNHACC" readonly disabled />
+            <br />
+            <br />
+            <label>Hãng đồ chơi</label>
+            <input id="toyBrand" type="text" value="@Model.HANGDOCHOI.TENHANGDOCHOI" readonly disabled />
+            <br />
+            <br />
+            <label>Giá đồ chơi</label>
+            <input id="toyPrice" type="text" value="@giaOld" />₫
+            <br />
+            <br />
+            <label>Danh mục đồ chơi</label>
+            <div class="cate-section">
+                @foreach (var cate in listDanhMuc)
+                {
+                    <input type="text" data-id="@cate.ID" value="@cate.Name" />
+                    <span></span>
+                }
+            </div>
+            <br />
+            <br />
+            <label>Ảnh</label>
+
+            <div class="img-section">
+                @foreach (var item in listAnh)
+                {
+                    count++;
+                    string classnameInput = "inputFileToLoad" + @count;
+                    string classnameImg = "imgTest" + @count;
+
+                    <div class="img">
+                        <img class="@classnameImg img-box" src="@item.HinhAnh" />
+                        <input class="@classnameInput" type="file" onchange="encodeImageFileAsURL('@classnameInput','@classnameImg')" />
+
+                    </div>
+                }
+            </div>
+            <br />
+            <br />
+            <br />
+            <button id="save-toy">Lưu</button>
+        </div>
+
+        <footer class="footer text-center">
+            2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
+        </footer>
+
+    </div>
+
+    </div>
+
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+
+</body>
+

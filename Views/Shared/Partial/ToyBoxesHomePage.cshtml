@@ -1,0 +1,40 @@
+﻿@model BT2MWG.Models.DOCHOI;
+@using BT2MWG.Models;
+@using System.Globalization
+
+@{
+    db dbo = new db();
+    var listHinhAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
+    var gia = dbo.layGiaTheoMaSanPham(@Model.MaDoChoi).Gia;
+    var a = 2;
+    var giaSauGiam = gia - (gia * Model.KHUYENMAI.CTKM.PTGiamGia)/100;
+
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+    string giaOld = gia.ToString("#,###", cul.NumberFormat);
+    string giaNew = giaSauGiam.ToString("#,###", cul.NumberFormat);
+}
+
+<div class="others-toy-item">
+    @if(listHinhAnh.Count > 0){
+        <img src="@listHinhAnh[0].HinhAnh.ToString()" alt="" />
+    }
+    <h3>
+        @*Đồ chơi xe địa hình cứu hộ Lego City 60301*@
+        @Model.TenDoChoi
+    </h3>
+    <p class="others-toy-item-price">
+        @*giá sau khi gảm*@
+        @giaNew₫
+    </p>
+    <span class="others-toy-item-old-price">
+        @*giá cũ*@
+        @giaOld₫
+    </span>
+    <span class="others-toy-item-percent">
+        @Model.KHUYENMAI.CTKM.PTGiamGia %
+    </span>
+
+    <div class="others-toy-item-buy">
+        <p class="txt">Chọn mua</p>
+    </div>
+</div>

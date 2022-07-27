@@ -1,12 +1,10 @@
 ﻿$('#keyword').keyup(function () {
+    debugger;
     var searchField = $('#keyword').val();
     var expression = RegExp(searchField, "i");
 
     //$('.search-result').remove();
     $('.search-result>ul').remove();
-
-   
-
     $.ajax({
         url: '/Product/Search/do-choi',
         type: 'GET',

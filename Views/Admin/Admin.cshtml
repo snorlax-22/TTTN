@@ -1,0 +1,180 @@
+﻿@model BT2MWG.ViewModel.AdminPageViewModel;
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+          content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Ample Admin Lite Template by WrapPixel</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/plugins/images/favicon.png">
+    <!-- Custom CSS -->
+    <link href="~/public/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/public/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <!-- Custom CSS -->
+    <link href="~/public/css/style.min.css" rel="stylesheet">
+
+</head>
+
+<style>
+    #empName:disabled {
+        background: #F7F3B7;
+        color: black;
+        border: 1px solid #bbb;
+    }
+</style>
+
+<body>
+
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+        @await Html.PartialAsync("/Views/Common/Partial/Topbar Header.cshtml")
+
+        @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
+
+        <div class="page-wrapper">
+            <br />
+            <label>Nhân viên nhập</label>
+            <input id="empName" type="button" value="@Model.taikhoan.USERNAME" readonly disabled></input>
+            @*<input id="empName" type="text" name="username" value="" readonly/>*@
+            <label>Giá đồ chơi</label>
+            <input id="toyPrice" type="text" />
+            <label>Tên đồ chơi</label>
+            <input id="toyName" type="text" />
+            <br />
+            <br />
+            <label>Ảnh</label>
+            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();" />
+            <div id="imgTest"></div>
+
+            <button id="add-toy">Thêm</button>
+
+            <table class="table">
+                <tr>
+                    <th>Mã Đồ Chơi</th>
+                    <th>Tên Đồ Chơi</th>
+                    <th>Trạng Thái </th>
+                    <th>Mô Tả</th>
+                    <th>SL Tồn</th>
+                    <th>Tên Hãng</th>
+                    <th>Tên Nhà CC</th>
+                    <th>  </th>
+                    <th>  </th>
+                </tr>
+                @foreach (var item in @Model.listDoChoi)
+                {
+                    string status = item.TrangThai ? "Còn bán" : "Ngừng bán";
+                    <tr>
+                        <td>@item.MaDoChoi</td>
+                        <td>@item.TenDoChoi</td>
+                        <td>@status</td>
+                        <td>@item.MoTa</td>
+                        <td>@item.SLTon</td>
+                        <td>@item.HANGDOCHOI.TENHANGDOCHOI</td>
+                        <td>@item.NHACUNGCAP.TENNHACC</td>
+                        <td><a class="edit-btn" data-id="@item.MaDoChoi" href="">Sửa</a></td>
+                        <td><a href="">Xóa</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+        <footer class="footer text-center">
+            2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
+        </footer>
+
+    </div>
+
+    </div>
+
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="js/pages/dashboards/dashboard1.js"></script>
+</body>
+<script type='text/javascript'>
+
+    $(".edit-btn").click(function(event) {
+        event.preventDefault();
+        window.location.href = "@Url.Action("SuaDoChoi", "Admin")" + "?idDoChoi=" + $(this).data("id");
+    });
+
+    $("#add-toy").click(function(e) {
+        $.ajax({
+            type: "POST",
+            url: "/Admin/ThemDoChoi/",
+            data: {
+                manv: 4,
+                tenDoChoi: $("#toyName").val(),
+                password: $("#toyPrice").val(),
+                listAnh: srcData,
+                slAnh: 1
+            },
+            success: function(result) {
+                if (result == 1) {
+                    console.log('ok');
+                    alert('Thêm đồ chơi thành công !');
+                }
+                else {
+                    console.log('error');
+                    alert('Thêm đồ chơi thất bại, vui lòng xem lại !');
+                }
+
+            },
+            error: function(result) {
+                console.log('error');
+                alert('Thêm đồ chơi thất bại, vui lòng xem lại !');
+            }
+        });
+    });
+
+
+    function encodeImageFileAsURL() {
+
+        var filesSelected = document.getElementById("inputFileToLoad").files;
+        if (filesSelected.length > 0) {
+            var fileToLoad = filesSelected[0];
+
+            var fileReader = new FileReader();
+
+            fileReader.onload = function(fileLoadedEvent) {
+                srcData = fileLoadedEvent.target.result; // <--- data: base64
+
+                var newImage = document.createElement('img');
+                newImage.src = srcData;
+
+                document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+                alert("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
+                console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
+            }
+            fileReader.readAsDataURL(fileToLoad);
+        }
+    }
+</script>
+</html>

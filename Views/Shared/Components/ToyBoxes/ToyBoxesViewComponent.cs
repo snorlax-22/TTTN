@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace BT2MWG.Views.Shared.Components.ToyBoxes
 {
-    public class ToyBoxes : ViewComponent
+    public class ToyBoxesHomePage : ViewComponent
     {
         DataHelper dataHelper = new DataHelper();
 

@@ -10,55 +10,16 @@ namespace BT2MWG.Controllers
 {
     public class ProductCateController : Controller
     {
-        int maxRows = 2;
+        int maxRows = 4;
+        
         DataHelper dataHelper = new DataHelper();
         private List<Product> productsSearchedBrand;
 
         public ActionResult Toy()
         {
 
-            try
-            {
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-
-                //builder.DataSource = "SNORLAX";
-                //builder.UserID = "sa";
-                //builder.Password = "123";
-                //builder.InitialCatalog = "TTTN";
-                builder.ConnectionString = "Data Source=SNORLAX;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=300;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-                {
-                    Console.WriteLine("\nQuery data example:");
-                    Console.WriteLine("=========================================\n");
-
-                    connection.Open();
-
-                    String sql = "SELECT name, collation_name FROM sys.databases";
-
-                    //using (SqlCommand command = new SqlCommand(sql, connection))
-                    //{
-                    //    using (SqlDataReader reader = command.ExecuteReader())
-                    //    {
-                    //        while (reader.Read())
-                    //        {
-                    //            Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
-                    //            var string1 = reader.GetString(0);  
-                    //        }
-                    //    }
-                    //}
-                }
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-            Console.WriteLine("\nDone..................................................................");
-
-
-
-
-
-
+            
+         
             var products = dataHelper.initProducts();
             double pageCount = (double)((decimal)products.Count() / Convert.ToDecimal(maxRows));
             products = (from product in products select product)

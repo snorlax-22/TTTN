@@ -1,0 +1,26 @@
+﻿#empName:disabled {
+    background: #F7F3B7;
+    color: black;
+    border: 1px solid #bbb;
+}
+
+#toyName {
+    width: 520px;
+}
+
+.img {
+    width: 100px;
+    margin: 5px 50px 5px 5px;
+}
+
+.img-box {
+    width: 150px;
+}
+
+.img-section {
+    display: flex;
+}
+
+.page-wrapper {
+    padding-left: 15px;
+}
