@@ -90,13 +90,15 @@ namespace BT2MWG.Controllers
         }
 
   
-        public void SuaHang(int idHang, string tenHang)
+        public int SuaHang(int idHang, string tenHang)
         {
             //var maDC = Int32.Parse(idHang);
 
             //DOCHOI lstdoChoi = dbo.layDoChoiTheoMa(Int32.Parse(idDoChoi));
 
-            Console.WriteLine(idHang);
+            var rs = dbo.suaHangDoChoi(tenHang, idHang);
+
+            return rs;
         }
 
     }

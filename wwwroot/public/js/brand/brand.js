@@ -6,7 +6,7 @@ $(".edit-btn").on('click', function (e) {
     console.log(idRow);
 
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "/Admin/SuaHang/",
         data: {
             idHang: $(this).data("id"),

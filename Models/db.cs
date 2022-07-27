@@ -332,5 +332,26 @@ namespace BT2MWG.Models
             return listDoChoi[0];
         }
 
+        public int suaHangDoChoi(string tenHang, int maHang)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("suaHangDoChoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@tenHang", tenHang);
+                cmd.Parameters.AddWithValue("@idHang", maHang);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
     }
 }
