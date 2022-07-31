@@ -1,0 +1,29 @@
+﻿@using System.Globalization
+@using BT2MWG.Models
+@model BT2MWG.Models.DOCHOI;
+
+@{
+    var dbo = new db();
+    var listHinhAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
+   
+    Layout = "~/Views/Shared/_Footer.cshtml";
+
+    var b = @Model;
+}
+<script src="~/public/js/productController.js"></script>
+
+<div class="detail-body">
+    <div class="detail-body-column">
+        @await Html.PartialAsync("_Slider",listHinhAnh)
+
+        @*@await Html.PartialAsync("_Info")*@
+    </div>
+    <div class="detail-body-column">
+        @await Html.PartialAsync("_DetailBody")
+    </div>
+
+</div>
+
+@*Mục đồ chơi khác*@
+<p class="others-toy-section">Đồ chơi khác</p>
+@*@await Html.PartialAsync("_OthersToy")*@

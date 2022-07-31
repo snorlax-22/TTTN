@@ -11,40 +11,18 @@ namespace BT2MWG.Controllers
 {
     public class ProductController : Controller
     {
-
-        DataHelper dataHelper = new DataHelper();
-        private object productsSearched;
-
+        db dbo = new db();
         public IActionResult Index()
         {
-            var products = dataHelper.initProducts();
-            return View(products);
+            return View();
         }
 
-        [HttpGet]
-        public ActionResult Search(string searchText)
+        public IActionResult Detail(int id)
         {
-            if (searchText == null) { return View(); }
-            var products = dataHelper.initProducts();
-            try
-            {
-                productsSearched = from product in products
-                                   where product.Name.StartsWith(searchText)
-                                   || product.Name.EndsWith(searchText)
-                                   || product.Name.Contains(searchText)
-                                   select product;
-            }
-            catch (ArgumentNullException)
-            {
-                return Json("Nothing");
-            }
-            string value = string.Empty;
-            value = JsonConvert.SerializeObject(productsSearched, Formatting.Indented, new JsonSerializerSettings
-            {
-                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-            });
+            var dochoi = dbo.layDoChoiTheoMa(id);
 
-            return Json(value);
+            return View(dochoi);
         }
+        
     }
 }

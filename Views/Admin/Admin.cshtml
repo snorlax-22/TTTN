@@ -1,4 +1,5 @@
-﻿@model BT2MWG.ViewModel.AdminPageViewModel;
+﻿@using BT2MWG.Models
+@model BT2MWG.ViewModel.AdminPageViewModel;
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -36,7 +37,12 @@
         border: 1px solid #bbb;
     }
 </style>
-
+@{
+    db dbo = new db();
+    var listNhaCC = dbo.layTatCaNhaCC();
+    var lsitCate = dbo.layTatCaDanhMuc();
+    var listBrand = dbo.layTatCaHang();
+}
 <body>
 
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
@@ -50,17 +56,54 @@
             <br />
             <label>Nhân viên nhập</label>
             <input id="empName" type="button" value="@Model.taikhoan.USERNAME" readonly disabled></input>
+            <br />
+            <br />
             @*<input id="empName" type="text" name="username" value="" readonly/>*@
-            <label>Giá đồ chơi</label>
-            <input id="toyPrice" type="text" />
             <label>Tên đồ chơi</label>
             <input id="toyName" type="text" />
             <br />
             <br />
+            <label>Nhà Cung cấp</label>
+            <select name="cate" id="cates">
+                @foreach (var item in listNhaCC)
+                {
+                    <option value="@item.MANHACC">@item.TENNHACC</option>
+                }
+
+            </select>
+            <br />
+            <br />
+            <label>Danh mục</label>
+            <select name="suppliers" id="suppliers">
+                @foreach (var item in lsitCate)
+                {
+                    <option value="@item.ID">@item.Name</option>
+                }
+            </select>
+
+            <label>Hãng</label>
+            <select name="brands" id="brands">
+                @foreach (var item in listBrand)
+                {
+                    <option value="@item.MAHANGDOCHOI">@item.TENHANGDOCHOI</option>
+                }
+            </select>
+
+            <br />
+            <br />
+            <label>Giá đồ chơi</label>
+            <input id="toyPrice" type="text" />
+            <br />
+            <br />
+
             <label>Ảnh</label>
             <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();" />
             <div id="imgTest"></div>
-
+            <br />
+            <label>Mô tả</label>
+            <textarea id="description"></textarea>
+            <br />
+            <br />
             <button id="add-toy">Thêm</button>
 
             <table class="table">
@@ -68,7 +111,6 @@
                     <th>Mã Đồ Chơi</th>
                     <th>Tên Đồ Chơi</th>
                     <th>Trạng Thái </th>
-                    <th>Mô Tả</th>
                     <th>SL Tồn</th>
                     <th>Tên Hãng</th>
                     <th>Tên Nhà CC</th>
@@ -82,7 +124,6 @@
                         <td>@item.MaDoChoi</td>
                         <td>@item.TenDoChoi</td>
                         <td>@status</td>
-                        <td>@item.MoTa</td>
                         <td>@item.SLTon</td>
                         <td>@item.HANGDOCHOI.TENHANGDOCHOI</td>
                         <td>@item.NHACUNGCAP.TENNHACC</td>
@@ -134,12 +175,17 @@
                 tenDoChoi: $("#toyName").val(),
                 password: $("#toyPrice").val(),
                 listAnh: srcData,
-                slAnh: 1
+                slAnh: 1,
+                moTa: $("#description").val(),
+                maNhaCC: $("#suppliers").val(),
+                cates: $("#cates").val(),
+                brands: $("#brands").val()
             },
             success: function(result) {
                 if (result == 1) {
                     console.log('ok');
                     alert('Thêm đồ chơi thành công !');
+                    location.reload();
                 }
                 else {
                     console.log('error');
@@ -167,11 +213,17 @@
                 srcData = fileLoadedEvent.target.result; // <--- data: base64
 
                 var newImage = document.createElement('img');
+                
                 newImage.src = srcData;
 
                 document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+
+                //newImage.addClass('img-test');
+
                 alert("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
                 console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
+
+               
             }
             fileReader.readAsDataURL(fileToLoad);
         }

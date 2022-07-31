@@ -1,0 +1,735 @@
+﻿input[type=tel], input[type=text], textarea {
+    -webkit-appearance: none;
+}
+
+body, button, h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, input, label, legend, option, select, textarea {
+    font: 14px/18px Helvetica Neue,Helvetica,Arial,SF Pro Display,sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+#app > section {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    min-width: 0;
+}
+
+.yourCart {
+    display: block;
+    overflow: hidden;
+}
+
+.bluekids .buymore {
+    color: black;
+    padding: 15px 10px 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.buymore {
+    float: left;
+    overflow: hidden;
+    font-size: 14px;
+    color: #288ad6;
+    line-height: 16px;
+    padding: 10px;
+}
+
+.bluekids .buymore:before {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.buymore:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #288ad6;
+    border-left: 1px solid #288ad6;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px 2px 0;
+    transform: rotate(-45deg);
+}
+
+.bluekids .yourCart > span {
+    padding: 15px 7px 13px;
+    color: black;
+    overflow: hidden;
+    width: 300px;
+    text-overflow: ellipsis;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.yourCart > span {
+    float: right;
+    padding: 9px 10px;
+}
+
+.bluekids section {
+    padding: 0;
+}
+
+.bluekids .middleCart {
+    box-shadow: 0 24px 80px rgb(0 0 0 / 7%), 0 10.0266px 33.4221px rgb(0 0 0 / 5%), 0 5.36071px 17.869px rgb(0 0 0 / 4%), 0 3.00517px 10.0172px rgb(0 0 0 / 4%), 0 1.59602px 5.32008px rgb(0 0 0 / 3%), 0 0.664142px 2.21381px rgb(0 0 0 / 2%);
+    border-radius: 8px;
+}
+
+.middleCart {
+    display: block;
+    background: #fff;
+    box-shadow: 0 0 18px rgb(0 0 0 / 12%);
+    border-radius: 2px;
+}
+
+.listing-cart {
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.bluekids .listing-cart .product-item:last-child {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 11px;
+}
+
+.listing-cart .product-item .imgsp {
+    float: left;
+    width: 16%;
+}
+
+.listing-cart .imgsp a, .listing-cart .imgsp a img {
+    display: block;
+    overflow: hidden;
+}
+
+.bluekids .listing-cart .imgsp a img {
+    width: 70px;
+}
+
+.listing-cart .imgsp a img {
+    width: 75px;
+    margin: auto;
+}
+
+.listing-cart .imgsp a, .listing-cart .imgsp a img {
+    display: block;
+    overflow: hidden;
+}
+
+.bluekids .listing-cart .imgsp button {
+    margin: 5px auto;
+    color: gray;
+}
+
+.bluekids .listing-cart .product-item:first-child {
+    padding-top: 24px;
+}
+
+.listing-cart .product-item {
+    display: block;
+    padding: 10px 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bluekids .listing-cart .product-item {
+    padding: 20px 0;
+    width: calc(100% - 60px);
+    margin: 0 30px;
+}
+
+.listing-cart .imgsp button {
+    display: block;
+    overflow: hidden;
+    margin: 15px auto 0;
+    border: 0;
+    background: #fff;
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.bluekids .listing-cart .imgsp button span {
+    background-image: url(https://cdn.tgdd.vn/mwgcart/vue-pro/css/img/Bluekids_sprite_desktop_2x.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 600px 400px;
+    background-position: -206px -301px;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+}
+
+.bluekids .listing-cart .product-item .infosp {
+    margin-left: 90px;
+}
+
+.listing-cart .product-item .infosp {
+    display: block;
+    margin-left: 95px;
+}
+
+.listing-cart .infosp .name-price {
+    display: block;
+}
+
+.bluekids .listing-cart .name-price .name-container a {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--light-black);
+    line-height: 17px;
+}
+
+.listing-cart .name-price a {
+    float: left;
+    width: 70%;
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bluekids .listing-cart .name-price span {
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    margin: -5px 0 10px 0;
+}
+
+.listing-cart .name-price span {
+    float: right;
+    color: #f30c28;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 2px;
+}
+
+.listing-cart .promo {
+    display: block;
+    overflow: hidden;
+    width: 75%;
+}
+
+.bluekids .listing-cart .promo small, .bluekids .listing-cart .promo small b {
+    color: black;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.bluekids .listing-cart .name-price span strike {
+    font-weight: 400;
+    color: gray;
+    font-size: 14px;
+}
+
+.bluekids .listing-cart .promo small {
+    color: black;
+    color: #000;
+}
+
+.listing-cart .promo small.active {
+    display: block;
+}
+
+.listing-cart .promo small {
+    display: none;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+    padding: 6px 0 0 10px;
+}
+
+.listing-cart .choose-color {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.bluekids .choosenumber {
+    border-radius: 4px;
+    height: 28px;
+    width: 92px;
+    border: 1px solid gray;
+}
+
+.choosenumber {
+    float: right;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    border-radius: 3px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+.bluekids .listing-cart .product-size-and-color-selection {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+}
+
+.choosenumber .minus {
+    float: left;
+    border-right: 1px solid #dfdfdf;
+    background: #fff;
+    width: 32%;
+    height: 30px;
+    position: relative;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.bluekids .choosenumber .number {
+    height: 24px;
+    line-height: 26px;
+}
+
+.bluekids .choosenumber input {
+    border: none;
+    margin: 1px 0 1px 1px;
+}
+
+.choosenumber .number {
+    font-size: 14px;
+    color: #333;
+    float: left;
+    width: 33%;
+    height: 30px;
+    text-align: center;
+}
+
+.bluekids .choosenumber .minus i, .bluekids .choosenumber .plus i:first-child {
+    width: 7px;
+    height: 1px;
+    margin: 12px auto;
+}
+
+.bluekids .choosenumber .minus i {
+    background: #ccc;
+    display: block;
+}
+
+.choosenumber .minus i {
+    width: 12px;
+    height: 2px;
+    background: #ccc;
+    display: block;
+    margin: 14px auto;
+}
+
+.choosenumber .plus {
+    float: right;
+    border-left: 1px solid #dfdfdf;
+    background: #fff;
+    width: 32%;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bluekids .choosenumber .minus i, .bluekids .choosenumber .plus i:first-child {
+    width: 7px;
+    height: 1px;
+    margin: 12px auto;
+}
+
+.choosenumber .plus i:first-child {
+    width: 12px;
+    height: 2px;
+    background: #288ad6;
+    display: block;
+    margin: 14px auto;
+}
+
+.bluekids .choosenumber .plus i:nth-child(2) {
+    top: 9px;
+    width: 1px;
+    height: 7px;
+}
+
+.choosenumber .plus i:nth-child(2) {
+    width: 2px;
+    height: 12px;
+    background: #288ad6;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    right: 0;
+}
+
+.bluekids .listing-cart .product-item:not(:first-child) {
+    border-top: 1px solid #f1f1f1;
+}
+
+.bluekids .listing-cart .product-item:last-child {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 11px;
+}
+
+.bluekids .total-provisional {
+    padding: 18px 30px;
+}
+
+.total-provisional {
+    display: block;
+    overflow: hidden;
+    padding: 10px 30px;
+}
+
+.bluekids .total-provisional > span {
+    color: black;
+    line-height: 24px;
+}
+
+.total-provisional > span {
+    float: left;
+    color: #333;
+}
+
+.bluekids .total-provisional span .total-label {
+    font-weight: 700;
+}
+
+.bluekids .total-provisional span:nth-child(2) {
+    font-weight: 700;
+    color: #ed1164;
+}
+
+.total-provisional > span:nth-child(2) {
+    float: right;
+}
+
+.bluekids .infor-customer {
+    border-top: 4px solid #f1f1f1;
+    border-bottom: 4px solid #f1f1f1;
+    padding: 15px 30px 5px;
+}
+
+.infor-customer {
+    display: block;
+    overflow: hidden;
+    border-top: 1px solid #d1d1d1;
+    padding: 10px 30px;
+}
+
+.bluekids .choosegetgoods h4, .bluekids .infor-customer h4 {
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--black);
+    text-transform: none;
+    font-size: 18px;
+}
+
+.infor-customer h4 {
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.infor-customer .form-customer, .texterror {
+    display: block !important;
+}
+
+.infor-customer .form-customer {
+    display: none;
+    overflow: hidden;
+    padding: 10px 0 0;
+}
+
+.form-customer .sex-customer {
+    display: block;
+    overflow: hidden;
+}
+
+.bluekids .form-customer .sex-customer span {
+    line-height: 16px;
+}
+
+    .bluekids .form-customer .sex-customer span i {
+        background-position: -355px -295px;
+        margin: 0;
+    }
+
+.form-customer .sex-customer span i {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px 2px 0 0;
+}
+
+.bluekids .cartnew-choose {
+    width: 17px;
+    height: 17px;
+    background-position: -354px -294px;
+}
+
+.bluekids [class*=cartnew-], .bluekids [class^=cartnew-] {
+    background-image: url(../img/Bluekids_sprite_desktop_2x.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 600px 400px;
+}
+.cartnew-choose {
+    background-position: -19px 0;
+    width: 14px;
+    height: 14px;
+    margin: 0 7px 3px 0;
+
+
+}
+
+[class*=cartnew-], [class^=cartnew-] {
+    background-image: url(../img/cart-mobile-1.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 133px 305px;
+}
+
+.bluekids .form-customer .sex-customer span {
+    line-height: 16px;
+}
+
+.form-customer .sex-customer span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #333;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.bluekids .form-customer .sex-customer span i {
+    background-position: -355px -295px;
+    margin: 0;
+}
+
+.form-customer .sex-customer span i {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px 2px 0 0;
+}
+
+.bluekids .cartnew-choose {
+    width: 17px;
+    height: 17px;
+    background-position: -354px -294px;
+}
+
+.bluekids [class*=cartnew-], .bluekids [class^=cartnew-] {
+    background-image: url(../img/Bluekids_sprite_desktop_2x.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 600px 400px;
+}
+
+.cartnew-choose {
+    background-position: -19px 0;
+    width: 14px;
+    height: 14px;
+    margin: 0 7px 3px 0;
+}
+
+[class*=cartnew-], [class^=cartnew-] {
+    background-image: url(../img/cart-mobile-1.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 133px 305px;
+}
+
+.bluekids .form-customer .fillinform {
+    padding: 12px 2px 10px;
+}
+
+.form-customer .fillinform {
+    display: block;
+    overflow: hidden;
+    padding: 12px 0 10px;
+}
+
+    .form-customer .fillinform .fillname {
+        float: left;
+        width: 49%;
+        margin: 0 1% 0 0;
+    }
+
+.cntry-district, .filladdress, .fillname {
+    position: relative;
+}
+
+.bluekids .form-customer .fillinform .fillname input {
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.form-customer .fillinform .fillname input {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 10px;
+    color: #333;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.form-label {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    transition: all .2s;
+    cursor: text !important;
+}
+
+.bluekids .form-customer .fillinform .fillname:nth-child(2) {
+    padding-left: 5px;
+}
+
+.form-customer .fillinform .fillname:nth-child(2) {
+    float: right;
+    margin-right: 0;
+}
+
+.form-customer .fillinform .fillname {
+    float: left;
+    width: 49%;
+    margin: 0 1% 0 0;
+}
+
+.cntry-district, .filladdress, .fillname {
+    position: relative;
+}
+
+.bluekids .form-customer .fillinform .fillname input {
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.form-customer .fillinform .fillname input {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 10px;
+    color: #333;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-label {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    transition: all .2s;
+    cursor: text !important;
+}
+
+.area-total .total-price {
+    display: block;
+    overflow: hidden;
+    padding: 10px 0 10px;
+    width: 100%;
+}
+
+.bluekids .area-total .total-price strong {
+    color: black;
+    line-height: 24px;
+}
+
+.area-total .total-price strong {
+    float: left;
+    color: #333;
+}
+
+.bluekids .area-total .total-price strong:nth-child(2) {
+    color: #ed1164;
+}
+
+.bluekids .area-total .total-price strong {
+    color: black;
+    line-height: 24px;
+}
+
+.area-total .total-price strong:nth-child(2) {
+    float: right;
+    color: #f30c28;
+}
+
+.bluekids .finaltotal button.submitorder {
+    background: #ed1164;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.finaltotal button.submitorder {
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    background: linear-gradient(180deg,#f79429,#f7712e);
+}
+
+.finaltotal {
+    display: block;
+    overflow: visible;
+    padding: 20px 30px;
+    position: relative;
+}
+
+

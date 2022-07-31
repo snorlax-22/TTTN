@@ -43,10 +43,8 @@ li {
 }
 
 .others-toy {
-    margin-right: 200px;
-    /* width: 100%; */
-    display: flex;
-    margin-left: 200px;
+    display: inline-flex;
+    width: 1200px;
 }
 
 .detail-body {
@@ -78,6 +76,11 @@ li {
     font-weight: bold;
     line-height: 31px;
     margin-right: 12px;
+}
+
+.price-section {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .discount {
@@ -304,13 +307,17 @@ ul, ol {
     width: 20%;
     border: 1px solid #ddd;
     border-radius: 8px;
-    margin-right: 2%;
+    
 }
 
-    .others-toy-item img {
-        width: 100%;
-        height: auto;
+    .others-toy-item:not(:last-child) {
+        margin-right: 1%;
     }
+
+.others-toy-item img {
+    width: 100%;
+    height: auto;
+}
 
 .others-toy div:hover {
     box-shadow: 0 0 2px 1px rgba(237, 17, 100, 0.5);
@@ -395,8 +402,9 @@ ul, ol {
 }
 
 #sync2 {
-    margin: 20px;
+    margin-right: 20px;
     width: 600px;
+    margin-top: 20px;
 }
 
 #sync1 .item {
@@ -411,9 +419,9 @@ ul, ol {
 }
 
 #sync2 .item {
-    /*background: #c9c9c9;*/
-    /*padding: 10px 0px;*/
-    /*margin: 5px;*/
+   /* background: #c9c9c9;
+    padding: 10px 0px;
+    margin: 5px;*/
     color: #fff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;

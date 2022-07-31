@@ -17,9 +17,7 @@ namespace BT2MWG.Controllers
 
         public ActionResult Toy()
         {
-
-            
-         
+    
             var products = dataHelper.initProducts();
             double pageCount = (double)((decimal)products.Count() / Convert.ToDecimal(maxRows));
             products = (from product in products select product)

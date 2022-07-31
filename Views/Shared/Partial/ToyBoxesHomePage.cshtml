@@ -7,34 +7,77 @@
     var listHinhAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
     var gia = dbo.layGiaTheoMaSanPham(@Model.MaDoChoi).Gia;
     var a = 2;
-    var giaSauGiam = gia - (gia * Model.KHUYENMAI.CTKM.PTGiamGia)/100;
+
+    int ptgiamgia = 0;
+
+    decimal giaSauGiam = 0;
+    try
+    {
+        if (Model.KHUYENMAI != null)
+        {
+            ptgiamgia = Model.KHUYENMAI.CTKM.PTGiamGia;
+            giaSauGiam = gia - (gia * ptgiamgia) / 100;
+        }
+        else
+        {
+
+            var km = dbo.layKM(@Model.MaDoChoi);
+            if(km.CTKM != null)
+            {
+                ptgiamgia = km.CTKM.PTGiamGia;
+            }
+            giaSauGiam = gia - (gia * ptgiamgia) / 100;
+        }
+    }
+    catch (Exception e)
+    {
+
+    }
 
     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
     string giaOld = gia.ToString("#,###", cul.NumberFormat);
     string giaNew = giaSauGiam.ToString("#,###", cul.NumberFormat);
 }
 
+<script src="~/public/js/cart/cart.js"></script>
+
 <div class="others-toy-item">
-    @if(listHinhAnh.Count > 0){
+    <a href="/product/detail/@Model.MaDoChoi"> 
+    @if (listHinhAnh.Count > 0)
+    {
         <img src="@listHinhAnh[0].HinhAnh.ToString()" alt="" />
     }
     <h3>
         @*Đồ chơi xe địa hình cứu hộ Lego City 60301*@
         @Model.TenDoChoi
     </h3>
-    <p class="others-toy-item-price">
-        @*giá sau khi gảm*@
-        @giaNew₫
-    </p>
-    <span class="others-toy-item-old-price">
-        @*giá cũ*@
-        @giaOld₫
-    </span>
-    <span class="others-toy-item-percent">
-        @Model.KHUYENMAI.CTKM.PTGiamGia %
-    </span>
+    @if (@ptgiamgia > 0)
+    {
+        <p class="others-toy-item-price">
+            @*giá sau khi gảm*@
+            @giaNew₫
+        </p>
+        <span class="others-toy-item-old-price">
+            @*giá cũ*@
+            @giaOld₫
+        </span>
 
+        <span class="others-toy-item-percent">
+            @ptgiamgia %
+        </span>
+    }
+    else
+    {
+        <p class="others-toy-item-price">
+            @*giá sau không gảm*@
+            @giaOld₫
+        </p>
+    }
+    </a>
     <div class="others-toy-item-buy">
-        <p class="txt">Chọn mua</p>
+        <p class="txt" data-id="@Model.MaDoChoi">Chọn mua</p>
     </div>
 </div>
+
+
+

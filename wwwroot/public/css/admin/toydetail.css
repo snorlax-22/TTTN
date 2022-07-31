@@ -24,3 +24,11 @@
 .page-wrapper {
     padding-left: 15px;
 }
+
+.img-test {
+    right: 30%;
+    height: 300px;
+    position: absolute;
+    top: 10%;
+}
+}

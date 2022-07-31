@@ -1,7 +1,6 @@
 ﻿@using System.Globalization
-@model List<BT2MWG.Models.Product>;
-@*
-*@
+@model List<BT2MWG.Models.HINHANH>;
+
 @{
     
     String i = (String)Url.ActionContext.RouteData.Values["id"];
@@ -9,19 +8,19 @@
 }
 
 <div id="sync1" class="owl-carousel owl-theme">
-    @foreach (var item in @Model[@j].Image)
+    @foreach (var item in Model)
     {
         <div class="item">
-            <img src="@item" alt="" />
+            <img src="@item.HinhAnh" alt="" />
         </div>
     }
 </div>
 <div id="sync2" class="owl-carousel owl-theme">
 
-    @foreach (var item in @Model[@j].Image)
+    @foreach (var item in Model)
     {
         <div class="slider-thumb item">
-            <img src="@item" alt="Forest" style="width: 80px;height: 102%">
+            <img src="@item.HinhAnh" alt="Forest" style="width: 80px;height: 80px">
         </div>
     }
 </div>

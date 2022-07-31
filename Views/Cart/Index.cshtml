@@ -1,0 +1,151 @@
+﻿@using BT2MWG.Models
+@using BT2MWG.ViewModel;
+@using System.Globalization
+@model List<CartItem>;
+@{
+    var b = Model;
+
+    db dbo = new db();
+
+    int ptgiamgia = 0;
+    decimal giaSauGiam = 0;
+    decimal tongTien = 0;
+    @foreach (var item in Model)
+    {
+        
+        item.DoChoi.ThayDoiGia = dbo.layGiaTheoMaSanPham(item.DoChoi.MaDoChoi);
+        item.DoChoi.KHUYENMAI = dbo.layKM(item.DoChoi.MaDoChoi);
+        item.DoChoi.DSHINHANH = dbo.layTatCaAnhTheoDoChoi(item.DoChoi.MaDoChoi);
+    }
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+    Layout = "~/Views/Shared/_Footer.cshtml";
+}
+
+
+<link href="~/public/css/cart/cart.css" rel="stylesheet">
+<script src="~/public/js/cart/cart.js"></script>
+
+<div id="app" class="bluekids">
+    <section>
+        <div class="yourCart top-content">
+            <a href="/" class="buymore">Mua thêm sản phẩm khác</a>
+            <span>
+                Giỏ hàng của bạn
+                <span>
+                </span>
+            </span>
+        </div>
+        <div class="middleCart">
+            <ul class="listing-cart">
+                @foreach (var item in Model)
+                {
+                    var gia = item.DoChoi.ThayDoiGia.Gia;
+                    giaSauGiam = gia - (gia * ptgiamgia) / 100;
+                    tongTien = tongTien +  (giaSauGiam * item.qty);
+
+                    if(item.DoChoi.KHUYENMAI.CTKM != null)
+                    {
+                        ptgiamgia = item.DoChoi.KHUYENMAI.CTKM.PTGiamGia;
+                    }
+                    
+                    
+                    string giaOld = gia.ToString("#,###", cul.NumberFormat);
+                    string giaNew = giaSauGiam.ToString("#,###", cul.NumberFormat);
+                    <li class="product-item">
+                        <div class="imgsp">
+                            <a href="/quan-be-gai/quan-legging-be-gai-ava-bs13-mau-xam">
+                                <img src="@item.DoChoi.DSHINHANH.FirstOrDefault().HinhAnh">
+                            </a>
+                            <div>
+                                <button>
+                                    <span>
+                                    </span> Xóa
+                                </button>
+                            </div>
+                        </div>
+                        <div data-tmp-price-original="149000" data-tmp-price-discount="74000" data-tmp-product-name="Quần legging bé gái AVA BS13 màu xám" data-tmp-product-type="1" data-tmp-quantity="1" data-tmp-max-quantity="10" class="infosp">
+                            <div class="name-price">
+                                <div class="name-container">
+                                    <a href="/quan-be-gai/quan-legging-be-gai-ava-bs13-mau-xam" class="product-item__name">
+                                        @item.DoChoi.TenDoChoi
+                                    </a>
+                                </div>
+                                <span>
+                                    @giaNew₫ <!----><strike>@giaOld₫</strike>
+                                </span>
+                            </div>
+                            <hr style="width: 65%; visibility: hidden;"><!----><!---->
+                            <div fragment="109b4937470" class="choose-color">
+                                <div class="product-size-and-color-selection">
+                                    <aside>
+                                        <span> Màu: <span class="color-text">Xám</span></span>
+                                        <div class="sg-color" style="display: none;">
+                                            <div class="select-color active">
+                                                <img data-src="https://cdn.tgdd.vn/Products/Images/10362/278829/quan-legging-be-gai-ava-bs13-mau-xam-160722-062408-600x600.jpg" src="https://cdn.tgdd.vn/Products/Images/10362/278829/quan-legging-be-gai-ava-bs13-mau-xam-160722-062408-600x600.jpg" loading="lazy" class="lazyload">
+                                                <small>Xám</small>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                </div>
+                                <div class="choosenumber" fragment="156e146d431">
+                                    <div class="minus" style="pointer-events: none;">
+                                        <i style="background-color: rgb(204, 204, 204);">
+                                        </i>
+                                    </div><input type="text" maxlength="3" class="number" value="@item.qty" style="border: none; pointer-events: all;">
+                                    <div class="plus" style="pointer-events: all;">
+                                        <i style="background-color: rgb(0, 0, 0);">
+                                        </i>
+                                        <i style="background-color: rgb(0, 0, 0);">
+                                        </i>
+                                    </div><!----><input type="hidden">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                }
+                @{
+                    string tongTienFormat = tongTien.ToString("#,###", cul.NumberFormat);
+                }
+            </ul>
+            <div class="infor-customer">
+                <h4>Thông tin khách hàng</h4>
+                <form class="form-customer">
+                    <div class="sex-customer">
+                        <input fragment="6c070c47cc" type="hidden" value="-1">
+                    </div>
+                    <div class="fillinform">
+                        <div class="fillname">
+                            <input placeholder="Họ và Tên" maxlength="50" id="cusName" name="cusName" required="required" class="capitalize untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+                        <div class="fillname phoneNumber">
+                            <input placeholder="Số điện thoại" type="tel" maxlength="10" id="cusPhone" name="cusPhone" required="required" class="untouched pristine required phoneNumber__input">
+                            <label for="cusPhone" class="form-label">
+
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+            <div class="finaltotal">
+                <div class="area-total">
+                    <div data-tmp-total-money-in-all="@tongTien" class="total-price">
+                        <strong>Tổng tiền:</strong>
+                            @{
+                                if (!string.IsNullOrEmpty(@tongTienFormat))
+                                {
+                                    <strong>@tongTienFormat₫</strong>
+                                }
+                            }
+                    </div>
+                </div>
+                <button type="button" class="submitorder">
+                    <b style="text-transform:uppercase">Đặt hàng</b>
+                </button>
+                @Html.ActionLink("Thanh Toán","PaymentWithPaypal","Paypal",@Model)
+            </div>
+        </div>
+    </section>
+</div>
+
+                             

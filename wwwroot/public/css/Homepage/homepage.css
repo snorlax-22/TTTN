@@ -2,5 +2,9 @@
 .banner {
     height: 130px;
     margin: 20px;
-    width: 1330px;
+    width: 1200px;
+}
+
+.center {
+    text-align: center;
 }

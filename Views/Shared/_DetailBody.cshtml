@@ -1,54 +1,83 @@
 ﻿@using System.Globalization
-@model List<BT2MWG.Models.Product>;
+@using BT2MWG.Models
+@model BT2MWG.Models.DOCHOI;
 @*
 *@
 @{
-    
-    String i = (String)Url.ActionContext.RouteData.Values["id"];
-    int j = Int32.Parse(i);
+    var dbo = new db();
+    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+    var gia = dbo.layGiaTheoMaSanPham(@Model.MaDoChoi).Gia;
 
-    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   
-    string af = Model[j].Price.ToString("#,###", cul.NumberFormat);
+    var listHinhAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
 
-    decimal priceNew = Model[j].Price - (Model[j].Price * Model[j].Discount) / 100;
+    int ptgiamgia = 0;
 
-    string aff = priceNew.ToString("#,###", cul.NumberFormat);
-    //Footer & Header
-    
+    decimal giaSauGiam = 0;
+
+    if (Model.KHUYENMAI != null)
+    {
+        ptgiamgia = Model.KHUYENMAI.CTKM.PTGiamGia;
+        giaSauGiam = gia - (gia * ptgiamgia) / 100;
+    }
+    else
+    {
+
+        var km = dbo.layKM(@Model.MaDoChoi);
+        if (km.CTKM != null)
+        {
+            ptgiamgia = km.CTKM.PTGiamGia;
+        }
+
+        giaSauGiam = gia - (gia * ptgiamgia) / 100;
+    }
+
+
+    string giaOld = gia.ToString("#,###", cul.NumberFormat);
+    string giaNew = giaSauGiam.ToString("#,###", cul.NumberFormat);
 
 }
 
 <div class="detail-body-column-2-product-name">
     <div class="title">
-        <h3>@Model[j].Name</h3>
+        <h3>@Model.TenDoChoi</h3>
+        <span class="product-id">#@Model.MaDoChoi</span>
     </div>
 
-    <div class="price-section">
-        <span class="current-price">@aff₫</span>
-        <span class="old-price">@af₫</span>
-        <span class="discount">@Model[j].Discount%</span>
+    @if (@ptgiamgia > 0)
+    {
+        <div class="price-section">
+            <span class="current-price">@giaNew₫</span>
+            <span class="old-price">@giaOld₫</span>
+            <span class="discount">@ptgiamgia%</span>
+        </div>
+    }
+    else
+    {
+        <div class="price-section">
+            <span class="current-price">@giaOld₫</span>
+        </div>
+    }
 
-    </div>
-    <span class="product-id">#@Model[j].ProductID</span>
-    <div class="discount-detail">
-        <p>Khuyến mãi</p>
-        <ul class="promotion-list">
-            @foreach (var item in @Model[j].Promotion)
-            {
-                <li>@item</li>
-            }
-        </ul>
-    </div>
+
+    @* <div class="discount-detail">
+    <p>Khuyến mãi</p>
+    <ul class="promotion-list">
+    @foreach (var item in @Model[j].Promotion)
+    {
+    <li>@item</li>
+    }
+    </ul>
+    </div>*@
     <div class="button-section">
         <button class="button button-buy">MUA NGAY</button>
-        <button class="button button-see">XEM CỬA HÀNG CÒN HÀNG</button>
+        <button class="button button-see">THÊM VÀO GIỎ HÀNG</button>
     </div>
 
     @*Thông tin đổi trả*@
     @await Html.PartialAsync("_Policy")
 
     @*Thông tin chi tiết của sản phẩm*@
-    @await Component.InvokeAsync("ProductDetailBox")
+    @*@await Component.InvokeAsync("ProductDetailBox")*@
 
 
 </div>

@@ -6,5 +6,6 @@ namespace BT2MWG.ViewModel
     public class PageHomeViewModel
     {
         public List<DOCHOI> listDoChoiKMKhung { get; set; }
+        public List<DOCHOI> listDoChoiVB { get; set; }
     }
 }

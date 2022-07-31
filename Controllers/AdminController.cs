@@ -15,6 +15,8 @@ namespace BT2MWG.Controllers
         {
             return View();
         }
+
+        #region đồ chơi
         public ActionResult Admin()
         {
             var tk = new TAIKHOAN();
@@ -29,13 +31,23 @@ namespace BT2MWG.Controllers
         }
 
         [HttpPost]
-        public int ThemDoChoi(string manv, string tenDoChoi, double giaMoi, string slAnh, string listAnh)
+        public int ThemDoChoi(string manv, string tenDoChoi, double giaMoi, string slAnh, string listAnh, string moTa, int maNhaCC,string cates, int brands)
         {
-            int isSuccess = dbo.themDoChoi(manv, tenDoChoi, giaMoi, slAnh, listAnh);
+            int isSuccess = dbo.themDoChoi(manv, tenDoChoi, giaMoi, slAnh, listAnh, moTa, maNhaCC, cates, brands);
             return isSuccess;
         }
 
+        public IActionResult SuaDoChoi(string idDoChoi)
+        {
+            var maDC = Int32.Parse(idDoChoi);
 
+            DOCHOI lstdoChoi = dbo.layDoChoiTheoMa(Int32.Parse(idDoChoi));
+
+            return View("~/Views/Admin/ToyDetail.cshtml", lstdoChoi);
+        }
+        #endregion
+        
+        #region hãng
         public ActionResult Brand()
         {
             var res = dbo.layTatCaHang();
@@ -46,6 +58,26 @@ namespace BT2MWG.Controllers
             return View("~/Views/Admin/Brand.cshtml", vm);
         }
 
+        public int SuaHang(int idHang, string tenHang)
+        {
+            var rs = dbo.suaHangDoChoi(tenHang, idHang);
+            return rs;
+        }
+        
+        public int XoaHang(int idHang)
+        {
+            var rs = dbo.xoaHangDoChoi(idHang);
+            return rs;
+        }
+
+        public int ThemHang(string tenHang)
+        {
+            var rs = dbo.themHangDoChoi(tenHang);
+            return rs;
+        }
+        #endregion
+
+        #region nhà CC
         public ActionResult Suppliers()
         {
             var res = dbo.layTatCaNhaCC();
@@ -57,9 +89,15 @@ namespace BT2MWG.Controllers
             return View("~/Views/Admin/Suppliers.cshtml", vm);
         }
 
+        public int themNhaCC(string tenNhaCC, string sdtNhaCC, string emailNhaCC, string diaChiNhaCC)
+        {
+            var rs = dbo.themNhaCC(tenNhaCC, sdtNhaCC, emailNhaCC, diaChiNhaCC);
+            return rs;
+        }
+        #endregion
+
         public IActionResult DangNhap(string username, string password)
         {
-
             var vm = new AdminPageViewModel();
             TAIKHOAN account = new TAIKHOAN();
             account.USERNAME = username;
@@ -80,26 +118,16 @@ namespace BT2MWG.Controllers
             }
         }
 
-        public IActionResult SuaDoChoi(string idDoChoi)
+        public int SuaAnh(int idAnh, string anh)
         {
-            var maDC = Int32.Parse(idDoChoi);
-
-            DOCHOI lstdoChoi = dbo.layDoChoiTheoMa(Int32.Parse(idDoChoi));
-
-            return View("~/Views/Admin/ToyDetail.cshtml", lstdoChoi);
+            var rs = dbo.SuaAnh(idAnh,anh);
+            return rs; 
         }
-
-  
-        public int SuaHang(int idHang, string tenHang)
+        
+        public int themAnh(int maHinhAnh, string anh)
         {
-            //var maDC = Int32.Parse(idHang);
-
-            //DOCHOI lstdoChoi = dbo.layDoChoiTheoMa(Int32.Parse(idDoChoi));
-
-            var rs = dbo.suaHangDoChoi(tenHang, idHang);
-
-            return rs;
+            var rs = dbo.SuaAnh(maHinhAnh, anh);
+            return rs; 
         }
-
     }
 }

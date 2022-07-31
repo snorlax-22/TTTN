@@ -1,23 +1,32 @@
 ﻿@model BT2MWG.ViewModel.PageHomeViewModel;
 @*
-   
+
 *@
 @{
     Layout = "~/Views/Shared/_Footer.cshtml";
     var listDoChoiKM = Model.listDoChoiKMKhung;
+    var listVBcare = Model.listDoChoiVB;
 }
 
-<link rel="stylesheet" href="~/public/css/Homepage/homepage.css"/>
+<link rel="stylesheet" href="~/public/css/Homepage/homepage.css" />
 
 <section>
-    <div>
+    <div class="center">
         @*<div class="others-toy" id="banner-giamgia">
 
         </div>*@
-        <img class="banner" src="~/public/image/Tagline-hotsale-1200x134.png"/>
+        <img class="banner" src="~/public/image/Tagline-hotsale-1200x134.png" />
 
         <div class="others-toy" id="toy-grid">
-            @foreach (var item in listDoChoiKM)
+            @foreach (var item in listDoChoiKM.Take(6))
+            {
+                @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
+            }
+        </div>
+
+        <img class="banner" src="~/public/image/P7UGE0JY-1200x200.png" />
+        <div class="others-toy" id="toy-grid">
+            @foreach (var item in listVBcare.Take(6))
             {
                 @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
             }

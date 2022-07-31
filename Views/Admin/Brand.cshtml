@@ -37,6 +37,10 @@
         @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
 
         <div class="page-wrapper">
+            <br />Thêm hãng đồ chơi
+            <input class="add-brand" type="text"/>
+            <a class="add-btn">Thêm</a>
+            <br />
             <table class="table">
                 <tr>
                     <th>Mã Hãng</th>
@@ -50,7 +54,7 @@
                         <td><label>@item.MAHANGDOCHOI</label></td>
                         <td><input id="@item.MAHANGDOCHOI" type="text" value="@item.TENHANGDOCHOI" /></td>
                         <td><a class="edit-btn" data-id="@item.MAHANGDOCHOI" >Lưu</a></td>
-                        <td><a >Xóa</a></td>
+                        <td><a class="delete-btn" data-id="@item.MAHANGDOCHOI">Xóa</a></td>
                     </tr>
                 }
             </table>

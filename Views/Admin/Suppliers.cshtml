@@ -34,6 +34,26 @@
         @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
 
         <div class="page-wrapper">
+            <label>Thêm Nhà Cung Cấp</label>
+            <br />
+            <table>
+                <tr> 
+                    <th>Tên nhà CC</th>
+                    <th><input class="sname" type="text"/></th>
+                    <th>SĐT Nhà CC</th>
+                    <th><input class="snumber" type="text"/></th>
+                </tr>
+                <tr> 
+                   
+                    <td>Email Nhà CC</td>
+                    <td><input class="smail" type="text"/></td>
+                    <td>Địa Chỉ Nhà CC</td>
+                    <td><input class="saddress" type="text"/></td>
+                </tr>
+            </table>
+             <br />     
+            <a class="add-btn">Thêm</a>
+            <br />
             @{
                 <table class="table">
                     <tr>
@@ -42,7 +62,6 @@
                         <th>SĐT</th>
                         <th>EMAIL</th>
                         <th>ĐỊA CHỈ</th>
-                        <th>  </th>
                         <th>  </th>
                     </tr>
                     @foreach (var item in @Model.listNhaCC)
@@ -54,7 +73,6 @@
                             <td>@item.EMAIL</td>
                             <td>@item.DIACHI</td>
                             <td><a href="">Sửa</a></td>
-                            <td><a href="">Xóa</a></td>
                         </tr>
                     }
                 </table>
@@ -78,5 +96,6 @@
     <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
     <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="js/pages/dashboards/dashboard1.js"></script>
+    <script src="~/public/js/supplier/supplier.js"></script>
 </body>
 </html>

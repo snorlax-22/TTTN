@@ -1,48 +1,25 @@
 ﻿@using System.Globalization
-@model List<BT2MWG.Models.Product>;
-@*
-*@
+@model BT2MWG.Models.DOCHOI;
+
 @{
-    
-    String i = (String)Url.ActionContext.RouteData.Values["id"];
-    int j = Int32.Parse(i);
-
-    CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   
-    string af = Model[j].Price.ToString("#,###", cul.NumberFormat);
-
-    decimal priceNew = Model[j].Price - (Model[j].Price * Model[j].Discount) / 100;
-
-    string aff = priceNew.ToString("#,###", cul.NumberFormat);
-    //Footer & Header
+    var b = Model;
     Layout = "~/Views/Shared/_Footer.cshtml";
 
 }
+<script src="~/public/js/productController.js"></script>
 
+<div class="detail-body">
+    <div class="detail-body-column">
+        @*@await Html.PartialAsync("_Slider")*@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="~/public/js/productController.js"></script>
-    <title>@Model[j].Name</title>
-</head>
-<body>
-
-    <div class="detail-body">
-        <div class="detail-body-column">
-            @await Html.PartialAsync("_Slider")
-
-            @await Html.PartialAsync("_Info")
-        </div>
-        <div class="detail-body-column">
-            @await Html.PartialAsync("_DetailBody")
-        </div>
-
+        @*@await Html.PartialAsync("_Info")*@
+    </div>
+    <div class="detail-body-column">
+        @*@await Html.PartialAsync("_DetailBody")*@
     </div>
 
-    @*Mục đồ chơi khác*@
-    <p class="others-toy-section">Đồ chơi khác</p>
-    @await Html.PartialAsync("_OthersToy")
+</div>
 
-
-</body>
-</html>
+@*Mục đồ chơi khác*@
+<p class="others-toy-section">Đồ chơi khác</p>
+@*@await Html.PartialAsync("_OthersToy")*@

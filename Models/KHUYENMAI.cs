@@ -10,6 +10,10 @@ namespace BT2MWG.Models
             CTKM = ctkm;
         }
 
+        public KHUYENMAI()
+        {
+            
+        }
         public int Id { get; set; }
         public string Name { get; set; }
 

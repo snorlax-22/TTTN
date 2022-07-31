@@ -74,6 +74,17 @@
             </div>
             <br />
             <br />
+            <label>Mô tả đồ chơi</label>
+            <span></span>
+            <textarea class="description">@Model.MoTa</textarea>>
+            <br />
+            <br />
+            <label>Thêm Ảnh</label>
+            <div id="imgTest"></div>
+            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURLAdd();" />
+            
+            <br />
+            <br />
             <label>Ảnh</label>
 
             <div class="img-section">
@@ -85,8 +96,8 @@
 
                     <div class="img">
                         <img class="@classnameImg img-box" src="@item.HinhAnh" />
-                        <input class="@classnameInput" type="file" onchange="encodeImageFileAsURL('@classnameInput','@classnameImg')" />
-
+                        <a class="delete-btn">x</a>
+                        <input class="@classnameInput" type="file" onchange="encodeImageFileAsURL('@classnameInput', '@classnameImg','@item.Id');" />
                     </div>
                 }
             </div>
@@ -102,7 +113,7 @@
 
     </div>
 
-    </div>
+
 
     <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
@@ -117,6 +128,6 @@
     <script src="js/custom.js"></script>
     <!--This page JavaScript -->
     <!--chartis chart-->
-
+    
 </body>
 
