@@ -76,6 +76,87 @@ namespace BT2MWG.Models
             return listDoChoiKM;
         }
 
+        public List<DOCHOI> layTatCaDoChoiV2()
+        {
+            var listDoChoiKM = new List<DOCHOI>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layDoChoiKMLonV2", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                if (conn.State.ToString().Equals(System.Data.ConnectionState.Closed.ToString()))
+                {
+                    conn.Open();
+                }
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    int idDoChoi = dr.GetInt32(0);
+
+                    ThayDoiGia gia = new ThayDoiGia()
+                    {
+                        Gia = dr.GetDecimal(1),
+                        NgayApDung = dr.GetDateTime(2)
+                    };
+
+                    HANGDOCHOI hang = new HANGDOCHOI()
+                    {
+                        TENHANGDOCHOI = dr.GetString(6)
+                    };
+
+                    CTKM ctkm = new CTKM()
+                    {
+                        IdDoChoi = idDoChoi,
+                        PTGiamGia = 0,
+                        IdKM = 0
+                    };
+
+                    KHUYENMAI km = new KHUYENMAI()
+                    {
+                        Id = 0,
+                        CTKM = ctkm,
+                        NgayBatDau = null
+                    };
+
+                    if (dr.GetDateTime(8) >= DateTime.Now )
+                    {
+                        ctkm = new CTKM()
+                        {
+                            IdDoChoi = idDoChoi,
+                            PTGiamGia = dr.GetInt32(3),
+                            IdKM = dr.GetInt32(4)
+                        };
+
+                        km = new KHUYENMAI()
+                        {
+                            Id = dr.GetInt32(4),
+                            CTKM = ctkm,
+                            NgayBatDau = dr.GetDateTime(5)
+                        };
+                    }
+                    
+
+                    DOCHOI doChoi = new DOCHOI()
+                    {
+                        TenDoChoi = dr.GetString(7),
+                        MaDoChoi = idDoChoi,
+                        ThayDoiGia = gia,
+                        KHUYENMAI = km
+                    };
+
+                    listDoChoiKM.Add(doChoi);
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+            }
+            listDoChoiKM = listDoChoiKM.GroupBy(x => x.MaDoChoi).Select(y => y.FirstOrDefault()).ToList();
+            return listDoChoiKM;
+        }
+
         public List<DOCHOI> layDoChoiTheoHang(int maHang)
         {
             var listDoChoiKM = new List<DOCHOI>();
@@ -590,6 +671,28 @@ namespace BT2MWG.Models
                 return 0;
             }
         }
+
+        public int xoaAnh(int maAnh)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("xoaAnh", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maAnh", maAnh);
+
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                conn.Close();
+                return 0;
+            }
+        }
+
 
         public List<HINHANH> layTatCaAnhTheoDoChoi(int? maDoChoi)
         {

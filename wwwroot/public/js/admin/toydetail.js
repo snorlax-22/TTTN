@@ -43,27 +43,26 @@ function encodeImageFileAsURL(data, data1, id) {
 }
 
 
-function encodeImageFileAsURLAdd(maHinhAnh) {
-
-    var a = document.getElementsByClassName(data)[0];
-    var filesSelected = document.getElementsByClassName(data)[0].files;
+function encodeImageFileAsURLAdd(maDoChoi) {
+    var filesSelected = document.getElementById('inputFileToLoad').files;
     if (filesSelected.length > 0) {
         var fileToLoad = filesSelected[0];
         var fileReader = new FileReader();
         fileReader.onload = function (fileLoadedEvent) {
             srcData = fileLoadedEvent.target.result; // <--- data: base64
-            var newImage = document.getElementsByClassName()[0];
+            var newImage = document.createElement('img');
             newImage.src = srcData;
             document.getElementsByClassName("imgTest").innerHTML = newImage.outerHTML;
             $.ajax({
                 type: "POST",
                 url: "/Admin/ThemAnh/",
                 data: {
-                    maHinhAnh: maHinhAnh,
+                    maDoChoi: maDoChoi,
                     anh: srcData
                 },
                 success: function (result) {
                     if (result == 1) {
+                        isSuccess = 1;
                         alert('Thêm ảnh thành công !');
                         location.reload();
                     }
@@ -79,9 +78,32 @@ function encodeImageFileAsURLAdd(maHinhAnh) {
                 }
             });
         }
-        fileReader.readAsDataURL(fileToLoad);
+        fileReader.readAsDataURL(fileToLoad); 
     }
 }
-//$("#savetoy").click(function (e) {
-    
-//});
+
+function xoaAnh(data) {
+    $.ajax({
+        type: "POST",
+        url: "/Admin/xoaAnh/",
+        data: {
+            idAnh: data,
+        },
+        success: function (result) {
+            if (result == 1) {
+                isSuccess = 1;
+                alert('Xóa ảnh thành công !');
+                location.reload();
+            }
+            else {
+                console.log('error');
+                alert('Xóa ảnh thất bại, vui lòng xem lại !');
+            }
+
+        },
+        error: function (result) {
+            console.log('error');
+            alert('Xóa ảnh thất bại, vui lòng xem lại !');
+        }
+    });
+}

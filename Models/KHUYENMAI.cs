@@ -17,9 +17,9 @@ namespace BT2MWG.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public DateTime NgayBatDau { get; set; }
+        public DateTime? NgayBatDau { get; set; }
         
-        public DateTime NgayKetThuc { get; set; }
+        public DateTime? NgayKetThuc { get; set; }
 
         public string LyDoKM { get; set; }
 

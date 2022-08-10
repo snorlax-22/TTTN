@@ -124,9 +124,15 @@ namespace BT2MWG.Controllers
             return rs; 
         }
         
-        public int themAnh(int maHinhAnh, string anh)
+        public int themAnh(int maDoChoi, string anh)
         {
-            var rs = dbo.SuaAnh(maHinhAnh, anh);
+            var rs = dbo.ThemAnh(maDoChoi, anh);
+            return rs; 
+        }
+        
+        public int xoaAnh(int idAnh)
+        {
+            var rs = dbo.xoaAnh(idAnh);
             return rs; 
         }
     }

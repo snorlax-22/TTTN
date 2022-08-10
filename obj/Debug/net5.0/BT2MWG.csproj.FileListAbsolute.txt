@@ -311,3 +311,4 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razo
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BraintreeHttp-Dotnet.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Success.cshtml.g.cs

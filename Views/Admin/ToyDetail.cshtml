@@ -81,7 +81,7 @@
             <br />
             <label>Thêm Ảnh</label>
             <div id="imgTest"></div>
-            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURLAdd();" />
+            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURLAdd('@Model.MaDoChoi');" />
             
             <br />
             <br />
@@ -96,7 +96,7 @@
 
                     <div class="img">
                         <img class="@classnameImg img-box" src="@item.HinhAnh" />
-                        <a class="delete-btn">x</a>
+                        <a class="delete-btn" onclick="xoaAnh('@item.Id')">x</a>
                         <input class="@classnameInput" type="file" onchange="encodeImageFileAsURL('@classnameInput', '@classnameImg','@item.Id');" />
                     </div>
                 }

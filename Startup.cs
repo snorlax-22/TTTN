@@ -18,12 +18,21 @@ namespace BT2MWG
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllHeaders",
+                      builder =>
+                      {
+                          builder.AllowAnyOrigin()
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod();
+                      });
+            });
             services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(5);
             });
             services.AddMvc(options => options.EnableEndpointRouting = false);
-
+            services.AddMvc().AddControllersAsServices();
         }
         public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
@@ -33,6 +42,7 @@ namespace BT2MWG
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("AllowAllHeaders");
             #region session
             app.UseSession();
             #endregion
@@ -41,8 +51,6 @@ namespace BT2MWG
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            
 
             //app.UseRouting();
             //Adding static file middleware

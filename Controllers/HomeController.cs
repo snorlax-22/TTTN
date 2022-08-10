@@ -1,27 +1,44 @@
-﻿using BT2MWG.Models;
+﻿using BT2MWG.Helpers;
+using BT2MWG.Models;
 using BT2MWG.ViewModel;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace BT2MWG.Controllers
 {
+    [EnableCors("AllowAllHeaders")]
     public class HomeController : Controller
     {
+        private readonly PaypalController _PController;
+
+        public HomeController(PaypalController pController)
+        {
+            _PController = pController;
+        }
         public IActionResult Index()
         {
+            var paymentId = HttpContext.Session.Get<string>("guid");
+            if (!string.IsNullOrEmpty(paymentId))
+            {
+                var payerId = HttpContext.Session.Get<string>("payerid");
+                var result = _PController.ExecutePayment(payerId, paymentId);
+                HttpContext.Session.Remove("GioHang");
+            }
 
             db dbo = new db();
-            
-            var b = dbo.layDoChoiKMKhung();
-            b = b.GroupBy(x => x.MaDoChoi).Select(y => y.First()).Distinct().ToList();
+
+            var b = dbo.layTatCaDoChoiV2();
+            b = b.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 50).Distinct().ToList();
             PageHomeViewModel vm = new PageHomeViewModel();
             vm.listDoChoiKMKhung = b;
 
             var c = dbo.layDoChoiTheoHang(7);
             c = c.GroupBy(x => x.MaDoChoi).Select(y => y.First()).Distinct().ToList();
             vm.listDoChoiVB = c;
-            return View("~/Views/Home/Index.cshtml",vm);
+            return View("~/Views/Home/Index.cshtml", vm);
         }
     }
 }

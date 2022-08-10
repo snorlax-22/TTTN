@@ -19,6 +19,81 @@
     $('.txt').click(function (event) {
         tempAlert('Đã thêm sản phẩm vào giỏ', 2000);
     });
+
+    $('.plus').click(function (event) {
+        var a = $(this).data("id");
+        $.ajax({
+            url: "/Cart/plusminusCart",
+            type: 'POST',
+            data: {
+                id: $(this).data("id"),
+                qty: 1,
+                key: '+'
+            },
+            success: function (res) {
+                $("#" + a).attr('value', res).trigger('change');
+            },
+            error: function (res) {
+                console.log('+1 error')
+            }
+        });
+    });
+
+    $('.minus').click(function (event) {
+        var a = $(this).data("id");
+        $.ajax({
+            url: "/Cart/plusminusCart",
+            type: 'POST',
+            data: {
+                id: $(this).data("id"),
+                qty: 1,
+                key: '-'
+            },
+            success: function (res) {
+                //$('input.text').val(res);
+                $("#" + a).attr('value', res).trigger('change');
+            },
+            error: function (res) {
+                console.log('-1 error')
+            }
+        });
+    });
+
+    $('#pay').click(function (event) {
+        $.ajax({
+            url: "/Paypal/checkIsLogin",
+            type: 'GET',
+            success: function (res) {
+                if (res == 1) {
+
+                }
+                else {
+                    showPopup();
+                }
+            },
+            error: function (res) {
+                console.log('-1 error')
+            }
+        });
+    });
+
+    //$('#login').click(function (event) {
+    //    $.ajax({
+    //        url: "/Paypal/loginCustomer",
+    //        type: 'POST',
+    //        data: {
+    //            id: $('#id-pay').val(),
+    //            password: $('#pw-pay').val()
+    //        },
+    //        success: function (res) {
+
+    //        },
+    //        error: function (res) {
+                
+    //        }
+    //    });
+    //});
+
 });
 
 function tempAlert(msg, duration) {
@@ -30,6 +105,23 @@ function tempAlert(msg, duration) {
     }, duration);
     document.body.appendChild(el);
 }
+
+function closePopup() {
+    var a = document.getElementsByClassName('bg-promo')[0];
+    a.classList.add('hide');
+    var b = document.getElementsByClassName('alert-promo')[0];
+    b.classList.add('hide');
+
+}
+
+function showPopup() {
+    var a = document.getElementsByClassName('bg-promo')[0];
+    a.classList.remove('hide');
+    var b = document.getElementsByClassName('alert-promo')[0];
+    b.classList.remove('hide');
+}
+
+
 
 
 

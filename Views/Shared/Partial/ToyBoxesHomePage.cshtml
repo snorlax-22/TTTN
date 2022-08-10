@@ -4,28 +4,17 @@
 
 @{
     db dbo = new db();
+    var a = Model;
     var listHinhAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
-    var gia = dbo.layGiaTheoMaSanPham(@Model.MaDoChoi).Gia;
-    var a = 2;
-
+    decimal gia = Model.ThayDoiGia.Gia;
     int ptgiamgia = 0;
-
     decimal giaSauGiam = 0;
+   
     try
     {
         if (Model.KHUYENMAI != null)
         {
             ptgiamgia = Model.KHUYENMAI.CTKM.PTGiamGia;
-            giaSauGiam = gia - (gia * ptgiamgia) / 100;
-        }
-        else
-        {
-
-            var km = dbo.layKM(@Model.MaDoChoi);
-            if(km.CTKM != null)
-            {
-                ptgiamgia = km.CTKM.PTGiamGia;
-            }
             giaSauGiam = gia - (gia * ptgiamgia) / 100;
         }
     }
