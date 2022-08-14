@@ -1,6 +1,7 @@
 ﻿@using BT2MWG.Models
 @using BT2MWG.ViewModel;
 @using System.Globalization
+@using Microsoft.AspNetCore.Http
 @model List<CartItem>;
 @{
     var b = Model;
@@ -16,6 +17,9 @@
     }
     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
     Layout = "~/Views/Shared/_Footer.cshtml";
+
+
+
 }
 
 <link href="~/public/css/cart/cart.css" rel="stylesheet">
@@ -24,6 +28,11 @@
 <div id="app" class="bluekids">
     <section>
         <div class="yourCart top-content">
+            @if (@Model.FirstOrDefault().loginfailed != null && @Model.FirstOrDefault().loginfailed == true)
+            {
+                <h1>Vui lòng kiểm tra lại tài khoản hoặc mật khẩu</h1>
+            }
+
             <a href="/" class="buymore">Mua thêm sản phẩm khác</a>
             <span>
                 Giỏ hàng của bạn
@@ -103,7 +112,7 @@
                                     <div class="minus" data-id="@item.DoChoi.MaDoChoi" style="@clsPointer">
                                         <i style="background-color: rgb(0, 0, 0);">
                                         </i>
-                                      
+
                                     </div>
 
                                     <input id="@item.DoChoi.MaDoChoi" type="text" maxlength="3" class="number" value="@item.qty" style="border: none; pointer-events: all;">
@@ -156,8 +165,7 @@
                 </div>
                 <button type="button" class="submitorder">
                     @*<b>@Html.ActionLink("THANH TOÁN","PaymentWithPaypal","Paypal",new{@style="color: #fff"})</b>*@
-                  
-                   <b id="pay">THANH TOÁN</b>
+                    <b id="pay">THANH TOÁN</b>
                 </button>
 
             </div>
@@ -166,16 +174,16 @@
 
     @*khung đăng nhập///////////*@
     <div class="bg-promo hide"></div>
-    <div  class="alert-promo hide">
+    <div class="alert-promo hide">
         <div class="close-popup" onclick="closePopup()">
             <i></i>
         </div><span>ĐĂNG NHẬP</span>
         <p>Tên đăng nhập</p>
         <input id="id-pay" />
         <p>Mật khẩu</p>
-        <input id="pw-pay"/>
-        @*<a id="login">Đăng nhập</a>*@
-        <b>@Html.ActionLink("ĐĂNG NHẬP","PaymentWithPaypal","Paypal",new{@style="color: #fff"})</b>
+        <input id="pw-pay" />
+        @*<b>@Html.ActionLink("ĐĂNG NHẬP","PaymentWithPaypal","Paypal",new{@style="color: #fff"})</b>*@
+        <b><a id="dangnhap">ĐĂNG NHẬP</a></b>
         <div class="resize-triggers">
             <div class="expand-trigger">
                 <div style="width: 341px; height: 169px;">
@@ -183,5 +191,15 @@
             </div><div class="contract-trigger"></div>
         </div>
     </div>
+    <script>
+        $('#dangnhap').click(function() {
+            var username = $('#id-pay').val();
+            var password = $('#pw-pay').val();
+            window.location.href = "@Url.Action("PaymentWithPaypal", "Paypal")" + "?username=" + $("#id-pay").val()+"&pw="+ $("#pw-pay").val();
+        })
+    </script>
+
 </div>
+
+
 

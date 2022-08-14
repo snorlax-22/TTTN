@@ -61,11 +61,11 @@
 
     $('#pay').click(function (event) {
         $.ajax({
-            url: "/Paypal/checkIsLogin",
+            url: "/Paypal/checkIsLoginCustomer",
             type: 'GET',
             success: function (res) {
                 if (res == 1) {
-
+                    //showConfirm();
                 }
                 else {
                     showPopup();
@@ -76,23 +76,6 @@
             }
         });
     });
-
-    //$('#login').click(function (event) {
-    //    $.ajax({
-    //        url: "/Paypal/loginCustomer",
-    //        type: 'POST',
-    //        data: {
-    //            id: $('#id-pay').val(),
-    //            password: $('#pw-pay').val()
-    //        },
-    //        success: function (res) {
-
-    //        },
-    //        error: function (res) {
-                
-    //        }
-    //    });
-    //});
 
 });
 

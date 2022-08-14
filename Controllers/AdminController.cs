@@ -17,6 +17,13 @@ namespace BT2MWG.Controllers
         }
 
         #region đồ chơi
+
+        public ActionResult Order()
+        {
+            List<GIOHANG> listGH = dbo.layTatCaGH();
+            return View("~/Views/Admin/Order.cshtml", listGH);
+        }
+
         public ActionResult Admin()
         {
             var tk = new TAIKHOAN();

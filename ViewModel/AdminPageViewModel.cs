@@ -9,5 +9,6 @@ namespace BT2MWG.ViewModel
         public List<DOCHOI> listDoChoi { get; set; }
         public List<HANGDOCHOI> listHang { get; set; }
         public List<NHACUNGCAP> listNhaCC { get; set; }
+        public List<GIOHANG> listGioHang { get; set; }
     }
 }

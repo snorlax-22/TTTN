@@ -2,6 +2,7 @@
 using BT2MWG.Models;
 using BT2MWG.ViewModel;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PayPal.Api;
 using System;
@@ -15,7 +16,7 @@ namespace BT2MWG.Controllers
         APIContext apiContext = Configuration.GetAPIContext();
         private Payment payment;
         db dbo = new db();
-
+        string payerid = "";
         public IActionResult Index()
         {
 
@@ -26,7 +27,7 @@ namespace BT2MWG.Controllers
         {
             var paymentExecution = new PaymentExecution()
             {
-                payer_id = "GBWULDBPHSDYG"
+                payer_id = payerId
             };
             this.payment = new Payment() { id = paymentId };
             return this.payment.Execute(apiContext, paymentExecution);
@@ -43,9 +44,9 @@ namespace BT2MWG.Controllers
         //    PaymentWithPaypal();
         //}
 
-        public int checkIsLogin()
+        public int checkIsLoginCustomer()
         {
-            var account = HttpContext.Session.Get<TAIKHOAN>("TaiKhoan");
+            var account = HttpContext.Session.Get<TAIKHOAN>("TaiKhoanKhachHang");
 
             if (account != null && account.MAQUYEN == 2)
             {
@@ -55,49 +56,96 @@ namespace BT2MWG.Controllers
             return 0;
         }
 
-        [EnableCors("AllowAllHeaders")]
-        public ActionResult PaymentWithPaypal()
+        public void login(string username, string password)
         {
+            HttpContext.Session.Remove("KhachHang");
+            var kh = dbo.getCusByUser(username);
+            HttpContext.Session.Set("KhachHang", kh);
+
+        }
+
+        [EnableCors("AllowAllHeaders")]
+        public ActionResult PaymentWithPaypal(string username, string pw)
+        {
+            var kh = new TAIKHOAN()
+            {
+                PASSWORD = pw,
+                USERNAME = username,
+                MAQUYEN = 2
+            };
+
             Payment createdPayment = null;
- 
-            try
-            {
-                var guid = Convert.ToString((new Random()).Next(100000));
-
-                createdPayment = this.CreatePayment(apiContext, "http://localhost:3423/Paypal/PaymentWithPayPal?guid=" + guid);
-
-                var links = createdPayment.links.GetEnumerator();
-
-                string paypalRedirectUrl = null;
-                
-
-                while (links.MoveNext())
-                {
-                    Links lnk = links.Current;
-
-                    if (lnk.rel.ToLower().Equals("approval_url"))
-                    {
-                        paypalRedirectUrl = lnk.href;
-                    }
-                }
-
-                HttpContext.Session.Set(guid, createdPayment.id);
-                HttpContext.Session.Set("guid", createdPayment.id);
-                HttpContext.Session.Set("payerid", createdPayment.token);
-                
-                return Redirect(paypalRedirectUrl);
-            }
-            catch(Exception ex)
-            {
-                ex.ToString();
-            }
-
             
+            var rs = dbo.LoginCheckKH(kh);
+
+            if(rs == 1)
+            {
+                try
+                {
+                    login(username, pw);
+                    var guid = Convert.ToString((new Random()).Next(100000));
+
+                    createdPayment = this.CreatePayment(apiContext, "http://localhost:3423/Paypal/PaymentWithPayPal?guid=" + guid);
+
+                    var links = createdPayment.links.GetEnumerator();
+
+                    string paypalRedirectUrl = null;
+
+
+                    while (links.MoveNext())
+                    {
+                        Links lnk = links.Current;
+
+                        if (lnk.rel.ToLower().Equals("approval_url"))
+                        {
+                            paypalRedirectUrl = lnk.href;
+                        }
+                    }
+
+                    HttpContext.Session.Set(guid, createdPayment.id);
+                    HttpContext.Session.Set("guid", createdPayment.id);
+
+                    return Redirect(paypalRedirectUrl);
+                }
+                catch (Exception ex)
+                {
+                    ex.ToString();
+                }
+            }
+            else
+            {
+                HttpContext.Session.SetInt32("loginfailed", -1);
+                return RedirectToAction("Index", "Cart");
+            }
             return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Success()
         {
+
+            string payerid = HttpContext.Request.Query["PayerID"];
+            var paymentId = HttpContext.Session.Get<string>("guid");
+            var carts = HttpContext.Session.Get<List<CartItem>>("GioHang");
+            //var listDetail = HttpContext.Session.Get<List<CTGH>>("CTGioHang");
+            var currentCus = HttpContext.Session.Get<KHACHHANG>("KhachHang");
+            var tongtien = HttpContext.Session.Get<decimal>("TongTien");
+
+            if (!string.IsNullOrEmpty(paymentId))
+            {
+                int IDGioHang = dbo.thanhtoanGioHang(currentCus.cmnd, tongtien, currentCus.masothue);
+                foreach(var item in carts)
+                {
+                    var giamua = item.DoChoi.ThayDoiGia.Gia - ((item.DoChoi.ThayDoiGia.Gia*item.DoChoi.KHUYENMAI.CTKM.PTGiamGia)/100);
+                    dbo.themCTGH(IDGioHang, item.DoChoi.MaDoChoi, null, giamua, null, item.qty);
+                }
+                var payerId = HttpContext.Session.GetString("payerid");
+                ExecutePayment(payerid, paymentId);
+                if (carts != null)
+                {
+                    HttpContext.Session.Remove("GioHang");
+                }
+            }
+
             return View("~/Views/Success.cshtml");
         }
 
@@ -112,13 +160,13 @@ namespace BT2MWG.Controllers
                 items = new List<Item>()
             };
 
-            foreach(CartItem item in carts)
+            foreach (CartItem item in carts)
             {
                 //tongTien = tongTien + item.DoChoi.ThayDoiGia.Gia * item.qty;
                 var ptGiam = item.DoChoi.KHUYENMAI.CTKM.PTGiamGia;
                 var gia = item.DoChoi.ThayDoiGia.Gia;
-                var giaPro = gia - ((gia*ptGiam)/100);
-                var itemPrice = Math.Round(giaPro / 23300,2).ToString().Replace(",",".");
+                var giaPro = gia - ((gia * ptGiam) / 100);
+                var itemPrice = Math.Round(giaPro / 23300, 2).ToString().Replace(",", ".");
                 tongTien = tongTien + (giaPro * item.qty);
 
                 itemList.items.Add(new Item()
@@ -127,10 +175,11 @@ namespace BT2MWG.Controllers
                     currency = "USD",
                     price = itemPrice,
                     quantity = item.qty.ToString(),
-                    sku = "sku" 
+                    sku = "sku"
                 });
             }
-            tongTien = Math.Round(tongTien / 23300,2);
+            HttpContext.Session.Set<decimal>("TongTien", tongTien);
+            tongTien = Math.Round(tongTien / 23300, 2);
             var tongTienFormated = tongTien.ToString().Replace(",", ".");
 
             var payer = new Payer()
@@ -140,18 +189,17 @@ namespace BT2MWG.Controllers
 
             var redirUrls = new RedirectUrls()
             {
-                cancel_url = "http://localhost:3423/",
-                return_url = "http://localhost:3423/"
+                cancel_url = "http://localhost:3423/" + "&Cancel=true",
+                return_url = "http://localhost:3423/Paypal/Success"
             };
 
             var details = new Details
             {
-                tax = "1",
-                shipping = "1",
+                tax = "0",
+                shipping = "0",
                 subtotal = tongTienFormated
             };
-
-            tongTien = tongTien + 2;
+            
             tongTienFormated = tongTien.ToString().Replace(",", ".");
 
             var amount = new Amount()

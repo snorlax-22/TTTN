@@ -4,6 +4,7 @@ using BT2MWG.ViewModel;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,15 +21,8 @@ namespace BT2MWG.Controllers
         }
         public IActionResult Index()
         {
-            var paymentId = HttpContext.Session.Get<string>("guid");
-            if (!string.IsNullOrEmpty(paymentId))
-            {
-                var payerId = HttpContext.Session.Get<string>("payerid");
-                var result = _PController.ExecutePayment(payerId, paymentId);
-                HttpContext.Session.Remove("GioHang");
-            }
-
-            db dbo = new db();
+            
+             db dbo = new db();
 
             var b = dbo.layTatCaDoChoiV2();
             b = b.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 50).Distinct().ToList();

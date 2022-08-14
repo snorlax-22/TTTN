@@ -7,7 +7,59 @@ namespace BT2MWG.Models
 {
     public class db
     {
-        SqlConnection conn = new SqlConnection("Data Source=SNORLAX;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=300;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        public int? SafeGetInt(SqlDataReader reader, int colIndex)
+        {
+            try
+            {
+                if (!reader.IsDBNull(colIndex))
+                    return reader.GetInt32(colIndex);
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            return null;
+        }
+
+        SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=300;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
+        #region login
+        public KHACHHANG getCusByUser(string username)
+        {
+            var kh = new KHACHHANG();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("getCusByUser", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@username", username);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    kh = new KHACHHANG()
+                    {
+                        cmnd = dr.GetString(0),
+                        hotenkh = dr.GetString(1),
+                        email = dr.GetString(2),
+                        gioitinh = dr.GetString(3),
+                        sdt = dr.GetString(4),
+                        diachi = dr.GetString(5),
+                        tinhtrang = dr.GetBoolean(6),
+                        masothue = dr.GetString(7)
+                    };
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+
+            return kh;
+        }
+
         public int LoginCheck(TAIKHOAN account)
         {
             SqlCommand cmd = new SqlCommand("dangNhap", conn);
@@ -26,7 +78,26 @@ namespace BT2MWG.Models
             return res;
         }
 
+        public int LoginCheckKH(TAIKHOAN account)
+        {
+            SqlCommand cmd = new SqlCommand("dangNhapKH", conn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@username", account.USERNAME);
+            cmd.Parameters.AddWithValue("@password", account.PASSWORD);
+            cmd.Parameters.AddWithValue("@maquyen", account.MAQUYEN);
+            SqlParameter oblLogin = new SqlParameter();
+            oblLogin.ParameterName = "@Isvalid";
+            oblLogin.SqlDbType = System.Data.SqlDbType.Bit;
+            oblLogin.Direction = System.Data.ParameterDirection.Output;
+            cmd.Parameters.Add(oblLogin);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            int res = Convert.ToInt32(oblLogin.Value);
+            conn.Close();
+            return res;
+        }
 
+        #endregion
 
         #region campaign
         public List<DOCHOI> layDoChoiKMKhung()
@@ -118,7 +189,7 @@ namespace BT2MWG.Models
                         NgayBatDau = null
                     };
 
-                    if (dr.GetDateTime(8) >= DateTime.Now )
+                    if (dr.GetDateTime(8) >= DateTime.Now)
                     {
                         ctkm = new CTKM()
                         {
@@ -134,7 +205,7 @@ namespace BT2MWG.Models
                             NgayBatDau = dr.GetDateTime(5)
                         };
                     }
-                    
+
 
                     DOCHOI doChoi = new DOCHOI()
                     {
@@ -316,8 +387,51 @@ namespace BT2MWG.Models
             }
 
         }
-        
+
         #endregion
+
+        #region get all
+        public List<GIOHANG> layTatCaGH()
+        {
+            var listCarts = new List<GIOHANG>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layTatCaGioHang", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var cart = new GIOHANG()
+                    {
+                        MaGioHang = dr.GetInt32(0),
+                        NvDuyet = SafeGetInt(dr, 1),
+                        NvGiao = SafeGetInt(dr, 2),
+                        CMNDKH = dr.GetString(3),
+                        NgayGiao = dr.GetDateTime(4),
+                        MaHoaDon = dr.GetString(6),
+                        TrangThai = new TrangThai()
+                        {
+                            MaTrangThai = dr.GetInt32(5),
+                            TenTrangThai = dr.GetString(7)
+                        }
+
+                    };
+                    listCarts.Add(cart);
+                }
+                conn.Close();
+
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+            }
+
+            return listCarts;
+        }
 
         public List<NHACUNGCAP> layTatCaNhaCC()
         {
@@ -354,7 +468,6 @@ namespace BT2MWG.Models
             return listSuppliers;
         }
 
-        
         public List<DANHMUC> layDanhMucTheoDoChoi(int idDoChoi)
         {
             var listcate = new List<DANHMUC>();
@@ -383,7 +496,7 @@ namespace BT2MWG.Models
             }
             return listcate;
         }
-        
+
         public List<DANHMUC> layTatCaDanhMuc()
         {
             var listcate = new List<DANHMUC>();
@@ -411,6 +524,10 @@ namespace BT2MWG.Models
             }
             return listcate;
         }
+        #endregion
+
+        #region by toy id
+
         public ThayDoiGia layGiaTheoMaSanPham(int idDoChoi)
         {
             var gia = new ThayDoiGia();
@@ -438,7 +555,6 @@ namespace BT2MWG.Models
             return gia;
         }
 
-   
         public KHUYENMAI layKM(int idDoChoi)
         {
             try
@@ -456,7 +572,7 @@ namespace BT2MWG.Models
                     ctkm.IdKM = dr.GetInt32(4);
                     ctkm.PTGiamGia = dr.GetInt32(2);
                     ctkm.IdDoChoi = dr.GetInt32(0);
-                    
+
                     var km = new KHUYENMAI(ctkm);
                     km.Id = dr.GetInt32(4);
                     km.Name = dr.GetString(3);
@@ -468,17 +584,17 @@ namespace BT2MWG.Models
                 }
                 else
                 {
-                   var km = new KHUYENMAI();
-                   return km;
+                    var km = new KHUYENMAI();
+                    return km;
                 }
-                
+
             }
             catch (Exception e)
             {
                 throw new Exception();
             }
         }
-
+        #endregion
 
         #region crud hãng
         public List<HANGDOCHOI> layTatCaHang()
@@ -637,7 +753,7 @@ namespace BT2MWG.Models
                 conn.Open();
                 cmd.Parameters.AddWithValue("@idHinhAnh", maHinhAnh);
                 cmd.Parameters.AddWithValue("@hinhAnh", anh);
-                
+
 
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -649,7 +765,7 @@ namespace BT2MWG.Models
                 return 0;
             }
         }
-        
+
         public int ThemAnh(int maDoChoi, string anh)
         {
             try
@@ -659,7 +775,7 @@ namespace BT2MWG.Models
                 conn.Open();
                 cmd.Parameters.AddWithValue("@idDoChoi", maDoChoi);
                 cmd.Parameters.AddWithValue("@hinhAnh", anh);
-                
+
 
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -726,6 +842,66 @@ namespace BT2MWG.Models
             }
 
             return listImages;
+        }
+        #endregion
+
+        #region cart
+
+        public int thanhtoanGioHang(string cmnd, decimal tongtien, string masothue)
+        {
+            try
+            {
+                //@cmnd = N'025971880',
+                //@mahoadon = N'HD1534531',
+                //@tongtien = 500000,
+                //@masothue = N'03882874'
+                var mahoadon = "HD" + DateTime.Now.ToString().Replace(" ", "").Replace(":", "").Replace("/", "");
+                SqlCommand cmd = new SqlCommand("thanhtoanGioHang", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@cmnd", cmnd);
+                cmd.Parameters.AddWithValue("@mahoadon", mahoadon);
+                cmd.Parameters.AddWithValue("@tongtien", tongtien);
+                cmd.Parameters.AddWithValue("@masothue", masothue);
+
+                int ID = (int)cmd.ExecuteScalar();
+                conn.Close();
+                return ID;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int themCTGH(int maGioHang, int maDoChoi, int? maPhieuTra, decimal giaMua, int? slTra, int slMua)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("themCTGH", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maGioHang", maGioHang);
+                cmd.Parameters.AddWithValue("@maDoChoi", maDoChoi);
+                cmd.Parameters.AddWithValue("@maPhieuTra", maPhieuTra != null ? maPhieuTra : DBNull.Value);
+                cmd.Parameters.AddWithValue("@giaMua", giaMua);
+                cmd.Parameters.AddWithValue("@soLuongTra", slTra != null ? slTra : DBNull.Value);
+                cmd.Parameters.AddWithValue("@soLuongMua", slMua);
+
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
         }
         #endregion
 

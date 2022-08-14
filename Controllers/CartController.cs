@@ -29,14 +29,23 @@ namespace BT2MWG.Controllers
             _secretKey = config["PaypalSettings:SecretKey"];
         }
        
+
+        
+
         public List<CartItem> Carts
         {
             get
             {
                 var carts = HttpContext.Session.Get<List<CartItem>>("GioHang");
+                var loginfailed = HttpContext.Session.GetInt32("loginfailed");
+                
                 if (carts == null)
                 {
                     carts = new List<CartItem>();
+                }
+                if (loginfailed == -1)
+                {
+                    carts.ForEach(x => x.loginfailed = true);
                 }
                 return carts;
             }
@@ -44,6 +53,7 @@ namespace BT2MWG.Controllers
 
         public IActionResult Index()
         {
+            
             return View(Carts);
         }
 
@@ -101,8 +111,6 @@ namespace BT2MWG.Controllers
             //lấy giỏ hàng hiện tại
 
             var myCart = Carts;
-
-
             
             //kiểm tra hàng đã có trong giỏ
             var item = myCart.SingleOrDefault(it => it.DoChoi.MaDoChoi == id);

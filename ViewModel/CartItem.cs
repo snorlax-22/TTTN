@@ -9,6 +9,9 @@ namespace BT2MWG.ViewModel
         public DOCHOI DoChoi { get; set; }
 
         public int qty { get; set; }
-        
+
+        public bool? loginfailed { get; set; }
+
+
     }
 }
