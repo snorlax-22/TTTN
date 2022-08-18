@@ -28,10 +28,14 @@
 <div id="app" class="bluekids">
     <section>
         <div class="yourCart top-content">
-            @if (@Model.FirstOrDefault().loginfailed != null && @Model.FirstOrDefault().loginfailed == true)
+            @if (@Model != null && @Model.Count != 0)
             {
-                <h1>Vui lòng kiểm tra lại tài khoản hoặc mật khẩu</h1>
+                @if (@Model.FirstOrDefault().loginfailed != null && @Model.FirstOrDefault().loginfailed == true)
+                {
+                    <h1>Vui lòng kiểm tra lại tài khoản hoặc mật khẩu</h1>
+                }
             }
+
 
             <a href="/" class="buymore">Mua thêm sản phẩm khác</a>
             <span>
@@ -195,7 +199,7 @@
         $('#dangnhap').click(function() {
             var username = $('#id-pay').val();
             var password = $('#pw-pay').val();
-            window.location.href = "@Url.Action("PaymentWithPaypal", "Paypal")" + "?username=" + $("#id-pay").val()+"&pw="+ $("#pw-pay").val();
+            window.location.href = "@Url.Action("PaymentWithPaypal", "Paypal")" + "?username=" + $("#id-pay").val() + "&pw=" + $("#pw-pay").val();
         })
     </script>
 

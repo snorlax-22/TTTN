@@ -20,10 +20,18 @@ namespace BT2MWG.Controllers
 
         public ActionResult Order()
         {
-            List<GIOHANG> listGH = dbo.layTatCaGH();
-            return View("~/Views/Admin/Order.cshtml", listGH);
+            var vm = new AdminPageViewModel();
+
+            vm.listNV = dbo.layTatCaNV();
+            vm.listGioHang = dbo.layTatCaGH();
+            
+            return View("~/Views/Admin/Order.cshtml", vm);
         }
 
+        public IActionResult LoadOrder(List<Product> aPList)
+        {
+            return PartialView("_OthersToy_Toy", aPList);
+        }
         public ActionResult Admin()
         {
             var tk = new TAIKHOAN();

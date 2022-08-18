@@ -524,6 +524,49 @@ namespace BT2MWG.Models
             }
             return listcate;
         }
+
+        public List<NHANVIEN> layTatCaNV()
+        {
+            var listNV = new List<NHANVIEN>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layTatCaNV", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var nv = new NHANVIEN()
+                    {
+                        MaNV = dr.GetInt32(0),
+                        TenNV = dr.GetString(1),
+                        //Email = dr.GetString(2),
+                        //GioiTinh = dr.GetBoolean(3),
+                        //SDT = dr.GetString(4),
+                        //DiaChi = dr.GetString(5),
+                        //TinhTrang = dr.GetBoolean(6),
+                        //MaSoThue = dr.GetString(7),
+                        //TAIKHOAN = new TAIKHOAN()
+                        //{
+                        //    USERNAME = dr.GetString(8),
+                        //    MAQUYEN = dr.GetInt32(9),
+                        //    PASSWORD = dr.GetString(10)
+                        //}
+                };
+              
+
+                    listNV.Add(nv);
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            return listNV;
+        }
         #endregion
 
         #region by toy id
@@ -860,7 +903,6 @@ namespace BT2MWG.Models
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 conn.Open();
                 cmd.Parameters.AddWithValue("@cmnd", cmnd);
-                cmd.Parameters.AddWithValue("@mahoadon", mahoadon);
                 cmd.Parameters.AddWithValue("@tongtien", tongtien);
                 cmd.Parameters.AddWithValue("@masothue", masothue);
 

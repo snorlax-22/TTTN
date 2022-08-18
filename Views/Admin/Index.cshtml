@@ -1,16 +1,74 @@
 ﻿@model BT2MWG.ViewModel.AdminPageViewModel;
 
-<!DOCTYPE html>
-<html>
+
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
     <title>Login Form</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form{
+    border: 3px solid #f1f1f1;
+    width: 700px;
+    margin: 0 auto;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+</style>
 </head>
+
 <body>
-    <h2>Login Page</h2>
+    @*<h2>Login Page</h2>
     <br>
     <div class="login">
         <label>
@@ -28,11 +86,34 @@
         <input asp-for="password" type="Password" name="Pass" id="password" placeholder="Password">
         <br><br>
         <input type="button" name="log" id="log" value="Log In Here">
-        @*@Html.ActionLink("Log In Here", "DangNhap","Admin",new{ username = , password = })*@
         <br><br>
         <br><br>
-    </div>
+    </div>*@
+    <h2>Login Form</h2>
 
+<form action="" method="post">
+  <div class="imgcontainer">
+    <img src="/public/images admin/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
     <script>
         $(document).ready(function() {
             $("#log").click(function(event) {
@@ -40,26 +121,6 @@
                 window.location.href = "@Url.Action("DangNhap", "Admin")" + "?username=" + $("#username").val()+"&password="+ $("#password").val();
             });
         })
-        //$("#log").click(function(e) {
-        //    $.ajax({
-        //        type: "POST",
-        //        url: "/Admin/Index/",
-        //        data: {
-        //            username: $("#Uname").val(),
-        //            password: $("#Pass").val()
-        //        },
-        //        success: function(result) {
-        //            debugger;
-        //            var a = result;
-        //            //window.localStorage.setItem("username", $("#Uname").val());
-        //            //window.location.href = "admin/admin";
-
-        //        },
-        //        error: function(result) {
-        //            console.log('error');
-        //        }
-        //    });
-        //});
     </script>
     @{
         if (TempData["msg"] != null)
@@ -70,4 +131,3 @@
         }
     }
 </body>
-</html>
