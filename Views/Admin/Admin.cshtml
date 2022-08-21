@@ -48,14 +48,14 @@
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
          data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
-        @await Html.PartialAsync("/Views/Common/Partial/Topbar Header.cshtml")
+        @await Html.PartialAsync("/Views/Common/Partial/Topbar Header.cshtml",@Model)
 
         @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
 
         <div class="page-wrapper">
             <br />
             <label>Nhân viên nhập</label>
-            <input id="empName" type="button" value="@Model.taikhoan.USERNAME" readonly disabled></input>
+            <input id="empName" type="button" value="@Model.nv.TenNV" readonly disabled></input>
             <br />
             <br />
             @*<input id="empName" type="text" name="username" value="" readonly/>*@

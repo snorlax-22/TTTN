@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 
@@ -20,8 +21,21 @@ namespace BT2MWG.Models
             }
             return null;
         }
+        public string? SafeGetString(SqlDataReader reader, int colIndex)
+        {
+            try
+            {
+                if (!reader.IsDBNull(colIndex))
+                    return reader.GetString(colIndex);
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            return null;
+        }
 
-        SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=300;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         #region login
         public KHACHHANG getCusByUser(string username)
@@ -48,6 +62,71 @@ namespace BT2MWG.Models
                         diachi = dr.GetString(5),
                         tinhtrang = dr.GetBoolean(6),
                         masothue = dr.GetString(7)
+                    };
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+
+            return kh;
+        }
+
+        public int duyetDonHang(int maDonHang, int maNVDuyet, int maNVGiao)
+        {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("duyetDonHang", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@maNvDuyet", maNVDuyet);
+                    cmd.Parameters.AddWithValue("@maNvGiao", maNVGiao);
+                    cmd.Parameters.AddWithValue("@maGioHang", maDonHang);
+
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return 1;
+                }
+                catch (Exception e)
+                {
+                    conn.Close();
+                    return 0;
+                }  
+        }
+
+        public NHANVIEN getEmpByUser(TAIKHOAN acc)
+        {
+            var kh = new NHANVIEN();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("getEmpByUser", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@username", acc.USERNAME);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    kh = new NHANVIEN()
+                    {
+                        MaNV = dr.GetInt32(0),
+                        TenNV = dr.GetString(1),
+                        Email = dr.GetString(2),
+                        GioiTinh = dr.GetBoolean(3),
+                        SDT = dr.GetString(4),
+                        DiaChi = dr.GetString(5),
+                        TinhTrang = dr.GetBoolean(6),
+                        MaSoThue = dr.GetString(7),
+                        TAIKHOAN = new TAIKHOAN()
+                        {
+                            USERNAME = dr.GetString(8),
+                            MAQUYEN = acc.MAQUYEN,
+                            PASSWORD = acc.PASSWORD
+                        },
                     };
                 }
                 conn.Close();
@@ -391,6 +470,86 @@ namespace BT2MWG.Models
         #endregion
 
         #region get all
+        public List<DOCHOI> layTatCaDoChoiV3()
+        {
+            var listDoChoiKM = new List<DOCHOI>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layTatCaDoChoiV2", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                if (conn.State.ToString().Equals(System.Data.ConnectionState.Closed.ToString()))
+                {
+                    conn.Open();
+                }
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    int idDoChoi = dr.GetInt32(0);
+
+                    ThayDoiGia gia = new ThayDoiGia()
+                    {
+                        Gia = dr.GetDecimal(1),
+                        NgayApDung = dr.GetDateTime(2)
+                    };
+
+                    HANGDOCHOI hang = new HANGDOCHOI()
+                    {
+                        TENHANGDOCHOI = dr.GetString(6)
+                    };
+
+                    CTKM ctkm = new CTKM()
+                    {
+                        IdDoChoi = idDoChoi,
+                        PTGiamGia = 0,
+                        IdKM = 0
+                    };
+
+                    KHUYENMAI km = new KHUYENMAI()
+                    {
+                        Id = 0,
+                        CTKM = ctkm,
+                        NgayBatDau = null
+                    };
+
+                    if (dr.GetDateTime(8) >= DateTime.Now)
+                    {
+                        ctkm = new CTKM()
+                        {
+                            IdDoChoi = idDoChoi,
+                            PTGiamGia = dr.GetInt32(3),
+                            IdKM = dr.GetInt32(4)
+                        };
+
+                        km = new KHUYENMAI()
+                        {
+                            Id = dr.GetInt32(4),
+                            CTKM = ctkm,
+                            NgayBatDau = dr.GetDateTime(5)
+                        };
+                    }
+
+
+                    DOCHOI doChoi = new DOCHOI()
+                    {
+                        TenDoChoi = dr.GetString(7),
+                        MaDoChoi = idDoChoi,
+                        ThayDoiGia = gia,
+                        KHUYENMAI = km
+                    };
+
+                    listDoChoiKM.Add(doChoi);
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+            }
+            
+            return listDoChoiKM;
+        }
         public List<GIOHANG> layTatCaGH()
         {
             var listCarts = new List<GIOHANG>();
@@ -407,11 +566,18 @@ namespace BT2MWG.Models
                     var cart = new GIOHANG()
                     {
                         MaGioHang = dr.GetInt32(0),
-                        NvDuyet = SafeGetInt(dr, 1),
-                        NvGiao = SafeGetInt(dr, 2),
+                        NvDuyet = new NHANVIEN()
+                        {
+                            MaNV = SafeGetInt(dr, 1),
+                            TenNV = SafeGetString(dr,8)
+                        },
+                        NvGiao = new NHANVIEN(){
+                           MaNV = SafeGetInt(dr, 2),
+                            TenNV = SafeGetString(dr, 9)
+                        },
                         CMNDKH = dr.GetString(3),
                         NgayGiao = dr.GetDateTime(4),
-                        MaHoaDon = dr.GetString(6),
+                        MaHoaDon = SafeGetString(dr,6),
                         TrangThai = new TrangThai()
                         {
                             MaTrangThai = dr.GetInt32(5),
@@ -870,10 +1036,7 @@ namespace BT2MWG.Models
                     while (dr.Read())
                     {
                         var supplier = new HINHANH();
-                        supplier.Id = dr.GetInt32(0);
                         supplier.HinhAnh = dr.GetString(1);
-                        supplier.IdDoChoi = dr.GetInt32(2);
-
                         listImages.Add(supplier);
                     }
                     conn.Close();
@@ -890,6 +1053,31 @@ namespace BT2MWG.Models
 
         #region cart
 
+        public int KiemTraTon(int madochoi, int sldochoi)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("kiemtraTon", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maDoChoi", madochoi);
+                cmd.Parameters.AddWithValue("@slDoChoi", sldochoi);
+                var returnParameter = cmd.Parameters.Add("@return_value", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+                cmd.ExecuteNonQuery();
+                var result = returnParameter.Value;
+                conn.Close();
+                return (int)result;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+            
+        }
+
         public int thanhtoanGioHang(string cmnd, decimal tongtien, string masothue)
         {
             try
@@ -898,9 +1086,8 @@ namespace BT2MWG.Models
                 //@mahoadon = N'HD1534531',
                 //@tongtien = 500000,
                 //@masothue = N'03882874'
-                var mahoadon = "HD" + DateTime.Now.ToString().Replace(" ", "").Replace(":", "").Replace("/", "");
                 SqlCommand cmd = new SqlCommand("thanhtoanGioHang", conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
                 conn.Open();
                 cmd.Parameters.AddWithValue("@cmnd", cmnd);
                 cmd.Parameters.AddWithValue("@tongtien", tongtien);
@@ -924,7 +1111,7 @@ namespace BT2MWG.Models
             try
             {
                 SqlCommand cmd = new SqlCommand("themCTGH", conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
                 conn.Open();
                 cmd.Parameters.AddWithValue("@maGioHang", maGioHang);
                 cmd.Parameters.AddWithValue("@maDoChoi", maDoChoi);

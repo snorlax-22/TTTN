@@ -2,7 +2,7 @@
 {
     public class NHANVIEN
     {
-        public int MaNV { get; set; }
+        public int? MaNV { get; set; }
         public string TenNV { get;set; }
         public string Email { get; set; }
         public bool GioiTinh { get; set; }

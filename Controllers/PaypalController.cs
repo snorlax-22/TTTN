@@ -44,16 +44,31 @@ namespace BT2MWG.Controllers
         //    PaymentWithPaypal();
         //}
 
-        public int checkIsLoginCustomer()
+        public string checkIsLoginCustomer()
         {
             var account = HttpContext.Session.Get<TAIKHOAN>("TaiKhoanKhachHang");
+            var carts = HttpContext.Session.Get<List<CartItem>>("GioHang");
+
+            foreach (var cart in carts)
+            {
+               var slTon = dbo.KiemTraTon(cart.DoChoi.MaDoChoi, cart.qty);
+               if(slTon == -1)
+               {
+                    return "Sản phẩm " + cart.DoChoi.TenDoChoi + " đã hết hàng";
+               }
+               else if(slTon > 0)
+               {
+                    return "Sản phẩm " + cart.DoChoi.TenDoChoi + " chỉ còn lại "+slTon.ToString();
+               }
+            }
+
 
             if (account != null && account.MAQUYEN == 2)
             {
-                return 1;
+                return "1";
             }
 
-            return 0;
+            return "0";
         }
 
         public void login(string username, string password)

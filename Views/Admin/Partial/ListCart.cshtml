@@ -1,0 +1,109 @@
+﻿@using BT2MWG.ViewModel
+@model AdminPageViewModel;
+@{
+    var listNVGH = @Model.listNV.Where(x => x.MaNV != 4);
+    int pageidx = 1;
+    int count = 0;
+    string clsHide = string.Empty;
+    int pageSize = 9;
+    int TotalPages = (int)Math.Ceiling(Model.listGioHang.Count / (double)pageSize);
+}
+<style>
+    .pagination {
+        margin-left: 45%;
+        display: inline-block;
+    }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 10px 22px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+            .pagination a.active {
+                background-color: #2cabe3;
+                color: white;
+            }
+
+            .pagination a:hover:not(.active) {
+                background-color: #ddd;
+            }
+</style>
+<table class="table" id="cart_tab">
+    <tr>
+        <th>Mã </th>
+        <th>NV Duyệt</th>
+        <th>NV Giao</th>
+        <th>CMNDKH</th>
+        <th>Thời Gian Giao</th>
+        <th>Hóa Đơn</th>
+        <th>Trạng Thái</th>
+        <th>  </th>
+
+    </tr>
+    @foreach (var item in @Model.listGioHang)
+    {
+        count++;
+        if (count > pageSize * pageidx)
+        {
+            pageidx++;
+            clsHide = "hide";
+        }
+        <tr class="itemrow @clsHide pageidx-@pageidx" data-page="@pageidx">
+            <td><label>@item.MaGioHang</label></td>
+            <td><label>@item.NvDuyet.TenNV</label></td>
+            <td>
+                <label>
+                    @if(item.TrangThai.MaTrangThai == 1)
+                    {
+                        <select name="deliver" id="deliver">
+                        @foreach (var nv in listNVGH)
+                        {
+                            <option value="@nv.MaNV">@nv.TenNV</option>
+                        }
+                        </select>
+                    }
+                    else
+                    {
+                        @item.NvGiao.TenNV
+                    }
+                </label>
+            </td>
+            <td><label>@item.CMNDKH</label></td>
+            <td><label>@item.NgayGiao</label></td>
+            <td><label>@item.MaHoaDon</label></td>
+            <td><label>@item.TrangThai.TenTrangThai</label></td>
+            @{
+                string btn = item.TrangThai.MaTrangThai == 1 ? "Duyệt" : "Hoàn thành";
+                string clsBtn = btn == "Duyệt" ? "approve" : "complete";
+            }
+            <td><a class="edit-btn @clsBtn" data-idnvduyet="@Model.nv.MaNV" data-btn="@clsBtn" data-id="@item.MaGioHang">@btn</a></td>
+        </tr>
+    }
+</table>
+
+<div class="pagination">
+    @for (int i = 1; i <= TotalPages; i++)
+    {
+        string clsActive = i == 1 ? "active" : string.Empty;
+        <a class="@clsActive page-button" data-page="@i">@i</a>
+    }
+</div>
+<script>
+
+    //paging
+    $('.page-button').click(function() {
+        var clsName = '.pageidx-' + $(this).data('page');
+
+        $('.itemrow').addClass('hide');
+        $(clsName).removeClass('hide');
+
+        $('.page-button').removeClass('active');
+
+        $(this).addClass('active');
+
+    });
+</script>
+

@@ -6,9 +6,21 @@
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
 body {font-family: Arial, Helvetica, sans-serif;}
+
+#log{
+        text-align: center;
+    display: block;
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 0px;
+    margin: 20px -11px 15px 1px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
 form{
     border: 3px solid #f1f1f1;
     width: 700px;
@@ -34,7 +46,7 @@ button {
   width: 100%;
 }
 
-button:hover {
+a:hover {
   opacity: 0.8;
 }
 
@@ -67,30 +79,10 @@ span.psw {
 </style>
 </head>
 
-<body>
-    @*<h2>Login Page</h2>
-    <br>
-    <div class="login">
-        <label>
-            <b>
-                User Name
-            </b>
-        </label>
-        <input asp-for="username" type="text" name="Uname" id="username" placeholder="Username">
-        <br><br>
-        <label>
-            <b>
-                Password
-            </b>
-        </label>
-        <input asp-for="password" type="Password" name="Pass" id="password" placeholder="Password">
-        <br><br>
-        <input type="button" name="log" id="log" value="Log In Here">
-        <br><br>
-        <br><br>
-    </div>*@
-    <h2>Login Form</h2>
 
+
+<body>
+    <h2>Login Form</h2>
 <form action="" method="post">
   <div class="imgcontainer">
     <img src="/public/images admin/img_avatar2.png" alt="Avatar" class="avatar">
@@ -98,12 +90,12 @@ span.psw {
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input class="username" type="text" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input class="password" type="password" placeholder="Enter Password" name="psw" required>
         
-    <button type="submit">Login</button>
+    <a id="log">Login</a>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
@@ -114,20 +106,17 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
-    <script>
-        $(document).ready(function() {
-            $("#log").click(function(event) {
-                event.preventDefault();
-                window.location.href = "@Url.Action("DangNhap", "Admin")" + "?username=" + $("#username").val()+"&password="+ $("#password").val();
-            });
-        })
-    </script>
+<script>
+
+</script>
     @{
         if (TempData["msg"] != null)
         {
-            <script>
-                alert('@TempData["msg"]')
-            </script>
+                                <script>
+                                    alert('@TempData["msg"]')
+                                </script>
         }
     }
+    <script src="~/public/js/admin/admin.js"></script>
 </body>
+

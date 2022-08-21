@@ -21,10 +21,13 @@ namespace BT2MWG.Controllers
         }
         public IActionResult Index()
         {
+
             
              db dbo = new db();
 
-            var b = dbo.layTatCaDoChoiV2();
+            
+
+            var b = dbo.layTatCaDoChoiV3();
             b = b.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 50).Distinct().ToList();
             PageHomeViewModel vm = new PageHomeViewModel();
             vm.listDoChoiKMKhung = b;

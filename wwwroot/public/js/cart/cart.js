@@ -64,12 +64,18 @@
             url: "/Paypal/checkIsLoginCustomer",
             type: 'GET',
             success: function (res) {
-                if (res == 1) {
+
+                if (res === "1") {
                     //showConfirm();
+                    aler('sai tk mk')
                 }
-                else {
+                else if (res === "0") {
                     showPopup();
+                }                 
+                else {
+                    alert(res);
                 }
+                
             },
             error: function (res) {
                 console.log('-1 error')
