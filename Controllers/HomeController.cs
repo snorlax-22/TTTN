@@ -25,7 +25,7 @@ namespace BT2MWG.Controllers
             
              db dbo = new db();
 
-            
+            //var a = dbo.layDoanhThuTheoThang(DateTime.Parse("2022-06-12"), DateTime.Parse("2022-08-21"));
 
             var b = dbo.layTatCaDoChoiV3();
             b = b.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 50).Distinct().ToList();

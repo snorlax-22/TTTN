@@ -52,6 +52,27 @@
 
     </div>
     
+    @*khung đăng nhập///////////*@
+    <div class="listctgh"></div>
+    <div class="bg-promo hide"></div>
+    <div class="alert-promo hide">
+        <div class="close-popup" onclick="closePopup()">
+            <i></i>
+        </div><span>ĐĂNG NHẬP</span>
+        <p>Tên đăng nhập</p>
+        <input id="id-pay" />
+        <p>Mật khẩu</p>
+        <input id="pw-pay" />
+        @*<b>@Html.ActionLink("ĐĂNG NHẬP","PaymentWithPaypal","Paypal",new{@style="color: #fff"})</b>*@
+        <b><a id="dangnhap">ĐĂNG NHẬP</a></b>
+        <div class="resize-triggers">
+            <div class="expand-trigger">
+                <div style="width: 341px; height: 169px;">
+                </div>
+            </div><div class="contract-trigger"></div>
+        </div>
+    </div>
+
     <footer class="footer text-center">
         2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
     </footer>

@@ -110,10 +110,10 @@
                 <tr>
                     <th>Mã Đồ Chơi</th>
                     <th>Tên Đồ Chơi</th>
-                    <th>Trạng Thái </th>
-                    <th>SL Tồn</th>
+                    @*<th>Trạng Thái </th>*@
+                    @*<th>SL Tồn</th>*@
                     <th>Tên Hãng</th>
-                    <th>Tên Nhà CC</th>
+                    @*<th>Tên Nhà CC</th>*@
                     <th>  </th>
                     <th>  </th>
                 </tr>
@@ -123,10 +123,10 @@
                     <tr>
                         <td>@item.MaDoChoi</td>
                         <td>@item.TenDoChoi</td>
-                        <td>@status</td>
-                        <td>@item.SLTon</td>
+                        @*<td>@status</td>*@
+                        @*<td>@item.SLTon</td>*@
                         <td>@item.HANGDOCHOI.TENHANGDOCHOI</td>
-                        <td>@item.NHACUNGCAP.TENNHACC</td>
+                        @*<td>@item.NHACUNGCAP.TENNHACC</td>*@
                         <td><a class="edit-btn" data-id="@item.MaDoChoi" href="">Sửa</a></td>
                         <td><a href="">Xóa</a></td>
                     </tr>
@@ -173,7 +173,7 @@
             data: {
                 manv: 4,
                 tenDoChoi: $("#toyName").val(),
-                password: $("#toyPrice").val(),
+                giaMoi: $("#toyPrice").val(),
                 listAnh: srcData,
                 slAnh: 1,
                 moTa: $("#description").val(),

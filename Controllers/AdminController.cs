@@ -13,6 +13,37 @@ namespace BT2MWG.Controllers
     {
         db dbo = new db();
 
+
+        public List<CTGH> LayChiTietGioHang(int maGH)
+        {
+            var listctgh = dbo.layCTDHtheoMaGH(maGH);
+
+            using (var enumerator = listctgh.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    var item = enumerator.Current;
+
+                    item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
+                    
+                    item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
+                }
+                return listctgh;
+            }
+        }
+
+        public ActionResult DoanhThu()
+        {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
+
+            return View("~/Views/Admin/DoanhThu.cshtml", vm);
+        }
         public IActionResult Index()
         {
             return View();
@@ -63,7 +94,7 @@ namespace BT2MWG.Controllers
             var vm = new AdminPageViewModel();
             vm.nv = nv;
 
-            var dsDoChoi = dbo.layTatCaDoChoi();
+            var dsDoChoi = dbo.layTatCaDoChoiV3();
             
             vm.listDoChoi = dsDoChoi;
 
@@ -80,11 +111,18 @@ namespace BT2MWG.Controllers
 
         public IActionResult SuaDoChoi(string idDoChoi)
         {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
             var maDC = Int32.Parse(idDoChoi);
 
-            DOCHOI lstdoChoi = dbo.layDoChoiTheoMa(Int32.Parse(idDoChoi));
+            vm.EditDoCHoi = dbo.layDoChoiTheoMa(Int32.Parse(idDoChoi));
 
-            return View("~/Views/Admin/ToyDetail.cshtml", lstdoChoi);
+            return View("~/Views/Admin/ToyDetail.cshtml", vm);
         }
         #endregion
 
@@ -189,4 +227,6 @@ namespace BT2MWG.Controllers
             return rs;
         }
     }
+
+
 }

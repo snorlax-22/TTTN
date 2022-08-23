@@ -33,7 +33,7 @@ namespace BT2MWG.Controllers
             if (string.IsNullOrEmpty(searchText)) { return Json(" "); }
             var products = dbo.layTatCaDoChoiV2();
 
-            foreach(var item in products)
+           foreach(var item in products)
             {
                 item.DSHINHANH = dbo.layTatCaAnhTheoDoChoi(item.MaDoChoi);
             }
@@ -41,9 +41,7 @@ namespace BT2MWG.Controllers
             try
             {
                 productsSearched = from product in products
-                                   where product.TenDoChoi.StartsWith(searchText)
-                                   || product.TenDoChoi.EndsWith(searchText)
-                                   || product.TenDoChoi.Contains(searchText)
+                                   where product.TenDoChoi.Contains(searchText)
                                    select product;
             }
             catch (ArgumentNullException)

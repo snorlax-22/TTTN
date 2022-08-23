@@ -314,3 +314,5 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\Brai
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Success.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Order.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\ListCart.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\Revenue.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\DoanhThu.cshtml.g.cs

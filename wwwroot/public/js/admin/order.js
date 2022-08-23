@@ -39,3 +39,33 @@ $('.approve').click(function () {
     })
 });
 
+$('.ctgh').click(function (event) {
+    $.ajax({
+        url: "/Admin/LayChiTietGioHang",
+        type: 'GET',
+        data: {
+            maGH: $(this).data('id')
+        },
+        success: function (res) {
+            console.info(res);
+        },
+        error: function (res) {
+            console.log('error')
+        }
+    });
+});
+
+function closePopup() {
+    var a = document.getElementsByClassName('bg-promo')[0];
+    a.classList.add('hide');
+    var b = document.getElementsByClassName('alert-promo')[0];
+    b.classList.add('hide');
+
+}
+
+function showPopup() {
+    var a = document.getElementsByClassName('bg-promo')[0];
+    a.classList.remove('hide');
+    var b = document.getElementsByClassName('alert-promo')[0];
+    b.classList.remove('hide');
+}

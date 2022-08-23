@@ -52,7 +52,7 @@
             clsHide = "hide";
         }
         <tr class="itemrow @clsHide pageidx-@pageidx" data-page="@pageidx">
-            <td><label>@item.MaGioHang</label></td>
+            <td><a class="ctgh" data-id="@item.MaGioHang" onclick="showPopup()">@item.MaGioHang</a></td>
             <td><label>@item.NvDuyet.TenNV</label></td>
             <td>
                 <label>

@@ -1,14 +1,14 @@
 ﻿@using BT2MWG.Models
 @using System.Globalization
-@model BT2MWG.Models.DOCHOI;
+@model BT2MWG.ViewModel.AdminPageViewModel;
 
 @{
     var count = 0;
     var dbo = new db();
 
-    var gia = dbo.layGiaTheoMaSanPham(@Model.MaDoChoi).Gia;
-    var listAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
-    var listDanhMuc = dbo.layDanhMucTheoDoChoi(@Model.MaDoChoi);
+    var gia = dbo.layGiaTheoMaSanPham(@Model.EditDoCHoi.MaDoChoi).Gia;
+    var listAnh = dbo.layTatCaAnhTheoDoChoi(@Model.EditDoCHoi.MaDoChoi);
+    var listDanhMuc = dbo.layDanhMucTheoDoChoi(@Model.EditDoCHoi.MaDoChoi);
     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
     string giaOld = gia.ToString("#,###", cul.NumberFormat);
     //viết thêm hàm lấy đồ chơi để lấy tên đồ chơi (lấy theo id)
@@ -49,15 +49,15 @@
             <br />
             <br />
             <label>Tên đồ chơi</label>
-            <input id="toyName" type="text" value="@Model.TenDoChoi" />
+            <input id="toyName" type="text" value="@Model.EditDoCHoi.TenDoChoi" />
             <br />
             <br />
             <label>Nhà cung cấp</label>
-            <input id="toySuppliers" type="text" value="@Model.NHACUNGCAP.TENNHACC" readonly disabled />
+            <input id="toySuppliers" type="text" value="@Model.EditDoCHoi.NHACUNGCAP.TENNHACC" readonly disabled />
             <br />
             <br />
             <label>Hãng đồ chơi</label>
-            <input id="toyBrand" type="text" value="@Model.HANGDOCHOI.TENHANGDOCHOI" readonly disabled />
+            <input id="toyBrand" type="text" value="@Model.EditDoCHoi.HANGDOCHOI.TENHANGDOCHOI" readonly disabled />
             <br />
             <br />
             <label>Giá đồ chơi</label>
@@ -76,12 +76,12 @@
             <br />
             <label>Mô tả đồ chơi</label>
             <span></span>
-            <textarea class="description">@Model.MoTa</textarea>>
+            <textarea class="description">@Model.EditDoCHoi.MoTa</textarea>>
             <br />
             <br />
             <label>Thêm Ảnh</label>
             <div id="imgTest"></div>
-            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURLAdd('@Model.MaDoChoi');" />
+            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURLAdd('@Model.EditDoCHoi.MaDoChoi');" />
             
             <br />
             <br />
