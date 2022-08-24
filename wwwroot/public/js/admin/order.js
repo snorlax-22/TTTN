@@ -47,7 +47,7 @@ $('.ctgh').click(function (event) {
             maGH: $(this).data('id')
         },
         success: function (res) {
-            console.info(res);
+            $('#content').html(res);
         },
         error: function (res) {
             console.log('error')
@@ -69,3 +69,32 @@ function showPopup() {
     var b = document.getElementsByClassName('alert-promo')[0];
     b.classList.remove('hide');
 }
+
+$('.submit').click(function (event) {
+
+    var datefrom = $('#input_from').val();
+    var dateto = $('#input_to').val();
+
+    $.ajax({
+        url: "/Admin/thongKeDoanhThu",
+        type: 'GET',
+        data: {
+            datefrom: datefrom,
+            dateto: dateto
+        },
+        success: function (res) {
+            console.log(res);
+            $('#chart').html(res);
+        },
+        error: function (res) {
+            
+        }
+    });
+});
+
+
+$('.gotoprint').click(function (event) {
+    //event.preventDefault();
+    alert("Okeeee");
+});
+

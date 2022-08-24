@@ -1,0 +1,54 @@
+﻿@using BT2MWG.Helpers
+@using BT2MWG.ViewModel
+@model CartPageViewModel;
+<link rel="stylesheet" href="~/public/css/admin/invoice.css">
+@{
+    decimal tongTien = 0;
+    int count = 0;
+}
+<page class="print" size="A4">
+   @if(@Model.listctgh.Count>0 && @Model != null)
+{
+    <table class="table" id="cart_tab">
+    <strong>Mã giỏ hàng: </strong>@Model.listctgh.FirstOrDefault().MaGioHang
+    <tr>
+        <th>STT</th>
+        <th>Tên đồ chơi</th>
+        <th>Hình ảnh</th>
+        <th>Số lượng</th>
+        <th>Giá</th>
+    </tr>
+    @foreach (var item in @Model.listctgh)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.DoChoi.TenDoChoi</td>
+            <td><img class ="imgctgh" src="@item.DoChoi.DSHINHANH.FirstOrDefault().HinhAnh"/></td>
+            <td>@item.SoLuongMua</td>
+            <td>@item.Gia.ToVnd()</td>
+           @* <td></td>*@
+           @{
+               tongTien = tongTien + item.Gia;
+           }
+        </tr>
+    }
+    
+</table>
+<label style="float: right;"><strong>Tổng tiền: </strong> @tongTien.ToVnd()</label>
+<br />
+<label>Họ tên người nhận: @Model.gh.HoTenNguoiNhan</label>
+<br />
+<label>CMND người nhận: @Model.gh.CMNDNguoNhan</label>
+<br />
+<label>Thời gian nhận hàng: @Model.gh.ThoiGianNhanHang</label>
+<br />
+<label>Địa chỉ giao: @Model.gh.DiaChiNhan</label>
+}
+</page>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="~/public/js/admin/invoice.js"></script>

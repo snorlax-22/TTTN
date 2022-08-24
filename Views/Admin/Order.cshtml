@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="~/public/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
     <!-- Custom CSS -->
     <link href="~/public/css/style.min.css" rel="stylesheet">
+    <link href="~/public/css/order/order.css" rel="stylesheet">
 </head>
 
 <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
@@ -58,13 +59,10 @@
     <div class="alert-promo hide">
         <div class="close-popup" onclick="closePopup()">
             <i></i>
-        </div><span>ĐĂNG NHẬP</span>
-        <p>Tên đăng nhập</p>
-        <input id="id-pay" />
-        <p>Mật khẩu</p>
-        <input id="pw-pay" />
-        @*<b>@Html.ActionLink("ĐĂNG NHẬP","PaymentWithPaypal","Paypal",new{@style="color: #fff"})</b>*@
-        <b><a id="dangnhap">ĐĂNG NHẬP</a></b>
+        </div><strong><h3>Chi tiết giỏ hàng</h3></strong>
+        <div id="content">
+            
+        </div>
         <div class="resize-triggers">
             <div class="expand-trigger">
                 <div style="width: 341px; height: 169px;">

@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[0.3.0, )"
             },
+            "LanguageExt.Core": {
+              "target": "Package",
+              "version": "[4.2.9, )"
+            },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",
               "version": "[5.2.9, )"

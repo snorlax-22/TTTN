@@ -56,13 +56,13 @@
             <td><label>@item.NvDuyet.TenNV</label></td>
             <td>
                 <label>
-                    @if(item.TrangThai.MaTrangThai == 1)
+                    @if (item.TrangThai.MaTrangThai == 1)
                     {
                         <select name="deliver" id="deliver">
-                        @foreach (var nv in listNVGH)
-                        {
-                            <option value="@nv.MaNV">@nv.TenNV</option>
-                        }
+                            @foreach (var nv in listNVGH)
+                            {
+                                <option value="@nv.MaNV">@nv.TenNV</option>
+                            }
                         </select>
                     }
                     else
@@ -73,7 +73,22 @@
             </td>
             <td><label>@item.CMNDKH</label></td>
             <td><label>@item.NgayGiao</label></td>
-            <td><label>@item.MaHoaDon</label></td>
+            <td>
+                <label>
+                    @{
+                        if (string.IsNullOrEmpty(item.MaHoaDon) && item.TrangThai.MaTrangThai == 2)
+                        {
+                            <button class="gotoprint">In hóa đơn</button>
+                        }
+                        else
+                        {
+                            @item.MaHoaDon;
+                        }
+                    }
+
+
+                </label>
+            </td>
             <td><label>@item.TrangThai.TenTrangThai</label></td>
             @{
                 string btn = item.TrangThai.MaTrangThai == 1 ? "Duyệt" : "Hoàn thành";
@@ -106,4 +121,4 @@
 
     });
 </script>
-
+<script src="~/public/js/admin/order.js"></script>

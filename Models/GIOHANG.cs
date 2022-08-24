@@ -14,6 +14,13 @@ namespace BT2MWG.Models
 
         public TrangThai TrangThai { get; set; }
 
+        public DateTime ThoiGianNhanHang { get; set; }
+        public string HoTenNguoiNhan { get; set; }
+        public string CMNDNguoNhan { get; set; }
+        public string DiaChiNhan { get; set; }
+        public string GhiChu { get; set; }
+        public string SDTNguoiNhan { get; set; }
+
     }
     public class TrangThai
     {

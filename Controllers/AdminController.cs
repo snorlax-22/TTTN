@@ -1,11 +1,16 @@
 ﻿using BT2MWG.Helpers;
 using BT2MWG.Models;
+using BT2MWG.Models.ReportModel;
 using BT2MWG.ViewModel;
+using LanguageExt;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Text.Json;
+
 
 namespace BT2MWG.Controllers
 {
@@ -13,36 +18,91 @@ namespace BT2MWG.Controllers
     {
         db dbo = new db();
 
+        //[HttpPost]
+        //public ActionResult LoadOrderDetail(string a)
+        //{
+        //    var b = a;
+        //    var c = JsonSerializer.Deserialize<List<CTGH>>(a);
+        //    return PartialView("~/Views/Admin/Partial/ListOrderDetail.cshtml");
+        //}
 
-        public List<CTGH> LayChiTietGioHang(int maGH)
+        public ActionResult InHoaDon()
         {
-            var listctgh = dbo.layCTDHtheoMaGH(maGH);
+            int maGH = 2025;
+            CartPageViewModel vm = new CartPageViewModel();
 
-            using (var enumerator = listctgh.GetEnumerator())
+            vm.listctgh = dbo.layCTDHtheoMaGH(maGH);
+            vm.gh = dbo.layDHtheoMaGH(maGH);
+            var enumerator = vm.listctgh.GetEnumerator();
+            while (enumerator.MoveNext())
             {
-                while (enumerator.MoveNext())
-                {
-                    var item = enumerator.Current;
+                var item = enumerator.Current;
 
-                    item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
-                    
-                    item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
-                }
-                return listctgh;
+                item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
+
+                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
             }
+
+            return View("~/Views/Admin/Partial/InvoicePrint.cshtml", vm);
+        }
+
+        public ActionResult LayChiTietGioHang(int maGH)
+        {
+
+            CartPageViewModel vm = new CartPageViewModel();
+
+            vm.listctgh = dbo.layCTDHtheoMaGH(maGH);
+            vm.gh = dbo.layDHtheoMaGH(maGH);
+            var enumerator = vm.listctgh.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                var item = enumerator.Current;
+
+                item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
+
+                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
+            }
+            return PartialView("~/Views/Admin/Partial/ListOrderDetail.cshtml", vm);
+        }
+
+
+        public ActionResult thongKeDoanhThu(string datefrom, string dateto)
+        {
+            CultureInfo provider = new CultureInfo("en-GB");
+            var df = DateTime.Parse(datefrom, provider, DateTimeStyles.NoCurrentDateDefault);
+            var dt = DateTime.Parse(dateto, provider, DateTimeStyles.NoCurrentDateDefault);
+            var strFr = df.ToString("yyyy-MM-dd");
+            var strTo = dt.ToString("yyyy-MM-dd");
+            
+            var doanhthu = dbo.layDoanhThuTheoThang(DateTime.Parse(strFr), DateTime.Parse(strTo));
+            string[] a = new string[doanhthu.Count];
+            decimal?[] b = new decimal?[doanhthu.Count];
+            string[] barColors = new string[doanhthu.Count];
+           
+            RevenueReport rp = new RevenueReport(doanhthu.Count);
+            int count = 0;
+            foreach (var item in doanhthu)
+            {
+                rp.thoigian[count] = (item.thang + "-" + item.year).ToString();
+                rp.revenue[count] = item.revenue;
+
+                count++;
+            }
+            
+            return PartialView("~/Views/Admin/Partial/Revenue.cshtml", rp);
         }
 
         public ActionResult DoanhThu()
         {
-            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
-            if (nv == null)
-            {
-                return View("~/Views/Admin/Index.cshtml");
-            }
-            var vm = new AdminPageViewModel();
-            vm.nv = nv;
+            //var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            //if (nv == null)
+            //{
+            //    return View("~/Views/Admin/Index.cshtml");
+            //}
+            //var vm = new AdminPageViewModel();
+            //vm.nv = nv;
 
-            return View("~/Views/Admin/DoanhThu.cshtml", vm);
+            return View("~/Views/Admin/DoanhThu.cshtml");
         }
         public IActionResult Index()
         {
@@ -95,7 +155,7 @@ namespace BT2MWG.Controllers
             vm.nv = nv;
 
             var dsDoChoi = dbo.layTatCaDoChoiV3();
-            
+
             vm.listDoChoi = dsDoChoi;
 
 

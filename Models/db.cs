@@ -36,7 +36,7 @@ namespace BT2MWG.Models
             return null;
         }
 
-        public decimal? SafeGetDecimal(SqlDataReader reader, int colIndex)
+        public decimal SafeGetDecimal(SqlDataReader reader, int colIndex)
         {
             try
             {
@@ -45,9 +45,9 @@ namespace BT2MWG.Models
             }
             catch (Exception e)
             {
-                return null;
+                return 0;
             }
-            return null;
+            return 0;
         }
 
         SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -588,12 +588,12 @@ namespace BT2MWG.Models
                         NvDuyet = new NHANVIEN()
                         {
                             MaNV = SafeGetInt(dr, 1),
-                            TenNV = SafeGetString(dr, 8)
+                            TenNV = SafeGetString(dr, 14)
                         },
                         NvGiao = new NHANVIEN()
                         {
                             MaNV = SafeGetInt(dr, 2),
-                            TenNV = SafeGetString(dr, 9)
+                            TenNV = SafeGetString(dr, 15)
                         },
                         CMNDKH = dr.GetString(3),
                         NgayGiao = dr.GetDateTime(4),
@@ -601,9 +601,14 @@ namespace BT2MWG.Models
                         TrangThai = new TrangThai()
                         {
                             MaTrangThai = dr.GetInt32(5),
-                            TenTrangThai = dr.GetString(7)
-                        }
-
+                            TenTrangThai = dr.GetString(13)
+                        },
+                        SDTNguoiNhan = dr.GetString(7),
+                        ThoiGianNhanHang = dr.GetDateTime(8),
+                        HoTenNguoiNhan = dr.GetString(9),
+                        CMNDNguoNhan = dr.GetString(10),
+                        DiaChiNhan = dr.GetString(11),
+                        GhiChu = SafeGetString(dr, 12)
                     };
                     listCarts.Add(cart);
                 }
@@ -1104,6 +1109,59 @@ namespace BT2MWG.Models
         #endregion
 
         #region cart
+
+        public GIOHANG layDHtheoMaGH(int maGH)
+        {
+            var cart = new GIOHANG();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layDHtheoMaGH", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maGH", maGH);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    cart = new GIOHANG()
+                    {
+                        MaGioHang = dr.GetInt32(0),
+                        NvDuyet = new NHANVIEN()
+                        {
+                            MaNV = SafeGetInt(dr, 1),
+                            TenNV = SafeGetString(dr, 14)
+                        },
+                        NvGiao = new NHANVIEN()
+                        {
+                            MaNV = SafeGetInt(dr, 2),
+                            TenNV = SafeGetString(dr, 15)
+                        },
+                        CMNDKH = dr.GetString(3),
+                        NgayGiao = dr.GetDateTime(4),
+                        MaHoaDon = SafeGetString(dr, 6),
+                        TrangThai = new TrangThai()
+                        {
+                            MaTrangThai = dr.GetInt32(5),
+                            TenTrangThai = dr.GetString(13)
+                        },
+                        SDTNguoiNhan = dr.GetString(7),
+                        ThoiGianNhanHang = dr.GetDateTime(8),
+                        HoTenNguoiNhan = dr.GetString(9),
+                        CMNDNguoNhan = dr.GetString(10),
+                        DiaChiNhan = dr.GetString(11),
+                        GhiChu = SafeGetString(dr, 12)
+                    };
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            return cart;
+        }
 
         public List<CTGH> layCTDHtheoMaGH(int maGH)
         {
