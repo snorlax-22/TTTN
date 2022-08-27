@@ -57,7 +57,7 @@
                 <h1>Thêm đợt khuyến mãi</h1>
                 <div>
                     <label>Nhân viên tạo KM</label>
-                    <input value="" readonly disabled />
+                    <input id="empid" value="@Model.nv.TenNV" data-id="@Model.nv.MaNV" readonly disabled />
                 </div>
                 <div>
                     <label for="km-time">Chọn thời gian cho đợt KM:</label>
@@ -72,11 +72,11 @@
                 <div>
 
                     <label>Nhập tên khuyến mãi: </label>
-                    <input placeholder="Nhập tên khuyến mãi" />
+                    <input id="kmname" placeholder="Nhập tên khuyến mãi" />
                     <br />
                     <label>Nhập lý do khuyến mãi: </label>
                     <br />
-                    <textarea placeholder="Lý do khuyến mãi"></textarea>
+                    <textarea id="lydokm" placeholder="Lý do khuyến mãi"></textarea>
                 </div>
                 <br />
                 <br />
@@ -90,7 +90,7 @@
                 <br />
                 <br />
                 <div>
-                    <button class="btn btn-primary">Lưu</button>
+                    <button class="btn save btn-primary">Lưu</button>
                 </div>
             </div>
         </div>

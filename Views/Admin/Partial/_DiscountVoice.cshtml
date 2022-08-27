@@ -6,15 +6,15 @@
 
 <div class="add-km-item">
     <label>Tên đồ chơi KM: </label>
-    <select id="toys">
+    <select class="toys">
         @foreach(var item in listDoChoi)
         {
-            <option value="@item.MaDoChoi">@item.TenDoChoi</option>
+            <option data-id="@item.MaDoChoi" value="@item.MaDoChoi">@item.TenDoChoi</option>
         }
     </select>
     <span>
         &emsp;
         <label>Phần trăm giảm giá: </label>
-        <input placeholder="Nhập phẩn trăm giảm giá" />
+        <input class="ptgiamgia" placeholder="Nhập phẩn trăm giảm giá" />
     </span>
 </div>

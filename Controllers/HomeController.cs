@@ -100,13 +100,12 @@ namespace BT2MWG.Controllers
 
 
             var b = dbo.layTatCaDoChoiV3();
-            b = b.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 50).Distinct().ToList();
+            var b2 = b;
             PageHomeViewModel vm = new PageHomeViewModel();
-            vm.listDoChoiKMKhung = b;
+            vm.listDoChoiKMKhung = b.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 10).Distinct().ToList();
 
-            var c = dbo.layDoChoiTheoHang(7);
-            c = c.GroupBy(x => x.MaDoChoi).Select(y => y.First()).Distinct().ToList();
-            vm.listDoChoiVB = c;
+           
+            vm.listDoChoiVB = b2.Where(x => x.HANGDOCHOI.TENHANGDOCHOI == "VBCare").ToList();
 
             vm.currentCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
 

@@ -16,32 +16,57 @@ namespace BT2MWG.Controllers
 {
     public class AdminController : Controller
     {
+
         db dbo = new db();
 
-        //[HttpPost]
-        //public ActionResult LoadOrderDetail(string a)
-        //{
-        //    var b = a;
-        //    var c = JsonSerializer.Deserialize<List<CTGH>>(a);
-        //    return PartialView("~/Views/Admin/Partial/ListOrderDetail.cshtml");
-        //}
+        public void TaoKhuyenMai(string arrPtGiamGia, string arrMaDoChoi, DateTime timeto, DateTime timefrom, string tenkm, string lydokm, int manv)
+        {
+            try
+            {
+                var arrToy = arrMaDoChoi.TrimStart('[')
+                 .TrimEnd(']').Replace("\"","")
+                 .Split(',').Select(n => Convert.ToInt32(n)).ToArray();
 
+                var arrDis = arrPtGiamGia.TrimStart('[')
+                 .TrimEnd(']').Replace("\"", "")
+                 .Split(',').Select(n => Convert.ToInt32(n)).ToArray();
 
-        //public int InHoaDon(decimal TongTien, string masothue, int manv)
-        //{
+                var idKm = dbo.themKhuyenMai(tenkm,timefrom, timeto, lydokm,manv);
 
-        //}
+                if(idKm > 0)
+                {
+                    var count = 0;
+                    foreach(var item in arrToy)
+                    {
+                        dbo.themChitietkhuyenmai(idKm, arrToy[count],arrDis[count]);
+                        count++;
+                    }
+                }
+
+            }
+            catch(Exception e)
+            {
+                var b = e.ToString();
+            }
+        }
+
 
         public ActionResult DiscountVoice()
         {
-
             return PartialView("~/Views/Admin/Partial/_DiscountVoice.cshtml");
         }
 
         public ActionResult KhuyenMai()
         {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
 
-            return View("~/Views/Admin/KhuyenMai.cshtml");
+            return View("~/Views/Admin/KhuyenMai.cshtml",vm);
         }
 
         public void XemHoaDon(int magh, string mahd)

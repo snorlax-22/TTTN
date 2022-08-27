@@ -51,6 +51,52 @@ namespace BT2MWG.Models
 
         }
 
+        public int themKhuyenMai(string tenkm, DateTime timefrom, DateTime timeto, string lydokm, int manv)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("themDotKhuyenMai", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@tenKM", tenkm);
+                cmd.Parameters.AddWithValue("@ngayBatDau", timefrom);
+                cmd.Parameters.AddWithValue("@ngayKetThuc", timeto);
+                cmd.Parameters.AddWithValue("@lydoKM", lydokm);
+                cmd.Parameters.AddWithValue("@maNVTaoKM", manv);
+
+                int ID = (int)cmd.ExecuteScalar();
+                conn.Close();
+                return ID;
+            }
+            catch(Exception e)
+            {
+                return 0;
+            }
+        }
+
+        public void themChitietkhuyenmai(int makm,int madochoi, int ptkm)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("themCTKM", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@makm", makm);
+                cmd.Parameters.AddWithValue("@madochoi", madochoi);
+                cmd.Parameters.AddWithValue("@ptgiamgia", ptkm);
+
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+            }
+        }
+
         public int themTaiKhoan(string tenKh, string mk, string acc, string mst, string add, string email, string phone, string gioitinh, string cmnd)
         {
             try
