@@ -21,9 +21,12 @@
                     </form>
                 </li>
                 <li>
-                    <a class="profile-pic" href="#">
-                        <span class="text-white font-medium">@Model.nv.TenNV</span>
-                    </a>
+                    @if (Model != null)
+                    {
+                        <a class="profile-pic" href="#">
+                            <span class="text-white font-medium">@Model.nv.TenNV</span>
+                        </a>
+                    }
                 </li>
             </ul>
         </div>

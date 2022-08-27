@@ -1,0 +1,89 @@
+﻿@using BT2MWG.Models
+@using BT2MWG.ViewModel;
+@using System.Globalization
+@using Microsoft.AspNetCore.Http
+@model KHACHHANG;
+@{
+    Layout = "~/Views/Shared/_Footer.cshtml";
+}
+
+<link href="~/public/css/cart/cart.css" rel="stylesheet">
+
+<div id="app" class="bluekids">
+    <section>
+        
+        <div class="middleCart">
+            
+            <div class="infor-customer">
+                <h2>Thông tin tài khoản</h2>
+                <form class="form-customer">
+                    @*<div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Anh</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Chị</label>
+                    </div>*@
+                    <div class="form-check form-check-inline">
+                        @Model.gioitinh
+                    </div>
+                    <div class="fillinform">
+                        <div class="fillname">
+                            <input placeholder="Họ và Tên" maxlength="50" id="cusName" value="@Model.hotenkh" name="cusName" required="required" class=" untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+                        <div class="fillname phoneNumber">
+                            <input placeholder="Số điện thoại" type="tel" maxlength="10" id="cusPhone"  value="@Model.sdt"  name="cusPhone" required="required" class="untouched pristine required phoneNumber__input">
+                            <label for="cusPhone" class="form-label">
+
+                            </label>
+                        </div>
+                    </div>
+                    <h4>Thông tin địa chỉ</h4>
+                    <div class="fillinform">
+                        <div class="fillname">
+                            <input placeholder="Email" maxlength="50" id="cusEmail" name="cusName" value="@Model.email" required="required" class=" untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+                        <div class="fillname">
+                            <input placeholder="Địa chỉ" maxlength="50" id="cusAdd" name="cusName" value="@Model.diachi"  required="required" class=" untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+                        <div class="fillname">
+                            <input placeholder="Mã số thuế" maxlength="50" id="cusMST" name="cusName" value="@Model.masothue"  required="required" class=" untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+                        <div class="fillname">
+                            <input placeholder="CMND/CCCD" maxlength="50" id="cusID" name="cusID" value="@Model.cmnd" required="required" class=" untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+                    </div>
+                    <h4>Thông tin tài khoản</h4>
+                    <div class="fillinform">
+                        <div class="fillname">
+                            <input placeholder="Tài khoản" maxlength="50" id="cusAccount" name="cusName" value="@Model.taikhoan.USERNAME"  required="required" disabled class=" untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+                        <div class="fillname">
+                            <input placeholder="Mật khẩu" maxlength="50" id="cusPass" name="cusName"   value="@Model.taikhoan.PASSWORD" type="password" required="required" class=" untouched pristine required">
+                            <label for="cusName" class="form-label"></label>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="finaltotal">
+                <button type="button" class="submitorder">
+                    <b id="update">CẬP NHẬT THÔNG TIN</b>
+                </button>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="~/public/js/cart/client.js"></script>
+
+
+

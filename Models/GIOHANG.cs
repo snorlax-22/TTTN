@@ -10,7 +10,7 @@ namespace BT2MWG.Models
         public string CMNDKH { get; set; }
         public DateTime NgayGiao { get; set; }
 
-        public string? MaHoaDon { get; set; }
+        public HoaDon HoaDon { get; set; }
 
         public TrangThai TrangThai { get; set; }
 

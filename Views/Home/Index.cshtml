@@ -11,6 +11,19 @@
 <link rel="stylesheet" href="~/public/css/Homepage/homepage.css" />
 
 <section>
+    @if (Model.currentCus != null)
+    {
+        <a class="header__hotline profile" data-kh="@Model.currentCus.taikhoan.USERNAME" style="position: fixed;top: 12px;right: 476px;">
+            @Model.currentCus.hotenkh
+        </a>
+    }
+    else
+    {
+        <a class="header__hotline" id="signin" style="position: fixed;top: 12px;right: 476px;">
+            ĐĂNG NHẬP
+        </a>
+    }
+
     <div class="center">
         @*<div class="others-toy" id="banner-giamgia">
 
@@ -33,6 +46,8 @@
         </div>
     </div>
 </section>
+
+<script src="~/public/js/cart/client.js"></script>
 
 
 

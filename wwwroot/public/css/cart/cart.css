@@ -442,10 +442,18 @@ a {
     padding: 10px 30px;
 }
 
+.bluekids .choosegetgoods h2, .bluekids .infor-customer h2 {
+    line-height: 24px;
+    font-weight: 700;
+    color: black;
+    text-transform: none;
+    font-size: 26px;
+}
+
 .bluekids .choosegetgoods h4, .bluekids .infor-customer h4 {
     line-height: 24px;
     font-weight: 700;
-    color: var(--black);
+    color: black;
     text-transform: none;
     font-size: 18px;
 }
@@ -653,6 +661,7 @@ a {
 .bluekids .form-customer .fillinform .fillname input {
     border: 1px solid gray;
     border-radius: 4px;
+        margin-bottom: 15px;
 }
 
 .form-customer .fillinform .fillname input {

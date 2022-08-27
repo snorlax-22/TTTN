@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Footer.cshtml";
+}
+<link href="~/public/css/cart/cart.css" rel="stylesheet">
+<link href="~/public/css/cart/login.css" rel="stylesheet">
+
+<div class="bluekids">
+    <div class="alert-promo ">
+        <span>ĐĂNG NHẬP</span>
+        <p>Tên đăng nhập</p>
+        <input id="id-pay" />
+        <p>Mật khẩu</p>
+        <input id="pw-pay" />
+        @*<b>@Html.ActionLink("ĐĂNG NHẬP","PaymentWithPaypal","Paypal",new{@style="color: #fff"})</b>*@
+        <b><a id="dangnhap">ĐĂNG NHẬP</a></b>
+        <div class="resize-triggers">
+            <div class="expand-trigger">
+                <div style="width: 341px; height: 169px;">
+                </div>
+            </div><div class="contract-trigger"></div>
+        </div>
+    </div>
+</div>
+
+<script src="~/public/js/cart/client.js"></script>

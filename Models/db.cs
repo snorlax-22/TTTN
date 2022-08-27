@@ -9,6 +9,112 @@ namespace BT2MWG.Models
 {
     public class db
     {
+
+        SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
+        #region khách hàng
+
+        public KHACHHANG layKHTheoCMND(string cmnd)
+        {
+            var hd = new KHACHHANG();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layKHtheoCMND", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@cmnd", cmnd);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    hd.cmnd = cmnd;
+                    hd.hotenkh = dr.GetString(1);
+                    hd.email = dr.GetString(2);
+                    hd.gioitinh = dr.GetString(3);
+                    hd.sdt = dr.GetString(4);
+                    hd.diachi = dr.GetString(5);
+                    hd.tinhtrang = dr.GetBoolean(6);
+                    hd.masothue = dr.GetString(7);
+                    hd.taikhoan = new TAIKHOAN()
+                    {
+                        USERNAME = dr.GetString(8)
+                    };
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            return hd;
+
+        }
+
+        public int themTaiKhoan(string tenKh, string mk, string acc, string mst, string add, string email, string phone, string gioitinh, string cmnd)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("themTaiKhoan", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@username", acc);
+                cmd.Parameters.AddWithValue("@pass", mk);
+                cmd.Parameters.AddWithValue("@cmnd", cmnd);
+                cmd.Parameters.AddWithValue("@hotenKH", tenKh);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@gioitinh", gioitinh);
+                cmd.Parameters.AddWithValue("@sdt", phone);
+                cmd.Parameters.AddWithValue("@diachi", add);
+                cmd.Parameters.AddWithValue("@mst", mst);
+
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int suaTaiKhoan(string username, string tenKh, string mk, string mst, string add, string email, string phone, string gioitinh, string cmnd)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("suaTaiKhoan", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@pass", mk);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@cmnd", cmnd.Trim());
+                cmd.Parameters.AddWithValue("@hotenKH", tenKh);
+                cmd.Parameters.AddWithValue("@email", email.Trim());
+                cmd.Parameters.AddWithValue("@sdt", phone);
+                cmd.Parameters.AddWithValue("@diachi", add.Trim());
+                cmd.Parameters.AddWithValue("@mst", mst.Trim());
+
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        #endregion
+
+        #region utility
         public int? SafeGetInt(SqlDataReader reader, int colIndex)
         {
             try
@@ -49,8 +155,64 @@ namespace BT2MWG.Models
             }
             return 0;
         }
+        #endregion
 
-        SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        #region hóa đơn
+        public HoaDon layHoaDonTheoMa(string MaHD)
+        {
+            var hd = new HoaDon();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layHoaDonTheoMa", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@MaHD", MaHD);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    hd.MaHoaDon = dr.GetString(0);
+                    hd.TongTien = dr.GetDecimal(1);
+                    hd.NgayTaoHD = dr.GetDateTime(2);
+                    hd.Mst = dr.GetString(3);
+                    hd.MaNV = dr.GetInt32(4);
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            return hd;
+
+        }
+
+        public int taoHoaDon(string maHoaDon, decimal tongTien, int magh, string masothue, int manv)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("taoHoaDon", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maHD", maHoaDon);
+                cmd.Parameters.AddWithValue("@tongTien", tongTien);
+                cmd.Parameters.AddWithValue("@magh", magh);
+                cmd.Parameters.AddWithValue("@mst", masothue);
+                cmd.Parameters.AddWithValue("@manv", manv);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+        #endregion
 
         #region login
         public KHACHHANG getCusByUser(string username)
@@ -76,8 +238,15 @@ namespace BT2MWG.Models
                         sdt = dr.GetString(4),
                         diachi = dr.GetString(5),
                         tinhtrang = dr.GetBoolean(6),
-                        masothue = dr.GetString(7)
+                        masothue = dr.GetString(7),
+                        taikhoan = new TAIKHOAN()
+                        {
+                            USERNAME = username,
+                            PASSWORD = dr.GetString(11),
+                            MAQUYEN = dr.GetInt32(10)
+                        }
                     };
+
                 }
                 conn.Close();
             }
@@ -87,6 +256,27 @@ namespace BT2MWG.Models
             }
 
             return kh;
+        }
+
+        public int hoanthanhDonHang(int maDonHang)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("hoanthanhDonHang", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maGioHang", maDonHang);
+
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                conn.Close();
+                return 0;
+            }
         }
 
         public int duyetDonHang(int maDonHang, int maNVDuyet, int maNVGiao)
@@ -597,7 +787,10 @@ namespace BT2MWG.Models
                         },
                         CMNDKH = dr.GetString(3),
                         NgayGiao = dr.GetDateTime(4),
-                        MaHoaDon = SafeGetString(dr, 6),
+                        HoaDon = new HoaDon()
+                        {
+                            MaHoaDon = SafeGetString(dr, 6),
+                        },
                         TrangThai = new TrangThai()
                         {
                             MaTrangThai = dr.GetInt32(5),
@@ -1080,7 +1273,7 @@ namespace BT2MWG.Models
             var supplier = new List<HINHANH>();
             if (maDoChoi > 0 || maDoChoi != null)
             {
-               
+
                 try
                 {
                     SqlCommand cmd = new SqlCommand("layAnhChiTiet", conn);
@@ -1089,10 +1282,10 @@ namespace BT2MWG.Models
                     cmd.Parameters.AddWithValue("@idDoChoi", maDoChoi);
 
                     SqlDataReader dr = cmd.ExecuteReader();
-                    
+
                     while (dr.Read())
                     {
-                        var a  = new HINHANH();
+                        var a = new HINHANH();
                         a.HinhAnh = dr.GetString(1);
                         supplier.Add(a);
                     }
@@ -1140,7 +1333,10 @@ namespace BT2MWG.Models
                         },
                         CMNDKH = dr.GetString(3),
                         NgayGiao = dr.GetDateTime(4),
-                        MaHoaDon = SafeGetString(dr, 6),
+                        HoaDon = new HoaDon()
+                        {
+                            MaHoaDon = SafeGetString(dr, 6),
+                        },
                         TrangThai = new TrangThai()
                         {
                             MaTrangThai = dr.GetInt32(5),

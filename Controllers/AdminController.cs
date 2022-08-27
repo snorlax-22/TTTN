@@ -26,13 +26,34 @@ namespace BT2MWG.Controllers
         //    return PartialView("~/Views/Admin/Partial/ListOrderDetail.cshtml");
         //}
 
-        public ActionResult InHoaDon()
-        {
-            int maGH = 2025;
-            CartPageViewModel vm = new CartPageViewModel();
 
-            vm.listctgh = dbo.layCTDHtheoMaGH(maGH);
-            vm.gh = dbo.layDHtheoMaGH(maGH);
+        //public int InHoaDon(decimal TongTien, string masothue, int manv)
+        //{
+
+        //}
+
+        public ActionResult DiscountVoice()
+        {
+
+            return PartialView("~/Views/Admin/Partial/_DiscountVoice.cshtml");
+        }
+
+        public ActionResult KhuyenMai()
+        {
+
+            return View("~/Views/Admin/KhuyenMai.cshtml");
+        }
+
+        public void XemHoaDon(int magh, string mahd)
+        {
+
+            CartPageViewModel vm = new CartPageViewModel();
+    
+            vm.listctgh = dbo.layCTDHtheoMaGH(magh);
+            vm.gh = dbo.layDHtheoMaGH(magh);
+
+            vm.hd = dbo.layHoaDonTheoMa(mahd);
+
             var enumerator = vm.listctgh.GetEnumerator();
             while (enumerator.MoveNext())
             {
@@ -43,7 +64,47 @@ namespace BT2MWG.Controllers
                 item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
             }
 
-            return View("~/Views/Admin/Partial/InvoicePrint.cshtml", vm);
+            HttpContext.Session.Set("HoaDonPage", vm);
+
+        }
+
+        public void InHoaDon(int magh, int manvtaohd, string cmnd)
+        {
+            decimal tongTien = 0;
+            var maHoaDon = DateTime.Now.ToString().Replace("/", "").Replace(":", "").Replace(" ", "");
+            
+            CartPageViewModel vm = new CartPageViewModel();
+
+            var mstKH = dbo.layKHTheoCMND(cmnd).masothue;
+            vm.listctgh = dbo.layCTDHtheoMaGH(magh);
+            vm.gh = dbo.layDHtheoMaGH(magh);
+
+            foreach (var item in vm.listctgh)
+            {
+                tongTien = tongTien + item.Gia;
+
+            }
+            dbo.taoHoaDon(maHoaDon, tongTien, magh, mstKH, manvtaohd);
+            vm.hd = dbo.layHoaDonTheoMa(maHoaDon);
+
+            var enumerator = vm.listctgh.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                var item = enumerator.Current;
+
+                item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
+
+                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
+            }
+
+            HttpContext.Session.Set("HoaDonPage", vm);
+
+        }
+
+        public ActionResult GoToPrint()
+        {
+            var cpv = HttpContext.Session.Get<CartPageViewModel>("HoaDonPage");
+            return View("~/Views/Admin/Partial/InvoicePrint.cshtml", cpv);
         }
 
         public ActionResult LayChiTietGioHang(int maGH)
@@ -142,6 +203,11 @@ namespace BT2MWG.Controllers
         public void duyetDonHang(int maDonHang, int maNVDuyet, int maNVGiao)
         {
             dbo.duyetDonHang(maDonHang, maNVDuyet, maNVGiao);
+        }
+
+        public void hoanthanhDonHang(int maDonHang)
+        {
+            dbo.hoanthanhDonHang(maDonHang);
         }
 
         public ActionResult Admin()

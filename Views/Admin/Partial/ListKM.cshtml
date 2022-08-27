@@ -1,0 +1,79 @@
+﻿@using BT2MWG.ViewModel
+@*@model AdminPageViewModel;*@
+@{
+    //var listNVGH = @Model.listNV.Where(x => x.MaNV != 4);
+    int pageidx = 1;
+    int count = 0;
+    string clsHide = string.Empty;
+    int pageSize = 9;
+    //int TotalPages = (int)Math.Ceiling(Model.listGioHang.Count / (double)pageSize);
+}
+<style>
+    .pagination {
+        margin-left: 45%;
+        display: inline-block;
+    }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 10px 22px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+            .pagination a.active {
+                background-color: #2cabe3;
+                color: white;
+            }
+
+            .pagination a:hover:not(.active) {
+                background-color: #ddd;
+            }
+</style>
+<table class="table" id="cart_tab">
+    <tr>
+        <th>Mã đợt KM</th>
+        <th>Tên KM</th>
+        <th>Ngày bắt đầu</th>
+        <th>Ngày kết thúc</th>
+        <th>Lý do KM</th>
+        <th>Nhân viên tạo KM</th>
+        <th>  </th>
+
+    </tr>
+        <tr class="itemrow @clsHide pageidx-@pageidx" data-page="@pageidx">
+            <td><a class="ctgh" onclick="showPopup()">2</a></td>
+            <td><label>Khuyến mãi hè 07/2022</label></td>
+            <td><label>2022-07-22</label></td>
+            <td><label>2022-08-22</label></td>
+            <td>
+                <label>KM Hè</label>
+            </td>
+            <td><label>Ngô Mạnh Cường</label></td>
+        </tr>
+</table>
+
+<div class="pagination">
+    @*@for (int i = 1; i <= TotalPages; i++)
+    {
+        string clsActive = i == 1 ? "active" : string.Empty;
+        <a class="@clsActive page-button" data-page="@i">@i</a>
+    }*@
+</div>
+<script>
+
+    //paging
+    $('.page-button').click(function() {
+        var clsName = '.pageidx-' + $(this).data('page');
+
+        $('.itemrow').addClass('hide');
+        $(clsName).removeClass('hide');
+
+        $('.page-button').removeClass('active');
+
+        $(this).addClass('active');
+
+    });
+</script>
+<script src="~/public/js/admin/order.js"></script>

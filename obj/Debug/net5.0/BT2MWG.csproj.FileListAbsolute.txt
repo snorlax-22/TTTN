@@ -319,3 +319,9 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2M
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.Views.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\LanguageExt.Core.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\InvoicePrint.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\KhuyenMai.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\_DiscountVoice.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\SignIn.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\SignUp.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\Profile.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\ListKM.cshtml.g.cs

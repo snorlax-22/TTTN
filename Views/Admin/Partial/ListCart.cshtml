@@ -76,13 +76,13 @@
             <td>
                 <label>
                     @{
-                        if (string.IsNullOrEmpty(item.MaHoaDon) && item.TrangThai.MaTrangThai == 2)
+                        if (string.IsNullOrEmpty(item.HoaDon.MaHoaDon))
                         {
-                            <button class="gotoprint">In hóa đơn</button>
+                            <button class="gotoprint" data-nvtao="@Model.nv.MaNV" data-magh="@item.MaGioHang" data-cmndkh="@item.CMNDKH">In hóa đơn</button>
                         }
                         else
                         {
-                            @item.MaHoaDon;
+                            <a class="invoice" data-mahd="@item.HoaDon.MaHoaDon" data-magh="@item.MaGioHang">@item.HoaDon.MaHoaDon</a>
                         }
                     }
 

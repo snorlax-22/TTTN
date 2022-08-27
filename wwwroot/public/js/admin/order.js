@@ -1,5 +1,5 @@
-﻿$('.nav-link').click(function () {
-
+﻿$('.nav-link').click(function (e) {
+    e.preventDefault();
     $('.nav-link').removeClass('active');
     $(this).addClass('active');
     var matrangthai = $(this).data('id');
@@ -33,6 +33,24 @@ $('.approve').click(function () {
         },
         success: function () {
             location.reload();  
+        },
+        error: function () {
+        }
+    })
+});
+
+$('.complete').click(function () {
+
+    var idCart = $(this).data('id');
+    //var myJsonProduct = JSON.stringify(prd);
+    $.ajax({
+        url: '/Admin/hoanthanhDonHang',
+        type: 'POST',
+        data: {
+            maDonHang: idCart
+        },
+        success: function () {
+            location.reload();
         },
         error: function () {
         }
@@ -94,7 +112,47 @@ $('.submit').click(function (event) {
 
 
 $('.gotoprint').click(function (event) {
-    //event.preventDefault();
-    alert("Okeeee");
+
+    var magh = $(this).data('magh');
+    var nvtao = $(this).data('nvtao');
+    var cmndkh = $(this).data('cmndkh');
+
+    $.ajax({
+        url: "/Admin/InHoaDon",
+        type: 'GET',
+        data: {
+            cmnd: cmndkh,
+            manvtaohd: nvtao,
+            magh: magh
+        },
+        success: function (res) {
+            location.reload();
+            document.location.href = '/Admin/GoToPrint', true;
+        },
+        error: function (res) {
+
+        }
+    });
+});
+
+$('.invoice').click(function (event) {
+
+    var magh = $(this).data('magh');
+    var mahd = $(this).data('mahd');
+
+    $.ajax({
+        url: "/Admin/XemHoaDon",
+        type: 'GET',
+        data: {
+            mahd: mahd,
+            magh: magh
+        },
+        success: function (res) {
+            document.location.href = '/Admin/GoToPrint', true;
+        },
+        error: function (res) {
+
+        }
+    });
 });
 
