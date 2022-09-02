@@ -2,7 +2,7 @@
 @using BT2MWG.ViewModel;
 @using System.Globalization
 @using Microsoft.AspNetCore.Http
-@model List<CartItem>;
+@model ClientCartPageViewModel;
 @{
     var b = Model;
 
@@ -11,7 +11,7 @@
     int ptgiamgia = 0;
     decimal giaSauGiam = 0;
     decimal tongTien = 0;
-    @foreach (var item in Model)
+    @foreach (var item in Model.cartItems)
     {
         item.DoChoi.DSHINHANH = dbo.layTatCaAnhTheoDoChoi(item.DoChoi.MaDoChoi);
     }
@@ -28,9 +28,9 @@
 <div id="app" class="bluekids">
     <section>
         <div class="yourCart top-content">
-            @if (@Model != null && @Model.Count != 0)
+            @if (@Model != null && @Model.cartItems.Count != 0)
             {
-                @if (@Model.FirstOrDefault().loginfailed != null && @Model.FirstOrDefault().loginfailed == true)
+                @if (@Model.cartItems.FirstOrDefault().loginfailed != null && @Model.cartItems.FirstOrDefault().loginfailed == true)
                 {
                     <h1>Vui lòng kiểm tra lại tài khoản hoặc mật khẩu</h1>
                 }
@@ -46,7 +46,7 @@
         </div>
         <div class="middleCart">
             <ul class="listing-cart">
-                @foreach (var item in Model)
+                @foreach (var item in Model.cartItems)
                 {
 
                     if (item.DoChoi.KHUYENMAI.CTKM != null)
@@ -141,18 +141,50 @@
                     <div class="sex-customer">
                         <input type="hidden" value="-1">
                     </div>
-                    <div class="fillinform">
-                        <div class="fillname">
-                            <input placeholder="Họ và Tên" maxlength="50" id="cusName" name="cusName" required="required" class="capitalize untouched pristine required">
-                            <label for="cusName" class="form-label"></label>
-                        </div>
-                        <div class="fillname phoneNumber">
-                            <input placeholder="Số điện thoại" type="tel" maxlength="10" id="cusPhone" name="cusPhone" required="required" class="untouched pristine required phoneNumber__input">
-                            <label for="cusPhone" class="form-label">
+                    @if (Model.curCus != null)
+                    {
+                        <div class="fillinform">
+                            <div class="fillname">
+                                <input placeholder="Họ và Tên" maxlength="50" id="cusName" value="@Model.curCus.hotenkh" name="cusName" required="required" class="capitalize untouched pristine required">
+                                <label for="cusName" class="form-label"></label>
+                            </div>
+                            <div class="fillname phoneNumber">
+                                <input placeholder="Số điện thoại" type="tel" maxlength="10" value="@Model.curCus.sdt" id="cusPhone" name="cusPhone" required="required" class="untouched pristine required phoneNumber__input">
+                                <label for="cusPhone" class="form-label">
 
-                            </label>
+                                </label>
+                            </div>
                         </div>
-                    </div>
+                    }
+                    else
+                    {
+                        <div class="fillinform">
+                            <div class="fillname">
+                                <input placeholder="Họ và Tên người nhận" maxlength="50" id="cusName" name="cusName" required="required" class="capitalize untouched pristine required">
+                                <label for="cusName" class="form-label"></label>
+                            </div>
+                            <div class="fillname phoneNumber">
+                                <input placeholder="Số điện thoại" type="tel" maxlength="10" id="cusPhone" name="cusPhone" required="required" class="untouched pristine required phoneNumber__input">
+                                <label for="cusPhone" class="form-label">
+
+                                </label>
+                            </div>
+                            <div class="fillname phoneNumber">
+                                <input placeholder="Thời gian nhận hàng" type="date" maxlength="10" id="cusDate" name="cusPhone" required="required" class="untouched pristine required phoneNumber__input">
+                                <label for="cusPhone" class="form-label">
+
+                                </label>
+                            </div>
+                            <div class="fillname">
+                                <input placeholder="Địa chỉ nhận hàng"  maxlength="10" id="cusAdd" name="cusPhone" required="required" class="untouched pristine required">
+                                <label for="cusPhone" class="form-label">
+
+                                </label>
+                            </div>
+
+                        </div>
+                    }
+
                 </form>
             </div>
             <div class="finaltotal">
@@ -197,10 +229,24 @@
     </div>
     <script>
         $('#dangnhap').click(function() {
-            var username = $('#id-pay').val();
-            var password = $('#pw-pay').val();
-            window.location.href = "@Url.Action("PaymentWithPaypal", "Paypal")" + "?username=" + $("#id-pay").val() + "&pw=" + $("#pw-pay").val();
-        })
+            if ($("#cusName").val() == '') {
+                alert('Vui lòng nhập tên người nhận hàng !')
+            }
+            else if ($("#cusDate").val() == '') {
+                alert('Vui lòng nhập thời gian nhận hàng !')
+            }
+            else if ($("#cusAdd").val() == '') {
+                alert('Vui lòng nhập địa chỉ nhận hàng !')
+            }
+            else {
+
+                var username = $('#id-pay').val();
+                var password = $('#pw-pay').val();
+                window.location.href = "@Url.Action("PaymentWithPaypal", "Paypal")" + "?username=" + $("#id-pay").val() + "&pw=" + $("#pw-pay").val() + "&cusName=" + $("#cusName").val() + "&cusDate=" + $("#cusDate").val()+ "&cusAdd=" + $("#cusAdd").val();
+
+            }
+        });
+
     </script>
 
 </div>

@@ -71,16 +71,19 @@ namespace BT2MWG.Controllers
             return "0";
         }
 
-        public void login(string username, string password)
+        public void login(string username, string password, string cusName, DateTime cusDate, string cusAdd)
         {
             HttpContext.Session.Remove("KhachHang");
             var kh = dbo.getCusByUser(username);
+            kh.hotenkh = cusName;
+            kh.diachi = cusAdd;
             HttpContext.Session.Set("KhachHang", kh);
+            HttpContext.Session.Set("NgayGiaoHang", cusDate);
 
         }
 
         [EnableCors("AllowAllHeaders")]
-        public ActionResult PaymentWithPaypal(string username, string pw)
+        public ActionResult PaymentWithPaypal(string username, string pw, string cusName, DateTime cusDate, string cusAdd)
         {
             var kh = new TAIKHOAN()
             {
@@ -97,7 +100,7 @@ namespace BT2MWG.Controllers
             {
                 try
                 {
-                    login(username, pw);
+                    login(username, pw, cusName, cusDate, cusAdd);
                     var guid = Convert.ToString((new Random()).Next(100000));
 
                     createdPayment = this.CreatePayment(apiContext, "http://localhost:3423/Paypal/PaymentWithPayPal?guid=" + guid);
@@ -144,10 +147,10 @@ namespace BT2MWG.Controllers
             //var listDetail = HttpContext.Session.Get<List<CTGH>>("CTGioHang");
             var currentCus = HttpContext.Session.Get<KHACHHANG>("KhachHang");
             var tongtien = HttpContext.Session.Get<decimal>("TongTien");
-
+            var ngayGiaoHang = HttpContext.Session.Get<DateTime>("NgayGiaoHang");
             if (!string.IsNullOrEmpty(paymentId))
             {
-                int IDGioHang = dbo.thanhtoanGioHang(currentCus.cmnd, tongtien, currentCus.masothue);
+                int IDGioHang = dbo.thanhtoanGioHang(currentCus.cmnd, tongtien, currentCus.sdt, ngayGiaoHang, currentCus.hotenkh,currentCus.cmnd,currentCus.diachi, "note");
                 foreach(var item in carts)
                 {
                     var giamua = item.DoChoi.ThayDoiGia.Gia - ((item.DoChoi.ThayDoiGia.Gia*item.DoChoi.KHUYENMAI.CTKM.PTGiamGia)/100);
@@ -182,7 +185,7 @@ namespace BT2MWG.Controllers
                 var gia = item.DoChoi.ThayDoiGia.Gia;
                 var giaPro = gia - ((gia * ptGiam) / 100);
                 var itemPrice = Math.Round(giaPro / 23300, 2).ToString().Replace(",", ".");
-                tongTien = tongTien + (giaPro * item.qty);
+                tongTien = tongTien + (Math.Round(giaPro / 23300, 2) * item.qty);
 
                 itemList.items.Add(new Item()
                 {
@@ -194,7 +197,7 @@ namespace BT2MWG.Controllers
                 });
             }
             HttpContext.Session.Set<decimal>("TongTien", tongTien);
-            tongTien = Math.Round(tongTien / 23300, 2);
+
             var tongTienFormated = tongTien.ToString().Replace(",", ".");
 
             var payer = new Payer()

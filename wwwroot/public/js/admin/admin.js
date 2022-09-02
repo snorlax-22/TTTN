@@ -11,6 +11,9 @@
                 if (result == 1) {
                     document.location.href = '/Admin/Admin', true;
                 }
+                else if (result == 1002) {
+                    document.location.href = '/Admin/Order', true;
+                }
                 else {
                     alert("Sai mật khẩu hoặc tên đăng nhập");
                 }

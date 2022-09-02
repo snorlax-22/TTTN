@@ -7,7 +7,7 @@ namespace BT2MWG.ViewModel
     {
         public List<DOCHOI> listDoChoiKMKhung { get; set; }
         public List<DOCHOI> listDoChoiVB { get; set; }
-
+        public List<DOCHOI> listDoChoi { get; set; }
         public KHACHHANG currentCus { get; set; }
     }
 }

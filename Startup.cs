@@ -66,10 +66,11 @@ namespace BT2MWG
                 routes.MapRoute("AddNhaCC", "{controller=Admin}/{action=Brand}");
                 routes.MapRoute("Default", "{controller=Product}/{action=Index}/do-choi/{id?}");
                 routes.MapRoute("Cart", "{controller=Cart}/{action=Index}");
+                routes.MapRoute("ProductDetail", "{controller=Product}/{action=Detail}/{id?}");
 
                 //routes.MapRoute("AdminLogin", "{controller=Admin}/{action=Admin}");
                 //routes.MapRoute("GetHTML", "{controller=GetHTML}/{action=Index}");
-                routes.MapRoute("1", "{controller=Product}/{action=Detail}/{id?}");
+
             });
         }
     }

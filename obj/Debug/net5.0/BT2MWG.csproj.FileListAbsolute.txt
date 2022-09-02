@@ -129,7 +129,6 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\BT2MWG.c
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\refint\BT2MWG.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\obj\Debug\net5.0\Razor\Views\GetHTML\Index.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\MWG\BT2\BT2MWG\bin\Debug\net5.0\RestSharp.dll
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\web.config
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\appsettings.json
@@ -138,9 +137,13 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2M
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.runtimeconfig.json
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.runtimeconfig.dev.json
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.pdb
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.Views.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.Views.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BraintreeHttp-Dotnet.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\LanguageExt.Core.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\System.Web.Mvc.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\System.Web.Razor.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\System.Web.Helpers.dll
@@ -281,10 +284,14 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razo
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Brand.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\DoanhThu.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\KhuyenMai.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Order.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\InvoicePrint.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\ListCart.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\ListKM.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\ListOrderDetail.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\Revenue.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\_DiscountVoice.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Suppliers.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\ToyDetail.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs
@@ -292,9 +299,13 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razo
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Common\Partial\Topbar Header.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\GetHTML\Index.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\Profile.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\SignIn.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\SignUp.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\ProductCate\Toy.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Product\Detail.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Product\Partial\_ItemSearch.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Shared\Components\ProductDetailBox\Default.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Shared\Components\ToyBoxes\Default.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Shared\Partial\ToyBoxesHomePage.cshtml.g.cs
@@ -315,13 +326,5 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\refi
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\BT2MWG.pdb
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\BT2MWG.genruntimeconfig.cache
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\ref\BT2MWG.dll
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.Views.dll
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\BT2MWG.Views.pdb
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\bin\Debug\net5.0\LanguageExt.Core.dll
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\InvoicePrint.cshtml.g.cs
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\KhuyenMai.cshtml.g.cs
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\_DiscountVoice.cshtml.g.cs
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\SignIn.cshtml.g.cs
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\SignUp.cshtml.g.cs
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\Profile.cshtml.g.cs
-C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\ListKM.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\Revenue1.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\Cate.cshtml.g.cs

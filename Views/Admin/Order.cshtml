@@ -27,29 +27,49 @@
 
      @await Html.PartialAsync("/Views/Common/Partial/Topbar Header.cshtml",@Model)
 
-    @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
+    @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml",@Model)
     @{
 
     }
     <div class="page-wrapper">
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-                <a class="nav-link active" data-id="1">Chưa duyệt</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-id="2">Đang giao</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-id="3">Đã hoàn thành</a>
-            </li>
-        </ul>
-        <div id="cart-list">
+        @if(!(Model.nv.TAIKHOAN.MAQUYEN == 1002)){
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" data-id="1">Chưa duyệt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-id="2">Đang giao</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-id="3">Đã hoàn thành</a>
+                </li>
+            </ul>
+            <div id="cart-list">
 
-            @{
-                Model.listGioHang = Model.listGioHang.Where(x => x.TrangThai.MaTrangThai == 1).ToList();
-            }
-            @await Html.PartialAsync("~/Views/Admin/Partial/ListCart.cshtml",@Model)
-        </div>
+                @{
+                    Model.listGioHang = Model.listGioHang.Where(x => x.TrangThai.MaTrangThai == 1).ToList();
+                }
+                @await Html.PartialAsync("~/Views/Admin/Partial/ListCart.cshtml",@Model)
+            </div>
+        }
+        else{
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" data-id="2">Đang giao</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-id="3">Đã hoàn thành</a>
+                </li>
+            </ul>
+            <div id="cart-list">
+
+                @{
+                    Model.listGioHang = Model.listGioHang.Where(x => x.TrangThai.MaTrangThai == 2 && x.NvGiao.MaNV == Model.nv.MaNV).ToList();
+                }
+                @await Html.PartialAsync("~/Views/Admin/Partial/ListCart.cshtml",@Model)
+            </div>
+        }
+        
 
     </div>
     

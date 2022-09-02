@@ -4,9 +4,13 @@ using BT2MWG.ViewModel;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 
 namespace BT2MWG.Controllers
 {
@@ -15,6 +19,8 @@ namespace BT2MWG.Controllers
     {
         private readonly PaypalController _PController;
         db dbo = new db();
+        ServiceHelper apiHelper = new ServiceHelper();
+
         public HomeController(PaypalController pController)
         {
             _PController = pController;
@@ -96,17 +102,11 @@ namespace BT2MWG.Controllers
 
         public IActionResult Index()
         {
-             db dbo = new db();
+            db dbo = new db();
 
-
-            var b = dbo.layTatCaDoChoiV3();
-            var b2 = b;
             PageHomeViewModel vm = new PageHomeViewModel();
-            vm.listDoChoiKMKhung = b.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 10).Distinct().ToList();
-
-           
-            vm.listDoChoiVB = b2.Where(x => x.HANGDOCHOI.TENHANGDOCHOI == "VBCare").ToList();
-
+            
+            vm.listDoChoi = dbo.layTatCaDoChoiV3();
             vm.currentCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
 
             return View("~/Views/Home/Index.cshtml", vm);

@@ -1,0 +1,38 @@
+﻿@using BT2MWG.Helpers
+@using BT2MWG.Models
+
+@model List<DOCHOI>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="/product/detail/@item.MaDoChoi">
+                <div class="img">
+                    <img src="@item.DSHINHANH.FirstOrDefault().HinhAnh" class="ls-is-cached lazyloaded" alt="">
+                </div>
+                <div class="ct">
+                    <h3>@item.TenDoChoi</h3>
+                    <div class="price">
+                        @{
+                            decimal pricecurrent = item.ThayDoiGia.Gia - (item.ThayDoiGia.Gia * item.KHUYENMAI.CTKM.PTGiamGia/100);
+                        }
+                        @{
+                            if (@item.KHUYENMAI.CTKM.PTGiamGia > 0)
+                            {
+                                <strong class="price-current">@pricecurrent.ToVnd()</strong>
+                                <span class="price-old">@item.ThayDoiGia.Gia.ToVnd()</span>
+                                <span class="price-percent">@item.KHUYENMAI.CTKM.PTGiamGia%</span>
+                            }
+                            else
+                            {
+                                <strong class="price-current">@pricecurrent.ToVnd()</strong>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </a>
+        </li>
+    }
+</ul>

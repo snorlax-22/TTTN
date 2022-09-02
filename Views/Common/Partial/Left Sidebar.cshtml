@@ -1,75 +1,102 @@
-﻿<aside class="left-sidebar" data-sidebarbg="skin6">
-    <!-- Sidebar scroll-->
-    <div class="scroll-sidebar">
-        <nav class="sidebar-nav">
+﻿@model BT2MWG.ViewModel.AdminPageViewModel;
+
+<aside class="left-sidebar" data-sidebarbg="skin6">
+
+
+    @if(Model.nv.TAIKHOAN.MAQUYEN == 1002){
+        <div class="scroll-sidebar">
             <nav class="sidebar-nav">
-                <ul id="sidebarnav">
-                    <li class="sidebar-item pt-2">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/doanhthu"
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Order"
                            aria-expanded="false">
-                            <i class="far fa-clock" aria-hidden="true"></i>
-                            <span class="hide-menu">Thống Kê</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Admin"
-                           aria-expanded="false">
-                            <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
-                            <span class="hide-menu">Thêm Đồ Chơi</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href=""
-                           aria-expanded="false">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <span class="hide-menu">Thêm Nhân Viên</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Brand"
-                           aria-expanded="false">
-                            <i class="fab fa-accusoft" aria-hidden="true"></i>
-                            <span class="hide-menu">Thêm Hãng</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href=""
-                           aria-expanded="false">
-                            <i class=" fab fa-hubspot" aria-hidden="true"></i>
-                            <span class="hide-menu">Thêm Loại Đồ Chơi</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Suppliers"
-                           aria-expanded="false">
-                            <i class="fas fa-warehouse" aria-hidden="true"></i>
-                            <span class="hide-menu">Thêm Nhà Cung Cấp</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Order"
-                           aria-expanded="false">
-                            <i class="fa fa-table" aria-hidden="true"></i>
-                            <span class="hide-menu">Duyệt Đơn Hàng</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="fontawesome.html"
-                           aria-expanded="false">
-                            <i class="fa fa-font" aria-hidden="true"></i>
-                            <span class="hide-menu">Icon</span>
-                        </a>
-                    </li>
-                    <li class="text-center p-20 upgrade-btn">
-                        <a href="https://www.wrappixel.com/templates/ampleadmin/"
-                           class="btn d-grid btn-danger text-white" target="_blank">
-                            Upgrade to Pro
-                        </a>
-                    </li>
-                </ul>
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Duyệt Đơn Hàng</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </nav>
-        </nav>
-        <!-- End Sidebar navigation -->
-    </div>
-    <!-- End Sidebar scroll-->
+            <!-- End Sidebar navigation -->
+        </div>
+    }
+    else{
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <nav class="sidebar-nav">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/doanhthu"
+                           aria-expanded="false">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Thống Kê</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Admin"
+                           aria-expanded="false">
+                                <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                                <span class="hide-menu">Thêm Đồ Chơi</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href=""
+                           aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="hide-menu">Thêm Nhân Viên</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Brand"
+                           aria-expanded="false">
+                                <i class="fab fa-accusoft" aria-hidden="true"></i>
+                                <span class="hide-menu">Thêm Hãng</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href=""
+                           aria-expanded="false">
+                                <i class=" fab fa-hubspot" aria-hidden="true"></i>
+                                <span class="hide-menu">Thêm Loại Đồ Chơi</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Suppliers"
+                           aria-expanded="false">
+                                <i class="fas fa-warehouse" aria-hidden="true"></i>
+                                <span class="hide-menu">Thêm Nhà Cung Cấp</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Admin/Order"
+                           aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Duyệt Đơn Hàng</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/khuyenmai"
+                           aria-expanded="false">
+                                <i class="fab fa-discourse" aria-hidden="true"></i>
+                                <span class="hide-menu">Tạo đợt khuyến mãi</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="fontawesome.html"
+                           aria-expanded="false">
+                                <i class="fa fa-font" aria-hidden="true"></i>
+                                <span class="hide-menu">Icon</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    }
+    
 </aside>

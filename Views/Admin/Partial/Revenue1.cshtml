@@ -1,0 +1,43 @@
+﻿@using BT2MWG.Models.ReportModel
+@model RevenueReport;
+@{
+    string[] result = @Model.revenue.Select(i => i.ToString()).ToArray();
+    string revenueArray = "[" + string.Join(",", result) + "]";
+
+    string[] result1 = @Model.thoigian.Select(i => i.ToString()).ToArray();
+    string timeeArray = string.Join(",", result1);
+    var b = 0;
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+
+<canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+
+<script>
+    var a = '@timeeArray';
+    var xValues = a.toString().split(',')
+    var yValues = @revenueArray;
+
+    setTimeout(function() {
+        new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    backgroundColor: "rgba(0,0,255)",
+                    borderColor: "rgba(84, 171, 255)",
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+            }
+        });
+
+    }, 2200);
+
+
+</script>
+

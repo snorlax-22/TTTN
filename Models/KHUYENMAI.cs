@@ -23,7 +23,7 @@ namespace BT2MWG.Models
 
         public string LyDoKM { get; set; }
 
-        public int MaNVTaoKM { get; set; }
+        public NHANVIEN NVTaoKM { get; set; }
 
         public CTKM CTKM { get; set; }
 

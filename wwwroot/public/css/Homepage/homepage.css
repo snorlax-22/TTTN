@@ -8,3 +8,90 @@
 .center {
     text-align: center;
 }
+
+.sticky-sidebar.active {
+    display: block;
+}
+
+.sticky-sidebar a {
+    position: fixed;
+    top: 195px;
+    width: 89px;
+    z-index: 999;
+}
+
+.sticky-sidebar .banner-left {
+    left: calc(((100vw - 1200px)/2) - 110px);
+}
+
+.sticky-sidebar .banner-right {
+    right: calc(((100vw - 1200px)/2) - 115px);
+}
+
+.sticky-sidebar a img {
+    display: block;
+    max-width: 100%;
+}
+/*dasfasdf*/
+.txt02 {
+    color: #333;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.others-toy {
+    margin-right: 85px;
+    margin-left: 85px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 92%;
+}
+
+.others-toy-item {
+    width: 15%;
+    margin-top: 1%;
+}
+
+/*common tab*/
+.title-manu {
+    text-align: start;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    padding-top: 20px;
+}
+
+.quick-link {
+    display: flex;
+    justify-content: left;
+    padding: 15px 0;
+    max-width: 1920px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.quick-link a {
+    align-items: center;
+    border-radius: 9px;
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    height: 45px;
+    margin: 0 3px 6px;
+    width: 127px;
+    padding: 0 14px;
+    border: 1px solid #e0e0e0;
+}
+
+.cates {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.quick-link a:hover {
+    color: #ed1164 !important;
+    border: 1px solid #ed1164;
+}

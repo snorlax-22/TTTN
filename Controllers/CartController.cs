@@ -53,8 +53,10 @@ namespace BT2MWG.Controllers
 
         public IActionResult Index()
         {
-            
-            return View(Carts);
+            var vm = new ClientCartPageViewModel();
+            vm.cartItems = Carts;
+            vm.curCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
+            return View(vm);
         }
 
         public void ThemVaoGio(int id, int qty = 1)

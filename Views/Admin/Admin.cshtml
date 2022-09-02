@@ -50,7 +50,7 @@
 
         @await Html.PartialAsync("/Views/Common/Partial/Topbar Header.cshtml",@Model)
 
-        @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
+        @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml",@Model)
 
         <div class="page-wrapper">
             <br />
@@ -64,7 +64,7 @@
             <br />
             <br />
             <label>Nhà Cung cấp</label>
-            <select name="cate" id="cates">
+            <select name="cate" id="suppliers">
                 @foreach (var item in listNhaCC)
                 {
                     <option value="@item.MANHACC">@item.TENNHACC</option>
@@ -74,7 +74,7 @@
             <br />
             <br />
             <label>Danh mục</label>
-            <select name="suppliers" id="suppliers">
+            <select name="suppliers" id="cates">
                 @foreach (var item in lsitCate)
                 {
                     <option value="@item.ID">@item.Name</option>
@@ -177,7 +177,7 @@
                 listAnh: srcData,
                 slAnh: 1,
                 moTa: $("#description").val(),
-                maNhaCC: $("#suppliers").val(),
+                maNhaCC: $("#suppliers :selected").val(),
                 cates: $("#cates").val(),
                 brands: $("#brands").val()
             },

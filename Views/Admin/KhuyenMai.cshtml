@@ -44,15 +44,15 @@
         @*tạo 2 cái partial-> 1: Thêm khuyến mãi, 2: load all khuyến mãi -> popup ctkm*@
         <div class="page-wrapper">
 
-            <ul class="nav nav-pills nav-fill">
+            @*<ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" data-id="1">Thêm đợt khuyến mãi</a>
+            <a class="nav-link active" data-id="1">Thêm đợt khuyến mãi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-id="2">Danh sách đợt khuyến mãi</a>
+            <a class="nav-link" data-id="2">Danh sách đợt khuyến mãi</a>
             </li>
-        </ul>
-            @*@await Html.PartialAsync("~/Views/Admin/Partial/ListKM.cshtml")*@
+            </ul>*@
+
             <div>
                 <h1>Thêm đợt khuyến mãi</h1>
                 <div>
@@ -83,16 +83,17 @@
                 <div class="section-add-item-km">
 
                     @await Html.PartialAsync("~/Views/Admin/Partial/_DiscountVoice.cshtml")
-                    
+
                 </div>
                 <br />
-                    <button class="btn btn-primary" id="add-km">Thêm đồ chơi vào đợt KM</button>
+                <button class="btn btn-primary" id="add-km">Thêm đồ chơi vào đợt KM</button>
                 <br />
                 <br />
                 <div>
                     <button class="btn save btn-primary">Lưu</button>
                 </div>
             </div>
+            @await Html.PartialAsync("~/Views/Admin/Partial/ListKM.cshtml",Model.listKM)
         </div>
         <footer class="footer text-center">
             2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>

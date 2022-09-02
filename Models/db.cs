@@ -51,6 +51,8 @@ namespace BT2MWG.Models
 
         }
 
+
+
         public int themKhuyenMai(string tenkm, DateTime timefrom, DateTime timeto, string lydokm, int manv)
         {
             try
@@ -68,13 +70,13 @@ namespace BT2MWG.Models
                 conn.Close();
                 return ID;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return 0;
             }
         }
 
-        public void themChitietkhuyenmai(int makm,int madochoi, int ptkm)
+        public void themChitietkhuyenmai(int makm, int madochoi, int ptkm)
         {
             try
             {
@@ -375,8 +377,8 @@ namespace BT2MWG.Models
                         TAIKHOAN = new TAIKHOAN()
                         {
                             USERNAME = dr.GetString(8),
-                            MAQUYEN = acc.MAQUYEN,
-                            PASSWORD = acc.PASSWORD
+                            MAQUYEN = dr.GetInt32(10),
+                            PASSWORD = dr.GetString(11)
                         },
                     };
                 }
@@ -640,16 +642,18 @@ namespace BT2MWG.Models
                 }
                 else
                 {
-                    var DoChoi = new DOCHOI();
-                    return DoChoi;
+                    var doChoi = new DOCHOI();
+                    conn.Close();
+                    return doChoi;
                 }
             }
             catch (Exception e)
             {
-                e.ToString();
+                var a = e.Message;
+                var doChoi = new DOCHOI();
                 conn.Close();
-                var DoChoi = new DOCHOI();
-                return DoChoi;
+                return doChoi;
+                
             }
         }
         public List<DOCHOI> layTatCaDoChoi()
@@ -725,6 +729,46 @@ namespace BT2MWG.Models
         #endregion
 
         #region get all
+
+        public List<KHUYENMAI> layTatCaDotKM()
+        {
+            var listSuppliers = new List<KHUYENMAI>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layTatCaDotKM", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var supplier = new KHUYENMAI();
+                    supplier.Id = dr.GetInt32(0);
+                    supplier.Name = dr.GetString(1);
+                    supplier.NgayBatDau = dr.GetDateTime(2);
+                    supplier.NgayKetThuc = dr.GetDateTime(3);
+                    supplier.LyDoKM = dr.GetString(4);
+                    supplier.NVTaoKM = new NHANVIEN()
+                    {
+                        MaNV = dr.GetInt32(5),
+                        TenNV = dr.GetString(6)
+                    };
+
+                    listSuppliers.Add(supplier);
+                }
+                conn.Close();
+
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+            }
+
+            return listSuppliers;
+        }
+
         public List<DOCHOI> layTatCaDoChoiV3()
         {
             var listDoChoiKM = new List<DOCHOI>();
@@ -831,7 +875,12 @@ namespace BT2MWG.Models
                             MaNV = SafeGetInt(dr, 2),
                             TenNV = SafeGetString(dr, 15)
                         },
-                        CMNDKH = dr.GetString(3),
+                        KhachHang = new KHACHHANG()
+                        {
+                            cmnd = dr.GetString(3),
+                            hotenkh = dr.GetString(16)
+                        },
+                        
                         NgayGiao = dr.GetDateTime(4),
                         HoaDon = new HoaDon()
                         {
@@ -972,18 +1021,18 @@ namespace BT2MWG.Models
                     {
                         MaNV = dr.GetInt32(0),
                         TenNV = dr.GetString(1),
-                        //Email = dr.GetString(2),
-                        //GioiTinh = dr.GetBoolean(3),
-                        //SDT = dr.GetString(4),
-                        //DiaChi = dr.GetString(5),
-                        //TinhTrang = dr.GetBoolean(6),
-                        //MaSoThue = dr.GetString(7),
-                        //TAIKHOAN = new TAIKHOAN()
-                        //{
-                        //    USERNAME = dr.GetString(8),
-                        //    MAQUYEN = dr.GetInt32(9),
-                        //    PASSWORD = dr.GetString(10)
-                        //}
+                        Email = dr.GetString(2),
+                        GioiTinh = dr.GetBoolean(3),
+                        SDT = dr.GetString(4),
+                        DiaChi = dr.GetString(5),
+                        TinhTrang = dr.GetBoolean(6),
+                        MaSoThue = dr.GetString(7),
+                        TAIKHOAN = new TAIKHOAN()
+                        {
+                            USERNAME = dr.GetString(8),
+                            MAQUYEN = dr.GetInt32(10),
+                            PASSWORD = dr.GetString(11)
+                        }
                     };
 
 
@@ -993,7 +1042,7 @@ namespace BT2MWG.Models
             }
             catch (Exception e)
             {
-                throw new Exception();
+                var ed = e.ToString();
             }
             return listNV;
         }
@@ -1377,7 +1426,10 @@ namespace BT2MWG.Models
                             MaNV = SafeGetInt(dr, 2),
                             TenNV = SafeGetString(dr, 15)
                         },
-                        CMNDKH = dr.GetString(3),
+                        KhachHang = new KHACHHANG()
+                        {
+                            cmnd = dr.GetString(3),
+                        }, 
                         NgayGiao = dr.GetDateTime(4),
                         HoaDon = new HoaDon()
                         {
@@ -1468,7 +1520,8 @@ namespace BT2MWG.Models
 
         }
 
-        public int thanhtoanGioHang(string cmnd, decimal tongtien, string masothue)
+        public int thanhtoanGioHang(string cmnd, decimal tongtien, string sdtnguoinhan, DateTime thoigian,
+            string hotennguoinhan, string cmndnguoinhan, string diachi, string ghichu)
         {
             try
             {
@@ -1481,7 +1534,12 @@ namespace BT2MWG.Models
                 conn.Open();
                 cmd.Parameters.AddWithValue("@cmnd", cmnd);
                 cmd.Parameters.AddWithValue("@tongtien", tongtien);
-                cmd.Parameters.AddWithValue("@masothue", masothue);
+                cmd.Parameters.AddWithValue("@sdtnguoinhan", sdtnguoinhan);
+                cmd.Parameters.AddWithValue("@thoigian", thoigian);
+                cmd.Parameters.AddWithValue("@hotennguoinhan", hotennguoinhan);
+                cmd.Parameters.AddWithValue("@cmndnguoinhan", cmndnguoinhan);
+                cmd.Parameters.AddWithValue("@diachi", diachi);
+                cmd.Parameters.AddWithValue("@ghichu", ghichu);
 
                 int ID = (int)cmd.ExecuteScalar();
                 conn.Close();
@@ -1543,8 +1601,8 @@ namespace BT2MWG.Models
                 {
                     var dt = new Revenue()
                     {
-                        thang = dr.GetString(0),
-                        year = dr.GetString(1),
+                        thang = dr.GetString(1),
+                        year = dr.GetString(0),
                         revenue = SafeGetDecimal(dr, 2)
                     };
 

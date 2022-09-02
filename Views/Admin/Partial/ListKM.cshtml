@@ -1,6 +1,9 @@
-﻿@using BT2MWG.ViewModel
-@*@model AdminPageViewModel;*@
+﻿@using BT2MWG.Models
+@using BT2MWG.ViewModel
+@model List<KHUYENMAI>;
 @{
+    db dbo = new db();
+
     //var listNVGH = @Model.listNV.Where(x => x.MaNV != 4);
     int pageidx = 1;
     int count = 0;
@@ -42,16 +45,20 @@
         <th>  </th>
 
     </tr>
+    @foreach(var item in Model)
+    {
         <tr class="itemrow @clsHide pageidx-@pageidx" data-page="@pageidx">
-            <td><a class="ctgh" onclick="showPopup()">2</a></td>
-            <td><label>Khuyến mãi hè 07/2022</label></td>
-            <td><label>2022-07-22</label></td>
-            <td><label>2022-08-22</label></td>
+            <td><a class="ctkm" onclick="showPopup()">@item.Id</a></td>
+            <td><label>@item.Name</label></td>
+            <td><label>@item.NgayBatDau</label></td>
+            <td><label>@item.NgayKetThuc</label></td>
             <td>
-                <label>KM Hè</label>
+                <label>@item.LyDoKM</label>
             </td>
-            <td><label>Ngô Mạnh Cường</label></td>
+            <td><label>@item.NVTaoKM.TenNV</label></td>
         </tr>
+    }
+    
 </table>
 
 <div class="pagination">

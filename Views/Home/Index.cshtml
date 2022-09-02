@@ -4,8 +4,7 @@
 *@
 @{
     Layout = "~/Views/Shared/_Footer.cshtml";
-    var listDoChoiKM = Model.listDoChoiKMKhung;
-    var listVBcare = Model.listDoChoiVB;
+    var rnd = new Random();
 }
 
 <link rel="stylesheet" href="~/public/css/Homepage/homepage.css" />
@@ -28,10 +27,25 @@
         @*<div class="others-toy" id="banner-giamgia">
 
         </div>*@
-        <img class="banner" src="~/public/image/Tagline-hotsale-1200x134.png" />
+        <div class="cates">
+        <section style="background-color:#fff!important">
+            <h3 class="title-manu">CÁC DANH MỤC</h3>
+            <div class="quick-link">
+                <a>
+                    Tên danh mục
+                </a>
+                <a>
+                    Tên danh mục
+                </a>
+            </div>
+        </section>
+        </div>
+
+
+        <img class="banner" src="~/public/image/Flash-sale-desk-min-1200x160.png" />
 
         <div class="others-toy" id="toy-grid">
-            @foreach (var item in listDoChoiKM.Take(6))
+            @foreach (var item in Model.listDoChoi.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 30).Take(6))
             {
                 @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
             }
@@ -39,14 +53,33 @@
 
         <img class="banner" src="~/public/image/P7UGE0JY-1200x200.png" />
         <div class="others-toy" id="toy-grid">
-            @foreach (var item in listVBcare.Take(6))
+            @foreach (var item in Model.listDoChoi.Where(x => x.HANGDOCHOI.TENHANGDOCHOI == "VBCare").Take(6))
+            {
+                @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
+            }
+        </div>
+
+        <img class="banner" src="~/public/image/1200x200-1200x200.jpg" />
+        <div class="others-toy" id="toy-grid">
+            @foreach (var item in Model.listDoChoi.Where(x => x.HANGDOCHOI.TENHANGDOCHOI == "Duka").Take(6))
+            {
+                @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
+            }
+        </div>
+
+        <img class="banner" src="~/public/image/Do-choi2400x360-1200x180-1.jpg" />
+        <div class="others-toy" id="toy-grid">
+            @foreach (var item in Model.listDoChoi.OrderBy(x=>rnd.Next()).Take(12))
             {
                 @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
             }
         </div>
     </div>
+    <div class="sticky-sidebar active">
+        <a class="banner-left"><img style="cursor:pointer" src="~/public/image/trai-79x271-15.png" width="79" height="275"></a>
+        <a class="banner-right"><img style="cursor:pointer" src="~/public/image/trai-79x275-1.png" width="79" height="275"></a>
+    </div>
 </section>
-
 <script src="~/public/js/cart/client.js"></script>
 
 

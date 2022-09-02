@@ -65,6 +65,7 @@ namespace BT2MWG.Controllers
             }
             var vm = new AdminPageViewModel();
             vm.nv = nv;
+            vm.listKM = dbo.layTatCaDotKM();
 
             return View("~/Views/Admin/KhuyenMai.cshtml",vm);
         }
@@ -159,23 +160,37 @@ namespace BT2MWG.Controllers
             var dt = DateTime.Parse(dateto, provider, DateTimeStyles.NoCurrentDateDefault);
             var strFr = df.ToString("yyyy-MM-dd");
             var strTo = dt.ToString("yyyy-MM-dd");
-            
+            var monthNo = (((dt.Year - df.Year) * 12) + dt.Month - df.Month) + 1;
             var doanhthu = dbo.layDoanhThuTheoThang(DateTime.Parse(strFr), DateTime.Parse(strTo));
-            string[] a = new string[doanhthu.Count];
-            decimal?[] b = new decimal?[doanhthu.Count];
-            string[] barColors = new string[doanhthu.Count];
-           
-            RevenueReport rp = new RevenueReport(doanhthu.Count);
-            int count = 0;
-            foreach (var item in doanhthu)
-            {
-                rp.thoigian[count] = (item.thang + "-" + item.year).ToString();
-                rp.revenue[count] = item.revenue;
 
-                count++;
+            for (int i = 0; i < doanhthu.Count(); i++)
+            {
+                if (Int32.Parse(doanhthu[i + 1].thang) - Int32.Parse(doanhthu[i].thang) != 1)
+                {
+                    var rn = new Revenue()
+                    {
+                        thang = (Int32.Parse(doanhthu[i].thang) + 1).ToString(),
+                        year = doanhthu[i].year,
+                        revenue = 0
+                    };
+                    doanhthu.Insert(i, rn);
+                }
             }
-            
-            return PartialView("~/Views/Admin/Partial/Revenue.cshtml", rp);
+            //string[] a = new string[doanhthu.Count];
+            //decimal?[] b = new decimal?[doanhthu.Count];
+            //string[] barColors = new string[doanhthu.Count];
+
+            //RevenueReport rp = new RevenueReport(doanhthu.Count);
+            //int count = 0;
+            //foreach (var item in doanhthu)
+            //{
+            //    rp.thoigian[count] = (item.thang + "-" + item.year).ToString();
+            //    rp.revenue[count] = item.revenue;
+
+            //    count++;
+            //}
+
+            return PartialView("~/Views/Admin/Partial/Revenue.cshtml", doanhthu);
         }
 
         public ActionResult DoanhThu()
@@ -208,8 +223,20 @@ namespace BT2MWG.Controllers
             vm.nv = nv;
 
             vm.listNV = dbo.layTatCaNV();
-            vm.listGioHang = dbo.layTatCaGH();
 
+            vm.listGioHang = dbo.layTatCaGH();
+            if (nv.TAIKHOAN.MAQUYEN == 1002)
+            {
+                var tk = new TAIKHOAN();
+                tk.USERNAME = nv.TAIKHOAN.USERNAME;
+                vm.listGioHang = dbo.layTatCaGH().Where(x=>x.NvGiao.MaNV == vm.nv.MaNV).ToList();
+                foreach (var item in vm.listGioHang)
+                {
+                    item.NvGiao = dbo.getEmpByUser(tk);
+                }
+            }
+
+            
             return View("~/Views/Admin/Order.cshtml", vm);
         }
 
@@ -221,6 +248,17 @@ namespace BT2MWG.Controllers
 
             vm.listNV = dbo.layTatCaNV().Where(x => x.MaNV != 4).ToList();
             vm.listGioHang = dbo.layTatCaGH().Where(x => x.TrangThai.MaTrangThai == matrangthai).ToList();
+
+            if (nv.TAIKHOAN.MAQUYEN == 1002)
+            {
+                var tk = new TAIKHOAN();
+                tk.USERNAME = nv.TAIKHOAN.USERNAME;
+                vm.listGioHang = vm.listGioHang.Where(x => x.NvGiao.MaNV == vm.nv.MaNV).ToList();
+                foreach (var item in vm.listGioHang)
+                {
+                    item.NvGiao = dbo.getEmpByUser(tk);
+                }
+            }
 
             return PartialView("~/Views/Admin/Partial/ListCart.cshtml", vm);
         }
@@ -249,7 +287,16 @@ namespace BT2MWG.Controllers
 
             vm.listDoChoi = dsDoChoi;
 
+            if (nv.TAIKHOAN.MAQUYEN == 1002)
+            {
+                var tk = new TAIKHOAN();
+                tk.USERNAME = nv.TAIKHOAN.USERNAME;
+                var curNv = dbo.getEmpByUser(tk);
+                vm.listGioHang = dbo.layTatCaGH().Where(x => x.NvGiao.MaNV == curNv.MaNV).ToList();
+                return View("~/Views/Admin/Order.cshtml", vm);
+            }
 
+            
             return View("~/Views/Admin/Admin.cshtml", vm);
         }
 
@@ -352,6 +399,12 @@ namespace BT2MWG.Controllers
                 var dsDoChoi = dbo.layTatCaDoChoi();
 
                 vm.listDoChoi = dsDoChoi;
+
+                if(vm.nv.TAIKHOAN.MAQUYEN == 1002)
+                {
+                    return 1002;
+                }
+
                 return 1;
             }
             else

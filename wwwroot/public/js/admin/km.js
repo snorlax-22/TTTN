@@ -1,4 +1,5 @@
-﻿$('#add-km').click(function (event) {
+﻿
+$('#add-km').click(function (event) {
     //event.preventDefault();
     $.ajax({
         url: "/Admin/DiscountVoice",

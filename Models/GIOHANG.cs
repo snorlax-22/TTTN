@@ -7,7 +7,8 @@ namespace BT2MWG.Models
         public int MaGioHang { get; set; }
         public NHANVIEN NvDuyet { get; set; }
         public NHANVIEN NvGiao { get; set; }
-        public string CMNDKH { get; set; }
+        //public string CMNDKH { get; set; }
+        public KHACHHANG KhachHang { get; set; }
         public DateTime NgayGiao { get; set; }
 
         public HoaDon HoaDon { get; set; }
