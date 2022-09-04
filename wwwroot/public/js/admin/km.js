@@ -35,24 +35,56 @@ $('.save').click(function (event) {
     var tenkm = $('#kmname').val();
     var lydokm = $('#lydokm').val();
 
-    $.ajax({
-        url: "/Admin/TaoKhuyenMai",
-        data: {
-            arrPtGiamGia: JSON.stringify(arrPtGiamGia),
-            arrMaDoChoi: JSON.stringify(arrMaDoChoi),
-            manv: manv,
-            timefrom: timefrom,
-            timeto: timeto,
-            tenkm: tenkm,
-            lydokm: lydokm
-        },
-        type: 'GET',
-        success: function (html) {
-            alert('Thêm đợt khuyến mãi thành công');
-            location.reload();
-        },
-        error: function (res) {
-            console.log('error DiscountVoice');
-        }
-    });
+    
+
+    if (timefrom == '' || timeto == '' || tenkm == '' || lydokm == '') {
+        alert('Vui lòng nhập đầy đủ thông tin');
+    }
+    else {
+        $.ajax({
+            url: "/Admin/CheckKMHopLe",
+            data: {
+                NgayKM: timefrom
+            },
+            type: 'GET',
+            success: function (res) {
+                if (res == true) {
+                    $.ajax({
+                        url: "/Admin/TaoKhuyenMai",
+                        data: {
+                            arrPtGiamGia: JSON.stringify(arrPtGiamGia),
+                            arrMaDoChoi: JSON.stringify(arrMaDoChoi),
+                            manv: manv,
+                            timefrom: timefrom,
+                            timeto: timeto,
+                            tenkm: tenkm,
+                            lydokm: lydokm
+                        },
+                        type: 'GET',
+                        success: function (res) {
+                            if (res != 0) {
+                                alert('Thêm đợt khuyến mãi thành công');
+                                location.reload();
+                            }
+                            else {
+                                alert('Đã có lỗi xảy ra, vui lòng kiểm tra lại !');
+                            }
+                        },
+                        error: function (res) {
+                            console.log('error DiscountVoice');
+                        }
+                    });
+                }
+                else {
+                    alert('Thời gian bắt đầu không được nằm trùng đợt khuyến mãi trước !');
+                }
+            },
+            error: function (res) {
+                alert('Đã có lỗi xảy ra, vui lòng kiểm tra lại !');
+            }
+        });
+        
+    }
+
+    
 });

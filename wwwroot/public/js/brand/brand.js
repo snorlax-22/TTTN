@@ -57,28 +57,33 @@ $(".delete-btn").on('click', function (e) {
 
 //thêm hãng
 $(".add-btn").on('click', function (e) {
-    $.ajax({
-        type: "POST",
-        url: "/Admin/ThemHang/",
-        data: {
-            tenHang: $('.add-brand').val()
-        },
-        success: function (rs) {
-            if (rs) {
-                alert('Thêm đồ chơi thành công');
-                location.reload();
-            }
-            else {
+    if ($('.add-brand').val() == '') {
+        alert('Vui lòng nhập tên hãng !');
+    }
+    else {
+        $.ajax({
+            type: "POST",
+            url: "/Admin/ThemHang/",
+            data: {
+                tenHang: $('.add-brand').val()
+            },
+            success: function (rs) {
+                if (rs) {
+                    alert('Thêm đồ chơi thành công');
+                    location.reload();
+                }
+                else {
+                    alert('Đã có lỗi xảy ra');
+                }
+            },
+            error: function (rs) {
+                alert('Đã có lỗi xảy ra');
+            },
+            failure: function (rs) {
                 alert('Đã có lỗi xảy ra');
             }
-        },
-        error: function (rs) {
-            alert('Đã có lỗi xảy ra');
-        },
-        failure: function (rs) {
-            alert('Đã có lỗi xảy ra');
-        }
-    });
+        });
+    }
 });
 
 

@@ -25,10 +25,10 @@ namespace BT2MWG.Models
         {
         }
         
-        public DOCHOI(List<HINHANH> dsHA)
-        {
-            DSHINHANH = dsHA;
-        }
+        //public DOCHOI(List<HINHANH> dsHA)
+        //{
+        //    DSHINHANH = dsHA;
+        //}
         
         public DOCHOI(NHACUNGCAP NhaCC, HANGDOCHOI hang)
         {
@@ -40,7 +40,6 @@ namespace BT2MWG.Models
         {
             TenDoChoi = tenDoChoi;
             MaDoChoi = maDoChoi;
-            KHUYENMAI = km;
         }
 
         public DOCHOI(int maDoChoi, string tenDoChoi, NHACUNGCAP nHACUNGCAP, bool trangThai, string moTa, HANGDOCHOI hANGDOCHOI, KHUYENMAI kHUYENMAI)
@@ -51,8 +50,14 @@ namespace BT2MWG.Models
             TrangThai = trangThai;
             MoTa = moTa;
             HANGDOCHOI = hANGDOCHOI;
+            DSHINHANH = dbo.layTatCaAnhTheoDoChoi(maDoChoi);       
+        }
+
+        public DOCHOI(int maDoChoi)
+        {
+            MaDoChoi = maDoChoi;
             DSHINHANH = dbo.layTatCaAnhTheoDoChoi(maDoChoi);
-            
+            KHUYENMAI = dbo.layKmTheoDoChoi(maDoChoi);
         }
     }
 }

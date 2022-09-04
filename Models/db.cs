@@ -544,7 +544,7 @@ namespace BT2MWG.Models
                         TenDoChoi = dr.GetString(7),
                         MaDoChoi = idDoChoi,
                         ThayDoiGia = gia,
-                        KHUYENMAI = km
+                        //KHUYENMAI = km
                     };
 
                     listDoChoiKM.Add(doChoi);
@@ -730,6 +730,35 @@ namespace BT2MWG.Models
 
         #region get all
 
+        public bool CheckNgayKMGanNhat(DateTime ThoiGianKMMoi)
+        {
+            int datediff = 0;
+            bool isValid = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("CheckNgayKMGanNhat", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ThoiGianKMMoi", ThoiGianKMMoi);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    datediff = dr.GetInt32(0);
+                }
+
+                isValid = datediff >= 0 ? true : false;
+
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            return isValid;
+        }
+
         public List<KHUYENMAI> layTatCaDotKM()
         {
             var listSuppliers = new List<KHUYENMAI>();
@@ -769,6 +798,67 @@ namespace BT2MWG.Models
             return listSuppliers;
         }
 
+        public KHUYENMAI layKmTheoDoChoi(int MaDoChoi)
+        {
+            var km = new KHUYENMAI();
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("layKmTheoDoChoi", conn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@MaDoChoi", MaDoChoi);
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                if(dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        var ctkm = new CTKM()
+                        {
+                            IdDoChoi = MaDoChoi,
+                            PTGiamGia = dr.GetInt32(2),
+                            IdKM = dr.GetInt32(3)
+                        };
+
+                        km = new KHUYENMAI()
+                        {
+                            Id = dr.GetInt32(0),
+                            CTKM = ctkm,
+                            NgayBatDau = dr.GetDateTime(5),
+                            NgayKetThuc = dr.GetDateTime(6)
+                        };
+                    }
+                    
+                }
+                else
+                {
+                        var ctkm = new CTKM()
+                        {
+                            IdDoChoi = MaDoChoi,
+                            PTGiamGia = 0,
+                            IdKM = 0
+                        };
+
+                        km = new KHUYENMAI()
+                        {
+                            Id = 0,
+                            CTKM = ctkm,
+                            NgayBatDau = null,
+                            NgayKetThuc = null
+                        };
+                    
+                }
+                conn.Close();
+                }
+                catch (Exception e)
+                {
+                    
+                }
+
+            return km;
+        }
+
         public List<DOCHOI> layTatCaDoChoiV3()
         {
             var listDoChoiKM = new List<DOCHOI>();
@@ -797,43 +887,57 @@ namespace BT2MWG.Models
                         TENHANGDOCHOI = dr.GetString(6)
                     };
 
-                    CTKM ctkm = new CTKM()
-                    {
-                        IdDoChoi = idDoChoi,
-                        PTGiamGia = 0,
-                        IdKM = 0
-                    };
+                    //CTKM ctkm = new CTKM()
+                    //{
+                    //    IdDoChoi = idDoChoi,
+                    //    PTGiamGia = 0,
+                    //    IdKM = 0
+                    //};
 
-                    KHUYENMAI km = new KHUYENMAI()
-                    {
-                        Id = 0,
-                        CTKM = ctkm,
-                        NgayBatDau = null
-                    };
+                    //KHUYENMAI km = new KHUYENMAI()
+                    //{
+                    //    Id = 0,
+                    //    CTKM = ctkm,
+                    //    NgayBatDau = null
+                    //};
 
+                    //ctkm = new CTKM()
+                    //{
+                    //    IdDoChoi = idDoChoi,
+                    //    PTGiamGia = dr.GetInt32(3),
+                    //    IdKM = dr.GetInt32(4)
+                    //};
 
-                    ctkm = new CTKM()
-                    {
-                        IdDoChoi = idDoChoi,
-                        PTGiamGia = dr.GetInt32(3),
-                        IdKM = dr.GetInt32(4)
-                    };
+                    //km = new KHUYENMAI()
+                    //{
+                    //    Id = dr.GetInt32(4),
+                    //    CTKM = ctkm,
+                    //    NgayBatDau = dr.GetDateTime(5)
+                    //};
 
-                    km = new KHUYENMAI()
-                    {
-                        Id = dr.GetInt32(4),
-                        CTKM = ctkm,
-                        NgayBatDau = dr.GetDateTime(5)
-                    };
+                    //if (dr.GetDateTime(8) < DateTime.Now)
+                    //{
+                    //    ctkm = new CTKM()
+                    //    {
+                    //        IdDoChoi = idDoChoi,
+                    //        PTGiamGia = 0,
+                    //        IdKM = dr.GetInt32(4)
+                    //    };
 
-
-
-                    DOCHOI doChoi = new DOCHOI()
+                    //    km = new KHUYENMAI()
+                    //    {
+                    //        Id = dr.GetInt32(4),
+                    //        CTKM = ctkm,
+                    //        NgayBatDau = dr.GetDateTime(5)
+                    //    };
+                    //}
+ 
+                    DOCHOI doChoi = new DOCHOI(idDoChoi)
                     {
                         TenDoChoi = dr.GetString(7),
                         MaDoChoi = idDoChoi,
                         ThayDoiGia = gia,
-                        KHUYENMAI = km,
+                        //KHUYENMAI = km,
                         HANGDOCHOI = hang
                     };
 

@@ -27,6 +27,7 @@ namespace BT2MWG.Controllers
         }
 
 
+
         public void GetProfile(string username)
         {
             var curCus = dbo.getCusByUser(username);
@@ -102,6 +103,9 @@ namespace BT2MWG.Controllers
 
         public IActionResult Index()
         {
+
+            var DoChoi = new DOCHOI(16);
+
             db dbo = new db();
 
             PageHomeViewModel vm = new PageHomeViewModel();

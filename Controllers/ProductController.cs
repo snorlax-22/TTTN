@@ -64,7 +64,7 @@ namespace BT2MWG.Controllers
             try
             {
                 listDoChoi = (from product in products
-                                   where ConvertToUnSign(product.TenDoChoi).ToLower().Contains(ConvertToUnSign(searchText).ToLower())
+                                   where ConvertToUnSign(product.TenDoChoi).ToLower().Replace(" ","").Contains(ConvertToUnSign(searchText).ToLower().Replace(" ", ""))
                                    select product).ToList();
             }
             catch (ArgumentNullException)

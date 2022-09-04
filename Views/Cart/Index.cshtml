@@ -23,7 +23,7 @@
 }
 
 <link href="~/public/css/cart/cart.css" rel="stylesheet">
-<script src="~/public/js/cart/cart.js"></script>
+
 
 <div id="app" class="bluekids">
     <section>
@@ -68,7 +68,7 @@
                                 <img src="@item.DoChoi.DSHINHANH.FirstOrDefault().HinhAnh">
                             </a>
                             <div>
-                                <button>
+                                <button data-id="@item.DoChoi.MaDoChoi" class="delete-item-cart">
                                     <span>
                                     </span> Xóa
                                 </button>
@@ -82,17 +82,17 @@
                                     </a>
                                 </div>
                                 @{
-                                    @if (ptgiamgia > 0)
+                                            @if (ptgiamgia > 0)
                                     {
-                                        <span>
-                                            @giaNew₫ <!----><strike>@giaOld₫</strike>
-                                        </span>
+                                                <span>
+                                                    @giaNew₫ <!----><strike>@giaOld₫</strike>
+                                                </span>
                                     }
                                     else
                                     {
-                                        <span>
-                                            @giaNew₫
-                                        </span>
+                                                <span>
+                                                    @giaNew₫
+                                                </span>
                                     }
                                 }
                             </div>
@@ -194,7 +194,7 @@
                         @{
                             if (!string.IsNullOrEmpty(@tongTienFormat))
                             {
-                                <strong id="total-price">@tongTienFormat₫</strong>
+                                        <strong id="total-price">@tongTienFormat₫</strong>
                             }
                         }
                     </div>
@@ -217,7 +217,7 @@
         <p>Tên đăng nhập</p>
         <input id="id-pay" />
         <p>Mật khẩu</p>
-        <input id="pw-pay" />
+        <input id="pw-pay" type="password"/>
         @*<b>@Html.ActionLink("ĐĂNG NHẬP","PaymentWithPaypal","Paypal",new{@style="color: #fff"})</b>*@
         <b><a id="dangnhap">ĐĂNG NHẬP</a></b>
         <div class="resize-triggers">
@@ -228,10 +228,12 @@
         </div>
     </div>
     <script>
+        
         $('#dangnhap').click(function() {
+
             if ($("#cusName").val() == '') {
                 alert('Vui lòng nhập tên người nhận hàng !')
-            }
+            }           
             else if ($("#cusDate").val() == '') {
                 alert('Vui lòng nhập thời gian nhận hàng !')
             }
@@ -248,7 +250,7 @@
         });
 
     </script>
-
+    <script src="~/public/js/cart/cart.js"></script>
 </div>
 
 

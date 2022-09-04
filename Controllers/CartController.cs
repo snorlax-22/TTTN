@@ -59,6 +59,24 @@ namespace BT2MWG.Controllers
             return View(vm);
         }
 
+        public int DeleteFromCart(int idDoChoi)
+        {
+            var myCart = Carts;
+
+            foreach(var item in myCart)
+            {
+               if(item.DoChoi.MaDoChoi == idDoChoi)
+               {
+                    item.qty = 0;
+                    myCart.Remove(item);
+                    HttpContext.Session.Set("GioHang", myCart);
+                    return 1;
+               }
+            }
+
+            return 0;
+        }
+
         public void ThemVaoGio(int id, int qty = 1)
         {
             //lấy giỏ hàng hiện tại
@@ -68,7 +86,7 @@ namespace BT2MWG.Controllers
             var item = myCart.SingleOrDefault(it => it.DoChoi.MaDoChoi == id);
             if (item != null)//đã có
             {
-                item.qty += qty;
+                item.qty = item.qty + 1;
             }
             else
             {
@@ -120,11 +138,11 @@ namespace BT2MWG.Controllers
 
             if (item != null && key.Equals("+"))//đã có
             {
-                item.qty += qty;
+                item.qty = item.qty + 1;
             }
             else
             {
-                item.qty -= qty;
+                item.qty = item.qty - 1;
             }
 
             HttpContext.Session.Set("GioHang", myCart);

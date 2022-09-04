@@ -19,8 +19,15 @@ namespace BT2MWG.Controllers
 
         db dbo = new db();
 
-        public void TaoKhuyenMai(string arrPtGiamGia, string arrMaDoChoi, DateTime timeto, DateTime timefrom, string tenkm, string lydokm, int manv)
+        public bool CheckKMHopLe(DateTime NgayKM)
         {
+            var rs = dbo.CheckNgayKMGanNhat(NgayKM);
+            return rs;
+        }
+
+        public int TaoKhuyenMai(string arrPtGiamGia, string arrMaDoChoi, DateTime timeto, DateTime timefrom, string tenkm, string lydokm, int manv)
+        {
+            int idKm = 0;
             try
             {
                 var arrToy = arrMaDoChoi.TrimStart('[')
@@ -31,7 +38,7 @@ namespace BT2MWG.Controllers
                  .TrimEnd(']').Replace("\"", "")
                  .Split(',').Select(n => Convert.ToInt32(n)).ToArray();
 
-                var idKm = dbo.themKhuyenMai(tenkm,timefrom, timeto, lydokm,manv);
+                idKm = dbo.themKhuyenMai(tenkm,timefrom, timeto, lydokm,manv);
 
                 if(idKm > 0)
                 {
@@ -42,12 +49,13 @@ namespace BT2MWG.Controllers
                         count++;
                     }
                 }
-
+                
             }
             catch(Exception e)
             {
                 var b = e.ToString();
             }
+            return idKm;
         }
 
 
@@ -163,19 +171,19 @@ namespace BT2MWG.Controllers
             var monthNo = (((dt.Year - df.Year) * 12) + dt.Month - df.Month) + 1;
             var doanhthu = dbo.layDoanhThuTheoThang(DateTime.Parse(strFr), DateTime.Parse(strTo));
 
-            for (int i = 0; i < doanhthu.Count(); i++)
-            {
-                if (Int32.Parse(doanhthu[i + 1].thang) - Int32.Parse(doanhthu[i].thang) != 1)
-                {
-                    var rn = new Revenue()
-                    {
-                        thang = (Int32.Parse(doanhthu[i].thang) + 1).ToString(),
-                        year = doanhthu[i].year,
-                        revenue = 0
-                    };
-                    doanhthu.Insert(i, rn);
-                }
-            }
+            //for (int i = 0; i < doanhthu.Count(); i++)
+            //{
+            //    if (Int32.Parse(doanhthu[i + 1].thang) - Int32.Parse(doanhthu[i].thang) != 1)
+            //    {
+            //        var rn = new Revenue()
+            //        {
+            //            thang = (Int32.Parse(doanhthu[i].thang) + 1).ToString(),
+            //            year = doanhthu[i].year,
+            //            revenue = 0
+            //        };
+            //        doanhthu.Insert(i, rn);
+            //    }
+            //}
             //string[] a = new string[doanhthu.Count];
             //decimal?[] b = new decimal?[doanhthu.Count];
             //string[] barColors = new string[doanhthu.Count];
@@ -195,15 +203,15 @@ namespace BT2MWG.Controllers
 
         public ActionResult DoanhThu()
         {
-            //var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
-            //if (nv == null)
-            //{
-            //    return View("~/Views/Admin/Index.cshtml");
-            //}
-            //var vm = new AdminPageViewModel();
-            //vm.nv = nv;
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
 
-            return View("~/Views/Admin/DoanhThu.cshtml");
+            return View("~/Views/Admin/DoanhThu.cshtml",vm);
         }
         public IActionResult Index()
         {

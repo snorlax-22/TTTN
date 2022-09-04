@@ -3,21 +3,30 @@
     var idCart = $(this).data('id');
     var idx = $(this).data('idx');
     //var myJsonProduct = JSON.stringify(prd);
-    var clsName = '.deliver.'+idx+' :selected'
-    $.ajax({
-        url: '/Admin/duyetDonHang',
-        type: 'POST',
-        data: {
-            maDonHang: idCart,
-            maNVDuyet: $(this).data('idnvduyet'),
-            maNVGiao: $(clsName).val()
-        },
-        success: function () {
-            location.reload();  
-        },
-        error: function () {
-        }
-    })
+    var clsName = '.deliver.' + idx + ' :selected';
+
+    if (!$(clsName).val() == '') {
+        $.ajax({
+            url: '/Admin/duyetDonHang',
+            type: 'POST',
+            data: {
+                maDonHang: idCart,
+                maNVDuyet: $(this).data('idnvduyet'),
+                maNVGiao: $(clsName).val()
+            },
+            success: function () {
+                alert('Duyệt đơn hàng thành công, xin kiểm tra tab đơn hàng ở tab "Đang giao"');
+                location.reload();
+            },
+            error: function () {
+
+            }
+        })
+    }
+    else {
+        alert('Vui lòng chọn nhân viên giao');
+    }
+    
 });
 
 $('.complete').click(function () {
@@ -31,6 +40,7 @@ $('.complete').click(function () {
             maDonHang: idCart
         },
         success: function () {
+            alert('Đã hoàn thành đơn hàng, xin kiểm tra tab đơn hàng ở tab "Đã hoàn thành"');
             location.reload();
         },
         error: function () {

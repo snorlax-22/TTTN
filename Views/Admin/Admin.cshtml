@@ -161,43 +161,49 @@
 </body>
 <script type='text/javascript'>
 
-    $(".edit-btn").click(function(event) {
+    $(".edit-btn").click(function (event) {
         event.preventDefault();
         window.location.href = "@Url.Action("SuaDoChoi", "Admin")" + "?idDoChoi=" + $(this).data("id");
     });
+    $("#add-toy").click(function (e) {
+        if ($("#toyName").val() == '' || $("#toyPrice").val() == '' || $("#description").val() == '') {
+            alert('Vui lòng nhập đầy đủ thông tin đồ chơi !');
+        }
+        else {
 
-    $("#add-toy").click(function(e) {
-        $.ajax({
-            type: "POST",
-            url: "/Admin/ThemDoChoi/",
-            data: {
-                manv: 4,
-                tenDoChoi: $("#toyName").val(),
-                giaMoi: $("#toyPrice").val(),
-                listAnh: srcData,
-                slAnh: 1,
-                moTa: $("#description").val(),
-                maNhaCC: $("#suppliers :selected").val(),
-                cates: $("#cates").val(),
-                brands: $("#brands").val()
-            },
-            success: function(result) {
-                if (result == 1) {
-                    console.log('ok');
-                    alert('Thêm đồ chơi thành công !');
-                    location.reload();
-                }
-                else {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/ThemDoChoi/",
+                data: {
+                    manv: 4,
+                    tenDoChoi: $("#toyName").val(),
+                    giaMoi: $("#toyPrice").val(),
+                    listAnh: srcData,
+                    slAnh: 1,
+                    moTa: $("#description").val(),
+                    maNhaCC: $("#suppliers :selected").val(),
+                    cates: $("#cates :selected").val(),
+                    brands: $("#brands :selected").val()
+                },
+                success: function (result) {
+                    if (result == 1) {
+                        console.log('ok');
+                        alert('Thêm đồ chơi thành công !');
+                        location.reload();
+                    }
+                    else {
+                        console.log('error');
+                        alert('Thêm đồ chơi thất bại, vui lòng xem lại !');
+                    }
+
+                },
+                error: function (result) {
                     console.log('error');
                     alert('Thêm đồ chơi thất bại, vui lòng xem lại !');
                 }
+            });
 
-            },
-            error: function(result) {
-                console.log('error');
-                alert('Thêm đồ chơi thất bại, vui lòng xem lại !');
-            }
-        });
+        }
     });
 
 
@@ -209,11 +215,11 @@
 
             var fileReader = new FileReader();
 
-            fileReader.onload = function(fileLoadedEvent) {
+            fileReader.onload = function (fileLoadedEvent) {
                 srcData = fileLoadedEvent.target.result; // <--- data: base64
 
                 var newImage = document.createElement('img');
-                
+
                 newImage.src = srcData;
 
                 document.getElementById("imgTest").innerHTML = newImage.outerHTML;
@@ -223,7 +229,7 @@
                 alert("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
                 console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
 
-               
+
             }
             fileReader.readAsDataURL(fileToLoad);
         }
