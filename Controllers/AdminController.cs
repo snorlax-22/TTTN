@@ -19,6 +19,81 @@ namespace BT2MWG.Controllers
 
         db dbo = new db();
 
+        #region nhanvien
+        public ActionResult Employee()
+        {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
+            vm.listNV = dbo.layTatCaNV();
+            vm.listQuyen = dbo.layTatCaQuyen();
+
+            return View("~/Views/Admin/Employee.cshtml",vm);
+        }
+
+        public int themNhanVien(string tenNV, string email, string diachi, bool gioitinh, 
+            string sdt, string mst,
+            string username, int maquyen, string password)
+        {
+            var rs = dbo.themNhanVien(tenNV, email, diachi, gioitinh, sdt, mst, username, maquyen, password);
+            return rs;
+        }
+
+        public int suaDoChoiInfo(int madochoi, int manv, int gia, string tendochoi, string mota)
+        {
+            var rs = dbo.suaDoChoi(madochoi,manv, gia, tendochoi, mota);
+            return rs;
+        }
+
+        public int XoaNV(int manv)
+        {
+            var rs = dbo.XoaNV(manv);
+            return rs;
+        }
+
+        #endregion
+
+        #region crug cate
+        public ActionResult Category()
+        {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
+            var res = dbo.layTatCaDanhMuc();
+
+            vm.listDanhMuc = res;
+            return View("~/Views/Admin/Category.cshtml",vm);
+        }
+
+        
+        public int SuaLoaiDoChoi(int idLoai, string tenLoai)
+        {
+            var rs = dbo.suaLoaiDoChoi(tenLoai, idLoai);
+            return rs;
+        }
+
+        public int XoaLoaiDoChoi(int idLoai)
+        {
+            var rs = dbo.xoaLoaiDoChoi(idLoai);
+            return rs;
+        }
+
+        public int ThemLoaiDoChoi(string tenLoai)
+        {
+            var rs = dbo.themLoaiDoChoi(tenLoai);
+            return rs;
+        }
+        #endregion
+
+        #region km
         public bool CheckKMHopLe(DateTime NgayKM)
         {
             var rs = dbo.CheckNgayKMGanNhat(NgayKM);
@@ -77,7 +152,9 @@ namespace BT2MWG.Controllers
 
             return View("~/Views/Admin/KhuyenMai.cshtml",vm);
         }
+        #endregion
 
+        #region hoadon
         public void XemHoaDon(int magh, string mahd)
         {
 
@@ -140,6 +217,7 @@ namespace BT2MWG.Controllers
             var cpv = HttpContext.Session.Get<CartPageViewModel>("HoaDonPage");
             return View("~/Views/Admin/Partial/InvoicePrint.cshtml", cpv);
         }
+        #endregion
 
         public ActionResult LayChiTietGioHang(int maGH)
         {
@@ -170,33 +248,6 @@ namespace BT2MWG.Controllers
             var strTo = dt.ToString("yyyy-MM-dd");
             var monthNo = (((dt.Year - df.Year) * 12) + dt.Month - df.Month) + 1;
             var doanhthu = dbo.layDoanhThuTheoThang(DateTime.Parse(strFr), DateTime.Parse(strTo));
-
-            //for (int i = 0; i < doanhthu.Count(); i++)
-            //{
-            //    if (Int32.Parse(doanhthu[i + 1].thang) - Int32.Parse(doanhthu[i].thang) != 1)
-            //    {
-            //        var rn = new Revenue()
-            //        {
-            //            thang = (Int32.Parse(doanhthu[i].thang) + 1).ToString(),
-            //            year = doanhthu[i].year,
-            //            revenue = 0
-            //        };
-            //        doanhthu.Insert(i, rn);
-            //    }
-            //}
-            //string[] a = new string[doanhthu.Count];
-            //decimal?[] b = new decimal?[doanhthu.Count];
-            //string[] barColors = new string[doanhthu.Count];
-
-            //RevenueReport rp = new RevenueReport(doanhthu.Count);
-            //int count = 0;
-            //foreach (var item in doanhthu)
-            //{
-            //    rp.thoigian[count] = (item.thang + "-" + item.year).ToString();
-            //    rp.revenue[count] = item.revenue;
-
-            //    count++;
-            //}
 
             return PartialView("~/Views/Admin/Partial/Revenue.cshtml", doanhthu);
         }

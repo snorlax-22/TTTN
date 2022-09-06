@@ -328,3 +328,5 @@ C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\BT2M
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\ref\BT2MWG.dll
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Partial\Revenue1.cshtml.g.cs
 C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Home\Cate.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Category.cshtml.g.cs
+C:\Users\Snorlax\OneDrive\Desktop\Cuong\BaoCaoThucTap\TTTN\obj\Debug\net5.0\Razor\Views\Admin\Employee.cshtml.g.cs

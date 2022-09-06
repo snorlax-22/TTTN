@@ -90,7 +90,7 @@ namespace BT2MWG.Controllers
             }
             else
             {
-                var hh = dbo.layTatCaDoChoiV2().FirstOrDefault(p => p.MaDoChoi == id);
+                var hh = dbo.layTatCaDoChoiV3().FirstOrDefault(p => p.MaDoChoi == id);
 
                 myCart.Add(new CartItem()
                 {

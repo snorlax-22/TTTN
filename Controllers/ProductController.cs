@@ -55,7 +55,7 @@ namespace BT2MWG.Controllers
         public ActionResult Search(string searchText)
         {
             string value = string.Empty;
-            var products = dbo.layTatCaDoChoiV2();
+            var products = dbo.layTatCaDoChoiV3();
             var listDoChoi = new List<DOCHOI>();
             foreach (var item in products)
             {

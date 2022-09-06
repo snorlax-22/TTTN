@@ -15,6 +15,23 @@
     });
 });
 
+$(".button-buy").click(function () {
+    $.ajax({
+        url: "/Cart/ThemVaoGio",
+        type: 'POST',
+        data: {
+            id: $(this).data("id"),
+            qty: 1
+        },
+        success: function (res) {
+            document.location.href = "/cart", true;
+        },
+        error: function (res) {
+            console.log('thêm vào giỏ thất bại');
+        }
+    });
+});
+
 $('.txt').click(function (event) {
     tempAlert('Đã thêm sản phẩm vào giỏ', 2000);
 });

@@ -12,6 +12,9 @@ namespace BT2MWG.ViewModel
         public List<GIOHANG> listGioHang { get; set; }
         public List<NHANVIEN> listNV { get; set; }
         public List<KHUYENMAI> listKM { get; set; }
+        public List<QUYEN> listQuyen { get; set; }
         public DOCHOI EditDoCHoi { get; set; }
+
+        public List<DANHMUC> listDanhMuc { get; set; }
     }
 }

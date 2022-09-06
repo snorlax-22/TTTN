@@ -4,6 +4,36 @@ $(".edit-btn").click(function (event) {
     window.location.href = "@Url.Action('DangNhap', 'Admin')" + "?username=" + $("#username").val() + "&password=" + $("#password").val();
 });
 
+$("#save-toy").click(function (event) {
+    $.ajax({
+        type: "POST",
+        url: "/Admin/suaDoChoiInfo/",
+        data: {
+            madochoi: $('#emppName').data('toyid'),
+            manv: $('#emppName').data('id'),
+            gia: $('#toyPrice').val(),
+            tendochoi: $('#toyName').val(),
+            mota: $('.description').val()
+        },
+        success: function (result) {
+            if (result == 1) {
+                isSuccess = 1;
+                alert('Xóa ảnh thành công !');
+                location.reload();
+            }
+            else {
+                console.log('error');
+                alert('Xóa ảnh thất bại, vui lòng xem lại !');
+            }
+
+        },
+        error: function (result) {
+            console.log('error');
+            alert('Xóa ảnh thất bại, vui lòng xem lại !');
+        }
+    });
+});
+
 function encodeImageFileAsURL(data, data1, id) {
     var a = document.getElementsByClassName(data)[0];
     var filesSelected = document.getElementsByClassName(data)[0].files;
@@ -63,18 +93,18 @@ function encodeImageFileAsURLAdd(maDoChoi) {
                 success: function (result) {
                     if (result == 1) {
                         isSuccess = 1;
-                        alert('Thêm ảnh thành công !');
+                        alert('Cập nhật thành công !');
                         location.reload();
                     }
                     else {
                         console.log('error');
-                        alert('Sửa ảnh thất bại, vui lòng xem lại !');
+                        alert('Cập nhật thất bại, vui lòng xem lại !');
                     }
 
                 },
                 error: function (result) {
                     console.log('error');
-                    alert('Sửa ảnh thất bại, vui lòng xem lại !');
+                    alert('Cập nhật thất bại, vui lòng xem lại !');
                 }
             });
         }

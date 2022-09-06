@@ -12,6 +12,63 @@ namespace BT2MWG.Models
 
         SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
+        #region nhân viên
+        public int themNhanVien(string tenNV, string email, string diachi,bool gioitinh, string sdt, string mst,
+            string username, int maquyen, string password)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("themNhanVien", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@tenNV", tenNV);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@gioiTinh", gioitinh);
+                cmd.Parameters.AddWithValue("@SDT", sdt);
+                cmd.Parameters.AddWithValue("@msThue", mst);
+                cmd.Parameters.AddWithValue("@userName", username);
+                cmd.Parameters.AddWithValue("@maQuyen", maquyen);
+                cmd.Parameters.AddWithValue("@diaChi", diachi);
+                cmd.Parameters.AddWithValue("@passWord", password);
+     
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int XoaNV(int manv)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("XoaNV", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@manv", manv);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        #endregion
+
         #region khách hàng
 
         public KHACHHANG layKHTheoCMND(string cmnd)
@@ -613,6 +670,31 @@ namespace BT2MWG.Models
         #endregion
 
         #region đồ chơi
+        public int suaDoChoi(int madochoi, int manv, int gia, string tendochoi, string mota)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("suaDoChoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@madochoi", madochoi);
+                cmd.Parameters.AddWithValue("@manv", manv);
+                cmd.Parameters.AddWithValue("@gia", gia);
+                cmd.Parameters.AddWithValue("@tendochoi", tendochoi);
+                cmd.Parameters.AddWithValue("@mota", mota);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+
+        }
         public DOCHOI layDoChoiTheoMa(int idDoChoi)
         {
             try
@@ -1150,6 +1232,37 @@ namespace BT2MWG.Models
             }
             return listNV;
         }
+
+        public List<QUYEN> layTatCaQuyen()
+        {
+            var listNV = new List<QUYEN>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layTatCaQuyen", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var nv = new QUYEN()
+                    {
+                        MaQuyen = dr.GetInt32(0),
+                        TenQuyen = dr.GetString(1)
+                    };
+
+
+                    listNV.Add(nv);
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                var ed = e.ToString();
+            }
+            return listNV;
+        }
         #endregion
 
         #region by toy id
@@ -1218,6 +1331,74 @@ namespace BT2MWG.Models
             catch (Exception e)
             {
                 throw new Exception();
+            }
+        }
+        #endregion
+
+        #region crud cate
+        public int themLoaiDoChoi(string tenHang)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("themLoaiDoChoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@tenLoai", tenHang);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int suaLoaiDoChoi(string tenHang, int maHang)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("suaLoaiDoChoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@tenLoai", tenHang);
+                cmd.Parameters.AddWithValue("@maLoai", maHang);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int xoaLoaiDoChoi(int maHang)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("xoaDanhMuc", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maDanhMuc", maHang);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
             }
         }
         #endregion
