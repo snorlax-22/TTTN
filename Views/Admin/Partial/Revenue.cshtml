@@ -12,7 +12,7 @@
             @*print section----------------------*@
             <div class="page-tools">
                 <div class="action-buttons">
-                    <a class="btn bg-white btn-light mx-1px text-95 print" href="#" data-title="Print">
+                    <a id="print" class="btn bg-white btn-light mx-1px text-95 print" data-title="Print">
                         <i class="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
                         Print
                     </a>
@@ -22,7 +22,7 @@
 
         </div>
 
-        <div class="container px-0">
+        <div id="printthis" class="container px-0">
             <div class="row mt-4">
                 <div class="col-12 col-lg-12">
                     <div class="row">
@@ -98,4 +98,18 @@
         </div>
     </div>
 </page>
+<script>
+    function printData() {
+        var divToPrint = document.getElementById("printthis");
+        newWin = window.open("");
+        newWin.document.write(divToPrint);
+        newWin.print();
+        newWin.close();
+    }
 
+    $('#print').on('click', function () {
+        printData();
+    })
+</script>
+
+<script src="~/public/js/admin/order.js"></script>

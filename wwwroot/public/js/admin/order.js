@@ -156,3 +156,14 @@ $('.invoice').click(function (event) {
     });
 });
 
+function printData() {
+    var divToPrint = document.getElementById("printthis");
+    newWin = window.open("");
+    newWin.document.write(divToPrint.innerHTML);
+    newWin.print();
+    newWin.close();
+}
+
+$('#print').on('click', function () {
+    printData();
+})
