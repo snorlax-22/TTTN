@@ -4,6 +4,7 @@ using BT2MWG.ViewModel;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -11,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace BT2MWG.Controllers
 {
@@ -81,7 +83,7 @@ namespace BT2MWG.Controllers
             var rs = dbo.themTaiKhoan(tenKh, mk, acc, mst, add, email, phone, gioitinh, cmnd);
 
             var curCus = dbo.getCusByUser(acc);
-             
+
             HttpContext.Session.Set("CurrentCus", curCus);
 
             return rs;
@@ -93,7 +95,7 @@ namespace BT2MWG.Controllers
 
             var curCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
 
-            var rs = dbo.suaTaiKhoan(username,tenKh, mk, mst, add, email, phone, gioitinh, cmnd);
+            var rs = dbo.suaTaiKhoan(username, tenKh, mk, mst, add, email, phone, gioitinh, cmnd);
 
             var curCusNext = dbo.getCusByUser(curCus.taikhoan.USERNAME);
             HttpContext.Session.Set("CurrentCus", curCus);
@@ -109,11 +111,33 @@ namespace BT2MWG.Controllers
             db dbo = new db();
 
             PageHomeViewModel vm = new PageHomeViewModel();
-            
+
             vm.listDoChoi = dbo.layTatCaDoChoiV3();
             vm.currentCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
 
             return View("~/Views/Home/Index.cshtml", vm);
         }
+
+        [Route("advancedsearch")]
+        public IActionResult AdvancedSearch()
+        {
+            var vm = new SearchViewModel()
+            {
+                hangDoChoi = dbo.layTatCaHang(),
+            };
+
+            return View("~/Views/Home/AdvancedSearch.cshtml", vm);
+        }
+
+        public async Task<IActionResult> GetProductList(Search query)
+        {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            var e = query.StrListManuId.Split(',')?.Select(Int32.Parse)?.ToList();
+            var b = dbo.layTatCaDoChoiV3().Where(x => e.Contains(x.HANGDOCHOI.MAHANGDOCHOI)).ToList();
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+            return View("~/Views/Shared/Partial/ProductList.cshtml",b);
+        }
+
     }
 }

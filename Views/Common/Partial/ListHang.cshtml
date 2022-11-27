@@ -1,0 +1,27 @@
+﻿@using BT2MWG.Models;
+@using BT2MWG.ViewModel;
+@model List<HANGDOCHOI>
+@{
+    int count = 0;
+    int width = 67;
+    int height = 33;
+}
+<div class="filter-item">
+    <div class="filter-item__title jsTitle"><span data-item="Hãng">Hãng</span></div>
+    <div class="filter-show">
+        <div class="filter-list filter-list--column manu outsight" data-sight="1">
+            @foreach(var item in Model)
+            {
+                count++;
+                <a href="#" class="c-btnbox filter-manu" data-order="@count" data-id="@item.MAHANGDOCHOI" data-name="@item.TENHANGDOCHOI" data-type="1">
+                    <img class="" src="@item.HINHANH" width="@width" height="@height" alt="@item.TENHANGDOCHOI">
+                </a>
+            }
+           
+        </div>
+        <div class="filter-button">
+            <a href="javascript:void(0)" class="btn-filter-close">Bỏ chọn</a>
+            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem @**@</a>
+        </div>
+    </div>
+</div>

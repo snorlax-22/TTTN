@@ -1,0 +1,3021 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\.DS_Store",
+      "PackagePath": "staticwebassets\\css\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\bootstrap\\mixins\\_grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\classic.css",
+      "PackagePath": "staticwebassets\\css\\classic.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\classic.date.css",
+      "PackagePath": "staticwebassets\\css\\classic.date.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\.DS_Store",
+      "PackagePath": "staticwebassets\\fonts\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\Read Me.txt"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\demo.html",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo.html"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\selection.json",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\selection.json"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\fonts\\icomoon\\style.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\images\\.DS_Store",
+      "PackagePath": "staticwebassets\\images\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\picker.date.js",
+      "PackagePath": "staticwebassets\\js\\picker.date.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\picker.js",
+      "PackagePath": "staticwebassets\\js\\picker.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\picker.time.js",
+      "PackagePath": "staticwebassets\\js\\picker.time.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\Homepage\\cate.css",
+      "PackagePath": "staticwebassets\\public\\css\\Homepage\\cate.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\Homepage\\homepage.css",
+      "PackagePath": "staticwebassets\\public\\css\\Homepage\\homepage.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\_Footer.css",
+      "PackagePath": "staticwebassets\\public\\css\\_Footer.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\_Header.css",
+      "PackagePath": "staticwebassets\\public\\css\\_Header.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\admin\\invoice.css",
+      "PackagePath": "staticwebassets\\public\\css\\admin\\invoice.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\admin\\toydetail.css",
+      "PackagePath": "staticwebassets\\public\\css\\admin\\toydetail.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\public\\css\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\cart\\cart.css",
+      "PackagePath": "staticwebassets\\public\\css\\cart\\cart.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\cart\\login.css",
+      "PackagePath": "staticwebassets\\public\\css\\cart\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-brands.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-brands.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-brands.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-regular.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-regular.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-regular.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-solid.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-solid.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-solid.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fa-solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome-all.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome-all.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_animated.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_animated.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_bordered-pulled.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_bordered-pulled.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_core.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_core.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_fixed-width.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_fixed-width.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_icons.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_icons.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_larger.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_larger.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_list.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_list.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_mixins.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_mixins.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_rotated-flipped.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_rotated-flipped.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_screen-reader.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_screen-reader.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_stacked.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_stacked.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\_variables.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\_variables.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\fa-brands.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\fa-brands.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\fa-regular.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\fa-regular.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\fa-solid.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\fa-solid.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\less\\fontawesome.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\less\\fontawesome.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_animated.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_core.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_larger.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\fa-brands.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\fa-brands.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\fa-regular.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\fa-regular.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\fa-solid.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\fa-solid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\scss\\fontawesome.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\scss\\fontawesome.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\ie7\\ie7.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\ie7\\ie7.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\ie7\\ie7.js",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\ie7\\ie7.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\themify-icons\\themify-icons.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\themify-icons\\themify-icons.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-core.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-core.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-variables.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-variables.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-wind.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-wind.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-wind.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons-wind.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\css\\weather-icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.eot",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.svg",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-beaufort.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-beaufort.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-day.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-day.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-direction.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-direction.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-misc.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-misc.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-moon.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-moon.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-neutral.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-neutral.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-night.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-night.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-time.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-time.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-wind-names.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\css\\variables-wind-names.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-beaufort.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-beaufort.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-day.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-day.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-direction.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-direction.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-misc.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-misc.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-moon-aliases.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-moon-aliases.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-moon.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-moon.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-neutral.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-neutral.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-night.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-night.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-time.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-time.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-wind-aliases.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-wind-aliases.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-wind-degrees.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-wind-degrees.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-wind.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-classes\\classes-wind.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-beaufort.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-beaufort.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-day.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-day.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-direction.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-direction.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-misc.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-misc.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-moon.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-moon.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-neutral.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-neutral.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-night.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-night.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-time.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-time.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-wind-names.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\icon-variables\\variables-wind-names.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-forecast-io.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-forecast-io.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-owm.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-owm.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-wmo4680.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-wmo4680.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-yahoo.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\mappings\\wi-yahoo.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-classes.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-classes.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-core.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-core.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-variables.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-variables.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-wind.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-wind.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-wind.min.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons-wind.min.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons.min.less",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\less\\weather-icons.min.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-beaufort.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-beaufort.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-day.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-day.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-direction.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-direction.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-misc.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-moon-aliases.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-moon-aliases.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-moon.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-moon.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-neutral.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-neutral.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-night.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-night.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-time.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-time.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-degrees.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-degrees.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-wind.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-classes\\classes-wind.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-forecast-io.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-forecast-io.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-owm.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-owm.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-wmo4680.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-wmo4680.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-yahoo.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\mappings\\wi-yahoo.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-classes.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-classes.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-core.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-core.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-variables.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-wind.min.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-wind.min.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-wind.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons-wind.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons.min.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons.min.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons.scss",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\icons\\weather-icons\\sass\\weather-icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\style.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\css admin\\style.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\css admin\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fa-brands.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fa-brands.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fa-brands.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fa-brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fa-regular.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fa-regular.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fa-regular.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fa-regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fa-solid.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fa-solid.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fa-solid.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fa-solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fontawesome-all.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fontawesome-all.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_animated.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_animated.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_bordered-pulled.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_bordered-pulled.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_core.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_core.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_fixed-width.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_fixed-width.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_icons.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_icons.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_larger.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_larger.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_list.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_list.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_mixins.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_mixins.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_rotated-flipped.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_rotated-flipped.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_screen-reader.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_screen-reader.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_stacked.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_stacked.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\_variables.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\_variables.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\fa-brands.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\fa-brands.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\fa-regular.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\fa-regular.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\fa-solid.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\fa-solid.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\less\\fontawesome.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\less\\fontawesome.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_animated.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_core.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_larger.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\fa-brands.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\fa-brands.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\fa-regular.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\fa-regular.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\fa-solid.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\fa-solid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\scss\\fontawesome.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\scss\\fontawesome.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\ie7\\ie7.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\ie7\\ie7.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\ie7\\ie7.js",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\ie7\\ie7.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\themify-icons\\themify-icons.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\themify-icons\\themify-icons.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\css\\weather-icons-core.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\css\\weather-icons-core.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\css\\weather-icons-variables.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\css\\weather-icons-variables.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\css\\weather-icons-wind.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\css\\weather-icons-wind.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\css\\weather-icons-wind.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\css\\weather-icons-wind.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\css\\weather-icons.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\css\\weather-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\css\\weather-icons.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\css\\weather-icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.eot",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.svg",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.ttf",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-beaufort.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-beaufort.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-day.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-day.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-direction.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-direction.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-misc.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-misc.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-moon.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-moon.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-neutral.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-neutral.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-night.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-night.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-time.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-time.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\css\\variables-wind-names.css",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\css\\variables-wind-names.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-beaufort.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-beaufort.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-day.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-day.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-direction.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-direction.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-misc.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-misc.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon-aliases.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon-aliases.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-moon.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-neutral.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-neutral.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-night.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-night.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-time.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-time.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-aliases.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-aliases.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-degrees.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind-degrees.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-classes\\classes-wind.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-beaufort.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-beaufort.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-day.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-day.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-direction.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-direction.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-misc.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-misc.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-moon.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-moon.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-neutral.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-neutral.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-night.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-night.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-time.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-time.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-wind-names.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\icon-variables\\variables-wind-names.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-forecast-io.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-forecast-io.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-owm.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-owm.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-wmo4680.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-wmo4680.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-yahoo.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\mappings\\wi-yahoo.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\weather-icons-classes.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\weather-icons-classes.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\weather-icons-core.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\weather-icons-core.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\weather-icons-variables.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\weather-icons-variables.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\weather-icons-wind.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\weather-icons-wind.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\weather-icons-wind.min.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\weather-icons-wind.min.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\weather-icons.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\weather-icons.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\less\\weather-icons.min.less",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\less\\weather-icons.min.less"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-beaufort.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-beaufort.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-day.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-day.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-direction.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-direction.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-misc.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon-aliases.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon-aliases.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-moon.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-neutral.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-neutral.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-night.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-night.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-time.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-time.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-degrees.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-degrees.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-forecast-io.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-forecast-io.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-owm.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-owm.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-wmo4680.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-wmo4680.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-yahoo.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\mappings\\wi-yahoo.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\weather-icons-classes.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\weather-icons-classes.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\weather-icons-core.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\weather-icons-core.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\weather-icons-variables.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\weather-icons-variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\weather-icons-wind.min.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\weather-icons-wind.min.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\weather-icons-wind.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\weather-icons-wind.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\weather-icons.min.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\weather-icons.min.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\icons\\weather-icons\\sass\\weather-icons.scss",
+      "PackagePath": "staticwebassets\\public\\css\\icons\\weather-icons\\sass\\weather-icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\order\\order.css",
+      "PackagePath": "staticwebassets\\public\\css\\order\\order.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_accordion.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_alert.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_badge.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_button-group.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_card.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_containers.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_functions.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_helpers.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_images.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_modal.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_nav.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_popover.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_progress.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_reboot.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_root.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_spinners.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_toasts.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_transitions.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\bootstrap\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\bootstrap\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\components.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\components.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\animation\\animation.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\animation\\animation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\breadcrumb\\breadcrumb.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\breadcrumb\\breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\buttons\\buttons.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\buttons\\buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\core.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\core.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\extra\\extra.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\extra\\extra.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\layout\\layout.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\layout\\layout.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\loader\\spinner.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\loader\\spinner.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\scafholdings\\scafholding.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\scafholdings\\scafholding.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\sidebar\\sidebar.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\sidebar\\sidebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\topbar\\header.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\topbar\\header.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\topbar\\notify.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\topbar\\notify.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\core\\wave-effects\\wave-effects.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\core\\wave-effects\\wave-effects.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\custom.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\custom.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\mixins\\padding-margin.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\mixins\\padding-margin.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\responsive.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\responsive.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\theme-colors\\theme-colors.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\theme-colors\\theme-colors.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\variable.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\variable.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\widgets\\comments.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\widgets\\comments.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\widgets\\feeds.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\widgets\\feeds.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\widgets\\profile.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\widgets\\profile.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\widgets\\steamline.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\widgets\\steamline.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\scss\\widgets\\widgets.scss",
+      "PackagePath": "staticwebassets\\public\\css\\scss\\widgets\\widgets.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\search\\search.css",
+      "PackagePath": "staticwebassets\\public\\css\\search\\search.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\style.css",
+      "PackagePath": "staticwebassets\\public\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\public\\css\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\css\\toy.css",
+      "PackagePath": "staticwebassets\\public\\css\\toy.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\1200x200-1200x200.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\1200x200-1200x200.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\Do-choi2400x360-1200x180-1.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\Do-choi2400x360-1200x180-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\Flash-sale-desk-min-1200x160.png",
+      "PackagePath": "staticwebassets\\public\\image\\Flash-sale-desk-min-1200x160.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\P7UGE0JY-1200x200.png",
+      "PackagePath": "staticwebassets\\public\\image\\P7UGE0JY-1200x200.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\Tagline-hotsale-1200x134.png",
+      "PackagePath": "staticwebassets\\public\\image\\Tagline-hotsale-1200x134.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\Trai-79x271-15.png",
+      "PackagePath": "staticwebassets\\public\\image\\Trai-79x271-15.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\Trai-79x275-1.png",
+      "PackagePath": "staticwebassets\\public\\image\\Trai-79x275-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\cam-trai.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\cam-trai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\hot-wheels.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\hot-wheels.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\hot-wheels2.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\hot-wheels2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\hot-wheels3.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\hot-wheels3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\hot-wheels4.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\hot-wheels4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\hot-wheels5.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\hot-wheels5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\icons8-home-50.png",
+      "PackagePath": "staticwebassets\\public\\image\\icons8-home-50.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\lego-canh-sat-2.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\lego-canh-sat-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\lego-canh-sat-3.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\lego-canh-sat-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\lego-canh-sat-4.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\lego-canh-sat-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\lego-canh-sat-5.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\lego-canh-sat-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\lego-canh-sat-6.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\lego-canh-sat-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\lego-canh-sat-7.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\lego-canh-sat-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\lego-canh-sat.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\lego-canh-sat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\phi-co.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\phi-co.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\tau-chien.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\tau-chien.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\thung-gach.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\thung-gach.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\truc-thang.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\truc-thang.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\truc-thang2.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\truc-thang2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\truc-thang3.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\truc-thang3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\truc-thang4.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\truc-thang4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\truc-thang5.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\truc-thang5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\truc-thang6.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\truc-thang6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\truc-thang7.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\truc-thang7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\xe-dia-hinh.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\xe-dia-hinh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\xe-dia-hinh2.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\xe-dia-hinh2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\xe-dia-hinh3.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\xe-dia-hinh3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\xe-dia-hinh4.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\xe-dia-hinh4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\xe-dia-hinh5.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\xe-dia-hinh5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\xe-dia-hinh6.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\xe-dia-hinh6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\image\\xe-dia-hinh7.jpg",
+      "PackagePath": "staticwebassets\\public\\image\\xe-dia-hinh7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\images admin\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\custom-select.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\custom-select.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\favicon.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\img_avatar2.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\img_avatar2.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\large\\img1.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\large\\img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\logo-icon.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\logo-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\logo-light-icon.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\logo-light-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\logo-light-text.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\logo-light-text.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\logo-text.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\logo-text.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\1-old.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\1-old.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\1.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\1.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\2.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\2.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\3.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\3.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\4.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\5.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\6.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\7.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\8.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\agent.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\agent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\agent2.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\agent2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\arijit.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\arijit.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\d1.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\d1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\d2.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\d3.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\d3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\d4.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\d4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\d5.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\d5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\genu.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\genu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\govinda.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\govinda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\hritik.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\hritik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\pawandeep.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\pawandeep.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\profile.png",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\ritesh.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\ritesh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\sonu.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\sonu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\images admin\\users\\varun.jpg",
+      "PackagePath": "staticwebassets\\public\\images admin\\users\\varun.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js admin\\app-style-switcher.js",
+      "PackagePath": "staticwebassets\\public\\js admin\\app-style-switcher.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js admin\\custom.js",
+      "PackagePath": "staticwebassets\\public\\js admin\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js admin\\pages\\dashboards\\dashboard1.js",
+      "PackagePath": "staticwebassets\\public\\js admin\\pages\\dashboards\\dashboard1.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js admin\\sidebarmenu.js",
+      "PackagePath": "staticwebassets\\public\\js admin\\sidebarmenu.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js admin\\waves.js",
+      "PackagePath": "staticwebassets\\public\\js admin\\waves.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\admin.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\admin.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\category.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\category.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\employee.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\employee.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\invoice.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\invoice.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\km.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\listcart.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\listcart.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\order.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\order.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\admin\\toydetail.js",
+      "PackagePath": "staticwebassets\\public\\js\\admin\\toydetail.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\brand\\brand.js",
+      "PackagePath": "staticwebassets\\public\\js\\brand\\brand.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\cart\\cart.js",
+      "PackagePath": "staticwebassets\\public\\js\\cart\\cart.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\cart\\client.js",
+      "PackagePath": "staticwebassets\\public\\js\\cart\\client.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\gethtml.js",
+      "PackagePath": "staticwebassets\\public\\js\\gethtml.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\productController.js",
+      "PackagePath": "staticwebassets\\public\\js\\productController.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\search\\search.js",
+      "PackagePath": "staticwebassets\\public\\js\\search\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\slider.js",
+      "PackagePath": "staticwebassets\\public\\js\\slider.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\supplier\\supplier.js",
+      "PackagePath": "staticwebassets\\public\\js\\supplier\\supplier.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\js\\toy.js",
+      "PackagePath": "staticwebassets\\public\\js\\toy.js"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\plugins\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\bower_components\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css",
+      "PackagePath": "staticwebassets\\public\\plugins\\bower_components\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\bower_components\\chartist\\dist\\chartist.min.css",
+      "PackagePath": "staticwebassets\\public\\plugins\\bower_components\\chartist\\dist\\chartist.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\bower_components\\perfect-scrollbar\\dist\\css\\perfect-scrollbar.min.css",
+      "PackagePath": "staticwebassets\\public\\plugins\\bower_components\\perfect-scrollbar\\dist\\css\\perfect-scrollbar.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\.DS_Store",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\custom-select.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\custom-select.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\favicon.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\large\\img1.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\large\\img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\logo-icon.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\logo-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\logo-light-icon.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\logo-light-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\logo-light-text.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\logo-light-text.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\logo-text.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\logo-text.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\1-old.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\1-old.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\1.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\1.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\2.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\2.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\3.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\3.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\4.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\5.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\6.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\7.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\8.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\agent.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\agent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\agent2.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\agent2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\arijit.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\arijit.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\d1.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\d1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\d2.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\d3.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\d3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\d4.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\d4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\d5.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\d5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\genu.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\genu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\govinda.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\govinda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\hritik.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\hritik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\pawandeep.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\pawandeep.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\profile.png",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\ritesh.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\ritesh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\sonu.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\sonu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\public\\plugins\\images admin\\users\\varun.jpg",
+      "PackagePath": "staticwebassets\\public\\plugins\\images admin\\users\\varun.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\.DS_Store",
+      "PackagePath": "staticwebassets\\scss\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_button-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_card.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_code.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_custom-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_functions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_images.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_input-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_media.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_media.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_modal.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_nav.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_popover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_print.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_print.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_progress.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_root.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_spinners.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_toasts.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_transitions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_align.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_display.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\bootstrap\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\wwwroot\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\scss\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BT2MWG.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BT2MWG.props",
+      "PackagePath": "build\\BT2MWG.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BT2MWG.props",
+      "PackagePath": "buildMultiTargeting\\BT2MWG.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BT2MWG.props",
+      "PackagePath": "buildTransitive\\BT2MWG.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

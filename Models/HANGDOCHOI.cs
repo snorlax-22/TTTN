@@ -12,5 +12,7 @@ namespace BT2MWG.Models
         [Required]
         [StringLength(50)]
         public string TENHANGDOCHOI { get; set; }
+        public string HINHANH { get; set; }
+        public string WEBHANG { get; set; }
     }
 }

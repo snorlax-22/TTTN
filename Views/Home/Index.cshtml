@@ -45,7 +45,7 @@
         <img class="banner" src="~/public/image/Flash-sale-desk-min-1200x160.png" />
 
         <div class="others-toy" id="toy-grid">
-            @foreach (var item in Model.listDoChoi.Where(x => x.KHUYENMAI.CTKM.PTGiamGia > 30).Take(6))
+            @foreach (var item in Model.listDoChoi.Where(x => x != null && x.KHUYENMAI.CTKM.PTGiamGia > 30).Take(6))
             {
                 @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
             }

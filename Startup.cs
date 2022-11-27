@@ -66,6 +66,7 @@ namespace BT2MWG
                 routes.MapRoute("AddNhaCC", "{controller=Admin}/{action=Brand}");
                 routes.MapRoute("Default", "{controller=Product}/{action=Index}/do-choi/{id?}");
                 routes.MapRoute("Cart", "{controller=Cart}/{action=Index}");
+                routes.MapRoute("advancedsearch", "{controller=Home}/{action=AdvancedSearch}");
                 routes.MapRoute("ProductDetail", "{controller=Product}/{action=Detail}/{id?}");
 
                 //routes.MapRoute("AdminLogin", "{controller=Admin}/{action=Admin}");

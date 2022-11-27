@@ -887,8 +887,11 @@ namespace BT2MWG.Models
                 {
                     SqlCommand cmd = new SqlCommand("layKmTheoDoChoi", conn);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                if (conn.State.ToString().Equals(System.Data.ConnectionState.Closed.ToString()))
+                {
                     conn.Open();
-                    cmd.Parameters.AddWithValue("@MaDoChoi", MaDoChoi);
+                }
+                cmd.Parameters.AddWithValue("@MaDoChoi", MaDoChoi);
 
                     SqlDataReader dr = cmd.ExecuteReader();
 
@@ -966,7 +969,8 @@ namespace BT2MWG.Models
 
                     HANGDOCHOI hang = new HANGDOCHOI()
                     {
-                        TENHANGDOCHOI = dr.GetString(6)
+                        TENHANGDOCHOI = dr.GetString(6),
+                        MAHANGDOCHOI = dr.GetInt32(10)
                     };
 
                     //CTKM ctkm = new CTKM()
@@ -1420,6 +1424,7 @@ namespace BT2MWG.Models
                     var brand = new HANGDOCHOI();
                     brand.MAHANGDOCHOI = dr.GetInt32(0);
                     brand.TENHANGDOCHOI = dr.GetString(1);
+                    brand.HINHANH = SafeGetString(dr,2);
                     listBrands.Add(brand);
                 }
                 conn.Close();
