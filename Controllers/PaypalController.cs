@@ -1,5 +1,6 @@
 ﻿using BT2MWG.Helpers;
 using BT2MWG.Models;
+using BT2MWG.Repository;
 using BT2MWG.ViewModel;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;

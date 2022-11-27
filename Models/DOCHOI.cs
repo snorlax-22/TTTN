@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using BT2MWG.Repository;
 
 namespace BT2MWG.Models
 {
-    
+
     public class DOCHOI
     {
         db dbo = new db();
