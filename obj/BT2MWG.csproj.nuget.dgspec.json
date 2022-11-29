@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj": {}
+    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\TTTN\\BT2MWG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj": {
+    "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\TTTN\\BT2MWG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj",
-        "projectName": "BT2MWG",
-        "projectPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\BT2MWG.csproj",
+        "projectUniqueName": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\TTTN\\BT2MWG.csproj",
+        "projectName": "TTTN",
+        "projectPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\TTTN\\BT2MWG.csproj",
         "packagesPath": "C:\\Users\\Snorlax\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\BaoCaoThucTap\\TTTN\\obj\\",
+        "outputPath": "C:\\Users\\Snorlax\\OneDrive\\Desktop\\Cuong\\TTTN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Snorlax\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
@@ -27,8 +27,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -39,8 +39,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -114,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
