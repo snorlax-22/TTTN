@@ -1,0 +1,433 @@
+﻿@using TTTN.Models
+@using TTTN.ViewModel;
+@using System.Globalization
+@using Microsoft.AspNetCore.Http
+@model SearchViewModel;
+@{
+    Layout = "~/Views/Shared/_Footer.cshtml";
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<link href="~/public/css/search/search.css" rel="stylesheet">
+
+<script type="text/javascript">
+    document.isClickPaging = false;
+    var query = {
+        PageSize: 1,
+        PageIndex: 0,
+    };
+</script>
+
+<div id="app" class="bluekids">
+    <section>
+
+        <div class="boxtop">
+            <p class="txt01">169 sản phẩm Sữa bột cho bé </p>
+        </div>
+
+        <div class="box-filter">
+            <div class="warpper-filfer">
+                <div class="filter-item filter-total">
+                    <div class="filter-item__title jsTitle allfilter">
+                        <i class="icon-filter"></i>Lọc
+                        <strong class="number hide" style="display: none;"></strong>
+                    </div>
+                    <!-- Bộ lọc -->
+                    <div class="filter-show show-total" id="wrapper">
+                        <div class="show-total__main">
+                            <div class="close-filtertotal">
+                                Đóng
+                                <i class="icon-closefilter"></i>
+                            </div>
+                            <div class="filter-selected" style="display: none;">
+                                <div class="warpper-selected">
+                                    <span class="filter-selected-txt">Đã chọn:</span>
+                                    <div class="appendItem"></div>
+                                    <a href="javascript:void(0)" class="clear-selected-all">Xóa tất cả</a>
+                                </div>
+                            </div>
+
+                            <!-- Filter sản phẩm -->
+                            <!-- Filter Property -->
+                            @*hãng*@
+                            <div class="show-total-item clearfix">
+                                <p class="show-total-txt" data-item="Giới tính">Hãng:</p>
+                                <div class="filter-list filter-list--hang manu insight" data-sight="0">
+                                    <a href="sua-bot-cho-be-nestle-nan" class="c-btnbox filter-manu " data-href="nestle-nan" data-id="1" data-name="Nestlé NAN" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/118987/NestleNan-200x120.png" width="67" height="33" alt="Nestlé NAN">
+                                    </a>
+                                    <a href="sua-bot-cho-be-abbott" class="c-btnbox filter-manu " data-href="abbott" data-id="118604" data-name="Abbott Grow" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2022/04/Sports/Images/118604/AbbottGrow-200x120.png" width="67" height="33" alt="Abbott Grow">
+                                    </a>
+                                    <a href="sua-bot-cho-be-similac" class="c-btnbox filter-manu " data-href="similac" data-id="118606" data-name="Similac" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/12/Sports/Images/118606/Thietkekhongten(74)-200x120.png" width="67" height="33" alt="Similac">
+                                    </a>
+                                    <a href="sua-bot-cho-be-pediasure" class="c-btnbox filter-manu " data-href="pediasure" data-id="118605" data-name="PediaSure" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/118605/PediaSure-200x120-1.png" width="67" height="33" alt="PediaSure">
+                                    </a>
+                                    <a href="sua-bot-cho-be-aptamil" class="c-btnbox filter-manu " data-href="aptamil" data-id="118607" data-name="Aptamil" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/118607/Aptamil-200x120.png" width="67" height="33" alt="Aptamil">
+                                    </a>
+                                    <a href="sua-bot-cho-be-vinamilk" class="c-btnbox filter-manu " data-href="vinamilk" data-id="119043" data-name="Vinamilk" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2022/04/Sports/Images/119043/Vinamilk-200x120.png" width="67" height="33" alt="Vinamilk">
+                                    </a>
+                                    <a href="sua-bot-cho-be-enfa" class="c-btnbox filter-manu " data-href="enfa" data-id="118608" data-name="Enfa" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/118608/Enfa-200x120.png" width="67" height="33" alt="Enfa">
+                                    </a>
+                                    <a href="sua-bot-cho-be-nutifood" class="c-btnbox filter-manu " data-href="nutifood" data-id="119614" data-name="Nutifood" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/10/Sports/Images/0/Nutifood-200x120.png" width="67" height="33" alt="Nutifood">
+                                    </a>
+                                    <a href="sua-bot-cho-be-optimum" class="c-btnbox filter-manu " data-href="optimum" data-id="119055" data-name="Optimum" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/119055/Optimum-200x120.png" width="67" height="33" alt="Optimum">
+                                    </a>
+                                    <a href="sua-bot-cho-be-blackmores" class="c-btnbox filter-manu " data-href="blackmores" data-id="303577" data-name="Blackmores" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2022/08/Sports/Images/303577/blackmores-logo-200x120.png" width="67" height="33" alt="Blackmores">
+                                    </a>
+                                    <a href="sua-bot-cho-be-dielac" class="c-btnbox filter-manu " data-href="dielac" data-id="119053" data-name="Dielac" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/119053/Thietkekhongten(37)-200x120.png" width="67" height="33" alt="Dielac">
+                                    </a>
+                                    <a href="sua-bot-cho-be-morinaga" class="c-btnbox filter-manu " data-href="morinaga" data-id="118986" data-name="Morinaga" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/10/Sports/Images/118986/Morinaga-200x120.png" width="67" height="33" alt="Morinaga">
+                                    </a>
+                                    <a href="sua-bot-cho-be-friso" class="c-btnbox filter-manu " data-href="friso" data-id="119003" data-name="Friso" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/119003/Friso-200x120.png" width="67" height="33" alt="Friso">
+                                    </a>
+                                    <a href="sua-bot-cho-be-glico" class="c-btnbox filter-manu " data-href="glico" data-id="119770" data-name="Glico" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/0/Glico-200x120.png" width="67" height="33" alt="Glico">
+                                    </a>
+                                    <a href="sua-bot-cho-be-hipp" class="c-btnbox filter-manu " data-href="hipp" data-id="118984" data-name="HiPP" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/10/Sports/Images/118984/Hipp-200x120.png" width="67" height="33" alt="HiPP">
+                                    </a>
+                                    <a href="sua-bot-cho-be-nutren" class="c-btnbox filter-manu " data-href="nutren" data-id="188600" data-name="Nutren" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2022/04/Sports/Images/188600/Nutren-200x120-1.png" width="67" height="33" alt="Nutren">
+                                    </a>
+                                    <a href="sua-bot-cho-be-colosbaby" class="c-btnbox filter-manu " data-href="colosbaby" data-id="119058" data-name="ColosBaby" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2022/03/Sports/Images/119058/colosbaby-200x120.png" width="67" height="33" alt="ColosBaby">
+                                    </a>
+                                    <a href="sua-bot-cho-be-wakodo" class="c-btnbox filter-manu " data-href="wakodo" data-id="150204" data-name="Wakodo" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/12/Sports/Images/0/wakodo-200x120.png" width="67" height="33" alt="Wakodo">
+                                    </a>
+                                    <a href="sua-bot-cho-be-meiji" class="c-btnbox filter-manu " data-href="meiji" data-id="150762" data-name="Meiji" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/12/Sports/Images/0/Meiji-200x120.png" width="67" height="33" alt="Meiji">
+                                    </a>
+                                    <a href="sua-bot-cho-be-meta-care" class="c-btnbox filter-manu " data-href="meta-care" data-id="118985" data-name="MetaCare" data-type="1">
+                                        <img src="https://cdn.tgdd.vn/2021/11/Sports/Images/118985/MetaCare-200x120.png" width="67" height="33" alt="MetaCare">
+                                    </a>
+                                </div>
+                            </div>
+
+                            @*giá*@
+                            <div class="show-total-item">
+                                <p class="show-total-txt" data-item="Giá">Giá:</p>
+                                <div class="price-slider text-active" data-activetxt="">
+                                    <p class="range-toggle" style="display: none;">
+                                        <a href="javascript:;" onclick="loadPriceRangeSlider(this)">
+                                            <i class="iconcate-range"></i>
+                                            <span class="down">Hoặc chọn mức giá phù hợp với bạn</span>
+                                        </a>
+                                    </p>
+                                    <div class="container">
+                                        <div class="row-input">
+                                            <form class="range-price">
+                                                <span class="range-left">
+                                                    <input type="tel" maxlength="8" name="price-min-value" data-minvalue="100000" value="100">
+                                                    <label class="place-holder">.000đ</label>
+                                                </span>
+                                                <span class="range-right">
+                                                    <input type="tel" maxlength="8" name="price-max-value" data-maxvalue="1400000" value="1400">
+                                                    <label class="place-holder">.000đ</label>
+                                                </span>
+                                            </form>
+                                        </div>
+                                        <div id="slider-range-total" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin noUi-connect" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div><div class="noUi-origin noUi-background" style="left: 100%;"><div class="noUi-handle noUi-handle-upper"></div></div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @*độ tuổi*@
+                            <div class="show-total-item " data-hiddenbyone="False">
+                                <p class="show-total-txt" data-item="Độ tuổi">Độ tuổi:</p>
+                                <div class="filter-list props insight" data-propid="31721" data-sight="0">
+
+                                    <a href="sua-bot-cho-be-duoi-6-thang" data-href="duoi-6-thang" class="c-btnbox has-icon  " data-smooth="0" data-id="219251" data-name="Dưới 6 tháng" data-type="3">
+                                        <img alt="Dưới 6 tháng" src="https://cdn.tgdd.vn/ValueIcons/17/be-0-6-thang-tuoi-2.png">
+                                        Dưới 6 tháng
+                                    </a>
+                                    <a href="sua-bot-cho-be-6-12-thang" data-href="6-12-thang" class="c-btnbox has-icon  " data-smooth="0" data-id="219252" data-name="6 - 12 tháng" data-type="3">
+                                        <img alt="6 - 12 tháng" src="https://cdn.tgdd.vn/ValueIcons/17/be-6-12-thang-tuoi-1.png">
+                                        6 - 12 tháng
+                                    </a>
+                                    <a href="sua-bot-cho-be-1-2-tuoi" data-href="1-2-tuoi" class="c-btnbox has-icon  " data-smooth="1" data-id="219253" data-name="1 - 2 tuổi" data-type="3">
+                                        <img alt="1 - 2 tuổi" src="https://cdn.tgdd.vn/ValueIcons/17/be-1-3-tuoi.png">
+                                        1 - 2 tuổi
+                                    </a>
+                                    <a href="sua-bot-cho-be-2-6-tuoi" data-href="2-6-tuoi" class="c-btnbox has-icon  " data-smooth="1" data-id="219254" data-name="2 - 6 tuổi" data-type="3">
+                                        <img alt="2 - 6 tuổi" src="https://cdn.tgdd.vn/ValueIcons/17/be-3-6-tuoi-1.png">
+                                        2 - 6 tuổi
+                                    </a>
+                                    <a href="sua-bot-cho-be-tren-6-tuoi" data-href="tren-6-tuoi" class="c-btnbox has-icon  " data-smooth="0" data-id="219255" data-name="Trên 6 tuổi" data-type="3">
+                                        <img alt="Trên 6 tuổi" src="https://cdn.tgdd.vn/ValueIcons/17/be-tren-6-tuoi.png">
+                                        Trên 6 tuổi
+                                    </a>
+
+
+                                </div>
+                            </div>
+
+                            @*khối lượng*@
+                            <div class="show-total-item " data-hiddenbyone="False">
+                                <p class="show-total-txt" data-item="Khối lượng">Khối lượng:</p>
+                                <div class="filter-list props insight" data-propid="31218" data-sight="0">
+
+                                    <a href="sua-bot-cho-be-duoi-500g" data-href="duoi-500g" class="c-btnbox   " data-smooth="1" data-id="214710" data-name="Dưới 500g" data-type="3">
+                                        Dưới 500g
+                                    </a>
+                                    <a href="sua-bot-cho-be-tu-500g-den-900g" data-href="tu-500g-den-900g" class="c-btnbox   " data-smooth="1" data-id="214711" data-name="Từ 500g đến 900g" data-type="3">
+                                        Từ 500g đến 900g
+                                    </a>
+                                    <a href="sua-bot-cho-be-tu-950g-tro-len" data-href="tu-950g-tro-len" class="c-btnbox   " data-smooth="1" data-id="214712" data-name="Từ 900g trở lên" data-type="3">
+                                        Từ 900g trở lên
+                                    </a>
+
+
+                                </div>
+                            </div>
+
+                            @*nơi sản xuất*@
+                            <div class="show-total-item " data-hiddenbyone="False">
+                                <p class="show-total-txt" data-item="Nơi sản xuất">Nơi sản xuất:</p>
+                                <div class="filter-list props insight" data-propid="33858" data-sight="0">
+
+                                    <a href="sua-bot-cho-be-nhat-ban" data-href="nhat-ban" class="c-btnbox   " data-smooth="0" data-id="231451" data-name="Nhật Bản" data-type="3">
+                                        Nhật Bản
+                                    </a>
+                                    <a href="sua-bot-cho-be-singapore" data-href="singapore" class="c-btnbox   " data-smooth="0" data-id="231453" data-name="Singapore" data-type="3">
+                                        Singapore
+                                    </a>
+                                    <a href="sua-bot-cho-be-thai-lan" data-href="thai-lan" class="c-btnbox   " data-smooth="0" data-id="231454" data-name="Thái Lan" data-type="3">
+                                        Thái Lan
+                                    </a>
+                                    <a href="sua-bot-cho-be-ireland" data-href="ireland" class="c-btnbox   " data-smooth="0" data-id="231455" data-name="Ireland" data-type="3">
+                                        Ireland
+                                    </a>
+                                    <a href="sua-bot-cho-be-viet-nam" data-href="viet-nam" class="c-btnbox   " data-smooth="0" data-id="231456" data-name="Việt Nam" data-type="3">
+                                        Việt Nam
+                                    </a>
+                                    <a href="sua-bot-cho-be-new-zealand" data-href="new-zealand" class="c-btnbox   " data-smooth="0" data-id="231459" data-name="New Zealand" data-type="3">
+                                        New Zealand
+                                    </a>
+                                    <a href="sua-bot-cho-be-ha-lan" data-href="ha-lan" class="c-btnbox   " data-smooth="0" data-id="231461" data-name="Hà Lan" data-type="3">
+                                        Hà Lan
+                                    </a>
+                                    <a href="sua-bot-cho-be-tay-ban-nha" data-href="tay-ban-nha" class="c-btnbox   " data-smooth="0" data-id="231463" data-name="Tây Ban Nha" data-type="3">
+                                        Tây Ban Nha
+                                    </a>
+                                    <a href="sua-bot-cho-be-duc" data-href="duc" class="c-btnbox   " data-smooth="0" data-id="231464" data-name="Đức" data-type="3">
+                                        Đức
+                                    </a>
+                                    <a href="sua-bot-cho-be-thuy-dien" data-href="thuy-dien" class="c-btnbox   " data-smooth="0" data-id="231465" data-name="Thuỵ Điển" data-type="3">
+                                        Thuỵ Điển
+                                    </a>
+                                    <a href="sua-bot-cho-be-my" data-href="my" class="c-btnbox   " data-smooth="0" data-id="231466" data-name="Mỹ" data-type="3">
+                                        Mỹ
+                                    </a>
+                                    <a href="sua-bot-cho-be-noi-dia-nhat" data-href="noi-dia-nhat" class="c-btnbox   " data-smooth="0" data-id="232939" data-name="Nội địa Nhật" data-type="3">
+                                        Nội địa Nhật
+                                    </a>
+                                    <a href="sua-bot-cho-be-thuy-si" data-href="thuy-si" class="c-btnbox   " data-smooth="1" data-id="240505" data-name="Thụy Sĩ" data-type="3">
+                                        Thụy Sĩ
+                                    </a>
+                                    <a href="sua-bot-cho-be-uc" data-href="uc" class="c-btnbox   " data-smooth="1" data-id="240667" data-name="Úc" data-type="3">
+                                        Úc
+                                    </a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-button-total">
+                            <a href="javascript:void(0)" class="btn-filter-close">Chọn lại</a>
+                            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem @**@</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- #region Bộ filter ngoài -->
+                <!-- Filter Sản phẩm-->
+                <!-- Filter Property -->
+                @*hãng*@
+                @await Html.PartialAsync("~/Views/Common/Partial/ListHang.cshtml", Model.hangDoChoi)
+
+                @*mức giá*@
+                <div class="filter-item">
+                    <div class="filter-item__title jsTitle price-title"><span data-item="Giá">Giá</span></div>
+                    <div class="filter-show">
+                        <div class="price-slider text-active" data-activetxt="">
+                            <p class="range-toggle" style="display: none;">
+                                <a href="javascript:;" onclick="loadPriceRangeSlider(this)">
+                                    <i class="iconcate-range"></i>
+                                    <span class="down">Hoặc chọn mức giá phù hợp với bạn</span>
+                                </a>
+                            </p>
+                            <div class="container">
+                                <div class="row-input">
+                                    <form class="range-price">
+                                        <span class="range-left">
+                                            <input type="tel" maxlength="8" name="price-min-value" data-minvalue="100000" value="100">
+                                            <label class="place-holder">.000đ</label>
+                                        </span>
+                                        <span class="range-right">
+                                            <input type="tel" maxlength="8" name="price-max-value" data-maxvalue="1400000" value="1400">
+                                            <label class="place-holder">.000đ</label>
+                                        </span>
+                                    </form>
+                                </div>
+                                <div id="slider-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background"><div class="noUi-base"><div class="noUi-origin noUi-connect" style="left: 0%;"><div class="noUi-handle noUi-handle-lower"></div></div><div class="noUi-origin noUi-background" style="left: 100%;"><div class="noUi-handle noUi-handle-upper"></div></div></div></div>
+                            </div>
+                        </div>
+                        <div class="filter-button">
+                            <a href="javascript:void(0)" class="btn-filter-close">Bỏ chọn</a>
+                            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem </a>
+                        </div>
+                    </div>
+                </div>
+
+                @*độ tuổi*@
+                <div class="filter-item " data-hiddenbyone="False">
+                    <div class="filter-item__title jsTitle"><span data-item="Độ tuổi">Độ tuổi</span></div>
+                    <div class="filter-show" data-groupid="">
+                        <div class="filter-list props outsight" data-propid="31721" data-sight="1">
+
+                            <a href="sua-bot-cho-be-duoi-6-thang" data-href="duoi-6-thang" class="c-btnbox has-icon  " data-smooth="0" data-id="219251" data-name="Dưới 6 tháng" data-type="3">
+                                <img alt="Dưới 6 tháng" src="https://cdn.tgdd.vn/ValueIcons/17/be-0-6-thang-tuoi-2.png">
+                                Dưới 6 tháng
+                            </a>
+                            <a href="sua-bot-cho-be-6-12-thang" data-href="6-12-thang" class="c-btnbox has-icon  " data-smooth="0" data-id="219252" data-name="6 - 12 tháng" data-type="3">
+                                <img alt="6 - 12 tháng" src="https://cdn.tgdd.vn/ValueIcons/17/be-6-12-thang-tuoi-1.png">
+                                6 - 12 tháng
+                            </a>
+                            <a href="sua-bot-cho-be-1-2-tuoi" data-href="1-2-tuoi" class="c-btnbox has-icon  " data-smooth="1" data-id="219253" data-name="1 - 2 tuổi" data-type="3">
+                                <img alt="1 - 2 tuổi" src="https://cdn.tgdd.vn/ValueIcons/17/be-1-3-tuoi.png">
+                                1 - 2 tuổi
+                            </a>
+                            <a href="sua-bot-cho-be-2-6-tuoi" data-href="2-6-tuoi" class="c-btnbox has-icon  " data-smooth="1" data-id="219254" data-name="2 - 6 tuổi" data-type="3">
+                                <img alt="2 - 6 tuổi" src="https://cdn.tgdd.vn/ValueIcons/17/be-3-6-tuoi-1.png">
+                                2 - 6 tuổi
+                            </a>
+                            <a href="sua-bot-cho-be-tren-6-tuoi" data-href="tren-6-tuoi" class="c-btnbox has-icon  " data-smooth="0" data-id="219255" data-name="Trên 6 tuổi" data-type="3">
+                                <img alt="Trên 6 tuổi" src="https://cdn.tgdd.vn/ValueIcons/17/be-tren-6-tuoi.png">
+                                Trên 6 tuổi
+                            </a>
+
+                        </div>
+
+
+                        <div class="filter-button filter-button-sticky">
+                            <a href="javascript:void(0)" class="btn-filter-close">Chọn lại</a>
+                            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem </a>
+                        </div>
+                    </div>
+                </div>
+
+                @*khối lượng*@
+                <div class="filter-item " data-hiddenbyone="False">
+                    <div class="filter-item__title jsTitle"><span data-item="Khối lượng">Khối lượng</span></div>
+                    <div class="filter-show filter-show--right" data-groupid="">
+                        <div class="filter-list props outsight" data-propid="31218" data-sight="1">
+
+                            <a href="sua-bot-cho-be-duoi-500g" data-href="duoi-500g" class="c-btnbox   " data-smooth="1" data-id="214710" data-name="Dưới 500g" data-type="3">
+                                Dưới 500g
+                            </a>
+                            <a href="sua-bot-cho-be-tu-500g-den-900g" data-href="tu-500g-den-900g" class="c-btnbox   " data-smooth="1" data-id="214711" data-name="Từ 500g đến 900g" data-type="3">
+                                Từ 500g đến 900g
+                            </a>
+                            <a href="sua-bot-cho-be-tu-950g-tro-len" data-href="tu-950g-tro-len" class="c-btnbox   " data-smooth="1" data-id="214712" data-name="Từ 900g trở lên" data-type="3">
+                                Từ 900g trở lên
+                            </a>
+
+                        </div>
+
+
+                        <div class="filter-button filter-button-sticky">
+                            <a href="javascript:void(0)" class="btn-filter-close">Chọn lại</a>
+                            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem </a>
+                        </div>
+                    </div>
+                </div>
+
+                @*Nơi sản xuất*@
+                <div class="filter-item " data-hiddenbyone="False">
+                    <div class="filter-item__title jsTitle"><span data-item="Nơi sản xuất">Nơi sản xuất</span></div>
+                    <div class="filter-show filter-show--right" data-groupid="">
+                        <div class="filter-list props outsight" data-propid="33858" data-sight="1">
+
+                            <a href="sua-bot-cho-be-nhat-ban" data-href="nhat-ban" class="c-btnbox   " data-smooth="0" data-id="231451" data-name="Nhật Bản" data-type="3">
+                                Nhật Bản
+                            </a>
+                            <a href="sua-bot-cho-be-singapore" data-href="singapore" class="c-btnbox   " data-smooth="0" data-id="231453" data-name="Singapore" data-type="3">
+                                Singapore
+                            </a>
+                            <a href="sua-bot-cho-be-thai-lan" data-href="thai-lan" class="c-btnbox   " data-smooth="0" data-id="231454" data-name="Thái Lan" data-type="3">
+                                Thái Lan
+                            </a>
+                            <a href="sua-bot-cho-be-ireland" data-href="ireland" class="c-btnbox   " data-smooth="0" data-id="231455" data-name="Ireland" data-type="3">
+                                Ireland
+                            </a>
+                            <a href="sua-bot-cho-be-viet-nam" data-href="viet-nam" class="c-btnbox   " data-smooth="0" data-id="231456" data-name="Việt Nam" data-type="3">
+                                Việt Nam
+                            </a>
+                            <a href="sua-bot-cho-be-new-zealand" data-href="new-zealand" class="c-btnbox   " data-smooth="0" data-id="231459" data-name="New Zealand" data-type="3">
+                                New Zealand
+                            </a>
+                            <a href="sua-bot-cho-be-ha-lan" data-href="ha-lan" class="c-btnbox   " data-smooth="0" data-id="231461" data-name="Hà Lan" data-type="3">
+                                Hà Lan
+                            </a>
+                            <a href="sua-bot-cho-be-tay-ban-nha" data-href="tay-ban-nha" class="c-btnbox   " data-smooth="0" data-id="231463" data-name="Tây Ban Nha" data-type="3">
+                                Tây Ban Nha
+                            </a>
+                            <a href="sua-bot-cho-be-duc" data-href="duc" class="c-btnbox   " data-smooth="0" data-id="231464" data-name="Đức" data-type="3">
+                                Đức
+                            </a>
+                            <a href="sua-bot-cho-be-thuy-dien" data-href="thuy-dien" class="c-btnbox   " data-smooth="0" data-id="231465" data-name="Thuỵ Điển" data-type="3">
+                                Thuỵ Điển
+                            </a>
+                            <a href="sua-bot-cho-be-my" data-href="my" class="c-btnbox   " data-smooth="0" data-id="231466" data-name="Mỹ" data-type="3">
+                                Mỹ
+                            </a>
+                            <a href="sua-bot-cho-be-noi-dia-nhat" data-href="noi-dia-nhat" class="c-btnbox   " data-smooth="0" data-id="232939" data-name="Nội địa Nhật" data-type="3">
+                                Nội địa Nhật
+                            </a>
+                            <a href="sua-bot-cho-be-thuy-si" data-href="thuy-si" class="c-btnbox   " data-smooth="1" data-id="240505" data-name="Thụy Sĩ" data-type="3">
+                                Thụy Sĩ
+                            </a>
+                            <a href="sua-bot-cho-be-uc" data-href="uc" class="c-btnbox   " data-smooth="1" data-id="240667" data-name="Úc" data-type="3">
+                                Úc
+                            </a>
+
+                        </div>
+
+
+                        <div class="filter-button filter-button-sticky">
+                            <a href="javascript:void(0)" class="btn-filter-close">Chọn lại</a>
+                            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- #endregion Bộ filter ngoài -->
+                <section>
+
+                    <div class="listproduct">
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+</div>
+<script src="~/public/js/search/search.js"></script>
+
+
+
+

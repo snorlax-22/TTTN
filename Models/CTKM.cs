@@ -1,4 +1,4 @@
-﻿namespace BT2MWG.Models
+﻿namespace TTTN.Models
 {
     public class CTKM
     { 

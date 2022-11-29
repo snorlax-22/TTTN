@@ -1,4 +1,4 @@
-﻿using BT2MWG.Models;
+﻿using TTTN.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
-namespace BT2MWG.Controllers
+namespace TTTN.Controllers
 {
     public class ProductController : Controller
     {

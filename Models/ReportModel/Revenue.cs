@@ -1,4 +1,4 @@
-﻿namespace BT2MWG.Models.ReportModel
+﻿namespace TTTN.Models.ReportModel
 {
     public class Revenue
     {

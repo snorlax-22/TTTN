@@ -1,7 +1,7 @@
-﻿using BT2MWG.Models;
+﻿using TTTN.Models;
 using System.Collections.Generic;
 
-namespace BT2MWG.ViewModel
+namespace TTTN.ViewModel
 {
     public class PageHomeViewModel
     {

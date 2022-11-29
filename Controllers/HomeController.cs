@@ -1,6 +1,6 @@
-﻿using BT2MWG.Helpers;
-using BT2MWG.Models;
-using BT2MWG.ViewModel;
+﻿using TTTN.Helpers;
+using TTTN.Models;
+using TTTN.ViewModel;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 
-namespace BT2MWG.Controllers
+namespace TTTN.Controllers
 {
     [EnableCors("AllowAllHeaders")]
     public class HomeController : Controller

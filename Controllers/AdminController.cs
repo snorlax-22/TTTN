@@ -1,7 +1,7 @@
-﻿using BT2MWG.Helpers;
-using BT2MWG.Models;
-using BT2MWG.Models.ReportModel;
-using BT2MWG.ViewModel;
+﻿using TTTN.Helpers;
+using TTTN.Models;
+using TTTN.Models.ReportModel;
+using TTTN.ViewModel;
 using LanguageExt;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text.Json;
 
 
-namespace BT2MWG.Controllers
+namespace TTTN.Controllers
 {
     public class AdminController : Controller
     {

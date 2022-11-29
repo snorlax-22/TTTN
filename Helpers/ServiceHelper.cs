@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text.Json;
 
-namespace BT2MWG.Helpers
+namespace TTTN.Helpers
 {
     public class ServiceHelper
     {

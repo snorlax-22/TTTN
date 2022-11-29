@@ -1,4 +1,4 @@
-﻿using BT2MWG.Models;
+﻿using TTTN.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace BT2MWG.Controllers
+namespace TTTN.Controllers
 {
     public class ProductCateController : Controller
     {

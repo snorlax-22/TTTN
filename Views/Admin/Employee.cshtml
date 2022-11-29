@@ -1,0 +1,144 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TTTN.ViewModel.AdminPageViewModel;
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ample Admin Lite Template by WrapPixel</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/plugins/images/favicon.png">
+    <!-- Custom CSS -->
+    <link href="~/public/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/public/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <!-- Custom CSS -->
+    <link href="~/public/css/style.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+        @await Html.PartialAsync("/Views/Common/Partial/Topbar Header.cshtml",Model)
+
+        @await Html.PartialAsync("/Views/Common/Partial/Left Sidebar.cshtml")
+
+        @*tạo 2 cái partial-> 1: Thêm khuyến mãi, 2: load all khuyến mãi -> popup ctkm*@
+        <div class="page-wrapper">
+
+            @*<ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+            <a class="nav-link active" data-id="1">Thêm đợt khuyến mãi</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" data-id="2">Danh sách đợt khuyến mãi</a>
+            </li>
+            </ul>*@
+
+            <div>
+                <h1>Thêm đợt khuyến mãi</h1>
+                <div>
+                    <label>Họ và tên nhân viên</label>
+                    <input id="tennv"/>
+                </div>
+                <div>
+                    <label for="km-time">Thông tin chung</label>
+                    <br />
+                    <label>Email nhân viên</label>
+                    <input id="emailnv">
+                    <br />
+                    <label>Giới tính</label>
+                    <select id="gioitinhnv">
+                        <option value=""></option>
+                        <option value="1">Nam</option>
+                        <option value="0">Nữ</option>
+                    </select>
+                    <br />
+                    <label>SĐT</label>
+                    <input id="sdtnv">
+                    <br />
+                    <label>Địa chỉ</label>
+                    <input id="diachinv"/>
+                    <br />
+                    <label>Mã số thuế</label>
+                    <input id="mstnv"/>
+                    <br />
+                    <label>Username</label>
+                    <input id="usnv" />
+                    <br />
+                    <label for="km-time">Tải khoản hệ thống</label>
+                    <br />
+                    <label>Mật khẩu</label>
+                    <input id="pwnv" />
+                    <br />
+                    <label>Vai trò</label>
+                    <select id="quyennv">
+                        <option value=""></option>
+                        @foreach(var item in Model.listQuyen){
+                            <option value="@item.MaQuyen">@item.TenQuyen</option>
+                        }
+                    </select>
+                </div>
+                <br />
+                <br />
+                <br />
+                <div>
+                    <button class="btn save btn-primary">Thêm</button>
+                </div>
+
+                <table class="table" id="cart_tab">
+                    <tr>
+                        <th>Mã NV</th>
+                        <th>Tên NV</th>
+                        <th>  </th>
+
+                    </tr>
+                    @foreach (var item in Model.listNV)
+                    {
+                        <tr class="itemrow">
+                            <td><a class="ctkm" onclick="showPopup()">@item.MaNV</a></td>
+                            <td><label>@item.TenNV</label></td>
+                            <td><a data-id="@item.MaNV" class="delete-btn">Xóa</a></td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+        <footer class="footer text-center">
+            2021 © Ample Admin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a>
+        </footer>
+    </div>
+
+
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/waves.js"></script>
+    <script src="js/sidebarmenu.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="js/pages/dashboards/dashboard1.js"></script>
+    <script src="~/public/js/admin/employee.js"></script>
+</body>
+</html>

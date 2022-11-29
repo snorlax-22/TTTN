@@ -1,4 +1,4 @@
-﻿using BT2MWG.Models;
+﻿using TTTN.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BT2MWG
+namespace TTTN
 {
     public class Program
     {

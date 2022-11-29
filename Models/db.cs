@@ -1,11 +1,11 @@
-﻿using BT2MWG.Models.ReportModel;
+﻿using TTTN.Models.ReportModel;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace BT2MWG.Models
+namespace TTTN.Models
 {
     public class db
     {

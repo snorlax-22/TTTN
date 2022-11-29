@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Newtonsoft.Json.Linq;
 
-namespace BT2MWG.Models
+namespace TTTN.Models
 {
     public class NHANVIEN
     {

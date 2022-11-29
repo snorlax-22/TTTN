@@ -24,8 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQnJhbmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Admin/Category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Admin/DoanhThu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRG9hbmhUaHUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Admin/Employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRW1wbG95ZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Admin/Index.cshtml]
@@ -84,12 +92,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uXFBhcnRpYWxcTGVmdCBTaWRlYmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Common/Partial/ListHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uXFBhcnRpYWxcTGlzdEhhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Common/Partial/Topbar Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uXFBhcnRpYWxcVG9wYmFyIEhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/GetHTML/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2V0SFRNTFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Home/AdvancedSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZHZhbmNlZFNlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Home/Cate.cshtml]
@@ -134,6 +150,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Shared/Components/ToyBoxes/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVG95Qm94ZXNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Shared/Partial/ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcUHJvZHVjdExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Snorlax/OneDrive/Desktop/Cuong/TTTN/Views/Shared/Partial/ToyBoxesHomePage.cshtml]

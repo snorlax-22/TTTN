@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BT2MWG.Models
+namespace TTTN.Models
 {
     [Table("TAIKHOAN")]
     public class TAIKHOAN

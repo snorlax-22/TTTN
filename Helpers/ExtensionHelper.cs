@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.Json;
 
-namespace BT2MWG.Helpers
+namespace TTTN.Helpers
 {
     public static class ExtensionHelper
     {

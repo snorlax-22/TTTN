@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BT2MWG.Models
+namespace TTTN.Models
 {
     public class Product
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BT2MWG.Models
+namespace TTTN.Models
 {
     public class ThayDoiGia
     {

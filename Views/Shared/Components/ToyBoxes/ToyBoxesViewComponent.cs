@@ -1,10 +1,10 @@
-﻿using BT2MWG.Controllers;
-using BT2MWG.Models;
+﻿using TTTN.Controllers;
+using TTTN.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BT2MWG.Views.Shared.Components.ToyBoxes
+namespace TTTN.Views.Shared.Components.ToyBoxes
 {
     public class ToyBoxesHomePage : ViewComponent
     {

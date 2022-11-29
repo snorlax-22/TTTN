@@ -1,9 +1,9 @@
-﻿using BT2MWG.Controllers;
-using BT2MWG.Models;
+﻿using TTTN.Controllers;
+using TTTN.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace BT2MWG.Views.Shared.Components.ProductDetailBox
+namespace TTTN.Views.Shared.Components.ProductDetailBox
 {
     public class ProductDetailBox : ViewComponent
     {

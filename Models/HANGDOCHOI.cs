@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BT2MWG.Models
+namespace TTTN.Models
 {
     [Table("HANGDOCHOI")]
     public class HANGDOCHOI

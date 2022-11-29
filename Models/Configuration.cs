@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BT2MWG.Models
+namespace TTTN.Models
 {
     public static class Configuration
     {
