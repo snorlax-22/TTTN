@@ -38,51 +38,49 @@ namespace TTTN.Helpers
             switch (compareType)
             {
                 case 1:
-                    IsLowerThan(v1, v2);
-                    break;
+                    return IsLowerThan(v1, v2);
                 case 2:
-                    IsEquals(v1, v2);
-                    break;
+                    return IsEquals(v1, v2);
                 case 3:
-                    IsGreaterThan(v1, v2);
-                    break;
+                    return IsGreaterThan(v1, v2);
+                default: 
+                    return false;
             }
-            return false;
         }
         public static List<DOCHOI> GetListWithNutris(this List<DOCHOI> list, Search query)
         {
-            var cType = query.Nutris.compareType;
+            var cType = query.compareType;
 
             var listTemp = list.AsQueryable();
 
-            if (query.Nutris.Protein > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Protein.CompareWithType(query.Nutris.Protein, cType));
-            if (query.Nutris.TotalFat > 0)
-                listTemp = listTemp.Where(x => x.Nutris.TotalFat.CompareWithType(query.Nutris.TotalFat, cType));
-            if (query.Nutris.TotalCarbon > 0)
-                listTemp = listTemp.Where(x => x.Nutris.TotalCarbon.CompareWithType(query.Nutris.TotalCarbon, cType));
-            if (query.Nutris.Calcium > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Calcium.CompareWithType(query.Nutris.Calcium, cType));
-            if (query.Nutris.Sodium > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Sodium.CompareWithType(query.Nutris.Sodium, cType));
-            if (query.Nutris.Magnesium > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Magnesium.CompareWithType(query.Nutris.Magnesium, cType));
-            if (query.Nutris.Iron > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Iron.CompareWithType(query.Nutris.Iron, cType));
-            if (query.Nutris.Copper > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Copper.CompareWithType(query.Nutris.Copper, cType));
-            if (query.Nutris.Potassium > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Potassium.CompareWithType(query.Nutris.Potassium, cType));
-            if (query.Nutris.VitaminD3 > 0)
-                listTemp = listTemp.Where(x => x.Nutris.VitaminD3.CompareWithType(query.Nutris.VitaminD3, cType));
-            if (query.Nutris.VitaminB1 > 0)
-                listTemp = listTemp.Where(x => x.Nutris.VitaminB1.CompareWithType(query.Nutris.VitaminB1, cType));
-            if (query.Nutris.VitaminB2 > 0)
-                listTemp = listTemp.Where(x => x.Nutris.VitaminB2.CompareWithType(query.Nutris.VitaminB2, cType));
-            if (query.Nutris.Iodine > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Iodine.CompareWithType(query.Nutris.Iodine, cType));
-            if (query.Nutris.Zinc > 0)
-                listTemp = listTemp.Where(x => x.Nutris.Zinc.CompareWithType(query.Nutris.Zinc, cType));
+            if (query.Protein > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Protein.CompareWithType(query.Protein, cType));
+            if (query.TotalFat > 0)
+                listTemp = listTemp.Where(x => x.Nutris.TotalFat.CompareWithType(query.TotalFat, cType));
+            if (query.TotalCarbon > 0)
+                listTemp = listTemp.Where(x => x.Nutris.TotalCarbon.CompareWithType(query.TotalCarbon, cType));
+            if (query.Calcium > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Calcium.CompareWithType(query.Calcium, cType));
+            if (query.Sodium > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Sodium.CompareWithType(query.Sodium, cType));
+            if (query.Magnesium > 0)
+                listTemp =   listTemp.Where(x => x.Nutris.Magnesium.CompareWithType(query.Magnesium, cType));
+            if (query.Iron > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Iron.CompareWithType(query.Iron, cType));
+            if (query.Copper > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Copper.CompareWithType(query.Copper, cType));
+            if (query.Potassium > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Potassium.CompareWithType(query.Potassium, cType));
+            if (query.VitaminD3 > 0)
+                listTemp = listTemp.Where(x => x.Nutris.VitaminD3.CompareWithType(query.VitaminD3, cType));
+            if (query.VitaminB1 > 0)
+                listTemp = listTemp.Where(x => x.Nutris.VitaminB1.CompareWithType(query.VitaminB1, cType));
+            if (query.VitaminB2 > 0)
+                listTemp = listTemp.Where(x => x.Nutris.VitaminB2.CompareWithType(query.VitaminB2, cType));
+            if (query.Iodine > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Iodine.CompareWithType(query.Iodine, cType));
+            if (query.Zinc > 0)
+                listTemp = listTemp.Where(x => x.Nutris.Zinc.CompareWithType(query.Zinc, cType));
 
 
             return list = listTemp.ToList();

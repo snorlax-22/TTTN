@@ -6,23 +6,16 @@ namespace TTTN.Models
     [Serializable]
     public class Search
     {
-        public string StrListManuId { get; set; }
-
-        public string StrOrigin { get; set; }
-
-        public QueryNutri Nutris { get; set; }
-
-    }
-
-    [Serializable]
-    public class QueryNutri
-    {
         /// <summary>
         /// 1: nhỏ hơn
         /// 2: bằng
         /// 3: lớn hơn
         /// </summary>
-        public int compareType { get; set; } 
+        public int compareType { get; set; }
+        public string StrListManuId { get; set; }
+
+        public string StrOrigin { get; set; }
+
         public int id { get; set; }
         public float Protein { get; set; }
         public float TotalFat { get; set; }
@@ -38,6 +31,13 @@ namespace TTTN.Models
         public float VitaminB2 { get; set; }
         public float Iodine { get; set; }
         public float Zinc { get; set; }
+
+    }
+
+    [Serializable]
+    public class QueryNutri
+    {
+        
 
     }
 }

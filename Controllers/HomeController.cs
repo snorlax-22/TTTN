@@ -134,7 +134,6 @@ namespace TTTN.Controllers
 
         public async Task<IActionResult> GetProductList(Search query)
         {
-
             var result = new List<DOCHOI>();
             var listManu = query.StrListManuId.ToListInt();
             var listOrigin = query.StrOrigin.ToListInt();
@@ -144,6 +143,8 @@ namespace TTTN.Controllers
 
             if (listManu.IsValidList())
                 listToys = listToys.Where(x => listManu.Contains(x.HANGDOCHOI.MAHANGDOCHOI));
+
+            result = listToys.ToList();
 
             if (listOrigin.IsValidList())
                 listToys = listToys.Where(x => listOrigin.Contains(x.HANGDOCHOI.MAXUATXU));

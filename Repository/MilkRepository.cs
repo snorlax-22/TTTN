@@ -84,6 +84,18 @@ namespace TTTN.Repository
                     brand.id = dr.GetInt32(0);
                     brand.Protein = dr.GetDouble(1);
                     brand.TotalFat = dr.GetDouble(2);
+                    brand.TotalCarbon = dr.GetDouble(3);
+                    brand.Calcium = dr.GetDouble(4);
+                    brand.Sodium = dr.GetDouble(5);
+                    brand.Magnesium = dr.GetDouble(6);
+                    brand.Iron = dr.GetDouble(7);
+                    brand.Copper = dr.GetDouble(8);
+                    brand.Potassium = dr.GetDouble(9);
+                    brand.VitaminD3 = dr.GetDouble(10);
+                    brand.VitaminB1 = dr.GetDouble(11);
+                    brand.VitaminB2 = dr.GetDouble(12);
+                    brand.Iodine = dr.GetDouble(13);
+                    brand.Zinc = dr.GetDouble(14);
 
                     listBrands.Add(brand);
                 }

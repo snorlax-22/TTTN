@@ -5,9 +5,11 @@
     e.preventDefault();
 
     $('.nutrival').click(function () {
-        if ($(this).hasClass('active')) return;
-        $('.nutrival').removeClass('active');
         $(this).addClass('active');
+        $('.nutrival').removeClass('acct');
+
+        var a = $(this).data('id')
+        $(`.nutrival[data-id=${a}]`).addClass('acct');
     });
 
     $('html, body').animate({
@@ -118,6 +120,26 @@ function unique(value, index, self) {
 
 // Hàm collect tất cả param gán vô biến query 
 function collectParam() {
+
+    var $ctype = $('.nutrival.acct');
+    if ($ctype.length > 0) {
+        query.compareType = $ctype.data('id');
+        query.Protein = $('input[name=protein]').val();
+        query.TotalFat = $('input[name=totalfat]').val();
+        query.TotalCarbon = $('input[name=totalcarbon]').val();
+        query.Calcium = $('input[name=calcium]').val();
+        query.Sodium = $('input[name=sodium]').val();
+        query.Magnesium = $('input[name=magnesium]').val();
+        query.Iron = $('input[name=iron]').val();
+        query.Copper = $('input[name=copper]').val();
+        query.Potassium = $('input[name=potassium]').val();
+        query.VitaminD3 = $('input[name=vitamind3]').val();
+        query.VitaminB1 = $('input[name=vitaminb1]').val();
+        query.VitaminB2 = $('input[name=vitaminb2]').val();
+        query.Iodine = $('input[name=iodine]').val();
+        query.Zinc = $('input[name=zinc]').val();
+    }
+    
     var $manu = $('.manu a.active');
     if ($manu.length > 0) {
         var numberArray = new Array();

@@ -2313,3 +2313,7 @@ a.c-btnbox.has-icon span label {
 .item-nutri{
     margin-bottom: 5px;
 }
+
+.c-btnbox.nutrival.acct {
+    border: 1px solid #ED1164;
+}
