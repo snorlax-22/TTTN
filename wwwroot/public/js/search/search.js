@@ -3,6 +3,13 @@
         return;
     }
     e.preventDefault();
+
+    $('.nutrival').click(function () {
+        if ($(this).hasClass('active')) return;
+        $('.nutrival').removeClass('active');
+        $(this).addClass('active');
+    });
+
     $('html, body').animate({
         scrollTop: $(".box-filter").offset().top
     }, 500);
@@ -216,88 +223,18 @@ function collectParam() {
 }
 
 function filterProduct(isClickPaging = false, isCheckPaging = false) {
-    //if (!flagFilterProduct) return;
-    //flagFilterProduct = false;
     collectParam();
     $.ajax({
         url: '/Home/GetProductList',
         type: 'POST',
         data: query,
-        //cache: false,
-        //async: query.PageIndex == 0,
-        //beforeSend: function () {
-        //    //if (isClickPaging == false) {
-        //    //    $("#preloader").show();
-        //    //}
-        //    //closePopUpFilter();
-        //},
         success: function (e) {
-            //$("#preloader").hide();
-            //flagFilterProduct = true;
 
             if (e == null || e == '') {
-                //var templateBack = '';
-                //var blockEmpty = '<li id="empty"><i class="empty"></i>Rất tiếc, <b>Hệ thống</b> không tìm thấy kết quả nào phù hợp với tiêu chí lọc đã chọn{back-to-category}</li>';
-                //$(".listproduct").html(blockEmpty.replace('{back-to-category}', templateBack));
-                //$('.boxtop .txt01').hide();
-                //$('#paging').hide();
-                //console.log(e.);  //todo test loi api hoac timeout call api
             }
             else {
                 $(".listproduct").html(e);
-                //if (isClickPaging == false) {
-                //    var scrollToElement = $(".boxtop");
-                //    var minus = scrollToElement !== undefined && scrollToElement.length > 0 ? scrollToElement.offset().top : 0;
-                //    $('html, body').animate({
-                //        scrollTop: minus
-                //    }, 800);
-                //}
-                //var total = e.total;
-                //if (total <= 20) {
-                //    $('#paging').hide();
-                //} else {
-                //    genPaging(total, query.PageSize, query.PageIndex);
-                //    $('#paging').show();
-                //}
-                //if (total !== undefined && total > 0) {
-                //    if (!query.IsBuffePage)
-                //        $('.boxtop .txt01-total').text(total);
-                //    else
-                //        $('.boxtop .txt01').html(total + " " + query.CateName);
-                //    $('.boxtop').show();
-                //} else {
-                //    $('.boxtop').hide();
-                //}
-                //console.log(e.textResponseApi);  //todo test loi api hoac timeout call api
             }
-
-            //if (e != null) {
-            //    query.TotalCount = e.total;
-            //}
-
-            //getNumberTotalFilter();
-
-            //replaceTextItemHasFilterIntoTitleItem();
-
-            //showOrOffFilterSort();
-            //var queryPaging = "?page=" + (query.PageIndex + 1);
-            //if (isClickPaging && query.IsFilter == 'False') {
-            //    history.pushState(null, '', queryPaging);
-            //} else {
-            //    query.IsFilter = "True";
-            //    // remove quicklink nếu có filter
-            //    if ($('.boxleft').find("#filter-follow-manu").length <= 0) {
-            //        $('.boxleft').remove();
-            //    }
-            //    //history.pushState(null, '', query.CateUrl);
-            //    var hasOut = toHash(query);
-            //    document.location.hash = hasOut;
-            //}
-
-            //fixShowFilterLeftRight();
-
-            //UpdateBoxProduct();
-
         },
         error: function () {
             console.log("Lỗi gọi action");

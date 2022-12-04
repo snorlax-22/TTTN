@@ -1,0 +1,45 @@
+﻿@using TTTN.Models;
+@using TTTN.ViewModel;
+@model List<HANGDOCHOI>
+@{
+    int count = 0;
+    int width = 67;
+    int height = 33;
+    var listXuatXu = Model.DistinctBy(x => x.MAXUATXU).ToList();
+}
+
+
+<div class="filter-item" data-hiddenbyone="False">
+    <div class="filter-item__title jsTitle"><span data-item="Nutri">Nutri</span></div>
+    <div class="filter-show" data-groupid="">
+        <div class="filter-list">
+            <a href="#" class="c-btnbox nutrival" data-order="@count" data-id="1">
+                Nhỏ hơn
+            </a>
+
+            <a href="#" class="c-btnbox nutrival" data-order="@count" data-id="2">
+                Bằng
+            </a>
+
+            <a href="#" class="c-btnbox nutrival" data-order="@count" data-id="3">
+                Lớn hơn
+            </a>
+        </div>
+        <div class="nutri">
+
+
+
+
+            <div class="item-nutri">
+                <span>Protein: </span><input name="protein" value="0">
+            </div>
+            <div class="item-nutri">
+                <span>TotalFat: </span><input name="totalfat" value="0">
+            </div>
+        </div>
+        <div class="filter-button filter-button-sticky">
+            <a href="javascript:void(0)" class="btn-filter-close">Chọn lại</a>
+            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem </a>
+        </div>
+    </div>
+</div>

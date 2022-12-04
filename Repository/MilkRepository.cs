@@ -39,53 +39,14 @@ namespace TTTN.Repository
                         MAXUATXU = dr.GetInt32(11),
                     };
 
-                    //CTKM ctkm = new CTKM()
-                    //{
-                    //    IdDoChoi = idDoChoi,
-                    //    PTGiamGia = 0,
-                    //    IdKM = 0
-                    //};
-
-                    //KHUYENMAI km = new KHUYENMAI()
-                    //{
-                    //    Id = 0,
-                    //    CTKM = ctkm,
-                    //    NgayBatDau = null
-                    //};
-
-                    //ctkm = new CTKM()
-                    //{
-                    //    IdDoChoi = idDoChoi,
-                    //    PTGiamGia = dr.GetInt32(3),
-                    //    IdKM = dr.GetInt32(4)
-                    //};
-
-                    //km = new KHUYENMAI()
-                    //{
-                    //    Id = dr.GetInt32(4),
-                    //    CTKM = ctkm,
-                    //    NgayBatDau = dr.GetDateTime(5)
-                    //};
-
-                    //if (dr.GetDateTime(8) < DateTime.Now)
-                    //{
-                    //    ctkm = new CTKM()
-                    //    {
-                    //        IdDoChoi = idDoChoi,
-                    //        PTGiamGia = 0,
-                    //        IdKM = dr.GetInt32(4)
-                    //    };
-
-                    //    km = new KHUYENMAI()
-                    //    {
-                    //        Id = dr.GetInt32(4),
-                    //        CTKM = ctkm,
-                    //        NgayBatDau = dr.GetDateTime(5)
-                    //    };
-                    //}
+                    Nutri nutris = new Nutri()
+                    {
+                        id = dr.GetInt32(9)
+                    };
 
                     DOCHOI doChoi = new DOCHOI(idDoChoi)
                     {
+                        Nutris = nutris,
                         TenDoChoi = dr.GetString(7),
                         MaDoChoi = idDoChoi,
                         ThayDoiGia = gia,
@@ -104,6 +65,38 @@ namespace TTTN.Repository
             }
 
             return listDoChoiKM;
+        }
+
+        public List<Nutri> getAllNutritions()
+        {
+            var listBrands = new List<Nutri>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("getAllNutris", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var brand = new Nutri();
+                    brand.id = dr.GetInt32(0);
+                    brand.Protein = dr.GetDouble(1);
+                    brand.TotalFat = dr.GetDouble(2);
+
+                    listBrands.Add(brand);
+                }
+                conn.Close();
+
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+            }
+
+            return listBrands;
         }
     }
 }

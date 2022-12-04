@@ -37,6 +37,9 @@
                 @*Nơi sản xuất*@
                 @await Html.PartialAsync("~/Views/Common/Partial/ListXuatXu.cshtml", Model.hangDoChoi)
 
+                @*Bảng input giá trị dinh dưỡng*@
+                @await Html.PartialAsync("~/Views/Common/Partial/TableNutris.cshtml", Model.hangDoChoi)
+
                 @*mức giá
                 <div class="filter-item">
                     <div class="filter-item__title jsTitle price-title"><span data-item="Giá">Giá</span></div>

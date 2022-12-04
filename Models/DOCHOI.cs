@@ -65,19 +65,19 @@ namespace TTTN.Models
     public class Nutri
     {
             public int id { get; set; }
-            public float Protein { get; set; }
-            public float TotalFat { get; set; }
-            public float TotalCarbon { get; set; }
-            public float Calcium { get; set; }
-            public float Sodium { get; set; }
-            public float Magnesium { get; set; }
-            public float Iron { get; set; }
-            public float Copper { get; set; }
-            public float Potassium { get; set; }
-            public float VitaminD3 { get; set; }
-            public float VitaminB1 { get; set; }
-            public float VitaminB2 { get; set; }
-            public float Iodine { get; set; }
-            public float Zinc { get; set; }
+            public double Protein { get; set; }
+            public double TotalFat { get; set; }
+            public double TotalCarbon { get; set; }
+            public double Calcium { get; set; }
+            public double Sodium { get; set; }
+            public double Magnesium { get; set; }
+            public double Iron { get; set; }
+            public double Copper { get; set; }
+            public double Potassium { get; set; }
+            public double VitaminD3 { get; set; }
+            public double VitaminB1 { get; set; }
+            public double VitaminB2 { get; set; }
+            public double Iodine { get; set; }
+            public double Zinc { get; set; }
     }
 }
