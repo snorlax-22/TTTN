@@ -11,10 +11,7 @@
     int ptgiamgia = 0;
     decimal giaSauGiam = 0;
     decimal tongTien = 0;
-    @foreach (var item in Model.cartItems)
-    {
-        item.DoChoi.DSHINHANH = dbo.layTatCaAnhTheoDoChoi(item.DoChoi.MaDoChoi);
-    }
+    
     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
     Layout = "~/Views/Shared/_Footer.cshtml";
 
@@ -68,7 +65,7 @@
                                 <img src="@item.DoChoi.DSHINHANH.FirstOrDefault().HinhAnh">
                             </a>
                             <div>
-                                <button data-id="@item.DoChoi.MaDoChoi" class="delete-item-cart">
+                                <button data-id="@item.DoChoi.MaSua" class="delete-item-cart">
                                     <span>
                                     </span> Xóa
                                 </button>
@@ -78,7 +75,7 @@
                             <div class="name-price">
                                 <div class="name-container">
                                     <a href="/quan-be-gai/quan-legging-be-gai-ava-bs13-mau-xam" class="product-item__name">
-                                        @item.DoChoi.TenDoChoi
+                                        @item.DoChoi.TenSua
                                     </a>
                                 </div>
                                 @{
@@ -113,14 +110,14 @@
                                     @{
                                         string clsPointer = item.qty == 1 ? "pointer-events: none;" : "pointer-events: all;";
                                     }
-                                    <div class="minus" data-id="@item.DoChoi.MaDoChoi" style="@clsPointer">
+                                    <div class="minus" data-id="@item.DoChoi.MaSua" style="@clsPointer">
                                         <i style="background-color: rgb(0, 0, 0);">
                                         </i>
 
                                     </div>
 
-                                    <input id="@item.DoChoi.MaDoChoi" type="text" maxlength="3" class="number" value="@item.qty" style="border: none; pointer-events: all;">
-                                    <div class="plus" data-id="@item.DoChoi.MaDoChoi" style="pointer-events: all;">
+                                    <input id="@item.DoChoi.MaSua" type="text" maxlength="3" class="number" value="@item.qty" style="border: none; pointer-events: all;">
+                                    <div class="plus" data-id="@item.DoChoi.MaSua" style="pointer-events: all;">
                                         <i style="background-color: rgb(0, 0, 0);">
                                         </i>
                                         <i style="background-color: rgb(0, 0, 0);">

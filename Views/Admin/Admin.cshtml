@@ -121,13 +121,13 @@
                 {
                     string status = item.TrangThai ? "Còn bán" : "Ngừng bán";
                     <tr>
-                        <td>@item.MaDoChoi</td>
-                        <td>@item.TenDoChoi</td>
+                        <td>@item.MaSua</td>
+                        <td>@item.TenSua</td>
                         @*<td>@status</td>*@
                         @*<td>@item.SLTon</td>*@
                         <td>@item.HANGDOCHOI.TENHANGDOCHOI</td>
                         @*<td>@item.NHACUNGCAP.TENNHACC</td>*@
-                        <td><a class="edit-btn" data-id="@item.MaDoChoi" href="">Sửa</a></td>
+                        <td><a class="edit-btn" data-id="@item.MaSua" href="">Sửa</a></td>
                         <td><a href="">Xóa</a></td>
                     </tr>
                 }

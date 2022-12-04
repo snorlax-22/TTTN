@@ -432,9 +432,9 @@ namespace TTTN.Models
         #endregion
 
         #region campaign
-        public List<DOCHOI> layDoChoiKMKhung()
+        public List<SUA> layDoChoiKMKhung()
         {
-            var listDoChoiKM = new List<DOCHOI>();
+            var listDoChoiKM = new List<SUA>();
             try
             {
                 SqlCommand cmd = new SqlCommand("layDoChoiKMLon", conn);
@@ -461,7 +461,7 @@ namespace TTTN.Models
                     khuyenMai.NgayKetThuc = dr.GetDateTime(6);
                     string tenDoChoi = dr.GetString(1);
 
-                    var doChoi = new DOCHOI(tenDoChoi, idDoChoi, khuyenMai);
+                    var doChoi = new SUA(tenDoChoi, idDoChoi, khuyenMai);
 
                     listDoChoiKM.Add(doChoi);
                 }
@@ -479,9 +479,9 @@ namespace TTTN.Models
             return listDoChoiKM;
         }
 
-        public List<DOCHOI> layTatCaDoChoiV2()
+        public List<SUA> layTatCaDoChoiV2()
         {
-            var listDoChoiKM = new List<DOCHOI>();
+            var listDoChoiKM = new List<SUA>();
             try
             {
                 SqlCommand cmd = new SqlCommand("layDoChoiKMLonV2", conn);
@@ -539,10 +539,10 @@ namespace TTTN.Models
                     }
 
 
-                    DOCHOI doChoi = new DOCHOI()
+                    SUA doChoi = new SUA()
                     {
-                        TenDoChoi = dr.GetString(7),
-                        MaDoChoi = idDoChoi,
+                        TenSua = dr.GetString(7),
+                        MaSua = idDoChoi,
                         ThayDoiGia = gia,
                         //KHUYENMAI = km
                     };
@@ -556,13 +556,13 @@ namespace TTTN.Models
                 e.ToString();
                 conn.Close();
             }
-            listDoChoiKM = listDoChoiKM.GroupBy(x => x.MaDoChoi).Select(y => y.FirstOrDefault()).ToList();
+            listDoChoiKM = listDoChoiKM.GroupBy(x => x.MaSua).Select(y => y.FirstOrDefault()).ToList();
             return listDoChoiKM;
         }
 
-        public List<DOCHOI> layDoChoiTheoHang(int maHang)
+        public List<SUA> layDoChoiTheoHang(int maHang)
         {
-            var listDoChoiKM = new List<DOCHOI>();
+            var listDoChoiKM = new List<SUA>();
             try
             {
                 SqlCommand cmd = new SqlCommand("layDoChoiTheoHang", conn);
@@ -580,10 +580,10 @@ namespace TTTN.Models
 
                     string tenDoChoi = dr.GetString(1);
 
-                    var doChoi = new DOCHOI();
+                    var doChoi = new SUA();
 
-                    doChoi.MaDoChoi = idDoChoi;
-                    doChoi.TenDoChoi = tenDoChoi;
+                    doChoi.MaSua = idDoChoi;
+                    doChoi.TenSua = tenDoChoi;
 
                     doChoi.ThayDoiGia = new ThayDoiGia()
                     {
@@ -613,52 +613,10 @@ namespace TTTN.Models
         #endregion
 
         #region đồ chơi
-        public DOCHOI layDoChoiTheoMa(int idDoChoi)
+        
+        public List<SUA> layTatCaDoChoi()
         {
-            try
-            {
-                SqlCommand cmd = new SqlCommand("layDoChoiTheoId", conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                conn.Open();
-                cmd.Parameters.AddWithValue("@idDoChoi", idDoChoi);
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    var hangPH = new HANGDOCHOI();
-                    hangPH.TENHANGDOCHOI = dr.GetString(5);
-
-                    var nhaCC = new NHACUNGCAP();
-                    nhaCC.TENNHACC = dr.GetString(6);
-
-                    var doChoi = new DOCHOI(nhaCC, hangPH);
-                    doChoi.MaDoChoi = dr.GetInt32(0);
-                    doChoi.TenDoChoi = dr.GetString(1);
-                    doChoi.TrangThai = dr.GetBoolean(2);
-                    doChoi.MoTa = dr.GetString(3);
-                    doChoi.SLTon = dr.GetInt32(4);
-                    conn.Close();
-                    return doChoi;
-                }
-                else
-                {
-                    var doChoi = new DOCHOI();
-                    conn.Close();
-                    return doChoi;
-                }
-            }
-            catch (Exception e)
-            {
-                var a = e.Message;
-                var doChoi = new DOCHOI();
-                conn.Close();
-                return doChoi;
-                
-            }
-        }
-        public List<DOCHOI> layTatCaDoChoi()
-        {
-            var listDoChoi = new List<DOCHOI>();
+            var listDoChoi = new List<SUA>();
             try
             {
                 SqlCommand cmd = new SqlCommand("layTatCaDoChoi", conn);
@@ -675,9 +633,9 @@ namespace TTTN.Models
                     var nhaCC = new NHACUNGCAP();
                     nhaCC.TENNHACC = dr.GetString(6);
 
-                    var doChoi = new DOCHOI(nhaCC, hangPH);
-                    doChoi.MaDoChoi = dr.GetInt32(0);
-                    doChoi.TenDoChoi = dr.GetString(1);
+                    var doChoi = new SUA(nhaCC, hangPH);
+                    doChoi.MaSua = dr.GetInt32(0);
+                    doChoi.TenSua = dr.GetString(1);
                     doChoi.TrangThai = dr.GetBoolean(2);
                     doChoi.MoTa = dr.GetString(3);
                     doChoi.SLTon = dr.GetInt32(4);
@@ -798,70 +756,11 @@ namespace TTTN.Models
             return listSuppliers;
         }
 
-        public KHUYENMAI layKmTheoDoChoi(int MaDoChoi)
+
+
+        public List<SUA> layTatCaDoChoiV3()
         {
-            var km = new KHUYENMAI();
-                try
-                {
-                    SqlCommand cmd = new SqlCommand("layKmTheoDoChoi", conn);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    conn.Open();
-                    cmd.Parameters.AddWithValue("@MaDoChoi", MaDoChoi);
-
-                    SqlDataReader dr = cmd.ExecuteReader();
-
-                if(dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        var ctkm = new CTKM()
-                        {
-                            IdDoChoi = MaDoChoi,
-                            PTGiamGia = dr.GetInt32(2),
-                            IdKM = dr.GetInt32(3)
-                        };
-
-                        km = new KHUYENMAI()
-                        {
-                            Id = dr.GetInt32(0),
-                            CTKM = ctkm,
-                            NgayBatDau = dr.GetDateTime(5),
-                            NgayKetThuc = dr.GetDateTime(6)
-                        };
-                    }
-                    
-                }
-                else
-                {
-                        var ctkm = new CTKM()
-                        {
-                            IdDoChoi = MaDoChoi,
-                            PTGiamGia = 0,
-                            IdKM = 0
-                        };
-
-                        km = new KHUYENMAI()
-                        {
-                            Id = 0,
-                            CTKM = ctkm,
-                            NgayBatDau = null,
-                            NgayKetThuc = null
-                        };
-                    
-                }
-                conn.Close();
-                }
-                catch (Exception e)
-                {
-                    
-                }
-
-            return km;
-        }
-
-        public List<DOCHOI> layTatCaDoChoiV3()
-        {
-            var listDoChoiKM = new List<DOCHOI>();
+            var listDoChoiKM = new List<SUA>();
             try
             {
                 SqlCommand cmd = new SqlCommand("layTatCaDoChoiV2", conn);
@@ -933,10 +832,10 @@ namespace TTTN.Models
                     //    };
                     //}
  
-                    DOCHOI doChoi = new DOCHOI(idDoChoi)
+                    SUA doChoi = new SUA()
                     {
-                        TenDoChoi = dr.GetString(7),
-                        MaDoChoi = idDoChoi,
+                        TenSua = dr.GetString(7),
+                        MaSua = idDoChoi,
                         ThayDoiGia = gia,
                         //KHUYENMAI = km,
                         HANGDOCHOI = hang
@@ -1155,32 +1054,7 @@ namespace TTTN.Models
 
         #region by toy id
 
-        public ThayDoiGia layGiaTheoMaSanPham(int idDoChoi)
-        {
-            var gia = new ThayDoiGia();
-            try
-            {
-                SqlCommand cmd = new SqlCommand("layGiaById", conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                conn.Open();
-                cmd.Parameters.AddWithValue("@idDoChoi", idDoChoi);
-
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    gia.Gia = dr.GetDecimal(0);
-                    gia.NgayApDung = dr.GetDateTime(1);
-                    gia.MaNV = dr.GetInt32(2);
-                }
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                throw new Exception();
-            }
-            return gia;
-        }
+        
 
         public KHUYENMAI layKM(int idDoChoi)
         {
@@ -1440,36 +1314,7 @@ namespace TTTN.Models
         }
 
 
-        public List<HINHANH> layTatCaAnhTheoDoChoi(int? maDoChoi)
-        {
-            var listImages = new List<HINHANH>();
-            if (maDoChoi > 0 || maDoChoi != null)
-            {
-                try
-                {
-                    SqlCommand cmd = new SqlCommand("layTatCaAnhTheoDoChoi", conn);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    conn.Open();
-                    cmd.Parameters.AddWithValue("@idDoChoi", maDoChoi);
-
-                    SqlDataReader dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
-                    {
-                        var supplier = new HINHANH();
-                        supplier.HinhAnh = dr.GetString(1);
-                        listImages.Add(supplier);
-                    }
-                    conn.Close();
-                }
-                catch (Exception e)
-                {
-
-                }
-            }
-
-            return listImages;
-        }
+        
 
         public List<HINHANH> layAnhChiTiet(int? maDoChoi)
         {
@@ -1582,9 +1427,9 @@ namespace TTTN.Models
                 {
                     var ctgh = new CTGH();
                     ctgh.MaGioHang = maGH;
-                    ctgh.DoChoi = new DOCHOI()
+                    ctgh.DoChoi = new SUA()
                     {
-                        MaDoChoi = dr.GetInt32(1)
+                        MaSua = dr.GetInt32(1)
                     };
                     ctgh.Gia = dr.GetDecimal(3);
                     ctgh.SoLuongMua = dr.GetInt32(5);

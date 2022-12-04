@@ -1,14 +1,14 @@
 ﻿@using System.Globalization
 @using TTTN.Models
-@model TTTN.Models.DOCHOI;
+@model TTTN.Models.SUA;
 @*
 *@
 @{
     var dbo = new db();
     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
-    var gia = dbo.layGiaTheoMaSanPham(@Model.MaDoChoi).Gia;
+    var gia = Model.ThayDoiGia.Gia;
 
-    var listHinhAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
+    var listHinhAnh = Model.DSHINHANH;
 
     int ptgiamgia = 0;
 
@@ -22,7 +22,7 @@
     else
     {
 
-        var km = dbo.layKM(@Model.MaDoChoi);
+        var km = dbo.layKM(@Model.MaSua);
         if (km.CTKM != null)
         {
             ptgiamgia = km.CTKM.PTGiamGia;
@@ -39,8 +39,8 @@
 
 <div class="detail-body-column-2-product-name">
     <div class="title">
-        <h3>@Model.TenDoChoi</h3>
-        <span class="product-id">#@Model.MaDoChoi</span>
+        <h3>@Model.TenSua</h3>
+        <span class="product-id">#@Model.MaSua</span>
     </div>
 
     @if (@ptgiamgia > 0)

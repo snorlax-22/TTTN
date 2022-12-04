@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PayPal.Api;
+using System.Collections.Generic;
 using System.Linq;
 using TTTN.Controllers;
 using TTTN.Helpers;
@@ -19,7 +20,7 @@ namespace TTTN.Service
             _milkRepo = milkRepository;
         }
 
-        public List<DOCHOI> layTatCaDoChoiV3()
+        public List<SUA> layTatCaSua()
         {
             var listmilk = _milkRepo.layTatCaDoChoiV3();
             var listNutri = _milkRepo.getAllNutritions();
@@ -30,10 +31,22 @@ namespace TTTN.Service
                 {
                     item.Nutris = listNutri.Where(x => x.id == item.Nutris.id).FirstOrDefault();
                 }
+                item.KHUYENMAI = _milkRepo.layKmTheoSua(item.MaSua);
+                item.DSHINHANH = _milkRepo.layTatCaAnhTheoSua(item.MaSua);
             }
             //get nutri
             
             return listmilk;
+        }
+
+        public SUA layChiTietSua(int idSua)
+        {
+
+            var milk = _milkRepo.laySuaTheoMa(idSua);
+            milk.ThayDoiGia = _milkRepo.layGiaTheoMaSanPham(milk.MaSua);
+            milk.KHUYENMAI = _milkRepo.layKmTheoSua(milk.MaSua);
+            milk.DSHINHANH = _milkRepo.layTatCaAnhTheoSua(milk.MaSua);
+            return milk;
         }
     }
 }

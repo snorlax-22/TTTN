@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace TTTN.Models
 {
     
-    public class DOCHOI
+    public class SUA
     {
-        db dbo = new db();
-        public int MaDoChoi { get; set; }
-        public string TenDoChoi { get; set; }
+
+        public int MaSua { get; set; }
+        public string TenSua { get; set; }
         public NHACUNGCAP NHACUNGCAP { get; set; }
         public bool TrangThai { get; set; }
         public string MoTa { get; set; }
@@ -22,43 +22,22 @@ namespace TTTN.Models
         public Nutri Nutris { get; set; } 
         public KHUYENMAI KHUYENMAI { get; set; }
 
-        public DOCHOI()
+        public List<DANHMUC> listDanhMuc { get; set; }
+        public SUA()
         {
         }
+       
         
-        //public DOCHOI(List<HINHANH> dsHA)
-        //{
-        //    DSHINHANH = dsHA;
-        //}
-        
-        public DOCHOI(NHACUNGCAP NhaCC, HANGDOCHOI hang)
+        public SUA(NHACUNGCAP NhaCC, HANGDOCHOI hang)
         {
             NHACUNGCAP = NhaCC;
             HANGDOCHOI = hang;
         }
 
-        public DOCHOI(string tenDoChoi,int maDoChoi, KHUYENMAI km)
+        public SUA(string tenDoChoi,int maDoChoi, KHUYENMAI km)
         {
-            TenDoChoi = tenDoChoi;
-            MaDoChoi = maDoChoi;
-        }
-
-        public DOCHOI(int maDoChoi, string tenDoChoi, NHACUNGCAP nHACUNGCAP, bool trangThai, string moTa, HANGDOCHOI hANGDOCHOI, KHUYENMAI kHUYENMAI)
-        {
-            MaDoChoi = maDoChoi;
-            TenDoChoi = tenDoChoi;
-            NHACUNGCAP = nHACUNGCAP;
-            TrangThai = trangThai;
-            MoTa = moTa;
-            HANGDOCHOI = hANGDOCHOI;
-            DSHINHANH = dbo.layTatCaAnhTheoDoChoi(maDoChoi);       
-        }
-
-        public DOCHOI(int maDoChoi)
-        {
-            MaDoChoi = maDoChoi;
-            DSHINHANH = dbo.layTatCaAnhTheoDoChoi(maDoChoi);
-            KHUYENMAI = dbo.layKmTheoDoChoi(maDoChoi);
+            TenSua = tenDoChoi;
+            MaSua = maDoChoi;
         }
     }
 

@@ -9,9 +9,9 @@ namespace TTTN.Repository
     {
         SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
-        public List<DOCHOI> layTatCaDoChoiV3()
+        public List<SUA> layTatCaDoChoiV3()
         {
-            var listDoChoiKM = new List<DOCHOI>();
+            var listDoChoiKM = new List<SUA>();
             try
             {
                 SqlCommand cmd = new SqlCommand("layTatCaDoChoiV2", conn);
@@ -44,11 +44,11 @@ namespace TTTN.Repository
                         id = dr.GetInt32(9)
                     };
 
-                    DOCHOI doChoi = new DOCHOI(idDoChoi)
+                    SUA doChoi = new SUA()
                     {
                         Nutris = nutris,
-                        TenDoChoi = dr.GetString(7),
-                        MaDoChoi = idDoChoi,
+                        TenSua = dr.GetString(7),
+                        MaSua = idDoChoi,
                         ThayDoiGia = gia,
                         //KHUYENMAI = km,
                         HANGDOCHOI = hang
@@ -109,6 +109,169 @@ namespace TTTN.Repository
             }
 
             return listBrands;
+        }
+
+        public SUA laySuaTheoMa(int idDoChoi)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layDoChoiTheoId", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@idDoChoi", idDoChoi);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    var hangPH = new HANGDOCHOI();
+                    hangPH.TENHANGDOCHOI = dr.GetString(5);
+
+                    var nhaCC = new NHACUNGCAP();
+                    nhaCC.TENNHACC = dr.GetString(6);
+
+                    var doChoi = new SUA(nhaCC, hangPH);
+                    doChoi.MaSua = dr.GetInt32(0);
+                    doChoi.TenSua = dr.GetString(1);
+                    doChoi.TrangThai = dr.GetBoolean(2);
+                    doChoi.MoTa = dr.GetString(3);
+                    doChoi.SLTon = dr.GetInt32(4);
+                    conn.Close();
+                    return doChoi;
+                }
+                else
+                {
+                    var doChoi = new SUA();
+                    conn.Close();
+                    return doChoi;
+                }
+            }
+            catch (Exception e)
+            {
+                var a = e.Message;
+                var doChoi = new SUA();
+                conn.Close();
+                return doChoi;
+
+            }
+        }
+
+        public KHUYENMAI layKmTheoSua(int masua)
+        {
+            var km = new KHUYENMAI();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layKmTheoDoChoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@MaDoChoi", masua);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        var ctkm = new CTKM()
+                        {
+                            IdDoChoi = masua,
+                            PTGiamGia = dr.GetInt32(2),
+                            IdKM = dr.GetInt32(3)
+                        };
+
+                        km = new KHUYENMAI()
+                        {
+                            Id = dr.GetInt32(0),
+                            CTKM = ctkm,
+                            NgayBatDau = dr.GetDateTime(5),
+                            NgayKetThuc = dr.GetDateTime(6)
+                        };
+                    }
+
+                }
+                else
+                {
+                    var ctkm = new CTKM()
+                    {
+                        IdDoChoi = masua,
+                        PTGiamGia = 0,
+                        IdKM = 0
+                    };
+
+                    km = new KHUYENMAI()
+                    {
+                        Id = 0,
+                        CTKM = ctkm,
+                        NgayBatDau = null,
+                        NgayKetThuc = null
+                    };
+
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return km;
+        }
+
+        public ThayDoiGia layGiaTheoMaSanPham(int idDoChoi)
+        {
+            var gia = new ThayDoiGia();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("layGiaById", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@idDoChoi", idDoChoi);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    gia.Gia = dr.GetDecimal(0);
+                    gia.NgayApDung = dr.GetDateTime(1);
+                    gia.MaNV = dr.GetInt32(2);
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            return gia;
+        }
+
+        public List<HINHANH> layTatCaAnhTheoSua(int? maDoChoi)
+        {
+            var listImages = new List<HINHANH>();
+            if (maDoChoi > 0 || maDoChoi != null)
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("layTatCaAnhTheoDoChoi", conn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@idDoChoi", maDoChoi);
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        var supplier = new HINHANH();
+                        supplier.HinhAnh = dr.GetString(1);
+                        listImages.Add(supplier);
+                    }
+                    conn.Close();
+                }
+                catch (Exception e)
+                {
+
+                }
+            }
+
+            return listImages;
         }
     }
 }

@@ -107,14 +107,8 @@ namespace TTTN.Controllers
 
         public IActionResult Index()
         {
-
-            var DoChoi = new DOCHOI(16);
-
-            db dbo = new db();
-
             PageHomeViewModel vm = new PageHomeViewModel();
-            var a = _milkSvc.layTatCaDoChoiV3();
-            vm.listDoChoi = dbo.layTatCaDoChoiV3();
+            vm.listDoChoi = _milkSvc.layTatCaSua();
             vm.currentCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
 
             return View("~/Views/Home/Index.cshtml", vm);
@@ -134,17 +128,15 @@ namespace TTTN.Controllers
 
         public async Task<IActionResult> GetProductList(Search query)
         {
-            var result = new List<DOCHOI>();
+            var result = new List<SUA>();
             var listManu = query.StrListManuId.ToListInt();
             var listOrigin = query.StrOrigin.ToListInt();
 
-            var listToys = _milkSvc.layTatCaDoChoiV3().AsQueryable();
+            var listToys = _milkSvc.layTatCaSua().AsQueryable();
 
 
             if (listManu.IsValidList())
                 listToys = listToys.Where(x => listManu.Contains(x.HANGDOCHOI.MAHANGDOCHOI));
-
-            result = listToys.ToList();
 
             if (listOrigin.IsValidList())
                 listToys = listToys.Where(x => listOrigin.Contains(x.HANGDOCHOI.MAXUATXU));

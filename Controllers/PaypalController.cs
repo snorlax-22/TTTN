@@ -51,14 +51,14 @@ namespace TTTN.Controllers
 
             foreach (var cart in carts)
             {
-               var slTon = dbo.KiemTraTon(cart.DoChoi.MaDoChoi, cart.qty);
+               var slTon = dbo.KiemTraTon(cart.DoChoi.MaSua, cart.qty);
                if(slTon == -1)
                {
-                    return "Sản phẩm " + cart.DoChoi.TenDoChoi + " đã hết hàng";
+                    return "Sản phẩm " + cart.DoChoi.TenSua + " đã hết hàng";
                }
                else if(slTon > 0)
                {
-                    return "Sản phẩm " + cart.DoChoi.TenDoChoi + " chỉ còn lại "+slTon.ToString();
+                    return "Sản phẩm " + cart.DoChoi.TenSua + " chỉ còn lại "+slTon.ToString();
                }
             }
 
@@ -154,7 +154,7 @@ namespace TTTN.Controllers
                 foreach(var item in carts)
                 {
                     var giamua = item.DoChoi.ThayDoiGia.Gia - ((item.DoChoi.ThayDoiGia.Gia*item.DoChoi.KHUYENMAI.CTKM.PTGiamGia)/100);
-                    dbo.themCTGH(IDGioHang, item.DoChoi.MaDoChoi, null, giamua, null, item.qty);
+                    dbo.themCTGH(IDGioHang, item.DoChoi.MaSua, null, giamua, null, item.qty);
                 }
                 var payerId = HttpContext.Session.GetString("payerid");
                 ExecutePayment(payerid, paymentId);
@@ -189,7 +189,7 @@ namespace TTTN.Controllers
 
                 itemList.items.Add(new Item()
                 {
-                    name = item.DoChoi.TenDoChoi,
+                    name = item.DoChoi.TenSua,
                     currency = "USD",
                     price = itemPrice,
                     quantity = item.qty.ToString(),

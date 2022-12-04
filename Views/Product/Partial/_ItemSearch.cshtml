@@ -1,18 +1,18 @@
 ﻿@using TTTN.Helpers
 @using TTTN.Models
 
-@model List<DOCHOI>
+@model List<SUA>
 
 <ul>
     @foreach (var item in Model)
     {
         <li>
-            <a href="/product/detail/@item.MaDoChoi">
+            <a href="/product/detail/@item.MaSua">
                 <div class="img">
                     <img src="@item.DSHINHANH.FirstOrDefault().HinhAnh" class="ls-is-cached lazyloaded" alt="">
                 </div>
                 <div class="ct">
-                    <h3>@item.TenDoChoi</h3>
+                    <h3>@item.TenSua</h3>
                     <div class="price">
                         @{
                             decimal pricecurrent = item.ThayDoiGia.Gia - (item.ThayDoiGia.Gia * item.KHUYENMAI.CTKM.PTGiamGia/100);

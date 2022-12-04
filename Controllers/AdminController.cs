@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.Json;
-
+using TTTN.Service;
 
 namespace TTTN.Controllers
 {
@@ -18,6 +18,13 @@ namespace TTTN.Controllers
     {
 
         db dbo = new db();
+
+        private MilkService _milkSvc;
+
+        public AdminController(MilkService milkService)
+        {
+            _milkSvc = milkService;
+        }
 
         public bool CheckKMHopLe(DateTime NgayKM)
         {
@@ -93,9 +100,9 @@ namespace TTTN.Controllers
             {
                 var item = enumerator.Current;
 
-                item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
+                item.DoChoi = _milkSvc.layChiTietSua(item.DoChoi.MaSua);
 
-                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
+                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaSua);
             }
 
             HttpContext.Session.Set("HoaDonPage", vm);
@@ -126,9 +133,9 @@ namespace TTTN.Controllers
             {
                 var item = enumerator.Current;
 
-                item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
+                item.DoChoi = _milkSvc.layChiTietSua(item.DoChoi.MaSua);
 
-                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
+                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaSua);
             }
 
             HttpContext.Session.Set("HoaDonPage", vm);
@@ -153,9 +160,9 @@ namespace TTTN.Controllers
             {
                 var item = enumerator.Current;
 
-                item.DoChoi = dbo.layDoChoiTheoMa(item.DoChoi.MaDoChoi);
+                item.DoChoi = _milkSvc.layChiTietSua(item.DoChoi.MaSua);
 
-                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaDoChoi);
+                item.DoChoi.DSHINHANH = dbo.layAnhChiTiet(item.DoChoi.MaSua);
             }
             return PartialView("~/Views/Admin/Partial/ListOrderDetail.cshtml", vm);
         }
@@ -326,7 +333,7 @@ namespace TTTN.Controllers
             vm.nv = nv;
             var maDC = Int32.Parse(idDoChoi);
 
-            vm.EditDoCHoi = dbo.layDoChoiTheoMa(Int32.Parse(idDoChoi));
+            vm.EditDoCHoi = _milkSvc.layChiTietSua(Int32.Parse(idDoChoi));
 
             return View("~/Views/Admin/ToyDetail.cshtml", vm);
         }

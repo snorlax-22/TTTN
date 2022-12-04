@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using TTTN.Service;
 
 namespace TTTN.Controllers
 {
@@ -18,19 +19,21 @@ namespace TTTN.Controllers
     public class CartController : Controller
     {
         db dbo = new db();
+
+        private MilkService _milkSvc;
+
         private readonly string _clientId;
         private readonly string _secretKey;
         public double TyGiaUSD = 23300;
         CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
 
-        public CartController(IConfiguration config)
+        public CartController(IConfiguration config, MilkService milkService)
         {
+            _milkSvc = milkService;
             _clientId = config["PaypalSettings:ClientId"];
             _secretKey = config["PaypalSettings:SecretKey"];
         }
        
-
-        
 
         public List<CartItem> Carts
         {
@@ -54,7 +57,12 @@ namespace TTTN.Controllers
         public IActionResult Index()
         {
             var vm = new ClientCartPageViewModel();
+            
             vm.cartItems = Carts;
+            foreach (var item in vm.cartItems)
+            {
+                item.DoChoi.DSHINHANH = _milkSvc.layChiTietSua(item.DoChoi.MaSua).DSHINHANH;
+            }
             vm.curCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
             return View(vm);
         }
@@ -65,7 +73,7 @@ namespace TTTN.Controllers
 
             foreach(var item in myCart)
             {
-               if(item.DoChoi.MaDoChoi == idDoChoi)
+               if(item.DoChoi.MaSua == idDoChoi)
                {
                     item.qty = 0;
                     myCart.Remove(item);
@@ -83,14 +91,14 @@ namespace TTTN.Controllers
             var myCart = Carts;
 
             //kiểm tra hàng đã có trong giỏ
-            var item = myCart.SingleOrDefault(it => it.DoChoi.MaDoChoi == id);
+            var item = myCart.SingleOrDefault(it => it.DoChoi.MaSua == id);
             if (item != null)//đã có
             {
                 item.qty = item.qty + 1;
             }
             else
             {
-                var hh = dbo.layTatCaDoChoiV2().FirstOrDefault(p => p.MaDoChoi == id);
+                var hh = dbo.layTatCaDoChoiV2().FirstOrDefault(p => p.MaSua == id);
 
                 myCart.Add(new CartItem()
                 {
@@ -133,7 +141,7 @@ namespace TTTN.Controllers
             var myCart = Carts;
             
             //kiểm tra hàng đã có trong giỏ
-            var item = myCart.SingleOrDefault(it => it.DoChoi.MaDoChoi == id);
+            var item = myCart.SingleOrDefault(it => it.DoChoi.MaSua == id);
 
 
             if (item != null && key.Equals("+"))//đã có

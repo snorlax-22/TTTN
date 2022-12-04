@@ -6,9 +6,9 @@
     var count = 0;
     var dbo = new db();
 
-    var gia = dbo.layGiaTheoMaSanPham(@Model.EditDoCHoi.MaDoChoi).Gia;
-    var listAnh = dbo.layTatCaAnhTheoDoChoi(@Model.EditDoCHoi.MaDoChoi);
-    var listDanhMuc = dbo.layDanhMucTheoDoChoi(@Model.EditDoCHoi.MaDoChoi);
+    var gia = Model.EditDoCHoi.ThayDoiGia.Gia;
+    var listAnh = Model.EditDoCHoi.DSHINHANH;
+    var listDanhMuc = Model.EditDoCHoi.listDanhMuc;
     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
     string giaOld = gia.ToString("#,###", cul.NumberFormat);
     //viết thêm hàm lấy đồ chơi để lấy tên đồ chơi (lấy theo id)
@@ -49,7 +49,7 @@
             <br />
             <br />
             <label>Tên đồ chơi</label>
-            <input id="toyName" type="text" value="@Model.EditDoCHoi.TenDoChoi" />
+            <input id="toyName" type="text" value="@Model.EditDoCHoi.TenSua" />
             <br />
             <br />
             <label>Nhà cung cấp</label>
@@ -81,7 +81,7 @@
             <br />
             <label>Thêm Ảnh</label>
             <div id="imgTest"></div>
-            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURLAdd('@Model.EditDoCHoi.MaDoChoi');" />
+            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURLAdd('@Model.EditDoCHoi.MaSua');" />
             
             <br />
             <br />

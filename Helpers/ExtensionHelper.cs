@@ -47,7 +47,7 @@ namespace TTTN.Helpers
                     return false;
             }
         }
-        public static List<DOCHOI> GetListWithNutris(this List<DOCHOI> list, Search query)
+        public static List<SUA> GetListWithNutris(this List<SUA> list, Search query)
         {
             var cType = query.compareType;
 

@@ -7,13 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using TTTN.Service;
 
 namespace TTTN.Controllers
 {
     public class ProductController : Controller
     {
         db dbo = new db();
+        private MilkService _milkSvc;
+
+        public ProductController(MilkService milkService)
+        {
+            _milkSvc = milkService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -29,7 +36,7 @@ namespace TTTN.Controllers
 
         public IActionResult Detail(int id)
         {
-            var dochoi = dbo.layDoChoiTheoMa(id);
+            var dochoi = _milkSvc.layChiTietSua(id);
 
             return View(dochoi);
         }
@@ -56,15 +63,15 @@ namespace TTTN.Controllers
         {
             string value = string.Empty;
             var products = dbo.layTatCaDoChoiV2();
-            var listDoChoi = new List<DOCHOI>();
+            var listDoChoi = new List<SUA>();
             foreach (var item in products)
             {
-                item.DSHINHANH = dbo.layTatCaAnhTheoDoChoi(item.MaDoChoi);
+                item.DSHINHANH = _milkSvc.layChiTietSua(item.MaSua).DSHINHANH;
             }
             try
             {
                 listDoChoi = (from product in products
-                                   where ConvertToUnSign(product.TenDoChoi).ToLower().Replace(" ","").Contains(ConvertToUnSign(searchText).ToLower().Replace(" ", ""))
+                                   where ConvertToUnSign(product.TenSua).ToLower().Replace(" ","").Contains(ConvertToUnSign(searchText).ToLower().Replace(" ", ""))
                                    select product).ToList();
             }
             catch (ArgumentNullException)
@@ -83,13 +90,13 @@ namespace TTTN.Controllers
 
         //      foreach(var item in products)
         //       {
-        //           item.DSHINHANH = dbo.layTatCaAnhTheoDoChoi(item.MaDoChoi);
+        //           item.DSHINHANH = dbo.layTatCaAnhTheoDoChoi(item.MaSua);
         //       }
 
         //       try
         //       {
         //           productsSearched = from product in products
-        //                              where product.TenDoChoi.Contains(searchText)
+        //                              where product.TenSua.Contains(searchText)
         //                              select product;
         //       }
         //       catch (ArgumentNullException)

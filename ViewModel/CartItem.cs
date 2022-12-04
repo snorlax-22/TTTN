@@ -6,7 +6,7 @@ namespace TTTN.ViewModel
 {
     public class CartItem
     {
-        public DOCHOI DoChoi { get; set; }
+        public SUA DoChoi { get; set; }
 
         public int qty { get; set; }
 

@@ -1,10 +1,9 @@
 ﻿@using System.Globalization
 @using TTTN.Models
-@model TTTN.Models.DOCHOI;
+@model TTTN.Models.SUA;
 
 @{
-    var dbo = new db();
-    var listHinhAnh = dbo.layTatCaAnhTheoDoChoi(@Model.MaDoChoi);
+    var listHinhAnh = Model.DSHINHANH;
    
     Layout = "~/Views/Shared/_Footer.cshtml";
 
