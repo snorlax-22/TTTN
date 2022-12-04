@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
+using TTTN.Service;
 
 namespace TTTN.Controllers
 {
@@ -18,12 +20,14 @@ namespace TTTN.Controllers
     public class HomeController : Controller
     {
         private readonly PaypalController _PController;
+        private MilkService _milkSvc;
         db dbo = new db();
         ServiceHelper apiHelper = new ServiceHelper();
 
-        public HomeController(PaypalController pController)
+        public HomeController(PaypalController pController, MilkService milkService)
         {
             _PController = pController;
+            _milkSvc = milkService;
         }
 
 
@@ -81,7 +85,7 @@ namespace TTTN.Controllers
             var rs = dbo.themTaiKhoan(tenKh, mk, acc, mst, add, email, phone, gioitinh, cmnd);
 
             var curCus = dbo.getCusByUser(acc);
-             
+
             HttpContext.Session.Set("CurrentCus", curCus);
 
             return rs;
@@ -93,7 +97,7 @@ namespace TTTN.Controllers
 
             var curCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
 
-            var rs = dbo.suaTaiKhoan(username,tenKh, mk, mst, add, email, phone, gioitinh, cmnd);
+            var rs = dbo.suaTaiKhoan(username, tenKh, mk, mst, add, email, phone, gioitinh, cmnd);
 
             var curCusNext = dbo.getCusByUser(curCus.taikhoan.USERNAME);
             HttpContext.Session.Set("CurrentCus", curCus);
@@ -109,11 +113,47 @@ namespace TTTN.Controllers
             db dbo = new db();
 
             PageHomeViewModel vm = new PageHomeViewModel();
-            
+            var a = _milkSvc.layTatCaDoChoiV3();
             vm.listDoChoi = dbo.layTatCaDoChoiV3();
             vm.currentCus = HttpContext.Session.Get<KHACHHANG>("CurrentCus");
 
             return View("~/Views/Home/Index.cshtml", vm);
         }
+
+        [Route("advancedsearch")]
+        public IActionResult AdvancedSearch()
+        {
+            var vm = new SearchViewModel()
+            {
+                hangDoChoi = dbo.layTatCaHang(),
+            };
+
+            return View("~/Views/Home/AdvancedSearch.cshtml", vm);
+        }
+
+
+        public async Task<IActionResult> GetProductList(Search query)
+        {
+
+            var result = new List<DOCHOI>();
+            var listManu = query.StrListManuId.ToListInt();
+            var listOrigin = query.StrOrigin.ToListInt();
+
+            var listToys = _milkSvc.layTatCaDoChoiV3().AsQueryable();
+
+
+            if (listManu.IsValidList())
+                listToys = listToys.Where(x => listManu.Contains(x.HANGDOCHOI.MAHANGDOCHOI));
+
+            if (listOrigin.IsValidList())
+                listToys = listToys.Where(x => listOrigin.Contains(x.HANGDOCHOI.MAXUATXU));
+
+            result = listToys.ToList().GetListWithNutris(query);
+            return View("~/Views/Shared/Partial/ProductList.cshtml", result);
+        }
+
+       
+
+
     }
 }

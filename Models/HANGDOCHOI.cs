@@ -12,5 +12,9 @@ namespace TTTN.Models
         [Required]
         [StringLength(50)]
         public string TENHANGDOCHOI { get; set; }
+
+        public string HINHANH { get; set; }
+        public string XUATXU { get; set; }
+        public int MAXUATXU { get; set; }
     }
 }

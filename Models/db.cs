@@ -884,7 +884,8 @@ namespace TTTN.Models
 
                     HANGDOCHOI hang = new HANGDOCHOI()
                     {
-                        TENHANGDOCHOI = dr.GetString(6)
+                        TENHANGDOCHOI = dr.GetString(6),
+                        MAHANGDOCHOI = dr.GetInt32(10)
                     };
 
                     //CTKM ctkm = new CTKM()
@@ -1239,6 +1240,9 @@ namespace TTTN.Models
                     var brand = new HANGDOCHOI();
                     brand.MAHANGDOCHOI = dr.GetInt32(0);
                     brand.TENHANGDOCHOI = dr.GetString(1);
+                    brand.HINHANH = dr.GetString(2);
+                    brand.XUATXU = dr.GetString(5);
+                    brand.MAXUATXU = dr.GetInt32(4);
                     listBrands.Add(brand);
                 }
                 conn.Close();

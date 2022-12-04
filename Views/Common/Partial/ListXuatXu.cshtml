@@ -1,0 +1,29 @@
+﻿@using TTTN.Models;
+@using TTTN.ViewModel;
+@model List<HANGDOCHOI>
+@{
+    int count = 0;
+    int width = 67;
+    int height = 33;
+    var listXuatXu = Model.DistinctBy(x => x.MAXUATXU).ToList();
+}
+
+
+<div class="filter-item " data-hiddenbyone="False">
+    <div class="filter-item__title jsTitle"><span data-item="Nơi sản xuất">Nơi sản xuất</span></div>
+    <div class="filter-show filter-show--right" data-groupid="">
+        <div class="filter-list origin outsight" data-propid="33858" data-sight="1">
+            @foreach (var item in listXuatXu)
+            {
+                count++;
+                <a href="#" class="c-btnbox   " data-order="@count" data-smooth="0" data-id="@item.MAXUATXU" data-type="3">
+                    @item.XUATXU
+                </a>
+            }
+        </div>
+        <div class="filter-button filter-button-sticky">
+            <a href="javascript:void(0)" class="btn-filter-close">Chọn lại</a>
+            <a href="javascript:void(0)" class="btn-filter-readmore ">Xem </a>
+        </div>
+    </div>
+</div>

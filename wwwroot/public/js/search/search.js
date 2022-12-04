@@ -115,6 +115,7 @@ function collectParam() {
     if ($manu.length > 0) {
         var numberArray = new Array();
         $manu.each(function () {
+            
             numberArray.push($(this).data('id'));
         });
         numberArray = numberArray.filter(unique);
@@ -126,6 +127,20 @@ function collectParam() {
             query.StrListManuId = '';
         }
     }
+
+    var $origins = $('.origin a.active');
+    if ($origins.length > 0) {
+        var numberArray = new Array();
+        $origins.each(function () {
+            console.log($(this).data('id'));
+            numberArray.push($(this).data('id'));
+        });
+        numberArray = numberArray.filter(unique);
+        query.StrOrigin = numberArray.join();
+    } else {
+        query.StrOrigin = '';
+    }
+
 
     var $specs = $('.specs a.active');
     if ($specs.length > 0) {
@@ -143,6 +158,8 @@ function collectParam() {
         query.StrListSpecs = '';
     }
 
+
+
     var $price = $('.price a.active');
     if ($price.length > 0) {
         var numberArray = new Array();
@@ -156,17 +173,7 @@ function collectParam() {
         query.StrListRangeId = '';
     }
 
-    var $prop = $('.props a.active');
-    if ($prop.length > 0) {
-        var numberArray = new Array();
-        $prop.each(function () {
-            numberArray.push($(this).data('id'));
-        });
-        numberArray = numberArray.filter(unique);
-        query.StrPropID = numberArray.join();
-    } else {
-        query.StrPropID = '';
-    }
+    
     var $cls = $('.colors a.active');
     if ($cls.length > 0) {
         let numberArray = new Array();
@@ -199,17 +206,6 @@ function collectParam() {
         query.StrListCategory = numberArray.join();
     } else {
         query.StrListCategory = '';
-    }
-    var $origincountry = $('.origin a.active');
-    if ($origincountry.length > 0) {
-        var numberArray = new Array();
-        $origincountry.each(function () {
-            numberArray.push($(this).data('value'));
-        });
-        numberArray = numberArray.filter(unique);
-        query.StrOriginCountry = numberArray.join();
-    } else {
-        query.StrOriginCountry = '';
     }
     var $oder = $('.sort-select-main p.active');
     if ($oder.length > 0) {

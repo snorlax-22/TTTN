@@ -19,6 +19,7 @@ namespace TTTN.Models
 
         public List<HINHANH> DSHINHANH { get; set; }
 
+        public Nutri Nutris { get; set; } 
         public KHUYENMAI KHUYENMAI { get; set; }
 
         public DOCHOI()
@@ -59,5 +60,24 @@ namespace TTTN.Models
             DSHINHANH = dbo.layTatCaAnhTheoDoChoi(maDoChoi);
             KHUYENMAI = dbo.layKmTheoDoChoi(maDoChoi);
         }
+    }
+
+    public class Nutri
+    {
+            public int id { get; set; }
+            public float Protein { get; set; }
+            public float TotalFat { get; set; }
+            public float TotalCarbon { get; set; }
+            public float Calcium { get; set; }
+            public float Sodium { get; set; }
+            public float Magnesium { get; set; }
+            public float Iron { get; set; }
+            public float Copper { get; set; }
+            public float Potassium { get; set; }
+            public float VitaminD3 { get; set; }
+            public float VitaminB1 { get; set; }
+            public float VitaminB2 { get; set; }
+            public float Iodine { get; set; }
+            public float Zinc { get; set; }
     }
 }
