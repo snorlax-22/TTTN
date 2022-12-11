@@ -11,11 +11,27 @@ namespace TTTN.Helpers
 {
     public static class ExtensionHelper
     {
-
+        public static string ExpireQuantity(this SUA sua)
+        {
+            if (sua == null || sua.MaSua == 0 || sua.loHang == null || sua.loHang.hsdconlai <= 0) return string.Empty;
+            var expireQuantity = sua.loHang.hsdconlai;
+            if (expireQuantity >= 730) return "HSD trên 2 năm";
+            if (expireQuantity >= 365) return "HSD trên 1 năm";
+            if (expireQuantity >= 180) return "HSD trên 6 tháng";
+            if (expireQuantity >= 60) return "HSD trên 2 tháng";
+            if (expireQuantity > 30) return "HSD trên 1 tháng";
+            return $"HSD trên {expireQuantity} ngày";
+        }
         public static List<int> ToListInt(this string String)
         {
             if (string.IsNullOrEmpty(String)) return new List<int>();
             return String.Split(',')?.Select(Int32.Parse)?.ToList();
+        }
+
+        public static List<string> ToListString(this string String)
+        {
+            if (string.IsNullOrEmpty(String)) return new List<string>();
+            return String.Split(',')?.ToList();
         }
 
         public static bool IsGreaterThan(double v1, double v2)

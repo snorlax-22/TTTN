@@ -1,4 +1,5 @@
 ﻿@model TTTN.Models.SUA;
+@using TTTN.Helpers;
 @using TTTN.Models;
 @using System.Globalization
 
@@ -9,7 +10,7 @@
     decimal gia = Model.ThayDoiGia.Gia;
     int ptgiamgia = 0;
     decimal giaSauGiam = 0;
-   
+
     try
     {
         if (Model.KHUYENMAI != null)
@@ -30,6 +31,17 @@
 
 @*<script src="~/public/js/cart/cart.js"></script>*@
 
+<style>
+    .expire {
+        font-size: 8px !important;
+        position: relative;
+        left: 7px;
+        border: 1px solid #ccc;
+        width: fit-content;
+        padding: 1px !important;
+    }
+</style>
+
 <div class="others-toy-item">
     <a href="/product/detail/@Model.MaSua"> 
     @if (listHinhAnh.Count > 0)
@@ -40,6 +52,13 @@
         @*Đồ chơi xe địa hình cứu hộ Lego City 60301*@
         @Model.TenSua
     </h3>
+        @if(Model.loHang.hsdconlai > 0)
+        {
+            <p class="expire">
+                @Model.ExpireQuantity()
+            </p>
+        }
+        
     @if (@ptgiamgia > 0)
     {
         <p class="others-toy-item-price">

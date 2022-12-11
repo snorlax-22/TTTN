@@ -15,5 +15,6 @@ namespace TTTN.ViewModel
         public List<QUYEN> listQuyen { get; set; }
         public List<DANHMUC> listDanhMuc { get; set; }
         public SUA EditDoCHoi { get; set; }
+        public List<DoTuoi> lstDoTuoi { get; set; }
     }
 }

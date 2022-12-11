@@ -1,8 +1,7 @@
 ﻿@model List<TTTN.Models.SUA>;
 
-<div class="others-toy" id="toy-grid">
-    @foreach(var item in Model)
+
+    @foreach (var item in Model)
     {
         @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
-    }   
-</div>
+    }

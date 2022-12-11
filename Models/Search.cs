@@ -7,13 +7,18 @@ namespace TTTN.Models
     public class Search
     {
         /// <summary>
+        /// 3: giá cao đến thấp
+        /// 2: giá thấp đến cao
+        /// </summary>
+        public int Sort { get; set; }
+        /// <summary>
         /// 1: nhỏ hơn
         /// 2: bằng
         /// 3: lớn hơn
         /// </summary>
         public int compareType { get; set; }
         public string StrListManuId { get; set; }
-
+        public string StrListAge { set; get; }
         public string StrOrigin { get; set; }
 
         public int id { get; set; }

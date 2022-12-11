@@ -119,7 +119,9 @@ namespace TTTN.Controllers
         {
             var vm = new SearchViewModel()
             {
+                listDoChoi = _milkSvc.layTatCaSua(),
                 hangDoChoi = dbo.layTatCaHang(),
+                lstdoTuoi = _milkSvc.layTatCaDoTuoi()
             };
 
             return View("~/Views/Home/AdvancedSearch.cshtml", vm);
@@ -128,12 +130,16 @@ namespace TTTN.Controllers
 
         public async Task<IActionResult> GetProductList(Search query)
         {
+            var ssort = query.Sort;
             var result = new List<SUA>();
             var listManu = query.StrListManuId.ToListInt();
             var listOrigin = query.StrOrigin.ToListInt();
+            var listAge = query.StrListAge.ToListInt();
 
             var listToys = _milkSvc.layTatCaSua().AsQueryable();
 
+            if (listAge.IsValidList())
+                listToys = listToys.Where(x => listAge.Contains(x.DoTuoi.MaDoTuoi));
 
             if (listManu.IsValidList())
                 listToys = listToys.Where(x => listManu.Contains(x.HANGDOCHOI.MAHANGDOCHOI));
@@ -142,10 +148,22 @@ namespace TTTN.Controllers
                 listToys = listToys.Where(x => listOrigin.Contains(x.HANGDOCHOI.MAXUATXU));
 
             result = listToys.ToList().GetListWithNutris(query);
+
+            if (ssort > 0)
+                switch (ssort)
+                {
+                    case 3:
+                        result = result.OrderByDescending(x => x.ThayDoiGia.Gia).ToList();
+                        break;
+                    case 2:
+                        result = result.OrderBy(x => x.ThayDoiGia.Gia).ToList();
+                        break;
+                }
+
             return View("~/Views/Shared/Partial/ProductList.cshtml", result);
         }
 
-       
+
 
 
     }

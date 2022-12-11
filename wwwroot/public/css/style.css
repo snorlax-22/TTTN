@@ -342,6 +342,15 @@ ul, ol {
     padding-bottom: 9px;
 }
 
+.expire {
+    font-size: 8px;
+    position: relative;
+    left: 7px;
+    border: 1px solid #ccc;
+    width: fit-content;
+    padding: 1px;
+}
+
 .others-toy-item-old-price {
     color: #555;
     display: inline-block;

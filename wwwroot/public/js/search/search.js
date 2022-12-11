@@ -32,7 +32,7 @@
             //    $(".block-manu .filter-show").addClass("has-scroll");
             //}
         });
-        $(".sort-select-main").fadeOut(0);
+        //$(".sort-select-main").fadeOut(0);
         $(".info__content").hide();
         if ($(".bsc-block .breadcrumb.hide").length > 0) {
             $(".bg-black .bsc-block").addClass("fix-padding");
@@ -69,10 +69,10 @@ $(document).on("click", ".sort-select-main p", function () {
     $(".sort-select-main p.active").removeClass('active');
     $(this).addClass('active');
 
-    query.OrderType = $(this).data('id');
+    query.Sort = $(this).data('id');
     query.PageIndex = 0;
     filterProduct(false, true);
-    replaceTextFilterSort($(this));
+
 });
 
 $(document).on('click', ".layout-nh2__item", function (event) {
@@ -121,6 +121,12 @@ function unique(value, index, self) {
 // Hàm collect tất cả param gán vô biến query 
 function collectParam() {
 
+    var $sort = $('.sort-select-main p.active');
+    if ($sort.length > 0) {
+        query.Sort = $sort.data('id');
+        console.log(query.Sort);
+    }
+
     var $ctype = $('.nutrival.acct');
     if ($ctype.length > 0) {
         query.compareType = $ctype.data('id');
@@ -139,7 +145,24 @@ function collectParam() {
         query.Iodine = $('input[name=iodine]').val();
         query.Zinc = $('input[name=zinc]').val();
     }
-    
+
+    var $age = $('.age a.active');
+    if ($age.length > 0) {
+        var numberArray = new Array();
+        $age.each(function () {
+
+            numberArray.push($(this).data('id'));
+        });
+        numberArray = numberArray.filter(unique);
+        query.StrListAge = numberArray.join();
+    } else {
+        if (query.IsBuffePage && query.PageId > 0 && query.IsManufacturePage) {
+            query.StrListAge = query.PageId.toString();
+        } else {
+            query.StrListAge = '';
+        }
+    }
+
     var $manu = $('.manu a.active');
     if ($manu.length > 0) {
         var numberArray = new Array();

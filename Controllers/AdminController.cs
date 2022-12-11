@@ -11,6 +11,8 @@ using System.Globalization;
 using System.Linq;
 using System.Text.Json;
 using TTTN.Service;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static TTTN.Service.MilkService;
 
 namespace TTTN.Controllers
 {
@@ -38,32 +40,33 @@ namespace TTTN.Controllers
             try
             {
                 var arrToy = arrMaDoChoi.TrimStart('[')
-                 .TrimEnd(']').Replace("\"","")
+                 .TrimEnd(']').Replace("\"", "")
                  .Split(',').Select(n => Convert.ToInt32(n)).ToArray();
 
                 var arrDis = arrPtGiamGia.TrimStart('[')
                  .TrimEnd(']').Replace("\"", "")
                  .Split(',').Select(n => Convert.ToInt32(n)).ToArray();
 
-                idKm = dbo.themKhuyenMai(tenkm,timefrom, timeto, lydokm,manv);
+                idKm = dbo.themKhuyenMai(tenkm, timefrom, timeto, lydokm, manv);
 
-                if(idKm > 0)
+                if (idKm > 0)
                 {
                     var count = 0;
-                    foreach(var item in arrToy)
+                    foreach (var item in arrToy)
                     {
-                        dbo.themChitietkhuyenmai(idKm, arrToy[count],arrDis[count]);
+                        dbo.themChitietkhuyenmai(idKm, arrToy[count], arrDis[count]);
                         count++;
                     }
                 }
-                
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 var b = e.ToString();
             }
             return idKm;
         }
+
 
 
         public ActionResult DiscountVoice()
@@ -82,14 +85,14 @@ namespace TTTN.Controllers
             vm.nv = nv;
             vm.listKM = dbo.layTatCaDotKM();
 
-            return View("~/Views/Admin/KhuyenMai.cshtml",vm);
+            return View("~/Views/Admin/KhuyenMai.cshtml", vm);
         }
 
         public void XemHoaDon(int magh, string mahd)
         {
 
             CartPageViewModel vm = new CartPageViewModel();
-    
+
             vm.listctgh = dbo.layCTDHtheoMaGH(magh);
             vm.gh = dbo.layDHtheoMaGH(magh);
 
@@ -113,7 +116,7 @@ namespace TTTN.Controllers
         {
             decimal tongTien = 0;
             var maHoaDon = DateTime.Now.ToString().Replace("/", "").Replace(":", "").Replace(" ", "");
-            
+
             CartPageViewModel vm = new CartPageViewModel();
 
             var mstKH = dbo.layKHTheoCMND(cmnd).masothue;
@@ -178,33 +181,6 @@ namespace TTTN.Controllers
             var monthNo = (((dt.Year - df.Year) * 12) + dt.Month - df.Month) + 1;
             var doanhthu = dbo.layDoanhThuTheoThang(DateTime.Parse(strFr), DateTime.Parse(strTo));
 
-            //for (int i = 0; i < doanhthu.Count(); i++)
-            //{
-            //    if (Int32.Parse(doanhthu[i + 1].thang) - Int32.Parse(doanhthu[i].thang) != 1)
-            //    {
-            //        var rn = new Revenue()
-            //        {
-            //            thang = (Int32.Parse(doanhthu[i].thang) + 1).ToString(),
-            //            year = doanhthu[i].year,
-            //            revenue = 0
-            //        };
-            //        doanhthu.Insert(i, rn);
-            //    }
-            //}
-            //string[] a = new string[doanhthu.Count];
-            //decimal?[] b = new decimal?[doanhthu.Count];
-            //string[] barColors = new string[doanhthu.Count];
-
-            //RevenueReport rp = new RevenueReport(doanhthu.Count);
-            //int count = 0;
-            //foreach (var item in doanhthu)
-            //{
-            //    rp.thoigian[count] = (item.thang + "-" + item.year).ToString();
-            //    rp.revenue[count] = item.revenue;
-
-            //    count++;
-            //}
-
             return PartialView("~/Views/Admin/Partial/Revenue.cshtml", doanhthu);
         }
 
@@ -218,7 +194,7 @@ namespace TTTN.Controllers
             var vm = new AdminPageViewModel();
             vm.nv = nv;
 
-            return View("~/Views/Admin/DoanhThu.cshtml",vm);
+            return View("~/Views/Admin/DoanhThu.cshtml", vm);
         }
         public IActionResult Index()
         {
@@ -244,14 +220,14 @@ namespace TTTN.Controllers
             {
                 var tk = new TAIKHOAN();
                 tk.USERNAME = nv.TAIKHOAN.USERNAME;
-                vm.listGioHang = dbo.layTatCaGH().Where(x=>x.NvGiao.MaNV == vm.nv.MaNV).ToList();
+                vm.listGioHang = dbo.layTatCaGH().Where(x => x.NvGiao.MaNV == vm.nv.MaNV).ToList();
                 foreach (var item in vm.listGioHang)
                 {
                     item.NvGiao = dbo.getEmpByUser(tk);
                 }
             }
 
-            
+
             return View("~/Views/Admin/Order.cshtml", vm);
         }
 
@@ -311,7 +287,7 @@ namespace TTTN.Controllers
                 return View("~/Views/Admin/Order.cshtml", vm);
             }
 
-            
+
             return View("~/Views/Admin/Admin.cshtml", vm);
         }
 
@@ -333,44 +309,11 @@ namespace TTTN.Controllers
             vm.nv = nv;
             var maDC = Int32.Parse(idDoChoi);
 
+            vm.listDanhMuc = dbo.layTatCaDanhMuc();
+
             vm.EditDoCHoi = _milkSvc.layChiTietSua(Int32.Parse(idDoChoi));
 
             return View("~/Views/Admin/ToyDetail.cshtml", vm);
-        }
-        #endregion
-
-        #region hãng
-        public ActionResult Brand()
-        {
-            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
-            if (nv == null)
-            {
-                return View("~/Views/Admin/Index.cshtml");
-            }
-            var vm = new AdminPageViewModel();
-            vm.nv = nv;
-            var res = dbo.layTatCaHang();
-
-            vm.listHang = res;
-            return View("~/Views/Admin/Brand.cshtml", vm);
-        }
-
-        public int SuaHang(int idHang, string tenHang)
-        {
-            var rs = dbo.suaHangDoChoi(tenHang, idHang);
-            return rs;
-        }
-
-        public int XoaHang(int idHang)
-        {
-            var rs = dbo.xoaHangDoChoi(idHang);
-            return rs;
-        }
-
-        public int ThemHang(string tenHang)
-        {
-            var rs = dbo.themHangDoChoi(tenHang);
-            return rs;
         }
         #endregion
 
@@ -415,7 +358,7 @@ namespace TTTN.Controllers
 
                 vm.listDoChoi = dsDoChoi;
 
-                if(vm.nv.TAIKHOAN.MAQUYEN == 1002)
+                if (vm.nv.TAIKHOAN.MAQUYEN == 1002)
                 {
                     return 1002;
                 }
@@ -428,6 +371,7 @@ namespace TTTN.Controllers
             }
         }
 
+        #region ảnh
         public int SuaAnh(int idAnh, string anh)
         {
             var rs = dbo.SuaAnh(idAnh, anh);
@@ -445,6 +389,122 @@ namespace TTTN.Controllers
             var rs = dbo.xoaAnh(idAnh);
             return rs;
         }
+        #endregion
+
+
+        #region hãng
+        public ActionResult Brand()
+        {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
+            var res = dbo.layTatCaHang();
+
+            vm.listHang = res;
+            return View("~/Views/Admin/Brand.cshtml", vm);
+        }
+
+        public int SuaHang(int idHang, string tenHang)
+        {
+            var rs = dbo.suaHangDoChoi(tenHang, idHang);
+            return rs;
+        }
+
+        public int XoaHang(int idHang)
+        {
+            var rs = dbo.xoaHangDoChoi(idHang);
+            return rs;
+        }
+
+        public int ThemHang(string tenHang)
+        {
+            var rs = dbo.themHangDoChoi(tenHang);
+            return rs;
+        }
+        #endregion
+
+        #region tuổi
+
+        public ActionResult Age()
+        {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
+            var res = _milkSvc.layTatCaDoTuoi();
+
+            vm.lstDoTuoi = res;
+            return View("~/Views/Admin/Age.cshtml", vm);
+        }
+        public int CrudDoTuoi(int idDoTuoi, string doTuoi, int type)
+        {
+            return _milkSvc.crudDotuoi(doTuoi, idDoTuoi, type);
+        }
+        #endregion
+
+        public ActionResult Import()
+        {
+            var nv = HttpContext.Session.Get<NHANVIEN>("NhanVien");
+            if (nv == null)
+            {
+                return View("~/Views/Admin/Index.cshtml");
+            }
+            var vm = new AdminPageViewModel();
+            vm.nv = nv;
+            var res = _milkSvc.layTatCaDoTuoi();
+
+            vm.lstDoTuoi = res;
+            return View("~/Views/Admin/Import.cshtml", vm);
+        }
+
+        public ActionResult RowImport()
+        {
+            return PartialView("~/Views/Admin/Partial/RowImport.cshtml");
+        }
+
+
+        public class ImportPayload{
+            public int manv { get; set; }
+            public string StrListQtt { get; set; }
+            public string StrListIdP { get; set; }
+            public string StrListEx { get; set; }
+            public string StrListManu { get; set; }
+            public string StrBestUse { get; set; }
+        }
+
+        public int nhapHang(ImportPayload payload)
+        {
+            var StrListQtt = payload.StrListQtt.ToListInt();
+            var StrListIdP = payload.StrListIdP.ToListInt();
+            var StrListManu = payload.StrListManu.ToListString();
+            var StrListEx = payload.StrListEx.ToListString();
+            var manv = payload.manv;
+
+            var lstLH = new List<LoHang>();
+            int count = 0;
+            foreach(var item in StrListIdP)
+            {
+                var lh = new LoHang()
+                {
+                    masua = StrListIdP[count],
+                    sl = StrListQtt[count],
+                    strngaysx = StrListManu[count],
+                    strngayhethan = StrListEx[count]
+                };
+                lstLH.Add(lh);
+            }
+            var rs = _milkSvc.nhapHang( manv, lstLH);
+
+            return -1;
+        }
+
     }
 
 

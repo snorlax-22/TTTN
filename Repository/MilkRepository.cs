@@ -2,12 +2,59 @@
 using System;
 using System.Data.SqlClient;
 using TTTN.Models;
+using static TTTN.Models.SUA;
 
 namespace TTTN.Repository
 {
     public class MilkRepository
     {
         SqlConnection conn = new SqlConnection("Data Source=188263-NMCUONG;Initial Catalog=TTTN;User ID=sa;Password=123;Integrated Security=true;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        public string SafeGetString(SqlDataReader reader, int colIndex)
+        {
+            try
+            {
+                if (!reader.IsDBNull(colIndex))
+                    return reader.GetString(colIndex);
+            }
+            catch (Exception e)
+            {
+                return "";
+            }
+            return "";
+        }
+
+        public List<DoTuoi> layTatCaDoTuoi()
+        {
+            var listBrands = new List<DoTuoi>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select * from DOTUOI", conn);
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    var brand = new DoTuoi()
+                    {
+                        MaDoTuoi = dr.GetInt32(0),
+                        stDoTuoi = dr.GetString(1)
+                    };
+
+                    listBrands.Add(brand);
+                }
+                conn.Close();
+
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+            }
+
+            return listBrands;
+        }
 
         public List<SUA> layTatCaDoChoiV3()
         {
@@ -39,6 +86,12 @@ namespace TTTN.Repository
                         MAXUATXU = dr.GetInt32(11),
                     };
 
+                    DoTuoi doTuoi = new DoTuoi()
+                    {
+                        MaDoTuoi = dr.GetInt32(12),
+                        stDoTuoi = dr.GetString(13)
+                    };
+
                     Nutri nutris = new Nutri()
                     {
                         id = dr.GetInt32(9)
@@ -51,7 +104,8 @@ namespace TTTN.Repository
                         MaSua = idDoChoi,
                         ThayDoiGia = gia,
                         //KHUYENMAI = km,
-                        HANGDOCHOI = hang
+                        HANGDOCHOI = hang,
+                        DoTuoi = doTuoi
                     };
 
                     listDoChoiKM.Add(doChoi);
@@ -272,6 +326,158 @@ namespace TTTN.Repository
             }
 
             return listImages;
+        }
+
+        public int themDoTuoi(string tenHang)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("themDoTuoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@DoTuoi", tenHang);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int xoaDoTuoi(int maHang)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("xoaDoTuoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@maDoTuoi", maHang);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int suaDoTuoi(string tenHang, int maHang)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("suaDoTuoi", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@tenDoTuoi", tenHang);
+                cmd.Parameters.AddWithValue("@idDoTuoi", maHang);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int taoPhieuNhap(int manv)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("taophieunhap", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@manv", manv);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public int nhaphang(int masua, int mapn, int sl, DateTime ngaysx, DateTime ngayhethan, DateTime ngaysdtotnhat, string mota)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("nhaphang", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@mapn", mapn);
+                cmd.Parameters.AddWithValue("@masua", masua);
+                cmd.Parameters.AddWithValue("@sl", sl);
+                cmd.Parameters.AddWithValue("@mota", mota);
+                cmd.Parameters.AddWithValue("@ngaysx", ngaysx.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@ngagyhethan", ngayhethan.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@ngaysdtotnhat", ngaysdtotnhat.ToString("yyyy-MM-dd"));
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+                conn.Close();
+                return 0;
+            }
+        }
+
+        public LoHang layLoHangTheoSua(int idSua)
+        {
+            var gia = new LoHang();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("laylohang", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@idsua", idSua);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+
+                    gia = new LoHang();
+
+                    gia.id = dr.GetInt32(0);
+                    gia.sl = dr.GetInt32(1);
+                    gia.mapn = dr.GetInt32(2);
+                    gia.ngaysx = dr.GetDateTime(3);
+                    gia.ngayhethan = dr.GetDateTime(4);
+                    gia.ngaysdtotnhat = dr.GetDateTime(5);
+                    gia.mota = SafeGetString(dr,6);
+                    
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            return gia;
         }
     }
 }

@@ -22,12 +22,26 @@ namespace TTTN.Models
         public Nutri Nutris { get; set; } 
         public KHUYENMAI KHUYENMAI { get; set; }
 
+        public DoTuoi DoTuoi { get; set; }
         public List<DANHMUC> listDanhMuc { get; set; }
+
+        public LoHang loHang { get; set;  }
         public SUA()
         {
         }
-       
-        
+
+        public class LoHang
+        {
+            public int id { get; set; }
+            public int sl { get; set; }
+            public int mapn { get; set; }
+            public DateTime ngaysx { get; set; }
+            public DateTime ngayhethan { get; set; }
+            public DateTime ngaysdtotnhat { get; set; }
+            public string mota { get; set; }
+            public double hsdconlai => (ngayhethan.Date - ngaysx.Date).TotalDays;
+        }
+
         public SUA(NHACUNGCAP NhaCC, HANGDOCHOI hang)
         {
             NHACUNGCAP = NhaCC;
@@ -58,5 +72,11 @@ namespace TTTN.Models
             public double VitaminB2 { get; set; }
             public double Iodine { get; set; }
             public double Zinc { get; set; }
+    }
+
+    public class DoTuoi
+    {
+        public int MaDoTuoi { get; set; }
+        public string stDoTuoi { get; set; }
     }
 }
