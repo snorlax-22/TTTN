@@ -50,7 +50,7 @@
                 @await Html.PartialAsync("~/Views/Shared/Partial/ToyBoxesHomePage.cshtml", item)
             }
         </div>
-
+<h1> TRUNG HERE </h1>
         <img class="banner" src="~/public/image/P7UGE0JY-1200x200.png" />
         <div class="others-toy" id="toy-grid">
             @foreach (var item in Model.listDoChoi.Where(x => x.HANGDOCHOI.TENHANGDOCHOI == "VBCare").Take(6))
